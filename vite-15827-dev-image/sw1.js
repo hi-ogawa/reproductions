@@ -17,7 +17,7 @@ this.addEventListener('activate', function (event) {
 this.addEventListener('fetch', function (event) {
   const url = new URL(event.request.url);
 
-  if (url.origin === location.origin && cacheList.includes(url.pathname)) {
+  if (url.origin === location.origin && cacheList.includes(url.pathname) && !url.search) {
     console.log('cache hit', url.pathname);
     event.respondWith(
       caches.open('sw-v1').then(async function (cache) {
