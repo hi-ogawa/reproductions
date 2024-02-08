@@ -1,0 +1,21 @@
+{
+  "name": "vanilla-typescript",
+  "version": "1.0.0",
+  "description": "JavaScript and TypeScript example starter project",
+  "main": "index.html",
+  "scripts": {
+    "test": "vitest"
+  },
+  "dependencies": {
+    "@okta/okta-signin-widget": "^7.15.1"
+  },
+  "devDependencies": {
+    "happy-dom": "^13.3.8",
+    "typescript": "^5.3.3",
+    "vitest": "^1.2.2"
+  },
+  "keywords": [
+    "typescript",
+    "javascript"
+  ]
+}
