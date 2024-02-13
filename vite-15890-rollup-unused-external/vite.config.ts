@@ -7,7 +7,7 @@ export default defineConfig({
     outDir: "dist/vite",
     rollupOptions: {
       input: [
-        "./src/svelte/app1.svelte", "./src/svelte/app2.svelte",
+        "./src/svelte/app.svelte",
       ]
     }
   },

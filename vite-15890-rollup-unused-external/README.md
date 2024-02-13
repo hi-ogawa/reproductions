@@ -1,27 +1,33 @@
 https://github.com/vitejs/vite/issues/15890
 
+- Svelte ssr event handler elimination issue?
+
 ```sh
-#
-# warning on ssr build
-#
+# warning on vite ssr build
 $ pnpm build --ssr
 ...
-vite v5.1.1 building SSR bundle for production...
-"omit" is imported from external module "lodash-es" but never used in "src/svelte/app2.svelte" and "src/svelte/app1.svelte".
-✓ 23 modules transformed.
-dist/vite/app1.js                 0.21 kB
-dist/vite/app2.js                 0.25 kB
-dist/vite/assets/ssr-hCmxaejy.js  1.43 kB
-✓ built in 175ms
+vite v5.1.1 building for production...
+✓ 663 modules transformed.
+dist/vite/assets/app-IHki7fMi.js  0.09 kB │ gzip: 0.09 kB
+✓ built in 560ms
 
-#
-# warning on client build
-#
+# ok on vite client build
 $ pnpm build
 ...
-vite v5.1.1 building for production...
-✓ 664 modules transformed.
-dist/vite/assets/app2-in1TljnR.js  0.03 kB │ gzip: 0.05 kB
-dist/vite/assets/app1-IHki7fMi.js  0.09 kB │ gzip: 0.09 kB
-✓ built in 598ms
+vite v5.1.1 building SSR bundle for production...
+"omit" is imported from external module "lodash-es" but never used in "src/svelte/app.svelte".
+✓ 22 modules transformed.
+dist/vite/app.js  1.53 kB
+✓ built in 147ms
+```
+
+- Rollup bug
+
+```sh
+$ pnpm build-rollup
+...
+./src/rollup/app1.js, ./src/rollup/app2.js → dist/rollup...
+(!) Unused external imports
+omit imported from external module "lodash-es" but never used in "src/rollup/app1.js" and "src/rollup/app2.js".
+created dist/rollup in 17ms
 ```
