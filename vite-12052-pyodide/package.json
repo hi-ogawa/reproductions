@@ -1,0 +1,24 @@
+{
+  "name": "@hiogawa/vite-pyodide-example",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "pnpm run --stream /^dev:/",
+    "dev:vite": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "dev:tsc": "tsc -b --watch --preserveWatchOutput",
+    "lint": "prettier -w --cache .",
+    "lint-check": "prettier -c --cache ."
+  },
+  "devDependencies": {
+    "@tsconfig/strictest": "^2.0.3",
+    "prettier": "^3.2.5",
+    "typescript": "^5.3.3",
+    "vite": "^5.1.1"
+  },
+  "packageManager": "pnpm@8.15.2+sha256.90bb5d6382cb2cb8b8d4959a076b3953d84d1d94121717097bcd41c71344fa14",
+  "dependencies": {
+    "pyodide": "^0.25.0"
+  }
+}
