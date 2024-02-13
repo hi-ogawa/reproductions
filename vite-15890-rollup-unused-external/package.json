@@ -5,14 +5,17 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "build-ssr": "vite build --ssr",
     "build-rollup": "rollup -c",
     "preview": "vite preview"
   },
   "devDependencies": {
     "@rollup/plugin-node-resolve": "^15.2.3",
+    "@sveltejs/vite-plugin-svelte": "^3.0.2",
     "@types/lodash-es": "^4.17.12",
     "lodash-es": "^4.17.21",
     "rollup": "^4.9.6",
+    "svelte": "^4.2.10",
     "vite": "^5.0.12"
   }
 }
