@@ -5,8 +5,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "build-ssr": "vite build --ssr",
-    "build-rollup": "rollup -c",
+    "build-rollup1": "rollup -c rollup1.config.js",
+    "build-rollup2": "rollup -c rollup2.config.js",
     "preview": "vite preview"
   },
   "devDependencies": {
