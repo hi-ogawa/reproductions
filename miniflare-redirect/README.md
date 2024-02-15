@@ -1,6 +1,20 @@
 https://github.com/cloudflare/workers-sdk/issues/5018
 https://github.com/hi-ogawa/vite-plugins/issues/127
 
+- `redirect: "manual"`
+
+```sh
+$ node main.js https://example.local/redirect
+[workerd] request.url = https://example.local/redirect
+[node] response {
+  status: 302,
+  headers: { 'content-length': '0', location: '/ok' },
+  text: ''
+}
+```
+
+- default
+
 ```sh
 $ node main.js https://example.local/ok
 [workerd] request.url = https://example.local/ok

@@ -22,7 +22,7 @@ const mf = new Miniflare({
   `,
 });
 
-const response = await mf.dispatchFetch(process.argv[2]);
+const response = await mf.dispatchFetch(process.argv[2], { redirect: "manual" });
 console.log("[node] response", {
   status: response.status,
   headers: Object.fromEntries(response.headers),
