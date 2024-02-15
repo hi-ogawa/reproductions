@@ -1,0 +1,13 @@
+{
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {},
+  "dependencies": {
+    "miniflare": "^3.20240129.2"
+  },
+  "packageManager": "pnpm@8.15.2+sha256.90bb5d6382cb2cb8b8d4959a076b3953d84d1d94121717097bcd41c71344fa14",
+  "volta": {
+    "node": "20.11.1"
+  }
+}
