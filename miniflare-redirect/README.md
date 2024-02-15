@@ -1,3 +1,4 @@
+https://github.com/cloudflare/workers-sdk/issues/5018
 https://github.com/hi-ogawa/vite-plugins/issues/127
 
 ```sh
