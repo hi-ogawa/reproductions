@@ -1,5 +1,8 @@
 import { exposeTinyRpc, messagePortServerAdapter } from "@hiogawa/tiny-rpc";
 
+// TODO: support interrupt
+// https://pyodide.org/en/stable/usage/keyboard-interrupts.html
+
 declare let loadPyodide: typeof import("pyodide").loadPyodide;
 
 async function main() {
