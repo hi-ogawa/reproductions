@@ -6,9 +6,9 @@ import { exposeTinyRpc, messagePortServerAdapter } from "@hiogawa/tiny-rpc";
 declare let loadPyodide: typeof import("pyodide").loadPyodide;
 
 async function main() {
-  // TODO: prefetch? self-host?
   // @ts-ignore
-  importScripts("https://cdn.jsdelivr.net/pyodide/v0.25.0/full/pyodide.js");
+  // Vite v5.1 wasm asset regression?
+  importScripts("/assets/pyodide/0.25.0/pyodide.js");
   const pyodide = await loadPyodide();
 
   exposeTinyRpc({
@@ -22,7 +22,7 @@ async function main() {
   });
 
   // notify main thread pyodide is ready
-  globalThis.postMessage("__PYODIDE_WORKER_READY__")
+  globalThis.postMessage("__PYODIDE_WORKER_READY__");
 }
 
 main();

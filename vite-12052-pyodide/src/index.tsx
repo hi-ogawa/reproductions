@@ -9,7 +9,10 @@ async function main() {
   await pyodide.loadPackagesFromImports(code);
   const result = await pyodide.runPythonAsync(code);
 
-  document.getElementById("root")!.textContent = JSON.stringify({ code, result });
+  document.getElementById("root")!.textContent = JSON.stringify({
+    code,
+    result,
+  });
 }
 
 main();

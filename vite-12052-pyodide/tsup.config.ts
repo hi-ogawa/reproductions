@@ -5,5 +5,5 @@ export default defineConfig({
   outDir: "src/worker/dist",
   format: ["iife"],
   platform: "neutral",
-  noExternal: [/.*/]
+  noExternal: [/.*/],
 });

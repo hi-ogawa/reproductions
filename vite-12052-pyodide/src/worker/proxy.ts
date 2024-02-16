@@ -12,7 +12,7 @@ export async function initializePyodideWorker() {
   const worker = new Worker(WORKER_URL);
 
   // wait for pyodide is ready
-  await new Promise<void>(resolve => {
+  await new Promise<void>((resolve) => {
     function handler(e: MessageEvent) {
       if (e.data === "__PYODIDE_WORKER_READY__") {
         resolve();
@@ -20,7 +20,7 @@ export async function initializePyodideWorker() {
       worker.removeEventListener("message", handler);
     }
     worker.addEventListener("message", handler);
-  })
+  });
 
   pyodide = proxyTinyRpc<PyodideInterface>({
     adapter: messagePortClientAdapter({
