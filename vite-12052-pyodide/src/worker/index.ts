@@ -7,8 +7,8 @@ declare let loadPyodide: typeof import("pyodide").loadPyodide;
 
 async function main() {
   // @ts-ignore
-  // Vite v5.1 wasm asset regression?
   importScripts("/assets/pyodide/0.25.0/pyodide.js");
+
   const pyodide = await loadPyodide();
 
   exposeTinyRpc({
