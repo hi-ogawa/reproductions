@@ -1,0 +1,25 @@
+{
+  "name": "@vitest/example-test",
+  "type": "module",
+  "private": true,
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": {
+    "test": "vitest",
+    "test:ui": "vitest --ui",
+    "test:run": "vitest run"
+  },
+  "devDependencies": {
+    "@vitest/ui": "latest",
+    "vite": "latest",
+    "vitest": "latest"
+  },
+  "stackblitz": {
+    "startCommand": "npm run test:ui"
+  },
+  "dependencies": {
+    "diagram-js": "^14.0.0",
+    "diagram-js-grid": "^1.0.0",
+    "min-dom": "^4.1.0"
+  }
+}
