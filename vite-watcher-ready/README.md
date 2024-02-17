@@ -1,7 +1,7 @@
 https://github.com/vitest-dev/vitest/pull/5123#issuecomment-1949788480
 
 ```sh
-# 5.1.3
+# 5.1.0-beta.0
 $ npm run dev
 
 > vite-starter@0.0.0 dev
@@ -10,7 +10,7 @@ $ npm run dev
 [watcher:ready] 0
 [watcher:ready] 1
 
-  VITE v5.1.3  ready in 158 ms
+  VITE v5.1.0-beta.0  ready in 153 ms
 
   ➜  Local:   http://localhost:5173/
   ➜  Network: use --host to expose
