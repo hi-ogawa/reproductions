@@ -1,0 +1,15 @@
+{
+  "name": "vite-starter",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "vitest"
+  },
+  "dependencies": {
+    "effect": "^2.3.8",
+    "preact": "^10.19.5"
+  }
+}
