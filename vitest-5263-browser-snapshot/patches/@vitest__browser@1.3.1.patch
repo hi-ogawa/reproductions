@@ -1,0 +1,12 @@
+diff --git a/dist/index.js b/dist/index.js
+index 208a10f03277fe1c8c4bad4337695062b1596bb2..5be01f93631911fff791405226175d04faa5a73b 100644
+--- a/dist/index.js
++++ b/dist/index.js
+@@ -474,6 +474,7 @@ var index = (project, base = "/") => {
+             include: [
+               "vitest > @vitest/utils > pretty-format",
+               "vitest > @vitest/snapshot > pretty-format",
++              "vitest > @vitest/snapshot > magic-string",
+               "vitest > diff-sequences",
+               "vitest > pretty-format",
+               "vitest > pretty-format > ansi-styles",
