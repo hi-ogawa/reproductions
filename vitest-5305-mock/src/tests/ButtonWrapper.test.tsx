@@ -1,12 +1,18 @@
 import { ButtonWrapper } from "./../components/ButtonWrapper";
 import { render, act, fireEvent } from "@testing-library/react";
 import { describe, it, expect, vi } from "vitest";
-import { OfficeApi } from "./../api/officeApi";
+
+vi.mock("./../api/officeApi", () => {
+  class OfficeApi {
+    getHost() {
+      return "SomeHost";
+    }
+  }
+  return { OfficeApi }
+});
 
 describe("ButtonWrapper component test suit", () => {
   it("Should show host name on click", async () => {
-    vi.spyOn(OfficeApi.prototype, "getHost").mockReturnValue("SomeHost");
-
     const root = render(<ButtonWrapper />);
     const btn = await root.findByRole("button");
     act(() => {
