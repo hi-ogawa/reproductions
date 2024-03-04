@@ -8,8 +8,13 @@ $ npm run dev
 > vite
 
 [watcher:ready] 0
+[getWatched()] {
+  '/home/hiroshi/code/personal/reproductions/vite-watcher-ready': [ 'vite.config.ts' ]
+}
 [watcher:ready] 1
-
+[getWatched()] {
+  '/home/hiroshi/code/personal/reproductions/vite-watcher-ready': [ 'vite.config.ts' ]
+}
   VITE v5.1.0-beta.0  ready in 153 ms
 
   ➜  Local:   http://localhost:5173/
@@ -29,4 +34,16 @@ $ npm run dev
   ➜  Network: use --host to expose
   ➜  press h + enter to show help
 [watcher:ready] 0
+[getWatched()] {
+  '/home/hiroshi/code/personal/reproductions/vite-watcher-ready': [
+    '.gitignore',
+    'README.md',
+    'index.html',
+    'main.js',
+    'package-lock.json',
+    'package.json',
+    'vite.config.ts'
+  ],
+  '/home/hiroshi/code/personal/reproductions': [ 'vite-watcher-ready' ]
+}
 ```

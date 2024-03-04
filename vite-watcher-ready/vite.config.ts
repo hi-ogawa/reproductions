@@ -9,6 +9,7 @@ export default defineConfig({
         let i = 0;
         server.watcher.on('ready', () => {
           console.log('[watcher:ready]', i++);
+          console.log('[getWatched()]', server.watcher.getWatched());
         });
       },
     },
