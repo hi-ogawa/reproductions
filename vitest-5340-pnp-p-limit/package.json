@@ -13,9 +13,9 @@
   "devDependencies": {
     "vitest": "1.3.1"
   },
-  "packageManager": "yarn@4.1.1+sha256.f3cc0eda8e5560e529c7147565b30faa43b4e472d90e8634d7134a37c7f59781",
+  "packageManager": "yarn@3.2.2+sha256.4bdff735211590c3591b58db2f00eb3391cc7192e5c99cd154fe59060301f5db",
   "volta": {
-    "node": "20.11.1"
+    "node": "18.12.1"
   },
   "stackblitz": {
     "startCommand": "npm run test"
