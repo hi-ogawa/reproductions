@@ -6,8 +6,8 @@
   "bin": {
     "index": "bin/index.js"
   },
+  "workspaces": ["./packages/frontend"],
   "scripts": {
-    "install-all": "npm i && cd packages/frontend && npm i",
     "build": "tsc",
     "test": "vitest",
     "test:run": "vitest run",
