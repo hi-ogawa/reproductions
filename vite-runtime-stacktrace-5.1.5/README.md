@@ -1,4 +1,5 @@
-https://github.com/hi-ogawa/vite-plugins/pull/198
+- https://github.com/hi-ogawa/vite-plugins/pull/198
+- https://github.com/vitejs/vite/issues/16178
 
 ```sh
 # node
