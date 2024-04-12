@@ -4,7 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "node repro.mjs",
     "build": "vite build",
     "preview": "vite preview"
   },
