@@ -1,5 +1,4 @@
-- https://github.com/hi-ogawa/vite-plugins/pull/198
-- https://github.com/vitejs/vite/issues/16178
+- https://github.com/vitejs/vite/issues/16293#issuecomment-2049573464
 
 ```sh
 $ node repro.mjs
