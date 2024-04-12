@@ -12,7 +12,6 @@
     "@remix-run/server-runtime": "^2.8.1",
     "vite": "5.2.8"
   },
-  "packageManager": "pnpm@8.15.6+sha256.01c01eeb990e379b31ef19c03e9d06a14afa5250b82e81303f88721c99ff2e6f",
   "volta": {
     "node": "20.12.2"
   }

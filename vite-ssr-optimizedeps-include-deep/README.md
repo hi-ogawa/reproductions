@@ -1,7 +1,8 @@
 - https://github.com/vitejs/vite/issues/16293#issuecomment-2049573464
 
 ```sh
-$ node repro.mjs
+npm i
+node repro.mjs
 ...
 Cannot optimize dependency: @remix-run/server-runtime > cookie, present in 'ssr.optimizeDeps.include'
 ...

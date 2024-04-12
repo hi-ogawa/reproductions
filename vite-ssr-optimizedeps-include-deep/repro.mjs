@@ -1,6 +1,7 @@
 import { createServer } from "vite";
 
 const server = await createServer({
+  clearScreen: false,
   configFile: false,
   optimizeDeps: {
     force: true,
