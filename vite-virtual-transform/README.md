@@ -19,4 +19,7 @@ node repro.mjs
   mangleCache: undefined,
   legalComments: undefined
 }
+[createFilter]
+true
+false
 ```
