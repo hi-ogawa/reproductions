@@ -1,0 +1,17 @@
+{
+  "name": "vite-starter",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node repro.mjs",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "5.2.8"
+  },
+  "volta": {
+    "node": "20.12.2"
+  }
+}
