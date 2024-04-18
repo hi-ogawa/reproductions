@@ -21,12 +21,12 @@ test("repro", () => {
     "1"
   ];
 
-  console.log([
-    import.meta.env.PROD,
-    import.meta.env.DEV,
-    import.meta.env.SSR,
-    process.env.PROD,
-    process.env.DEV,
-    process.env.SSR,
-  ]);
+  console.log({
+    "import.meta.env.PROD": import.meta.env.PROD,
+    "import.meta.env.DEV": import.meta.env.DEV,
+    "import.meta.env.SSR": import.meta.env.SSR,
+    "process.env.PROD": process.env.PROD,
+    "process.env.DEV": process.env.DEV,
+    "process.env.SSR": process.env.SSR
+  });
 });
