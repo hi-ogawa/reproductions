@@ -1,0 +1,23 @@
+{
+  "name": "vite-starter",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node repro.mjs",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "5.2.10"
+  },
+  "volta": {
+    "node": "20.12.2"
+  },
+  "dependencies": {
+    "@hiogawa/utils": "^1.6.4-pre.2",
+    "cookie": "^0.6.0",
+    "minimatch": "^9.0.4",
+    "semver": "^7.6.0"
+  }
+}
