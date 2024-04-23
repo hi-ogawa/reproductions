@@ -1,0 +1,16 @@
+{
+  "version": "0.0.0",
+  "private": true,
+  "type": "commonjs",
+  "scripts": {
+    "test": "jest",
+    "tsc-dev": "tsc -b --watch --preserveWatchOutput"
+  },
+  "devDependencies": {
+    "@jest/globals": "^29.7.0",
+    "esbuild": "^0.20.2",
+    "esbuild-jest": "^0.5.0",
+    "jest": "^29.7.0",
+    "typescript": "^5.4.5"
+  }
+}
