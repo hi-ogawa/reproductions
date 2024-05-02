@@ -1,0 +1,13 @@
+{
+  "include": ["src", "vite.config.ts"],
+  "compilerOptions": {
+    "strict": true,
+    "noEmit": true,
+    "moduleResolution": "Bundler",
+    "module": "ESNext",
+    "target": "ESNext",
+    "lib": ["ESNext", "DOM", "DOM.Iterable"],
+    "types": ["vite/client"],
+    "jsx": "react-jsx"
+  }
+}
