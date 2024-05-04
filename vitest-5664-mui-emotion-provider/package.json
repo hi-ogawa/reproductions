@@ -1,0 +1,24 @@
+{
+  "name": "@vitest/example-react",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "test": "vitest"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.5",
+    "@mui/material": "^5.15.16",
+    "react": "^18.2.0"
+  },
+  "devDependencies": {
+    "@testing-library/react": "^13.2.0",
+    "@types/react": "^18.2.79",
+    "jsdom": "^24.0.0",
+    "vite": "5.2.10",
+    "vitest": "1.5.3"
+  },
+  "stackblitz": {
+    "startCommand": "npm run test"
+  }
+}
