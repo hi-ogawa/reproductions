@@ -1,7 +1,15 @@
 https://github.com/vitest-dev/vitest/issues/5664
 
 ```sh
-DEBUG=vite:resolve npm run test
+npm run test
+
+# ok
+NO_ALIAS=1 npm run test node.test.tsx
+
+# not ok
+NO_ALIAS=1 npm run test jsdom.test.tsx
+stderr | node_modules/@emotion/react/dist/emotion-react.esm.js:472:15
+You are loading @emotion/react when it is already loaded. Running multiple instances may cause problems. This can happen if multiple versions are used, or if multiple builds of the same version are used.
 ```
 
 ```sh
