@@ -6,6 +6,7 @@
 		"test": "vitest"
 	},
 	"dependencies": {
+		"test-dep": "file:./fixtures/test-dep",
 		"@emotion/react": "^11.11.4",
 		"@emotion/styled": "^11.11.5",
 		"@mui/material": "^5.15.16",
@@ -21,5 +22,6 @@
 	},
 	"stackblitz": {
 		"startCommand": "npm run test"
-	}
+	},
+	"packageManager": "pnpm@9.0.6+sha512.f6d863130973207cb7a336d6b439a242a26ac8068077df530d6a86069419853dc1ffe64029ec594a9c505a3a410d19643c870aba6776330f5cfddcf10a9c1617"
 }

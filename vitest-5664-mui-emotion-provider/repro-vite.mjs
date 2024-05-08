@@ -14,7 +14,7 @@ if (process.argv[2] === "reverse") {
 	console.log("###### server.pluginContainer.resolveId");
 	console.log("######");
 	console.log(
-		await server.pluginContainer.resolveId("@emotion/react", undefined, {
+		await server.pluginContainer.resolveId("test-dep", undefined, {
 			ssr: true,
 		}),
 	);
@@ -34,7 +34,7 @@ if (process.argv[2] === "reverse") {
 	console.log("###### server.pluginContainer.resolveId");
 	console.log("######");
 	console.log(
-		await server.pluginContainer.resolveId("@emotion/react", undefined, {
+		await server.pluginContainer.resolveId("test-dep", undefined, {
 			ssr: true,
 		}),
 	);

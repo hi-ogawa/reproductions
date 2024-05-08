@@ -1,0 +1,20 @@
+{
+  "name": "test-dep",
+  "version": "11.11.4",
+  "main": "dist/emotion-react.cjs.js",
+  "module": "dist/emotion-react.esm.js",
+  "browser": {
+    "./dist/emotion-react.esm.js": "./dist/emotion-react.browser.esm.js"
+  },
+  "exports": {
+    ".": {
+      "module": {
+        "worker": "./dist/emotion-react.worker.esm.js",
+        "browser": "./dist/emotion-react.browser.esm.js",
+        "default": "./dist/emotion-react.esm.js"
+      },
+      "import": "./dist/emotion-react.cjs.mjs",
+      "default": "./dist/emotion-react.cjs.js"
+    }
+  }
+}
