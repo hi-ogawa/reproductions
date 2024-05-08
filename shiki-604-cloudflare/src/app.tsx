@@ -1,12 +1,13 @@
 import { defineComponent } from "vue";
-import { getHighlighterCore } from "shiki/core";
-import shikiWasm from "shiki/wasm";
+import { getHighlighterCore, type HighlighterCore } from "shiki/core";
+
+let highlighter: HighlighterCore;
 
 export const App = defineComponent(async () => {
-	const highlighter = await getHighlighterCore({
+	highlighter ??= await getHighlighterCore({
 		themes: [import("shiki/themes/vitesse-light.mjs")],
 		langs: [import("shiki/langs/vue.mjs")],
-		loadWasm: shikiWasm,
+		loadWasm: import("shiki/wasm"),
 	});
 
 	const html = highlighter.codeToHtml(CODE, {

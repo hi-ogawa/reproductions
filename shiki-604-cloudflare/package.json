@@ -6,9 +6,9 @@
 		"dev": "vite dev",
 		"build": "vite build && vite build --ssr",
 		"preview": "vite preview",
-		"cf-build": "SERVER_ENTRY=/src/adapters/cloudflare-workers pnpm build && bash misc/cloudflare-workers/build.sh",
-		"cf-preview": "cd misc/cloudflare-workers && wrangler dev",
-		"cf-release": "cd misc/cloudflare-workers && wrangler deploy"
+		"cf-build": "SERVER_ENTRY=/src/adapters/cloudflare-workers pnpm build",
+		"cf-preview": "wrangler dev",
+		"cf-release": "false"
 	},
 	"dependencies": {
 		"@hiogawa/vite-plugin-ssr-middleware": "latest",
