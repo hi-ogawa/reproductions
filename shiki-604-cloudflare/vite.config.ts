@@ -10,7 +10,7 @@ export default defineConfig((env) => ({
 	plugins: [
 		vitePluginLogger(),
 		vitePluginSsrMiddleware({
-			entry: "/src/entry-server.tsx",
+			entry: process.env["SERVER_ENTRY"] || "/src/adapters/node",
 			preview: path.resolve("./dist/server/index.js"),
 		}),
 	],
