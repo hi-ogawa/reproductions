@@ -1,20 +1,20 @@
 {
-	"name": "@hiogawa/shiki-cloudflare",
-	"private": true,
-	"type": "module",
-	"scripts": {
-		"dev": "vite dev",
-		"build": "vite build && vite build --ssr",
-		"preview": "vite preview"
-	},
-	"dependencies": {
-		"@hiogawa/vite-plugin-ssr-middleware": "latest",
-		"shiki": "^1.4.0",
-		"vite": "latest",
-		"vue": "^3.4.27"
-	},
-	"packageManager": "pnpm@9.0.6+sha512.f6d863130973207cb7a336d6b439a242a26ac8068077df530d6a86069419853dc1ffe64029ec594a9c505a3a410d19643c870aba6776330f5cfddcf10a9c1617",
-	"devDependencies": {
-		"@types/node": "^20.12.10"
-	}
+  "name": "@hiogawa/demo-shiki-cloudflare-vite-ssr",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite dev",
+    "build": "vite build && vite build --ssr",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@hiogawa/vite-plugin-ssr-middleware": "latest",
+    "shiki": "^1.4.0",
+    "vite": "latest",
+    "vue": "^3.4.27"
+  },
+  "devDependencies": {
+    "@types/node": "^20.12.10"
+  },
+  "packageManager": "pnpm@9.0.6+sha512.f6d863130973207cb7a336d6b439a242a26ac8068077df530d6a86069419853dc1ffe64029ec594a9c505a3a410d19643c870aba6776330f5cfddcf10a9c1617"
 }
