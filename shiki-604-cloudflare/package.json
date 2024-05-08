@@ -8,7 +8,7 @@
 		"preview": "vite preview",
 		"cf-build": "SERVER_ENTRY=/src/adapters/cloudflare-workers pnpm build",
 		"cf-preview": "wrangler dev",
-		"cf-release": "false"
+		"cf-release": "wrangler deploy"
 	},
 	"dependencies": {
 		"@hiogawa/vite-plugin-ssr-middleware": "latest",
