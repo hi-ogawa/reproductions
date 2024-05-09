@@ -7,13 +7,18 @@ import { defineConfig } from "vite";
 
 export default defineConfig((env) => ({
 	clearScreen: false,
+	define: {
+		"import.meta.env.VITE_BUILD_CF": !!process.env["VITE_BUILD_CF"],
+	},
 	plugins: [
 		vitePluginLogger(),
 		vitePluginSsrMiddleware({
-			entry: process.env["SERVER_ENTRY"] || "/src/adapters/node",
+			entry: process.env["VITE_BUILD_CF"]
+				? "/src/adapters/cloudflare-workers"
+				: "/src/adapters/node",
 			preview: path.resolve("./dist/server/index.js"),
 		}),
-		!!process.env["SERVER_ENTRY"] && {
+		{
 			name: "wrangler-wasm",
 			apply: (_config, env) => !!env.isSsrBuild,
 			config() {

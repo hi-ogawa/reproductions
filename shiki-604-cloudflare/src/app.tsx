@@ -5,11 +5,11 @@ let highlighter: HighlighterCore;
 
 export const App = defineComponent(async () => {
 	await loadWasm(async (info) => {
-		if (import.meta.env.DEV) {
-			return import("shiki/wasm");
-		} else {
+		if (import.meta.env.VITE_BUILD_CF) {
 			const mod = await import("shiki/onig.wasm" as string);
 			return WebAssembly.instantiate(mod.default, info);
+		} else {
+			return import("shiki/wasm");
 		}
 	});
 
