@@ -6,7 +6,7 @@
 		"dev": "vite dev",
 		"build": "vite build && vite build --ssr",
 		"preview": "vite preview",
-		"cf-build": "VITE_BUILD_CF=1 pnpm build",
+		"cf-build": "VITE_BUILD_CF=1 pnpm build && rm dist/client/index.html",
 		"cf-preview": "wrangler dev",
 		"cf-dry": "wrangler publish --dry-run --outdir dist/cf-dry",
 		"cf-release": "wrangler deploy"
