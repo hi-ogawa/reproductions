@@ -18,7 +18,7 @@ export default defineConfig((env) => ({
 				: "/src/adapters/node",
 			preview: path.resolve("./dist/server/index.js"),
 		}),
-		{
+		!!process.env["VITE_BUILD_CF"] && {
 			name: "wrangler-wasm",
 			apply: (_config, env) => !!env.isSsrBuild,
 			config() {
