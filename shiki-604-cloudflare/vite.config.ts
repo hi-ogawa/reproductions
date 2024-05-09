@@ -23,6 +23,11 @@ export default defineConfig((env) => ({
 			apply: (_config, env) => !!env.isSsrBuild,
 			config() {
 				return {
+					resolve: {
+						alias: {
+							"shiki/wasm": "shiki/onig.wasm",
+						},
+					},
 					build: {
 						rollupOptions: {
 							external: [/\.wasm$/],

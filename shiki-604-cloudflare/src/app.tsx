@@ -4,14 +4,7 @@ import { getHighlighterCore, loadWasm, type HighlighterCore } from "shiki/core";
 let highlighter: HighlighterCore;
 
 export const App = defineComponent(async () => {
-	await loadWasm(async (info) => {
-		if (import.meta.env.VITE_BUILD_CF) {
-			const mod = await import("shiki/onig.wasm" as string);
-			return WebAssembly.instantiate(mod.default, info);
-		} else {
-			return import("shiki/wasm");
-		}
-	});
+	await loadWasm(import("shiki/wasm"));
 
 	highlighter ??= await getHighlighterCore({
 		themes: [import("shiki/themes/vitesse-light.mjs")],
