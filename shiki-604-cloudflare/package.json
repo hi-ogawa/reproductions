@@ -12,14 +12,15 @@
 		"cf-release": "wrangler deploy"
 	},
 	"dependencies": {
-		"@hiogawa/vite-plugin-ssr-middleware": "latest",
-		"shiki": "^1.4.0",
-		"vite": "latest",
+		"@shikijs/core": "^1.5.0",
+		"shiki": "^1.5.1",
 		"vue": "^3.4.27"
 	},
 	"devDependencies": {
 		"@hattip/adapter-node": "^0.0.45",
+		"@hiogawa/vite-plugin-ssr-middleware": "^0.0.3",
 		"@types/node": "^20.12.10",
+		"vite": "^5.2.11",
 		"wrangler": "^3.53.1"
 	},
 	"packageManager": "pnpm@9.0.6+sha512.f6d863130973207cb7a336d6b439a242a26ac8068077df530d6a86069419853dc1ffe64029ec594a9c505a3a410d19643c870aba6776330f5cfddcf10a9c1617"

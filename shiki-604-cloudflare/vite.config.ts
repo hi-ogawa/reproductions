@@ -7,9 +7,6 @@ import { defineConfig } from "vite";
 
 export default defineConfig((env) => ({
 	clearScreen: false,
-	define: {
-		"import.meta.env.VITE_BUILD_CF": !!process.env["VITE_BUILD_CF"],
-	},
 	plugins: [
 		vitePluginLogger(),
 		vitePluginSsrMiddleware({
@@ -18,11 +15,16 @@ export default defineConfig((env) => ({
 				: "/src/adapters/node",
 			preview: path.resolve("./dist/server/index.js"),
 		}),
-		{
-			name: "wrangler-wasm",
+		!!process.env["VITE_BUILD_CF"] && {
+			name: "shiki-wasm-cloudflare",
 			apply: (_config, env) => !!env.isSsrBuild,
 			config() {
 				return {
+					resolve: {
+						alias: {
+							"shiki/wasm": "shiki/onig.wasm",
+						},
+					},
 					build: {
 						rollupOptions: {
 							external: [/\.wasm$/],
