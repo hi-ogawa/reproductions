@@ -4,6 +4,7 @@ import { getHighlighterCore, loadWasm, type HighlighterCore } from "shiki/core";
 let highlighter: HighlighterCore;
 
 export const App = defineComponent(async () => {
+	// setup vite alias to `shiki/onig.wasm` during cf build
 	await loadWasm(import("shiki/wasm"));
 
 	highlighter ??= await getHighlighterCore({
