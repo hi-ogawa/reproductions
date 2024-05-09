@@ -16,7 +16,7 @@ export default defineConfig((env) => ({
 			preview: path.resolve("./dist/server/index.js"),
 		}),
 		!!process.env["VITE_BUILD_CF"] && {
-			name: "wrangler-wasm",
+			name: "shiki-wasm-cloudflare",
 			apply: (_config, env) => !!env.isSsrBuild,
 			config() {
 				return {
