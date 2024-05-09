@@ -1,14 +1,14 @@
-import type { ViteDevServer } from "vite";
 import { App } from "./app";
 import { renderToString } from "vue/server-renderer";
-
-declare let __vite_server: ViteDevServer;
 
 export async function handler(_request: Request) {
 	let html: string;
 	if (import.meta.env.DEV) {
 		html = (await import("/index.html?raw")).default;
-		html = await __vite_server.transformIndexHtml("/", html);
+		html = html.replace(
+			"<head>",
+			`<head><script type="module" src="/@vite/client"></script>`,
+		);
 	} else {
 		html = (await import("/dist/client/index.html?raw")).default;
 	}
