@@ -7,9 +7,6 @@ import { defineConfig } from "vite";
 
 export default defineConfig((env) => ({
 	clearScreen: false,
-	define: {
-		"import.meta.env.VITE_BUILD_CF": !!process.env["VITE_BUILD_CF"],
-	},
 	plugins: [
 		vitePluginLogger(),
 		vitePluginSsrMiddleware({
