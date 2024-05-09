@@ -8,6 +8,7 @@
 		"preview": "vite preview",
 		"cf-build": "SERVER_ENTRY=/src/adapters/cloudflare-workers pnpm build",
 		"cf-preview": "wrangler dev",
+		"cf-dry": "wrangler publish --dry-run --outdir dist/cf-dry",
 		"cf-release": "wrangler deploy"
 	},
 	"dependencies": {
