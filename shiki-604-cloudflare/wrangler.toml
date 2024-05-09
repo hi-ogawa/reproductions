@@ -1,0 +1,10 @@
+name = "shiki-cloudflare-demo"
+main = "dist/server/index.js"
+assets = "dist/client"
+workers_dev = true
+compatibility_date = "2024-01-01"
+
+[define]
+__VUE_OPTIONS_API__ = "false"
+__VUE_PROD_DEVTOOLS__ = "false"
+__VUE_PROD_HYDRATION_MISMATCH_DETAILS__ = "false"

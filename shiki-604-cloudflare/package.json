@@ -1,0 +1,26 @@
+{
+	"name": "@hiogawa/demo-shiki-cloudflare-vite-ssr",
+	"private": true,
+	"type": "module",
+	"scripts": {
+		"dev": "vite dev",
+		"build": "vite build && vite build --ssr",
+		"preview": "vite preview",
+		"cf-build": "VITE_BUILD_CF=1 pnpm build && rm dist/client/index.html",
+		"cf-preview": "wrangler dev",
+		"cf-dry": "wrangler publish --dry-run --outdir dist/cf-dry",
+		"cf-release": "wrangler deploy"
+	},
+	"dependencies": {
+		"@hiogawa/vite-plugin-ssr-middleware": "latest",
+		"shiki": "^1.4.0",
+		"vite": "latest",
+		"vue": "^3.4.27"
+	},
+	"devDependencies": {
+		"@hattip/adapter-node": "^0.0.45",
+		"@types/node": "^20.12.10",
+		"wrangler": "^3.53.1"
+	},
+	"packageManager": "pnpm@9.0.6+sha512.f6d863130973207cb7a336d6b439a242a26ac8068077df530d6a86069419853dc1ffe64029ec594a9c505a3a410d19643c870aba6776330f5cfddcf10a9c1617"
+}
