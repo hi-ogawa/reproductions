@@ -1,5 +1,5 @@
 diff --git a/dist/index.mjs b/dist/index.mjs
-index b5138caf105a39be021ce5eaaa1874a388f73322..06da21ac26661f535ceb79da2f905f8a622478d8 100644
+index b5138caf105a39be021ce5eaaa1874a388f73322..9e1d0a8ed8837789c7e9a3a51fcb1d7f23dfcd18 100644
 --- a/dist/index.mjs
 +++ b/dist/index.mjs
 @@ -4979,7 +4979,13 @@ function loadWasm(options) {
@@ -7,9 +7,9 @@ index b5138caf105a39be021ce5eaaa1874a388f73322..06da21ac26661f535ceb79da2f905f8a
                      instance = await _makeArrayBufferLoader(instance)(info);
                  }
 -            }
-+                // else if (instance instanceof WebAssembly.Module) {
-+                //   instance = await _makeArrayBufferLoader(instance)(info);
-+                // }
++                else if (instance instanceof WebAssembly.Module) {
++                  instance = await _makeArrayBufferLoader(instance)(info);
++                }
 +                else if (instance.default instanceof WebAssembly.Module) {
 +                  instance = await _makeArrayBufferLoader(instance.default)(info);
 +                }
