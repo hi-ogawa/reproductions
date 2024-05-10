@@ -1,0 +1,23 @@
+{
+	"name": "@vitest/example-react",
+	"type": "module",
+	"private": true,
+	"scripts": {
+		"test": "vitest"
+	},
+	"dependencies": {
+		"react": "^18.2.0"
+	},
+	"devDependencies": {
+		"@testing-library/jest-dom": "^6.4.2",
+		"@testing-library/react": "^13.2.0",
+		"@testing-library/user-event": "^14.5.2",
+		"@types/react": "^18.2.79",
+		"jsdom": "^24.0.0",
+		"vite": "latest",
+		"vitest": "latest"
+	},
+	"stackblitz": {
+		"startCommand": "DEBUG_PRINT_LIMIT=100000 CI=1 npm run test npm run test"
+	}
+}
