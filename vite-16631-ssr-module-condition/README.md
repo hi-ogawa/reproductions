@@ -2,8 +2,11 @@ https://github.com/vitejs/vite/issues/16631
 
 ```sh
 $ node repro-vite.mjs
-[ 'default' ]
+[ 'module' ]
 
-$ TEST_INLINE=1 node repro-vite.mjs
+$ TEST_NO_EXTERNAL=1 node repro-vite.mjs
+[ 'module' ]
+
+$ TEST_EXTERNAL=1 node repro-vite.mjs
 [ 'module' ]
 ```
