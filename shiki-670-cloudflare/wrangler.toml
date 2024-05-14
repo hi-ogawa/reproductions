@@ -1,0 +1,3 @@
+name = "shiki-670-cloudflare"
+main = "server.js"
+compatibility_date = "2024-01-01"

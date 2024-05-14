@@ -1,0 +1,15 @@
+{
+	"name": "@hiogawa/demo-shiki-cloudflare-vite-ssr",
+	"private": true,
+	"type": "module",
+	"scripts": {
+		"dev": "wrangler dev",
+		"release": "wrangler deploy"
+	},
+	"dependencies": {
+		"shiki": "^1.5.2"
+	},
+	"devDependencies": {
+		"wrangler": "^3.56.0"
+	}
+}
