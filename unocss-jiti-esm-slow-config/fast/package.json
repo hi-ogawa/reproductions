@@ -1,0 +1,9 @@
+{
+	"private": true,
+	"type": "module",
+	"scripts": {},
+	"dependencies": {
+		"@unocss/config": "0.58.9",
+		"unocss": "0.58.9"
+	}
+}
