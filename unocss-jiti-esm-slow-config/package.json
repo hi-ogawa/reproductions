@@ -1,0 +1,12 @@
+{
+	"private": true,
+	"type": "module",
+	"scripts": {},
+	"dependencies": {
+		"@unocss/config": "^0.60.2",
+		"unocss": "^0.60.2"
+	},
+	"stackblitz": {
+		"startCommand": "node repro.mjs"
+	}
+}
