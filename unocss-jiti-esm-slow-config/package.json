@@ -7,6 +7,6 @@
 		"unocss": "^0.60.2"
 	},
 	"stackblitz": {
-		"startCommand": "node repro.mjs"
+		"startCommand": "node repro.mjs && (cd fast && npm i && node repro.mjs)"
 	}
 }
