@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   '@hattip/adapter-node':
-    specifier: ^0.0.44
-    version: 0.0.44
+    specifier: ^0.0.45
+    version: 0.0.45
   '@hono/node-server':
     specifier: ^1.11.1
     version: 1.11.1
@@ -235,37 +235,37 @@ packages:
     dev: false
     optional: true
 
-  /@hattip/adapter-node@0.0.44:
-    resolution: {integrity: sha512-Qf0kcrE4yHFrmKgfntrxHGNkk0/9a45aKmAO3ex6OiRKat5DZCFDdFMHV85Z594IohzT7Q+WcWiHQl/b0Jvo7Q==}
+  /@hattip/adapter-node@0.0.45:
+    resolution: {integrity: sha512-doZZbmI4y3AQ1nObGNIHTD+5+u0KjfEvpnpwgxVzyh6/SLC3w+G2Za9lNtv9PXiwHMXWFph942aXnZFOx7M4YQ==}
     dependencies:
-      '@hattip/core': 0.0.44
-      '@hattip/polyfills': 0.0.44
-      '@hattip/walk': 0.0.44
+      '@hattip/core': 0.0.45
+      '@hattip/polyfills': 0.0.45
+      '@hattip/walk': 0.0.45
     dev: false
 
-  /@hattip/core@0.0.44:
-    resolution: {integrity: sha512-hW0scygJk2FjC8lL+NAaV8eY5XtseXvX+EyORFgtURJQ33myy/epSFm7uLZcVNVU9aA0C4WyJQSza+U0rxt2Sg==}
+  /@hattip/core@0.0.45:
+    resolution: {integrity: sha512-4BK9dPU7sLvmP9sUq048uSaKFvQY2Qa6D0xQteQBIiDYuTdbopcUQLETM1sdkUeUtFxHPwPu/NclfJAC5INarw==}
     dev: false
 
-  /@hattip/headers@0.0.44:
-    resolution: {integrity: sha512-bwNQ+o8RRTox9FWkmprTP8/rNki9BXkrthCDdnT5zgfkjZk6VFAloV5jmYqnqrNkh3Aw5DFGUcQJRoQBb4aQCw==}
+  /@hattip/headers@0.0.45:
+    resolution: {integrity: sha512-owgxAt1jdhEcAdDfnlpPa8iQx/swItReYUlo8UFZ0GUCMiWJvnpl6rTdUsS6bCwMK9IJOliivN4dHEY8VKdGQw==}
     dependencies:
-      '@hattip/core': 0.0.44
+      '@hattip/core': 0.0.45
     dev: false
 
-  /@hattip/polyfills@0.0.44:
-    resolution: {integrity: sha512-ldNES22u/135K8Yg6nti1djcwZeIw6e1SY/iqW0qh+AfyYNHuGTix7YL/9OKAD9wbOUj2NHqXYOGCT69NsfIqA==}
+  /@hattip/polyfills@0.0.45:
+    resolution: {integrity: sha512-H8a+NVu/rAspycnkLSLVvWu3ei/ndFhA+3KQS1p2YjCcuf4Wuj4EWfScrwgL4d6CR0J+FxqX1P9NDGa4tdJQmQ==}
     dependencies:
-      '@hattip/core': 0.0.44
+      '@hattip/core': 0.0.45
       '@whatwg-node/fetch': 0.9.17
       node-fetch-native: 1.6.4
     dev: false
 
-  /@hattip/walk@0.0.44:
-    resolution: {integrity: sha512-tjYO71byyQpdsOVKJ4cySAwWSYqU9IWbROiU1D9SqlQyEYN+TOEaB6n8YkX1gyRbLVkMe+/DJcuagm9AQdPO5A==}
+  /@hattip/walk@0.0.45:
+    resolution: {integrity: sha512-GYEQN5n2JUzjLl9hdMJ+0mbsfwvldRKMBdxx+l29SxmRhOwyWURDyaSfX7UEkEmmxjbg4YqEoWyYgaAtxeW7Jw==}
     hasBin: true
     dependencies:
-      '@hattip/headers': 0.0.44
+      '@hattip/headers': 0.0.45
       cac: 6.7.14
       mime-types: 2.1.35
     dev: false
