@@ -1,4 +1,5 @@
 import { Counter } from "./_client";
+import { Client1, Client2 } from "./_repro";
 
 export default function Page() {
 	return (
@@ -15,6 +16,9 @@ export default function Page() {
 				<div>
 					<div>Server: {Math.random().toString(36).slice(2)}</div>
 					<Counter />
+
+					{/* TypeError: Cannot assign to read only property 'SomeComp' of object '#<Object>' */}
+					<Client1 SomeComp={Client2} />
 				</div>
 			</body>
 		</html>
