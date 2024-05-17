@@ -11,9 +11,9 @@ export default defineConfig({
 						try {
 							const entry = process.env["SERVER_ENTRY"] || "/src/hono";
 							const mod = await server.ssrLoadModule(entry);
-							await mod.default(req, res);
+							await mod.default(req, res, next);
 						} catch (e) {
-							next();
+							next(e);
 						}
 					} else {
 						next();

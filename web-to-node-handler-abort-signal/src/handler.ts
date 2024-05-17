@@ -1,4 +1,4 @@
-export function handler(req: Request) {
+export async function handler(req: Request) {
 	let aborted = false;
 	req.signal.addEventListener("abort", () => {
 		console.log("abort!");
