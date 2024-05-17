@@ -21,7 +21,7 @@
         $("#response").textContent = "";
         abortController = new AbortController();
         const res = await fetch("/stream", { signal: abortController.signal });
-        res.body?.pipeThrough(new TextDecoderStream()).pipeTo(new WritableStream({
+        await res.body?.pipeThrough(new TextDecoderStream()).pipeTo(new WritableStream({
           write(chunk) {
             $("#response").textContent += chunk;
           }

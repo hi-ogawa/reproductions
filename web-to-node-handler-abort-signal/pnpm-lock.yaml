@@ -8,6 +8,12 @@ dependencies:
   '@hattip/adapter-node':
     specifier: ^0.0.44
     version: 0.0.44
+  '@hono/node-server':
+    specifier: ^1.11.1
+    version: 1.11.1
+  hono:
+    specifier: ^4.3.7
+    version: 4.3.7
   vite:
     specifier: ^5.2.11
     version: 5.2.11(@types/node@20.12.12)
@@ -261,6 +267,11 @@ packages:
       mime-types: 2.1.35
     dev: false
 
+  /@hono/node-server@1.11.1:
+    resolution: {integrity: sha512-GW1Iomhmm1o4Z+X57xGby8A35Cu9UZLL7pSMdqDBkD99U5cywff8F+8hLk5aBTzNubnsFAvWQ/fZjNwPsEn9lA==}
+    engines: {node: '>=18.14.1'}
+    dev: false
+
   /@kamilkisiela/fast-url-parser@1.1.4:
     resolution: {integrity: sha512-gbkePEBupNydxCelHCESvFSFM8XPh1Zs/OAVRW/rKpEqPAl5PbOM90Si8mv9bvnR53uPD2s/FiRxdvSejpRJew==}
     dev: false
@@ -486,6 +497,11 @@ packages:
     requiresBuild: true
     dev: false
     optional: true
+
+  /hono@4.3.7:
+    resolution: {integrity: sha512-GXlsGnCAwGosu+COwYyYC8MwOY2L6Ihg9V1znYdMD8DHCJl+13Nk4o8dsBYJpae4oujjw24jBaITuYWVq2+V8Q==}
+    engines: {node: '>=16.0.0'}
+    dev: false
 
   /mime-db@1.52.0:
     resolution: {integrity: sha512-sPU4uV7dYlvtWJxwwxHD0PuihVNiE7TyAbQ5SWxDCB9mUYvOgroQOwYQQOKPJ8CIbE+1ETVlOoK1UC2nU3gYvg==}

@@ -1,6 +1,9 @@
-import { createMiddleware } from "@hattip/adapter-node/native-fetch";
+import { getRequestListener } from "@hono/node-server";
+import { Hono } from "hono";
 
-function handler(_req: Request) {
+const app = new Hono();
+
+app.get("*", () => {
 	let cancelled = false;
 
 	const stream = new ReadableStream<string>({
@@ -19,6 +22,6 @@ function handler(_req: Request) {
 	});
 
 	return new Response(stream.pipeThrough(new TextEncoderStream()));
-}
+});
 
-export default createMiddleware((ctx) => handler(ctx.request));
+export default getRequestListener(app.fetch);
