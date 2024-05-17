@@ -1,5 +1,4 @@
 import type http from "node:http";
-import { Readable } from "node:stream";
 import ReactDOMServer from "react-dom/server.edge";
 import type { StreamData } from "./entry-server";
 import { $__global } from "./global";
