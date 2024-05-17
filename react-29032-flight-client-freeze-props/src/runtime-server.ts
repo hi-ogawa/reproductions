@@ -1,8 +1,6 @@
 import ReactServer from "react-server-dom-webpack/server.edge";
 
-export const Counter = registerClientReference("id", "Counter");
-
-function registerClientReference(id: string, name: string) {
+export function registerClientReference(id: string, name: string) {
 	return Object.defineProperties(
 		{},
 		{

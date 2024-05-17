@@ -1,36 +1,34 @@
-import http from "node:http";
-import assert from "node:assert";
-import { Counter } from "./routes/_client";
-import type { StreamData } from "./entry-server";
+import type http from "node:http";
 import { Readable } from "node:stream";
 import ReactDOMServer from "react-dom/server.edge";
+import type { StreamData } from "./entry-server";
+import { $__global } from "./global";
+import { createMemoImport } from "./runtime-client";
 
-async function handler(_req: http.IncomingMessage, res: http.ServerResponse) {
-	(globalThis as any).__webpack_require__ = (_id: string) => {
-		return { Counter };
-	};
+export default async function handler(
+	_req: http.IncomingMessage,
+	res: http.ServerResponse,
+) {
+	const reactServer = await importReactServer();
+	const flightStream = await reactServer.handler();
+
+	(globalThis as any).__webpack_require__ = createMemoImport();
 	const { default: ReactClient } = await import(
 		"react-server-dom-webpack/client.edge"
 	);
-	const flightRes = await fetch("http://localhost:3001");
-	assert.ok(flightRes.ok);
-	assert.ok(flightRes.body);
 	const node = await ReactClient.createFromReadableStream<StreamData>(
-		flightRes.body,
+		flightStream,
 		{
 			ssrManifest: {},
 		},
 	);
-	const ssrStream = await ReactDOMServer.renderToReadableStream(node);
-	res.setHeader("content-tyep", "text/html;charset=utf-8");
+	const ssrStream = await ReactDOMServer.renderToReadableStream(node, {
+		bootstrapModules: ["/@vite/client", "/src/entry-browser"],
+	});
+	res.setHeader("content-type", "text/html;charset=utf-8");
 	Readable.fromWeb(ssrStream as any).pipe(res);
 }
 
-async function main() {
-	const server = http.createServer(handler);
-	server.listen(3002, () => {
-		console.log(":: listening at http://localhost:3002");
-	});
+async function importReactServer(): Promise<typeof import("./entry-server")> {
+	return $__global.reactServer.ssrLoadModule("/src/entry-server") as any;
 }
-
-main();
