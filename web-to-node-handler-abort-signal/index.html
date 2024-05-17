@@ -20,7 +20,7 @@
       $("#fetch").addEventListener("click", async () => {
         $("#response").textContent = "";
         abortController = new AbortController();
-        const res = await fetch("/stream", { signal: abortController.signal });
+        const res = await fetch("/api/stream", { signal: abortController.signal });
         await res.body?.pipeThrough(new TextDecoderStream()).pipeTo(new WritableStream({
           write(chunk) {
             $("#response").textContent += chunk;

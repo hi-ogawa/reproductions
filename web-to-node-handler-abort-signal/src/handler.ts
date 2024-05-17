@@ -5,6 +5,11 @@ export async function handler(req: Request) {
 		aborted = true;
 	});
 
+	const url = new URL(req.url);
+	if (url.pathname === "/api/simple") {
+		return new Response("simple!");
+	}
+
 	let cancelled = false;
 
 	const stream = new ReadableStream<string>({

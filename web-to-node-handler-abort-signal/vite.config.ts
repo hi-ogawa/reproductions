@@ -7,7 +7,7 @@ export default defineConfig({
 			name: "node-middleware",
 			configureServer(server) {
 				server.middlewares.use(async (req, res, next) => {
-					if (req.originalUrl === "/stream") {
+					if (req.originalUrl?.startsWith("/api/")) {
 						try {
 							const entry = process.env["SERVER_ENTRY"] || "/src/hono";
 							const mod = await server.ssrLoadModule(entry);
