@@ -9,7 +9,7 @@ export default defineConfig({
 				server.middlewares.use(async (req, res, next) => {
 					if (req.originalUrl === "/stream") {
 						try {
-							const entry = process.env["SERVER_ENTRY"] || "/src/hattip";
+							const entry = process.env["SERVER_ENTRY"] || "/src/hono";
 							const mod = await server.ssrLoadModule(entry);
 							await mod.default(req, res);
 						} catch (e) {
