@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, height=device-height, initial-scale=1.0"
+    />
+  </head>
+  <body>
+    <button id="fetch">fetch stream</button>
+    <button id="abort">abort stream</button>
+    <pre id="response"></pre>
+
+    <script type="module">
+      const $ = document.querySelector.bind(document);
+      let abortController;
+
+      // https://developer.mozilla.org/en-US/docs/Web/API/AbortController/abort#examples
+      $("#fetch").addEventListener("click", async () => {
+        $("#response").textContent = "";
+        abortController = new AbortController();
+        const res = await fetch("/stream", { signal: abortController.signal });
+        res.body?.pipeThrough(new TextDecoderStream()).pipeTo(new WritableStream({
+          write(chunk) {
+            $("#response").textContent += chunk;
+          }
+        }))
+      });
+
+      $("#abort").addEventListener("click", () => {
+        abortController?.abort();
+      });
+  </script>
+  </body>
+</html>
