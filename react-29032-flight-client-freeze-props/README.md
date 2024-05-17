@@ -1,5 +1,5 @@
 https://github.com/hi-ogawa/vite-plugins/pull/318
 
 ```sh
-npm run dev
+pnpm dev
 ```
