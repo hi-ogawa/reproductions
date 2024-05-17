@@ -14,9 +14,6 @@ dependencies:
   h3:
     specifier: ^1.11.1
     version: 1.11.1
-  hono:
-    specifier: ^4.3.7
-    version: 4.3.7
   vite:
     specifier: ^5.2.11
     version: 5.2.11(@types/node@20.12.12)
@@ -542,11 +539,6 @@ packages:
       unenv: 1.9.0
     transitivePeerDependencies:
       - uWebSockets.js
-    dev: false
-
-  /hono@4.3.7:
-    resolution: {integrity: sha512-GXlsGnCAwGosu+COwYyYC8MwOY2L6Ihg9V1znYdMD8DHCJl+13Nk4o8dsBYJpae4oujjw24jBaITuYWVq2+V8Q==}
-    engines: {node: '>=16.0.0'}
     dev: false
 
   /iron-webcrypto@1.2.1:
