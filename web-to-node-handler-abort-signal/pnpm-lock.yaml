@@ -9,8 +9,8 @@ dependencies:
     specifier: ^0.0.45
     version: 0.0.45
   '@hiogawa/utils-node':
-    specifier: 0.0.1-pre.16
-    version: 0.0.1-pre.16
+    specifier: 0.0.1-pre.17
+    version: 0.0.1-pre.17
   '@hono/node-server':
     specifier: ^1.11.1
     version: 1.11.1
@@ -270,8 +270,8 @@ packages:
       mime-types: 2.1.35
     dev: false
 
-  /@hiogawa/utils-node@0.0.1-pre.16:
-    resolution: {integrity: sha512-/cZDay5QhLRZVPVDirL/BsWzkcnbleeXxyMyMQ10d+AhbPp9jtVemZ6w/8tyrdZFU4fM2Q5MxJBu6XweWLhm2g==}
+  /@hiogawa/utils-node@0.0.1-pre.17:
+    resolution: {integrity: sha512-d58uSQ1gt0h2+ewf+mE4s/IE4LKANm2UQvZEKTM4XfW3kZ8X73KQGxCFTSxgHNciNKwmLk2YKfGxu9QanzMN5A==}
     dev: false
 
   /@hono/node-server@1.11.1:

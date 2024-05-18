@@ -7,7 +7,7 @@
 	},
 	"dependencies": {
 		"@hattip/adapter-node": "^0.0.45",
-		"@hiogawa/utils-node": "0.0.1-pre.16",
+		"@hiogawa/utils-node": "0.0.1-pre.17",
 		"@hono/node-server": "^1.11.1",
 		"h3": "^1.11.1",
 		"vite": "^5.2.11"
