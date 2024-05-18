@@ -8,6 +8,9 @@ dependencies:
   '@hattip/adapter-node':
     specifier: ^0.0.45
     version: 0.0.45
+  '@hiogawa/utils-node':
+    specifier: 0.0.1-pre.16
+    version: 0.0.1-pre.16
   '@hono/node-server':
     specifier: ^1.11.1
     version: 1.11.1
@@ -265,6 +268,10 @@ packages:
       '@hattip/headers': 0.0.45
       cac: 6.7.14
       mime-types: 2.1.35
+    dev: false
+
+  /@hiogawa/utils-node@0.0.1-pre.16:
+    resolution: {integrity: sha512-/cZDay5QhLRZVPVDirL/BsWzkcnbleeXxyMyMQ10d+AhbPp9jtVemZ6w/8tyrdZFU4fM2Q5MxJBu6XweWLhm2g==}
     dev: false
 
   /@hono/node-server@1.11.1:
