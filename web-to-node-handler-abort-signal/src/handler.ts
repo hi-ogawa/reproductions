@@ -6,17 +6,20 @@ export async function handler(req: Request) {
 	});
 
 	const url = new URL(req.url);
+	console.log("[pathname]", url.pathname);
 	if (url.pathname === "/api/simple") {
-		return new Response("simple!");
+		return new Response("simple!\n");
 	}
 
 	let cancelled = false;
 
-	const stream = new ReadableStream<string>({
+	const encoder = new TextEncoder();
+
+	const stream = new ReadableStream<Uint8Array>({
 		async start(controller) {
 			for (let i = 0; !aborted && !cancelled; i++) {
 				console.log(`sending i = ${i}`);
-				controller.enqueue(`i = ${i}\n`);
+				controller.enqueue(encoder.encode(`i = ${i}\n`));
 				await new Promise((resolve) => setTimeout(resolve, 1000));
 			}
 			controller.close();
@@ -27,5 +30,5 @@ export async function handler(req: Request) {
 		},
 	});
 
-	return new Response(stream.pipeThrough(new TextEncoderStream()));
+	return new Response(stream);
 }

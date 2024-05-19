@@ -3,7 +3,10 @@
 	"type": "module",
 	"scripts": {
 		"dev": "vite",
-		"lint": "biome check --apply --linter-enabled=false ."
+		"lint": "biome check --apply --linter-enabled=false .",
+		"deno": "deno run --allow-net src/deno.ts",
+		"bun": "bun run src/bun.ts",
+		"test": "curl http://localhost:5173/api/simple && curl http://localhost:5173/api/stream"
 	},
 	"dependencies": {
 		"@hattip/adapter-node": "^0.0.45",
