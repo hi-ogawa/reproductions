@@ -15,7 +15,7 @@ export async function handler(req: Request) {
 	const stream = new ReadableStream<string>({
 		async start(controller) {
 			for (let i = 0; !aborted && !cancelled; i++) {
-				console.log({ i });
+				console.log(`sending i = ${i}`);
 				controller.enqueue(`i = ${i}\n`);
 				await new Promise((resolve) => setTimeout(resolve, 1000));
 			}
