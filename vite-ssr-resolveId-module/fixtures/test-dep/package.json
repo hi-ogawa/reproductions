@@ -1,0 +1,6 @@
+{
+	"name": "test-dep",
+	"version": "11.11.4",
+	"main": "./dist/main.js",
+	"module": "./dist/module.js"
+}
