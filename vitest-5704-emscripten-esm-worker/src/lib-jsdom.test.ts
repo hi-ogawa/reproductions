@@ -1,7 +1,8 @@
 // @vitest-environment jsdom
-import { test } from "vitest";
+import { expect, test } from "vitest";
 import Module from "../dist/lib.js";
 
-test.fails("basic", async () => {
-	await Module();
+test("basic", async () => {
+	const lib = await Module();
+	expect(lib.hello("world")).toMatchInlineSnapshot(`"hello, world!"`);
 });

@@ -6,5 +6,5 @@ emcc --version # 3.1.59
 make
 node src/main-demo.js
 node src/lib-demo.js
-pnpm test
+VITE_NODE_DEBUG_DUMP=1 pnpm test
 ```
