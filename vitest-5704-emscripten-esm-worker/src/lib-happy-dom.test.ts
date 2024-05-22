@@ -2,6 +2,9 @@
 import { test } from "vitest";
 import Module from "../dist/lib.js";
 
+// fileURLToPath breaks because jsdom/happy-dom does
+//   new URL("./", import.meta.url) --> http://localhost:3000/src
+
 // TypeError: The URL must be of scheme file
 //  ❯ Module.default dist/lib.js:142:37
 //     140|    // since there's no way getting the current absolute path of the module when
