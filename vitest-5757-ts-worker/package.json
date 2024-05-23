@@ -1,0 +1,15 @@
+{
+	"type": "module",
+	"private": true,
+	"scripts": {
+		"test": "vitest"
+	},
+	"devDependencies": {
+		"@types/node": "^20.12.12",
+		"tsx": "^4.10.5",
+		"vitest": "^1.6.0"
+	},
+	"volta": {
+		"node": "20.13.1"
+	}
+}
