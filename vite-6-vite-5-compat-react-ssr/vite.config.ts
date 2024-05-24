@@ -3,6 +3,7 @@ import {
 	type Plugin,
 	type PluginOption,
 	defineConfig,
+	createServerModuleRunner,
 } from "vite";
 import react from "@vitejs/plugin-react";
 
@@ -31,9 +32,13 @@ function vitePluginSsrMiddleware({
 	const plugin: Plugin = {
 		name: vitePluginSsrMiddleware.name,
 		configureServer(server) {
+			const runner = createServerModuleRunner(server.environments.ssr);
+			const load = process.env["USE_RUNNER"]
+				? runner.import.bind(runner)
+				: server.ssrLoadModule;
 			const handler: Connect.NextHandleFunction = async (req, res, next) => {
 				try {
-					const mod = await server.ssrLoadModule(entry);
+					const mod = await load(entry);
 					await mod["default"](req, res, next);
 				} catch (e) {
 					next(e);

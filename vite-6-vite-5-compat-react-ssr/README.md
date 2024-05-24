@@ -6,3 +6,5 @@ Hydration error reproduction after Client HMR
 - load page
 - edit `root.tsx` and see client hmr works
 - reload and see hydration error
+
+It works fine when `USE_RUNNER=1 pnpm dev`
