@@ -9,15 +9,15 @@
 		"typecheck": "tsc"
 	},
 	"dependencies": {
-		"@remix-run/node": "*",
-		"@remix-run/react": "*",
-		"@remix-run/serve": "*",
+		"@remix-run/node": "2.9.2",
+		"@remix-run/react": "2.9.2",
+		"@remix-run/serve": "2.9.2",
 		"isbot": "^4.1.0",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0"
 	},
 	"devDependencies": {
-		"@remix-run/dev": "*",
+		"@remix-run/dev": "2.9.2",
 		"@types/react": "^18.2.20",
 		"@types/react-dom": "^18.2.7",
 		"typescript": "^5.1.6",
