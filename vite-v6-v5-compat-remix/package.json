@@ -29,7 +29,7 @@
 	},
 	"pnpm": {
 		"overrides": {
-			"vite": "file:./vite-6.0.0-alpha.17.tgz"
+			"vite": "file:./vite-6.0.0-alpha.17-da354ea3b.tgz"
 		}
 	}
 }
