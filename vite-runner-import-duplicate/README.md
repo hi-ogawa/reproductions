@@ -5,11 +5,11 @@ vite 6 runner import duplicate module
 
 ```sh
 $ node test-vite.js
-[debug:import] file:///home/hiroshi/code/personal/vite-environment-examples/examples/repro/src/thing.js
-[debug:import] file:///home/hiroshi/code/personal/vite-environment-examples/examples/repro/src/thing.js
+[debug:import] file:///home/hiroshi/code/personal/reproductions/vite-runner-import-duplicate/src/dep.js
+[debug:import] file:///home/hiroshi/code/personal/reproductions/vite-runner-import-duplicate/src/dep.js
 false
 
 $ node test-node.js
-[debug:import] file:///home/hiroshi/code/personal/vite-environment-examples/examples/repro/src/thing.js
+[debug:import] file:///home/hiroshi/code/personal/reproductions/vite-runner-import-duplicate/src/dep.js
 true
 ```
