@@ -4,4 +4,4 @@ const something = "Something";
 // TS support for this is still very new. Added in https://github.com/microsoft/TypeScript/pull/58640
 export { something as "arbitrary string" };
 
-export { something as normalIdentifier }
+export { something as normalIdentifier };

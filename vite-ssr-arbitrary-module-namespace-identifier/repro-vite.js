@@ -1,7 +1,7 @@
 import { createServer } from "vite";
 
 const server = await createServer({
-  configFile: false,
+	configFile: false,
 });
 await server.pluginContainer.buildStart({});
 

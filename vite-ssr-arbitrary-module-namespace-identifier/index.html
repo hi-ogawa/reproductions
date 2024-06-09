@@ -1,0 +1,6 @@
+<script type="module">
+  import * as lib from "/file-2.js";
+  const el = document.createElement("pre");
+  el.textContent = JSON.stringify(lib, null, 2);
+  document.body.appendChild(el);
+</script>
