@@ -1,3 +1,5 @@
+Deploy Vite SSR app with Vercel
+
 ```sh
 # local dev
 pnpm dev
@@ -6,7 +8,7 @@ pnpm dev
 pnpm build
 pnpm preview
 
-# deploy vercel
+# deploy from cli
 vercel deploy
 vercel --prod
 ```
