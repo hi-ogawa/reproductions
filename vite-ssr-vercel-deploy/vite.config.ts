@@ -13,6 +13,12 @@ export default defineConfig((env) => ({
 			entry: "/src/entry-server.tsx",
 			preview: path.resolve("./dist/server/index.js"),
 		}),
+		{
+			name: "expose-vite-server",
+			configureServer(server) {
+				(globalThis as any).__vite_server = server;
+			},
+		},
 	],
 	build: {
 		outDir: env.isSsrBuild ? "dist/server" : "dist/client",

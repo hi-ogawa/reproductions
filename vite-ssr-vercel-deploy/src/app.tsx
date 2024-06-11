@@ -1,40 +1,29 @@
-import React from "react";
+import { useState } from "react";
+import reactLogo from "./assets/react.svg";
+import viteLogo from "./assets/vite.svg";
 
 export function App() {
-	const [input, setInput] = React.useState("");
-	const [counter, setCounter] = React.useState(0);
+	const [count, setCount] = useState(0);
 
 	return (
-		<div
-			style={{
-				display: "flex",
-				flexDirection: "column",
-				gap: "0.5rem",
-				maxWidth: "300px",
-			}}
-		>
-			<h2>Example</h2>
-			<div>[hydrated: {Number(useHydrated())}]</div>
-			<div>Input {input}</div>
-			<input
-				value={input}
-				onChange={(e) => {
-					setInput(e.target.value);
-				}}
-			/>
-			<div>Counter: {counter}</div>
-			<div style={{ display: "flex", gap: "0.5rem" }}>
-				<button onClick={() => setCounter(counter - 1)}>-1</button>
-				<button onClick={() => setCounter(counter + 1)}>+1</button>
+		<>
+			<div>
+				<a href="https://vitejs.dev" target="_blank">
+					<img src={viteLogo} className="logo" alt="Vite logo" />
+				</a>
+				<a href="https://reactjs.org" target="_blank">
+					<img src={reactLogo} className="logo react" alt="React logo" />
+				</a>
 			</div>
-		</div>
-	);
-}
-
-function useHydrated() {
-	return React.useSyncExternalStore(
-		React.useCallback(() => () => {}, []),
-		() => true,
-		() => false,
+			<h1>Vite + React</h1>
+			<div className="card">
+				<button onClick={() => setCount((count) => count + 1)}>
+					count is {count}
+				</button>
+			</div>
+			<p className="read-the-docs">
+				Click on the Vite and React logos to learn more
+			</p>
+		</>
 	);
 }
