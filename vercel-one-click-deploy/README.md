@@ -8,7 +8,7 @@ pnpm preview
 
 # deploy vercel
 vercel deploy
-vercel deploy --prod
+vercel --prod
 ```
 
 ## links
