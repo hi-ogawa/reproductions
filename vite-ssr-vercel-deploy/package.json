@@ -7,7 +7,7 @@
 		"build": "vite build && vite build --ssr",
 		"preview": "vite preview",
 		"lint": "biome format --write .",
-		"vc-build": "pnpm build && bash misc/vercel/build.sh"
+		"vc-build": "pnpm build && node misc/vercel/build.js"
 	},
 	"dependencies": {
 		"react": "^18.3.1",
