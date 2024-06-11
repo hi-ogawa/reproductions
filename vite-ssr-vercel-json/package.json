@@ -7,9 +7,7 @@
 		"build": "vite build && vite build --ssr",
 		"preview": "vite preview",
 		"lint": "biome format --write .",
-		"vc-build": "",
-		"vc-preview": "",
-		"vc-release": ""
+		"vc-build": "pnpm build && node misc/vc-build.js"
 	},
 	"dependencies": {
 		"react": "^18.3.1",

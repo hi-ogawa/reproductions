@@ -8,18 +8,6 @@ importers:
 
   .:
     dependencies:
-      '@hiogawa/utils-node':
-        specifier: ^0.0.1
-        version: 0.0.1
-      '@types/react':
-        specifier: ^18.3.3
-        version: 18.3.3
-      '@types/react-dom':
-        specifier: ^18.3.0
-        version: 18.3.0
-      hono:
-        specifier: ^4.4.5
-        version: 4.4.5
       react:
         specifier: ^18.3.1
         version: 18.3.1
@@ -30,6 +18,12 @@ importers:
       '@hiogawa/vite-plugin-ssr-middleware':
         specifier: ^0.0.3
         version: 0.0.3(vite@5.2.13(@types/node@16.18.11))
+      '@types/react':
+        specifier: ^18.3.3
+        version: 18.3.3
+      '@types/react-dom':
+        specifier: ^18.3.0
+        version: 18.3.0
       vercel:
         specifier: ^34.2.6
         version: 34.2.6
@@ -204,9 +198,6 @@ packages:
   '@fastify/busboy@2.1.1':
     resolution: {integrity: sha512-vBZP4NlzfOlerQTnba4aqZoMhE/a9HY7HRqoOPaETQcSQuWEIyZMHGfVu6w9wGtGK5fED5qRs2DteVCjOH60sA==}
     engines: {node: '>=14'}
-
-  '@hiogawa/utils-node@0.0.1':
-    resolution: {integrity: sha512-vEir6KhApTlPPT+0wX85wglFgZjxG/WZGjWGahSR7+ltNkpY0OpmxozbF5sLodYgXPObTK8cKgsQ4nzFLtZQ8g==}
 
   '@hiogawa/vite-plugin-ssr-middleware@0.0.3':
     resolution: {integrity: sha512-84bzaAuImty4s4vHjOk5MQMzmDs0W0GP43fOTFhsBfj/MSJCNJ68elmPNZWs57WkIEzcdB4haY/P8Nf4ZGH8Qw==}
@@ -824,10 +815,6 @@ packages:
 
   has-unicode@2.0.1:
     resolution: {integrity: sha512-8Rf9Y83NBReMnx0gFzA8JImQACstCYWUplepDa9xprwwtmgEZUF0h/i5xSA625zB/I37EtrswSST6OXxwaaIJQ==}
-
-  hono@4.4.5:
-    resolution: {integrity: sha512-hyf+1c+gTEo0+xjdYT2e8y4M3HcEy0ARuRZHPRgeRhq/mupkI4j9/qEWVKsyj0se4KhfRnYrld4Tk6z/9veq/Q==}
-    engines: {node: '>=16.0.0'}
 
   http-errors@1.4.0:
     resolution: {integrity: sha512-oLjPqve1tuOl5aRhv8GK5eHpqP1C9fb+Ol+XTLjKfLltE44zdDbEdjPSbU7Ch5rSNsVFqZn97SrMmZLdu1/YMw==}
@@ -1499,8 +1486,6 @@ snapshots:
 
   '@fastify/busboy@2.1.1': {}
 
-  '@hiogawa/utils-node@0.0.1': {}
-
   '@hiogawa/vite-plugin-ssr-middleware@0.0.3(vite@5.2.13(@types/node@16.18.11))':
     dependencies:
       vite: 5.2.13(@types/node@16.18.11)
@@ -2152,8 +2137,6 @@ snapshots:
   graceful-fs@4.2.11: {}
 
   has-unicode@2.0.1: {}
-
-  hono@4.4.5: {}
 
   http-errors@1.4.0:
     dependencies:

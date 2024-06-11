@@ -1,4 +1,7 @@
 {
 	"$schema": "https://openapi.vercel.sh/vercel.json",
-	"version": 2
+	"version": 2,
+	"buildCommand": "pnpm vc-build",
+	"outputDirectory": "dist/client",
+	"rewrites": [{ "source": "/(.*)", "destination": "/api" }]
 }
