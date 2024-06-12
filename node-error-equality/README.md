@@ -1,5 +1,6 @@
-https://github.com/vitest-dev/vitest/issues/5697
-https://github.com/vitest-dev/vitest/issues/5244
+- https://github.com/vitest-dev/vitest/issues/5697
+- https://github.com/vitest-dev/vitest/issues/5244
+- https://github.com/nodejs/node/pull/51805
 
 Repro to verify Node v22's new equality checking behavior related to `Error`.
 
@@ -13,6 +14,8 @@ v22.3.0
 
 $ node --test
 ```
+
+As seen in the output below, the error diff doesn't seem to properly format `cause`.
 
 <details><summary>output</summary>
 
