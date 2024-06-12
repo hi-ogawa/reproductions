@@ -1,0 +1,7 @@
+{
+	"private": true,
+	"type": "module",
+	"volta": {
+		"node": "22.3.0"
+	}
+}
