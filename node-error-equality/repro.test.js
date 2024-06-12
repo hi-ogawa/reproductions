@@ -19,3 +19,17 @@ test("cause 3", () => {
 		new Error("a", { cause: "y" }),
 	);
 });
+
+test("custom 1", () => {
+	assert.deepStrictEqual(
+		new Error("a"),
+		Object.assign(new Error("a"), { k: "x" }),
+	);
+});
+
+test("custom 2", () => {
+	assert.deepStrictEqual(
+		Object.assign(new Error("a"), { k: "x" }),
+		Object.assign(new Error("a"), { k: "y" }),
+	);
+});

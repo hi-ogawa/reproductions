@@ -96,14 +96,49 @@ $ node --test
     operator: 'deepStrictEqual'
   }
 
-ℹ tests 4
-ℹ suites 0
-ℹ pass 0
-ℹ fail 4
-ℹ cancelled 0
-ℹ skipped 0
-ℹ todo 0
-ℹ duration_ms 42.662477
+✖ custom 1 (0.616629ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
+  + actual - expected
+
+  + [Error: a]
+  - [Error: a] {
+  -   k: 'x'
+  - }
+      at TestContext.<anonymous> (file:///home/hiroshi/code/personal/reproductions/node-error-equality/repro.test.js:24:9)
+      at Test.runInAsyncScope (node:async_hooks:206:9)
+      at Test.run (node:internal/test_runner/test:856:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:565:18)
+      at Test.postRun (node:internal/test_runner/test:955:19)
+      at Test.run (node:internal/test_runner/test:898:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:565:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: {},
+    expected: { k: 'x' },
+    operator: 'deepStrictEqual'
+  }
+
+✖ custom 2 (0.776834ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
+  + actual - expected
+
+    [Error: a] {
+  +   k: 'x'
+  -   k: 'y'
+    }
+      at TestContext.<anonymous> (file:///home/hiroshi/code/personal/reproductions/node-error-equality/repro.test.js:31:9)
+      at Test.runInAsyncScope (node:async_hooks:206:9)
+      at Test.run (node:internal/test_runner/test:856:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:565:18)
+      at Test.postRun (node:internal/test_runner/test:955:19)
+      at Test.run (node:internal/test_runner/test:898:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:565:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: { k: 'x' },
+    expected: { k: 'y' },
+    operator: 'deepStrictEqual'
+  }
 ```
 
 </details>
