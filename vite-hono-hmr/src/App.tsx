@@ -19,7 +19,7 @@ export default function App() {
       <h1>Vite + React</h1>
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
-          hehe count is {count}
+          count is {count}
         </button>
         <p>
           Edit <code>src/App.tsx</code> and save to test HMR
