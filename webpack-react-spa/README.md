@@ -4,3 +4,4 @@ Practice Webpack (part 1)
 - React SPA
 - Esbuild loader
 - Implement HMR with `@hiogawa/tiny-refresh`
+- Own dev server
