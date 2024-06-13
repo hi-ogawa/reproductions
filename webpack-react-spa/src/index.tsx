@@ -1,7 +1,7 @@
 import "./index.css";
 import React from "react";
 import ReactDOMClient from "react-dom/client";
-import { App } from "./App.tsx"; // TODO: how to resolve extension less?
+import { App } from "./App";
 
 function main() {
 	const el = document.getElementById("root");

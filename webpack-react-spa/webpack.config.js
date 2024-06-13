@@ -7,7 +7,7 @@ import HtmlWebpackPlugin from "html-webpack-plugin";
 export default {
 	mode: "development",
 	devtool: "source-map",
-	entry: "./src/entry-client.tsx",
+	entry: "./src/index.tsx",
 	plugins: [
 		new HtmlWebpackPlugin({
 			template: "index.html",
@@ -17,6 +17,9 @@ export default {
 		filename: "[name].bundle.js",
 		path: path.resolve("./dist"),
 		clean: true,
+	},
+	resolve: {
+		extensions: [".tsx", ".ts", "..."],
 	},
 	module: {
 		rules: [
