@@ -1,6 +1,9 @@
 import React from "react";
 import ReactDOMClient from "react-dom/client";
 
+// TODO: resolve extension less?
+import { Test } from "./test.tsx";
+
 const h = React.createElement;
 
 function App() {
@@ -11,6 +14,7 @@ function App() {
 		null,
 		h("h1", null, "Webpack React SPA"),
 		h("button", { onClick: () => setCount((c) => c + 1) }, `Count: ${count}`),
+		h(Test, { label: "foo" }),
 	);
 }
 

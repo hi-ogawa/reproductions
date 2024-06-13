@@ -18,4 +18,12 @@ export default {
 		path: path.resolve("./dist"),
 		clean: true,
 	},
+	module: {
+		rules: [
+			{
+				test: /\.tsx$/,
+				use: path.resolve("./src/esbuild-loader.js"),
+			},
+		],
+	},
 };
