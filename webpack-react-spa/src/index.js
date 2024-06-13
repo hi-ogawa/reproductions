@@ -1,14 +1,23 @@
 import React from "react";
 import ReactDOMClient from "react-dom/client";
 
+const h = React.createElement;
+
 function App() {
-	return React.createElement("div", null, "hello");
+	const [count, setCount] = React.useState(0);
+
+	return h(
+		"div",
+		null,
+		h("h1", null, "Webpack React SPA"),
+		h("button", { onClick: () => setCount((c) => c + 1) }, `Count: ${count}`),
+	);
 }
 
 function main() {
 	const el = document.getElementById("root");
 	const root = ReactDOMClient.createRoot(el);
-	root.render(React.createElement(App));
+	root.render(h(App));
 }
 
 main();
