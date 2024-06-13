@@ -15,6 +15,9 @@ importers:
         specifier: ^18.2.0
         version: 18.3.1(react@18.3.1)
     devDependencies:
+      '@hiogawa/tiny-refresh':
+        specifier: ^0.1.0
+        version: 0.1.0(vite@5.2.13)
       '@types/react':
         specifier: ^18.2.66
         version: 18.3.3
@@ -164,6 +167,14 @@ packages:
     engines: {node: '>=12'}
     cpu: [x64]
     os: [win32]
+
+  '@hiogawa/tiny-refresh@0.1.0':
+    resolution: {integrity: sha512-LghptS/L6hJDuF4Ij58BzeFCsKceEvKDK+j1HtjYBtTIf1E7tCdeXtMTMnse35Zq6ypI8GX2HqoIrfFzH7gjPQ==}
+    peerDependencies:
+      vite: '*'
+    peerDependenciesMeta:
+      vite:
+        optional: true
 
   '@rollup/rollup-android-arm-eabi@4.18.0':
     resolution: {integrity: sha512-Tya6xypR10giZV1XzxmH5wr25VcZSncG0pZIjfePT0OVBvqNEurzValetGNarVrGiq66EBVAFn15iYX4w6FKgQ==}
@@ -408,6 +419,10 @@ snapshots:
 
   '@esbuild/win32-x64@0.20.2':
     optional: true
+
+  '@hiogawa/tiny-refresh@0.1.0(vite@5.2.13)':
+    optionalDependencies:
+      vite: 5.2.13
 
   '@rollup/rollup-android-arm-eabi@4.18.0':
     optional: true
