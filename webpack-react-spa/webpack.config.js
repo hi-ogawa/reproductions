@@ -20,9 +20,20 @@ export default {
 	},
 	module: {
 		rules: [
+			// https://webpack.js.org/contribute/writing-a-loader/
 			{
 				test: /\.tsx$/,
 				use: path.resolve("./src/esbuild-loader.js"),
+			},
+			// https://webpack.js.org/guides/asset-management/#loading-css
+			{
+				test: /\.css$/i,
+				use: ["style-loader", "css-loader"],
+			},
+			// https://webpack.js.org/guides/asset-management/#loading-images
+			{
+				test: /\.(png|svg|jpg|jpeg|gif)$/i,
+				type: "asset/resource",
 			},
 		],
 	},

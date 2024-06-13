@@ -1,12 +1,16 @@
+import "./index.css";
+import React from "react";
 import ReactDOMClient from "react-dom/client";
-
-// TODO: how to resolve extension less
-import { App } from "./app.tsx";
+import { App } from "./App.tsx"; // TODO: how to resolve extension less?
 
 function main() {
 	const el = document.getElementById("root");
 	const root = ReactDOMClient.createRoot(el!);
-	root.render(<App />);
+	root.render(
+		<React.StrictMode>
+			<App />
+		</React.StrictMode>,
+	);
 }
 
 main();
