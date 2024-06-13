@@ -2,6 +2,6 @@ Practice Webpack (part 1)
 
 - [x] Guide https://webpack.js.org/guides/
 - [x] React SPA
-- [ ] Esbuild loader for tsx https://webpack.js.org/contribute/writing-a-loader/
+- [x] Esbuild loader for tsx https://webpack.js.org/contribute/writing-a-loader/
 - [ ] Implement HMR with `@hiogawa/tiny-refresh`
 - [ ] Own dev server

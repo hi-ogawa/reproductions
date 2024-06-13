@@ -7,7 +7,7 @@ import HtmlWebpackPlugin from "html-webpack-plugin";
 export default {
 	mode: "development",
 	devtool: "source-map",
-	entry: "./src/index.js",
+	entry: "./src/entry-client.tsx",
 	plugins: [
 		new HtmlWebpackPlugin({
 			template: "index.html",
