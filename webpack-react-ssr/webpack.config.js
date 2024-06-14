@@ -40,4 +40,18 @@ export default {
 			},
 		],
 	},
+	/**
+	 * @type {import("webpack-dev-server").Configuration}
+	 */
+	devServer: {
+		// https://webpack.js.org/configuration/dev-server/#devserversetupmiddlewares
+		setupMiddlewares: (middlewares, devServer) => {
+			// TODO: can inject ssr middleweare?
+			// console.log({
+			// 	middlewares,
+			// 	devServer,
+			// })
+			return middlewares;
+		},
+	},
 };
