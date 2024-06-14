@@ -18,6 +18,7 @@ export default () => {
 		devtool: "source-map",
 		output: {
 			path: path.resolve("./dist"),
+			clean: true,
 		},
 		resolve: {
 			extensions: [".tsx", ".ts", "..."],
@@ -72,23 +73,33 @@ export default () => {
 					 * @type {import("webpack-dev-server").Configuration}
 					 */
 					const devServer = {
-						hot: false,
 						static: {
 							serveIndex: false,
 						},
+						// https://github.com/webpack/webpack-dev-middleware#server-side-rendering
 						devMiddleware: {
 							writeToDisk: true,
 							serverSideRender: true,
 						},
+						// https://webpack.js.org/configuration/dev-server/#devserversetupmiddlewares
 						setupMiddlewares: (middlewares, _devServer) => {
-							// https://webpack.js.org/configuration/dev-server/#devserversetupmiddlewares
-							// https://github.com/webpack/webpack-dev-middleware?tab=readme-ov-file#server-side-rendering
 							middlewares.push({
 								name: "dev-ssr",
-								middleware: webToNodeHandler(async (request) => {
+								// @ts-ignore
+								middleware: (req, res, next) => {
+									// TODO: pass it to server runtime?
+									/** @type {import("webpack").MultiStats} */
+									const stats = res.locals.webpack.devMiddleware.stats;
+									const statsJson = stats.toJson();
+									0 && console.log(statsJson);
+
+									/** @type {import("./src/entry-server")} */
 									const mod = require(path.resolve("./dist/server.cjs"));
-									return mod.handler(request);
-								}),
+									const nodeHandler = webToNodeHandler((request) =>
+										mod.handler(request),
+									);
+									nodeHandler(req, res, next);
+								},
 							});
 							return middlewares;
 						},

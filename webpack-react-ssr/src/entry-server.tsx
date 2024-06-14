@@ -3,7 +3,8 @@ import ReactDOMServer from "react-dom/server.edge";
 
 export async function handler(_request: Request) {
 	const htmlStream = await ReactDOMServer.renderToReadableStream(<Root />, {
-		bootstrapModules: [],
+		// TODO: switch on build
+		bootstrapScripts: ["/client.js"],
 	});
 	return new Response(htmlStream, {
 		headers: {
