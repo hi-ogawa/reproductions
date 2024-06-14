@@ -1,14 +1,14 @@
 Practice Webpack (SSR)
 
-- [x] build
+- [x] build server
   - [x] server build (cjs)
   - [ ] externalize more
-- [x] dev
+- [x] dev server
   - server entry flushed to fs and invalidate `require.cache`
   - integrate webpack dev middleware
-- [ ] integrate client
-  - multi compiler?
-  - ssr assets?
+  - [ ] reload server
+- [x] integrate client
+- [ ] assets
 
 ## links
 
