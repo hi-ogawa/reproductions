@@ -1,8 +1,11 @@
-import ReactDOMServer from "react-dom/server";
+import React from "react";
+import ReactDOMServer from "react-dom/server.edge";
 
-export function handler(_request: Request) {
-	const html = ReactDOMServer.renderToString(<Root />);
-	return new Response(html, {
+export async function handler(_request: Request) {
+	const htmlStream = await ReactDOMServer.renderToReadableStream(<Root />, {
+		bootstrapModules: [],
+	});
+	return new Response(htmlStream, {
 		headers: {
 			"content-type": "text/html",
 		},
@@ -18,7 +21,8 @@ function Root() {
 				<link rel="icon" href="/favicon.ico" />
 			</head>
 			<body>
-				<div>Hello</div>
+				<div>React ({React.version})</div>
+				<div>Hello SSR</div>
 			</body>
 		</html>
 	);

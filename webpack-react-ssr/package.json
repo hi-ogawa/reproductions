@@ -11,8 +11,8 @@
 		"lint-check": "biome check ."
 	},
 	"dependencies": {
-		"react": "^18.3.1",
-		"react-dom": "^18.3.1"
+		"react": "19.0.0-rc-dfd30974ab-20240613",
+		"react-dom": "19.0.0-rc-dfd30974ab-20240613"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "^1.8.1",
