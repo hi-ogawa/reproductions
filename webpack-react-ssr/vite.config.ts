@@ -9,9 +9,9 @@ export default defineConfig({
 		{
 			name: "preview-middleware",
 			async configurePreviewServer(server) {
-				const mod = await import(path.resolve("./dist/server.js"));
+				const mod = await import(path.resolve("./dist/server.cjs"));
 				return () => {
-					server.middlewares.use(webToNodeHandler(mod.default));
+					server.middlewares.use(webToNodeHandler(mod.handler));
 				};
 			},
 		},

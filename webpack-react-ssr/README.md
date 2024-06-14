@@ -15,4 +15,4 @@ Practice Webpack (SSR)
 ## links
 
 - https://webpack.js.org/contribute/writing-a-plugin/
-- https://github.com/webpack/webpack-dev-middleware?tab=readme-ov-file#serversiderender
+- https://github.com/webpack/webpack-dev-middleware#server-side-rendering

@@ -1,7 +1,7 @@
 import ReactDOMServer from "react-dom/server";
 
-export default function handler(_request: Request) {
-	const html = ReactDOMServer.renderToString(<App />);
+export function handler(_request: Request) {
+	const html = ReactDOMServer.renderToString(<Root />);
 	return new Response(html, {
 		headers: {
 			"content-type": "text/html",
@@ -9,7 +9,7 @@ export default function handler(_request: Request) {
 	});
 }
 
-function App() {
+function Root() {
 	return (
 		<html>
 			<head>

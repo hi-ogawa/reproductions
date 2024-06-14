@@ -1,7 +1,10 @@
 // @ts-check
 
+import { createRequire } from "node:module";
 import path from "node:path";
 import { webToNodeHandler } from "@hiogawa/utils-node";
+
+const require = createRequire(import.meta.url);
 
 // https://webpack.js.org/configuration/configuration-types/#exporting-multiple-configurations
 // https://github.com/unstubbable/mfng/blob/251b5284ca6f10b4c46e16833dacf0fd6cf42b02/apps/aws-app/webpack.config.js
@@ -15,19 +18,17 @@ export default () => {
 		mode: "development",
 		devtool: "source-map",
 		target: "node20",
+		// TODO: https://webpack.js.org/configuration/externals
+		externals: {},
 		entry: {
 			server: {
 				import: "./src/entry-server",
-				filename: "server.js",
+				filename: "server.cjs",
 				library: {
 					// https://webpack.js.org/configuration/output/#outputlibrarytype
-					type: "module",
+					type: "commonjs-static",
 				},
 			},
-		},
-		experiments: {
-			// esm
-			outputModule: true,
 		},
 		output: {
 			path: path.resolve("./dist"),
@@ -61,11 +62,6 @@ export default () => {
 				name: "MyPlugin",
 				apply(compiler) {
 					const name = "MyPlugin";
-					// https://webpack.js.org/api/compiler-hooks/
-					// console.log("[hooks]", Object.keys(compiler.hooks));
-					console.log("[MyPlugin.apply]");
-
-					// plugin can manipulate webpack config?
 					/**
 					 * @type {import("webpack-dev-server").Configuration}
 					 */
@@ -84,11 +80,8 @@ export default () => {
 							middlewares.push({
 								name: "dev-ssr",
 								middleware: webToNodeHandler(async (request) => {
-									// TODO: invalidate
-									// - require.cache trick with cjs?
-									// - tsx cache import?
-									const mod = await import(path.resolve("./dist/server.js"));
-									return mod.default(request);
+									const mod = require(path.resolve("./dist/server.cjs"));
+									return mod.handler(request);
 								}),
 							});
 							return middlewares;
@@ -96,16 +89,10 @@ export default () => {
 					};
 					compiler.options.devServer = devServer;
 
-					// compiler.hooks.assetEmitted.tap(name, (...args) => {
-					// 	console.log("[assetEmitted]", args);
-					// });
-
-					// compiler.hooks.shouldEmit.tap(name, (_) => {
-					// 	return true;
-					// });
-
-					compiler.hooks.invalid.tap(name, (fileName) => {
-						console.log("[invalid]", fileName);
+					// https://webpack.js.org/api/compiler-hooks/
+					compiler.hooks.invalid.tap(name, () => {
+						// invalidate cjs
+						delete require.cache[path.resolve("./dist/server.cjs")];
 					});
 				},
 			},
