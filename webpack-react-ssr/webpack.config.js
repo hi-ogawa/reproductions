@@ -23,18 +23,18 @@ export default () => {
 			rules: [
 				// https://webpack.js.org/contribute/writing-a-loader/
 				{
-					test: /\.tsx$/,
+					test: /\.tsx?$/,
 					use: path.join(import.meta.dirname, "extra/esbuild-loader.js"),
 				},
-				// https://webpack.js.org/guides/asset-management/#loading-css
+				// https://webpack.js.org/guides/asset-modules/#source-assets
+				// https://webpack.js.org/guides/asset-modules/#replacing-inline-loader-syntax
 				{
-					test: /\.css$/i,
-					use: ["style-loader", "css-loader"],
+					resourceQuery: /raw/,
+					type: "asset/source",
 				},
-				// https://webpack.js.org/guides/asset-management/#loading-images
 				{
-					test: /\.(png|svg|jpg|jpeg|gif)$/i,
-					type: "asset/resource",
+					resourceQuery: /inline/,
+					type: "asset/inline",
 				},
 			],
 		},

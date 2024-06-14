@@ -1,7 +1,6 @@
-import "./App.css";
 import React from "react";
-import reactLogo from "./assets/react.svg";
-import webpackLogo from "./assets/webpack.svg";
+import reactLogo from "./assets/react.svg?inline";
+import webpackLogo from "./assets/webpack.svg?inline";
 
 export function App() {
 	const [count, setCount] = React.useState(0);
@@ -10,21 +9,10 @@ export function App() {
 		<div id="root">
 			<div>
 				<a href="https://webpack.js.org" target="_blank">
-					{/* TODO: how to match same asset url between server and client? */}
-					<img
-						suppressHydrationWarning
-						src={webpackLogo}
-						className="logo"
-						alt="Vite logo"
-					/>
+					<img src={webpackLogo} className="logo" alt="Vite logo" />
 				</a>
 				<a href="https://react.dev" target="_blank">
-					<img
-						suppressHydrationWarning
-						src={reactLogo}
-						className="logo react"
-						alt="React logo"
-					/>
+					<img src={reactLogo} className="logo react" alt="React logo" />
 				</a>
 			</div>
 			<h1>Webpack + React</h1>
