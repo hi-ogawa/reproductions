@@ -16,10 +16,6 @@ export default () => {
 	const commonConfig = {
 		mode: "development",
 		devtool: "source-map",
-		output: {
-			path: path.resolve("./dist"),
-			clean: true,
-		},
 		resolve: {
 			extensions: [".tsx", ".ts", "..."],
 		},
@@ -63,12 +59,18 @@ export default () => {
 				},
 			},
 		},
+		output: {
+			path: path.resolve("./dist/server"),
+			clean: true,
+		},
 		plugins: [
 			// https://webpack.js.org/contribute/writing-a-plugin/#example
 			{
 				name: "MyPlugin",
 				apply(compiler) {
 					const name = "MyPlugin";
+					const serverPath = path.resolve("./dist/server/server.cjs");
+
 					/**
 					 * @type {import("webpack-dev-server").Configuration}
 					 */
@@ -94,7 +96,7 @@ export default () => {
 									0 && console.log(statsJson);
 
 									/** @type {import("./src/entry-server")} */
-									const mod = require(path.resolve("./dist/server.cjs"));
+									const mod = require(serverPath);
 									const nodeHandler = webToNodeHandler((request) =>
 										mod.handler(request),
 									);
@@ -109,7 +111,7 @@ export default () => {
 					// https://webpack.js.org/api/compiler-hooks/
 					compiler.hooks.invalid.tap(name, () => {
 						// invalidate cjs
-						delete require.cache[path.resolve("./dist/server.cjs")];
+						delete require.cache[serverPath];
 					});
 				},
 			},
@@ -124,6 +126,10 @@ export default () => {
 		name: "client",
 		entry: {
 			client: "./src/entry-client",
+		},
+		output: {
+			path: path.resolve("./dist/client"),
+			clean: true,
 		},
 	};
 
