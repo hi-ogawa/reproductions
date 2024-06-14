@@ -24,7 +24,7 @@ export default () => {
 				// https://webpack.js.org/contribute/writing-a-loader/
 				{
 					test: /\.tsx?$/,
-					use: path.join(import.meta.dirname, "extra/esbuild-loader.js"),
+					use: path.resolve("./extra/esbuild-loader.js"),
 				},
 				// https://webpack.js.org/guides/asset-modules/#source-assets
 				// https://webpack.js.org/guides/asset-modules/#replacing-inline-loader-syntax
