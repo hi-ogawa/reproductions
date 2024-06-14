@@ -1,5 +1,5 @@
+// @ts-check
 import path from "node:path";
-import HtmlWebpackPlugin from "html-webpack-plugin";
 
 /**
  * @type {import("webpack").Configuration}
@@ -7,6 +7,7 @@ import HtmlWebpackPlugin from "html-webpack-plugin";
 export default {
 	mode: "development",
 	devtool: "source-map",
+	target: "node20",
 	entry: {
 		server: {
 			import: "./src/entry-server",
@@ -21,7 +22,6 @@ export default {
 		outputModule: true,
 	},
 	plugins: [],
-	target: "node20",
 	output: {
 		path: path.resolve("./dist"),
 		clean: true,
@@ -53,7 +53,7 @@ export default {
 	 */
 	devServer: {
 		// https://webpack.js.org/configuration/dev-server/#devserversetupmiddlewares
-		setupMiddlewares: (middlewares, devServer) => {
+		setupMiddlewares: (middlewares, _devServer) => {
 			// TODO: can inject ssr middleweare?
 			// console.log({
 			// 	middlewares,

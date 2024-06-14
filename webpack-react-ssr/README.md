@@ -8,3 +8,4 @@ Practice Webpack (SSR)
   - target
 - [ ] dev
   - integrate webpack dev middleware
+- [ ] integrate client
