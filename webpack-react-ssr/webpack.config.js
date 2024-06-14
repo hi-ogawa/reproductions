@@ -1,5 +1,7 @@
 // @ts-check
+
 import path from "node:path";
+import { webToNodeHandler } from "@hiogawa/utils-node";
 
 // https://webpack.js.org/configuration/configuration-types/#exporting-multiple-configurations
 // https://github.com/unstubbable/mfng/blob/251b5284ca6f10b4c46e16833dacf0fd6cf42b02/apps/aws-app/webpack.config.js
@@ -9,6 +11,7 @@ export default () => {
 	 * @type {import("webpack").Configuration}
 	 */
 	const serverConfig = {
+		name: "server",
 		mode: "development",
 		devtool: "source-map",
 		target: "node20",
@@ -55,15 +58,51 @@ export default () => {
 		plugins: [
 			// https://webpack.js.org/contribute/writing-a-plugin/#example
 			{
-				name: "test-plugin",
+				name: "MyPlugin",
 				apply(compiler) {
 					const name = "MyPlugin";
 					// https://webpack.js.org/api/compiler-hooks/
 					// console.log("[hooks]", Object.keys(compiler.hooks));
+					console.log("[MyPlugin.apply]");
 
-					compiler.hooks.shouldEmit.tap(name, (_) => {
-						return true;
-					});
+					// plugin can manipulate webpack config?
+					/**
+					 * @type {import("webpack-dev-server").Configuration}
+					 */
+					const devServer = {
+						hot: false,
+						static: {
+							serveIndex: false,
+						},
+						devMiddleware: {
+							writeToDisk: true,
+							serverSideRender: true,
+						},
+						setupMiddlewares: (middlewares, _devServer) => {
+							// https://webpack.js.org/configuration/dev-server/#devserversetupmiddlewares
+							// https://github.com/webpack/webpack-dev-middleware?tab=readme-ov-file#server-side-rendering
+							middlewares.push({
+								name: "dev-ssr",
+								middleware: webToNodeHandler(async (request) => {
+									// TODO: invalidate
+									// - require.cache trick with cjs?
+									// - tsx cache import?
+									const mod = await import(path.resolve("./dist/server.js"));
+									return mod.default(request);
+								}),
+							});
+							return middlewares;
+						},
+					};
+					compiler.options.devServer = devServer;
+
+					// compiler.hooks.assetEmitted.tap(name, (...args) => {
+					// 	console.log("[assetEmitted]", args);
+					// });
+
+					// compiler.hooks.shouldEmit.tap(name, (_) => {
+					// 	return true;
+					// });
 
 					compiler.hooks.invalid.tap(name, (fileName) => {
 						console.log("[invalid]", fileName);
@@ -71,34 +110,6 @@ export default () => {
 				},
 			},
 		],
-		/**
-		 * @type {import("webpack-dev-server").Configuration}
-		 */
-		devServer: {
-			// [webpack-dev-middleware] HookWebpackError: HMR is not implemented for module chunk format yet
-			hot: false,
-
-			// https://webpack.js.org/configuration/dev-server/#devserversetupmiddlewares
-			setupMiddlewares: (middlewares, _devServer) => {
-				_devServer.compiler;
-				// TODO: can inject ssr middleweare?
-				// console.log({
-				// 	middlewares,
-				// 	devServer,
-				// })
-
-				// TODO: how to load server module?
-				// how about tsx's namespace import?
-
-				// middlewares.push({
-				// 	name: "dev-ssr",
-				// 	middleware: (req, res) => {
-				// 		res.send("hello!!!!!!!!!!!");
-				// 	}
-				// });
-				return middlewares;
-			},
-		},
 	};
 
 	return [serverConfig];
