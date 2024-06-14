@@ -1,16 +1,14 @@
 Practice Webpack (SSR)
 
 - [x] build
-  - server build
-    - esm ✔️
-    - cjs
-  - external
-  - target
-- [ ] dev
-  - bundled entry needs to be flushed to fs? (force emit?)
-  - integrate webpack dev middleware?
+  - [x] server build (cjs)
+  - [ ] externalize more
+- [x] dev
+  - server entry flushed to fs and invalidate `require.cache`
+  - integrate webpack dev middleware
 - [ ] integrate client
   - multi compiler?
+  - ssr assets?
 
 ## links
 
