@@ -1,5 +1,5 @@
-import React from "react";
 import ReactDOMServer from "react-dom/server.edge";
+import { App } from "./App";
 
 export async function handler(_request: Request) {
 	const htmlStream = await ReactDOMServer.renderToReadableStream(<Root />, {
@@ -21,8 +21,7 @@ function Root() {
 				<link rel="icon" href="/favicon.ico" />
 			</head>
 			<body>
-				<div>React ({React.version})</div>
-				<div>Hello SSR</div>
+				<App />
 			</body>
 		</html>
 	);

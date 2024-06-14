@@ -8,7 +8,8 @@ Practice Webpack (SSR)
   - integrate webpack dev middleware
   - [ ] reload server
 - [x] integrate client
-- [ ] assets
+- [ ] server assets
+  - [ ] FOUC
 
 ## links
 
