@@ -2,10 +2,16 @@ Practice Webpack (SSR)
 
 - [x] build
   - server build
-    - esm (x)
+    - esm ✔️
     - cjs
   - external
   - target
 - [ ] dev
-  - integrate webpack dev middleware
+  - bundled entry needs to be flushed to fs? (force emit?)
+  - integrate webpack dev middleware?
 - [ ] integrate client
+  - multi compiler?
+
+## links
+
+- https://webpack.js.org/contribute/writing-a-plugin/

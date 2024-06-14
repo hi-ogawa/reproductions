@@ -21,7 +21,6 @@ export default {
 		// esm
 		outputModule: true,
 	},
-	plugins: [],
 	output: {
 		path: path.resolve("./dist"),
 		clean: true,
@@ -48,17 +47,38 @@ export default {
 			},
 		],
 	},
+	plugins: [
+		// https://webpack.js.org/contribute/writing-a-plugin/#example
+		{
+			name: "test-plugin",
+			apply(compiler) {
+				// https://webpack.js.org/api/compiler-hooks/
+				console.log("[hooks]", Object.keys(compiler.hooks));
+			},
+		},
+	],
 	/**
 	 * @type {import("webpack-dev-server").Configuration}
 	 */
 	devServer: {
 		// https://webpack.js.org/configuration/dev-server/#devserversetupmiddlewares
 		setupMiddlewares: (middlewares, _devServer) => {
+			_devServer.compiler;
 			// TODO: can inject ssr middleweare?
 			// console.log({
 			// 	middlewares,
 			// 	devServer,
 			// })
+
+			// TODO: how to load server module?
+			// how about tsx's namespace import?
+
+			// middlewares.push({
+			// 	name: "dev-ssr",
+			// 	middleware: (req, res) => {
+			// 		res.send("hello!!!!!!!!!!!");
+			// 	}
+			// });
 			return middlewares;
 		},
 	},

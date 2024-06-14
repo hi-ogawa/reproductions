@@ -2,6 +2,8 @@ import path from "node:path";
 import { webToNodeHandler } from "@hiogawa/utils-node";
 import { defineConfig } from "vite";
 
+// borrow vite preview server
+
 export default defineConfig({
 	plugins: [
 		{
