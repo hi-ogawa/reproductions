@@ -13,26 +13,11 @@ export default () => {
 	/**
 	 * @type {import("webpack").Configuration}
 	 */
-	const serverConfig = {
-		name: "server",
+	const commonConfig = {
 		mode: "development",
 		devtool: "source-map",
-		target: "node20",
-		// TODO: https://webpack.js.org/configuration/externals
-		externals: {},
-		entry: {
-			server: {
-				import: "./src/entry-server",
-				filename: "server.cjs",
-				library: {
-					// https://webpack.js.org/configuration/output/#outputlibrarytype
-					type: "commonjs-static",
-				},
-			},
-		},
 		output: {
 			path: path.resolve("./dist"),
-			clean: true,
 		},
 		resolve: {
 			extensions: [".tsx", ".ts", "..."],
@@ -55,6 +40,27 @@ export default () => {
 					type: "asset/resource",
 				},
 			],
+		},
+	};
+
+	/**
+	 * @type {import("webpack").Configuration}
+	 */
+	const serverConfig = {
+		...commonConfig,
+		name: "server",
+		target: "node20",
+		// TODO: https://webpack.js.org/configuration/externals
+		externals: {},
+		entry: {
+			server: {
+				import: "./src/entry-server",
+				filename: "server.cjs",
+				library: {
+					// https://webpack.js.org/configuration/output/#outputlibrarytype
+					type: "commonjs-static",
+				},
+			},
 		},
 		plugins: [
 			// https://webpack.js.org/contribute/writing-a-plugin/#example
@@ -99,5 +105,16 @@ export default () => {
 		],
 	};
 
-	return [serverConfig];
+	/**
+	 * @type {import("webpack").Configuration}
+	 */
+	const clientConfig = {
+		...commonConfig,
+		name: "client",
+		entry: {
+			client: "./src/entry-client",
+		},
+	};
+
+	return [serverConfig, clientConfig];
 };
