@@ -7,14 +7,22 @@ import HtmlWebpackPlugin from "html-webpack-plugin";
 export default {
 	mode: "development",
 	devtool: "source-map",
-	entry: "./src/index.tsx",
-	plugins: [
-		new HtmlWebpackPlugin({
-			template: "index.html",
-		}),
-	],
+	entry: {
+		server: {
+			import: "./src/entry-server",
+			filename: "server.js",
+			library: {
+				type: "module",
+			},
+		},
+	},
+	experiments: {
+		// esm
+		outputModule: true,
+	},
+	plugins: [],
+	target: "node20",
 	output: {
-		filename: "[name].bundle.js",
 		path: path.resolve("./dist"),
 		clean: true,
 	},
