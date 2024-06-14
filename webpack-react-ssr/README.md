@@ -1,1 +1,4 @@
-Practice Webpack (part 2)
+Practice Webpack (SSR)
+
+- [ ] build
+- [ ] dev
