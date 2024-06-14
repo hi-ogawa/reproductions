@@ -16,6 +16,8 @@ export function App() {
 				</a>
 			</div>
 			<h1>Webpack + React</h1>
+			<pre>{React.version}</pre>
+			<pre>[hydrated: {String(useHydrated())}]</pre>
 			<div className="card">
 				<button onClick={() => setCount((count) => count + 1)}>
 					count is {count}
@@ -29,5 +31,13 @@ export function App() {
 				Click on Webpack and React logos to learn more
 			</p>
 		</div>
+	);
+}
+
+function useHydrated() {
+	return React.useSyncExternalStore(
+		React.useCallback(() => () => {}, []),
+		() => true,
+		() => false,
 	);
 }
