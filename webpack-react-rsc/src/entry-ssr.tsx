@@ -49,6 +49,8 @@ export async function handler(request: Request) {
 }
 
 async function getFlightStreamCode(stream: ReadableStream<Uint8Array>) {
+	// TODO: stream
+	// TODO: escape script string
 	const flightString = await streamToString(stream);
 	return `\
 self.__flightStream = new ReadableStream({
