@@ -1,5 +1,6 @@
 import React from "react";
 import ReactServer from "react-server-dom-webpack/server.edge";
+import Page from "./routes/page";
 
 export type FlightData = React.ReactNode;
 
@@ -22,21 +23,6 @@ export async function handler(request: Request) {
 	// delegate to ssr
 	const entrySsr = await import("./entry-ssr-layer");
 	return entrySsr.handler(flightStream);
-}
-
-function Page() {
-	return (
-		<html>
-			<head>
-				<meta charSet="utf-8" />
-				<title>Webpack RSC</title>
-				<link rel="icon" type="image/x-icon" href="/favicon.ico" />
-			</head>
-			<body>
-				<div>Hello RSC!</div>
-			</body>
-		</html>
-	);
 }
 
 function createBundlerConfig() {
