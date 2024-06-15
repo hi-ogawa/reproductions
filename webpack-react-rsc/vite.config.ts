@@ -9,6 +9,12 @@ export default defineConfig({
 		{
 			name: "preview-middleware",
 			async configurePreviewServer(server) {
+				server.middlewares.use((req, _res, next) => {
+					// disable compression for streaming
+					delete req.headers["accept-encoding"];
+					next();
+				});
+
 				const mod = await import(path.resolve("./dist/server/server.cjs"));
 				return () => {
 					server.middlewares.use(webToNodeHandler(mod.handler));
@@ -17,6 +23,6 @@ export default defineConfig({
 		},
 	],
 	build: {
-		outDir: "dist/client",
+		outDir: "dist/browser",
 	},
 });

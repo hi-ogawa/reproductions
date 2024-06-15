@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOMServer from "react-dom/server.edge";
 import ReactClient from "react-server-dom-webpack/client.edge";
+import type { StatsCompilation } from "webpack";
 import type { FlightData } from "./entry-server";
 import * as entryReactServer from "./entry-server-layer";
 
@@ -20,7 +21,7 @@ export async function handler(request: Request) {
 	const [flightStream1, flightStream2] = flightStream.tee();
 
 	// react client (flight -> react node)
-	const rootPromise = ReactClient.createFromReadableStream<FlightData>(
+	const node = await ReactClient.createFromReadableStream<FlightData>(
 		flightStream1,
 		{
 			ssrManifest: {},
@@ -30,7 +31,7 @@ export async function handler(request: Request) {
 	function SsrRoot() {
 		return (
 			<>
-				{React.use(rootPromise)}
+				{node}
 				{/* send a copy of flight stream together with ssr */}
 				<StreamTransfer stream={flightStream2} />;
 			</>
@@ -38,9 +39,19 @@ export async function handler(request: Request) {
 	}
 
 	// react dom ssr (react node -> html)
+	let bootstrapScripts: string[] = [];
+	if (__define.DEV) {
+		bootstrapScripts = ["/assets/index.js"];
+	} else {
+		const clientStats: { default: StatsCompilation } = await import(
+			/* webpackIgnore: true */ "./__client_stats.js" as string
+		);
+		bootstrapScripts = clientStats.default.assetsByChunkName!["index"].map(
+			(file) => `/assets/${file}`,
+		);
+	}
 	const htmlStream = await ReactDOMServer.renderToReadableStream(<SsrRoot />, {
-		// TODO: hashed prod assets
-		bootstrapScripts: __define.DEV ? ["/assets/index.js"] : [],
+		bootstrapScripts,
 	});
 
 	return new Response(htmlStream, {

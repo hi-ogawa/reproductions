@@ -159,6 +159,7 @@ export default function (env, _argv) {
 	const browserConfig = {
 		...commonConfig,
 		name: "browser",
+		dependencies: ["server"],
 		entry: {
 			index: "./src/entry-browser",
 		},
@@ -180,7 +181,7 @@ export default function (env, _argv) {
 					compilation.hooks.done.tap("client-stats", (stats) => {
 						const statsJson = stats.toJson({ all: false, assets: true });
 						const code = `export default ${JSON.stringify(statsJson, null, 2)}`;
-						writeFileSync("./dist/browser/__stats.js", code);
+						writeFileSync("./dist/server/__client_stats.js", code);
 					});
 				},
 			},
