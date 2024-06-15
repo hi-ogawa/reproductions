@@ -1,5 +1,7 @@
 Practice Webpack (SSR)
 
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/hi-ogawa/reproductions/tree/main/webpack-react-ssr?file=webpack.config.js)
+
 https://webpack-react-ssr-hiroshi.vercel.app
 
 - [x] build server
