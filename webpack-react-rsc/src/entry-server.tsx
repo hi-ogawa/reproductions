@@ -4,11 +4,9 @@ import ReactServer from "react-server-dom-webpack/server.edge";
 export type FlightData = React.ReactNode;
 
 export async function handler(request: Request) {
+	// react server (react node -> flight)
 	const url = new URL(request.url);
-	// TODO: jsx transform is broken?
-	Page;
-	// const node = <div>hello</div>;
-	const node = React.createElement("div", null, "hello");
+	const node = <Page />;
 	const flightStream = ReactServer.renderToReadableStream<FlightData>(
 		node,
 		createBundlerConfig(),
@@ -21,15 +19,8 @@ export async function handler(request: Request) {
 		});
 	}
 
-	// https://webpack.js.org/api/module-methods/#magic-comments
-	const entrySsr: typeof import("./entry-ssr") = await import(
-		/* webpackIgnore: true */ "./ssr.cjs" as string
-	);
-
-	// TODO: this doesn't trigger a separate layer?
-	// console.log(require("./entry-ssr"));
-	// const entrySsr: typeof import("./entry-ssr") = await import("./entry-ssr");
-
+	// delegate to ssr
+	const entrySsr = await import("./entry-ssr-layer");
 	return entrySsr.handler(flightStream);
 }
 
@@ -42,7 +33,7 @@ function Page() {
 				<link rel="icon" type="image/x-icon" href="/favicon.ico" />
 			</head>
 			<body>
-				<div>Hello</div>
+				<div>Hello RSC!</div>
 			</body>
 		</html>
 	);

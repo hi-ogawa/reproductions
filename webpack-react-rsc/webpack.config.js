@@ -59,10 +59,7 @@ export default function (env, _argv) {
 		dependencies: ["client"],
 		target: "node20",
 		entry: {
-			server: "./src/entry-server",
-			// TODO: dedicated entry is needed to force separate layer?
-			//       if so, wouldn't it be mostly same as spawning one more compiler?
-			ssr: "./src/entry-ssr",
+			server: "./src/entry-server-layer",
 		},
 		output: {
 			path: path.resolve("./dist/server"),
@@ -80,11 +77,11 @@ export default function (env, _argv) {
 			rules: [
 				{
 					layer: "server",
-					test: /\/entry-server\./,
+					resource: /\/entry-server-layer\./,
 				},
 				{
 					layer: "ssr",
-					test: /\/entry-ssr\./,
+					resource: /\/entry-ssr-layer\./,
 				},
 				{
 					issuerLayer: "server",
