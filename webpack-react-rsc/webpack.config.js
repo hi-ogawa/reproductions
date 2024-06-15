@@ -22,7 +22,7 @@ export default function (env, _argv) {
 	const dev = !env.WEBPACK_BUILD;
 
 	/**
-	 * @type {import("webpack").Configuration}
+	 * @satisfies {import("webpack").Configuration}
 	 */
 	const commonConfig = {
 		mode: "development",
@@ -60,6 +60,9 @@ export default function (env, _argv) {
 		target: "node20",
 		entry: {
 			server: "./src/entry-server",
+			// TODO: dedicated entry is needed to force separate layer?
+			//       if so, wouldn't it be mostly same as spawning one more compiler?
+			ssr: "./src/entry-ssr",
 		},
 		output: {
 			path: path.resolve("./dist/server"),
@@ -72,9 +75,25 @@ export default function (env, _argv) {
 		},
 		// TODO: https://webpack.js.org/configuration/externals
 		externals: {},
-		resolve: {
-			...commonConfig.resolve,
-			conditionNames: ["react-server", "..."],
+		experiments: { layers: true },
+		module: {
+			rules: [
+				{
+					layer: "server",
+					test: /\/entry-server\./,
+				},
+				{
+					layer: "ssr",
+					test: /\/entry-ssr\./,
+				},
+				{
+					issuerLayer: "server",
+					resolve: {
+						conditionNames: ["react-server", "..."],
+					},
+				},
+				...commonConfig.module.rules,
+			],
 		},
 		plugins: [
 			new webpack.DefinePlugin({
@@ -86,6 +105,7 @@ export default function (env, _argv) {
 				name: "dev-ssr",
 				apply(compiler) {
 					const name = "dev-ssr";
+					const serverDir = path.resolve("./dist/server");
 					const serverPath = path.resolve("./dist/server/server.cjs");
 
 					/**
@@ -122,9 +142,12 @@ export default function (env, _argv) {
 
 					// https://webpack.js.org/api/compiler-hooks/
 					compiler.hooks.invalid.tap(name, () => {
-						// invalidate cjs
-						// TODO: also trigger browser reload?
-						delete require.cache[serverPath];
+						// invalidate all server cjs
+						for (const key in require.cache) {
+							if (key.startsWith(serverDir)) {
+								delete require.cache[key];
+							}
+						}
 					});
 				},
 			},
