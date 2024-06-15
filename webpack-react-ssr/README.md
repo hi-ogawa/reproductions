@@ -1,5 +1,7 @@
 Practice Webpack (SSR)
 
+https://webpack-react-ssr-hiroshi.vercel.app
+
 - [x] build server
   - [x] server build (cjs)
   - [ ] externalize more
