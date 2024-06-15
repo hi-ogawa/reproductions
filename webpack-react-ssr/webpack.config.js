@@ -52,6 +52,7 @@ export default function (env, _argv) {
 	const serverConfig = {
 		...commonConfig,
 		name: "server",
+		dependencies: ["client"],
 		target: "node20",
 		// TODO: https://webpack.js.org/configuration/externals
 		externals: {},
@@ -94,23 +95,15 @@ export default function (env, _argv) {
 								name: "dev-ssr",
 								// @ts-ignore
 								middleware: (req, res, next) => {
-									// TODO: how to pass it to server runtime?
+									// TODO: how to pass on prod?
 									/** @type {import("webpack").MultiStats} */
 									const stats = res.locals.webpack.devMiddleware.stats;
 									const statsJson = stats.toJson();
-									// console.log(statsJson)
-
-									const clientStats = statsJson.children?.find(
-										(s) => s.name === "client",
-									);
-									0 &&
-										console.log(JSON.stringify(clientStats?.assets, null, 2));
-									// 0 && console.log(statsJson);
 
 									/** @type {import("./src/entry-server")} */
 									const mod = require(serverPath);
 									const nodeHandler = webToNodeHandler((request) =>
-										mod.handler(request),
+										mod.handler(request, { stats: statsJson }),
 									);
 									nodeHandler(req, res, next);
 								},
@@ -142,7 +135,8 @@ export default function (env, _argv) {
 		},
 		output: {
 			path: path.resolve("./dist/client"),
-			filename: env.WEBPACK_BUILD ? "[name].[contenthash:8].js" : "[name].js",
+			filename:
+				1 || env.WEBPACK_BUILD ? "[name].[contenthash:8].js" : "[name].js",
 			clean: true,
 		},
 	};
