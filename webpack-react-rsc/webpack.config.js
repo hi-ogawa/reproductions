@@ -58,8 +58,6 @@ export default function (env, _argv) {
 		name: "server",
 		dependencies: ["client"],
 		target: "node20",
-		// TODO: https://webpack.js.org/configuration/externals
-		externals: {},
 		entry: {
 			server: "./src/entry-server",
 		},
@@ -71,6 +69,12 @@ export default function (env, _argv) {
 				type: "commonjs-static",
 			},
 			clean: true,
+		},
+		// TODO: https://webpack.js.org/configuration/externals
+		externals: {},
+		resolve: {
+			...commonConfig.resolve,
+			conditionNames: ["react-server", "..."],
 		},
 		plugins: [
 			new webpack.DefinePlugin({

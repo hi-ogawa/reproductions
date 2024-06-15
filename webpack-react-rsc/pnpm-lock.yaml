@@ -17,6 +17,9 @@ importers:
       react-dom:
         specifier: 19.0.0-rc-dfd30974ab-20240613
         version: 19.0.0-rc-dfd30974ab-20240613(react@19.0.0-rc-dfd30974ab-20240613)
+      react-server-dom-webpack:
+        specifier: 19.0.0-rc-dfd30974ab-20240613
+        version: 19.0.0-rc-dfd30974ab-20240613(react-dom@19.0.0-rc-dfd30974ab-20240613(react@19.0.0-rc-dfd30974ab-20240613))(react@19.0.0-rc-dfd30974ab-20240613)(webpack@5.92.0(webpack-cli@5.1.4))
     devDependencies:
       '@biomejs/biome':
         specifier: ^1.8.1
@@ -553,6 +556,10 @@ packages:
     resolution: {integrity: sha512-n02Vykv5uA3eHGM/Z2dQrcD56kL8TyDb2p1+0P83PClMnC/nc+anbQRhIOWnSq4Ke/KvDPrY3C9hDtC/A3eHnQ==}
     peerDependencies:
       acorn: ^8
+
+  acorn-loose@8.4.0:
+    resolution: {integrity: sha512-M0EUka6rb+QC4l9Z3T0nJEzNOO7JcoJlYMrBlyBCiFSXRyxjLKayd4TbQs2FDRWQU1h9FR7QVNHt+PEaoNL5rQ==}
+    engines: {node: '>=0.4.0'}
 
   acorn@8.11.3:
     resolution: {integrity: sha512-Y9rRfJG5jcKOE0CLisYbojUjIrIEE7AGMzA/Sm4BslANhbS+cDMpgBdcPT91oJ7OuJ9hYJBx59RjbhxVnrF8Xg==}
@@ -1452,6 +1459,14 @@ packages:
     peerDependencies:
       react: 19.0.0-rc-dfd30974ab-20240613
 
+  react-server-dom-webpack@19.0.0-rc-dfd30974ab-20240613:
+    resolution: {integrity: sha512-yD144OXIWQt7j5AhvY1kRef0Qj9I+H0afPjO62guPdrYW49eRgH9lbaHigz+auL2De17/5PARTaQzYrIEmcsiQ==}
+    engines: {node: '>=0.10.0'}
+    peerDependencies:
+      react: 19.0.0-rc-dfd30974ab-20240613
+      react-dom: 19.0.0-rc-dfd30974ab-20240613
+      webpack: ^5.59.0
+
   react@19.0.0-rc-dfd30974ab-20240613:
     resolution: {integrity: sha512-3Qj7oDBSsImcwuHwRHOqpp58P0JNn72/SxXqKj+HYnKj1PnoPXXsaeO9Xv9Rz4yT6B6IpteWra2guN6l5r8P4A==}
     engines: {node: '>=0.10.0'}
@@ -2312,6 +2327,10 @@ snapshots:
       negotiator: 0.6.3
 
   acorn-import-attributes@1.9.5(acorn@8.11.3):
+    dependencies:
+      acorn: 8.11.3
+
+  acorn-loose@8.4.0:
     dependencies:
       acorn: 8.11.3
 
@@ -3198,6 +3217,14 @@ snapshots:
     dependencies:
       react: 19.0.0-rc-dfd30974ab-20240613
       scheduler: 0.25.0-rc-dfd30974ab-20240613
+
+  react-server-dom-webpack@19.0.0-rc-dfd30974ab-20240613(react-dom@19.0.0-rc-dfd30974ab-20240613(react@19.0.0-rc-dfd30974ab-20240613))(react@19.0.0-rc-dfd30974ab-20240613)(webpack@5.92.0(webpack-cli@5.1.4)):
+    dependencies:
+      acorn-loose: 8.4.0
+      neo-async: 2.6.2
+      react: 19.0.0-rc-dfd30974ab-20240613
+      react-dom: 19.0.0-rc-dfd30974ab-20240613(react@19.0.0-rc-dfd30974ab-20240613)
+      webpack: 5.92.0(webpack-cli@5.1.4)
 
   react@19.0.0-rc-dfd30974ab-20240613: {}
 

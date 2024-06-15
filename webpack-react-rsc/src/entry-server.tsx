@@ -1,49 +1,43 @@
-import { tinyassert } from "@hiogawa/utils";
-import ReactDOMServer from "react-dom/server.edge";
-import type { StatsCompilation } from "webpack";
-import { App } from "./App";
-import css from "./index.css?raw";
+import ReactServer from "react-server-dom-webpack/server.edge";
+
+export type FlightData = React.ReactNode;
 
 export async function handler(_request: Request) {
-	let scripts: string[];
-	if (__define.DEV) {
-		scripts = ["/assets/client.js"];
-	} else {
-		// https://webpack.js.org/api/module-methods/#magic-comments
-		const mod = await import(
-			/* webpackMode: "eager" */
-			"../dist/client/__stats.js" as string
-		);
-		const stats = mod.default as StatsCompilation;
-		const files = stats.assetsByChunkName?.["client"];
-		tinyassert(files);
-		scripts = files
-			.filter((f) => f.endsWith(".js"))
-			.map((file) => `/assets/${file}`);
-	}
-
-	const htmlStream = await ReactDOMServer.renderToReadableStream(<Root />, {
-		bootstrapScripts: scripts,
-	});
-	return new Response(htmlStream, {
+	const node = <Page />;
+	const stream = ReactServer.renderToReadableStream<FlightData>(
+		node,
+		createBundlerConfig(),
+	);
+	return new Response(stream, {
 		headers: {
-			"content-type": "text/html",
+			"content-type": "text/x-component;charset=utf-8",
 		},
 	});
 }
 
-function Root() {
+function Page() {
 	return (
 		<html>
 			<head>
 				<meta charSet="utf-8" />
 				<title>Webpack React SSR</title>
 				<link rel="icon" href="/favicon.ico" />
-				<style>{css}</style>
 			</head>
 			<body>
-				<App />
+				<div>Hello</div>
 			</body>
 		</html>
+	);
+}
+
+function createBundlerConfig() {
+	return new Proxy(
+		{},
+		{
+			get(_target, p: string, _receiver) {
+				const [id, name] = p.split("#");
+				return { id, name, chunks: [] };
+			},
+		},
 	);
 }
