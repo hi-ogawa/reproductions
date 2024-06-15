@@ -90,7 +90,6 @@ export default function (env, _argv) {
 					 * @type {import("webpack-dev-server").Configuration}
 					 */
 					const devServer = {
-						hot: false,
 						host: "localhost",
 						static: {
 							serveIndex: false,
