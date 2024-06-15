@@ -65,13 +65,14 @@ export default function (env, _argv) {
 		},
 		output: {
 			path: path.resolve("./dist/server"),
-			filename: "[name].cjs",
+			filename: "[name].js",
 			library: {
 				// https://webpack.js.org/configuration/output/#outputlibrarytype
-				type: "commonjs-static",
+				type: "module",
 			},
 			clean: true,
 		},
+		experiments: { outputModule: true },
 		plugins: [
 			new webpack.DefinePlugin({
 				"__define.SSR": "true",
@@ -82,12 +83,14 @@ export default function (env, _argv) {
 				name: "dev-ssr",
 				apply(compiler) {
 					const name = "dev-ssr";
-					const serverPath = path.resolve("./dist/server/server.cjs");
+					const serverPath = path.resolve("./dist/server/server.js");
+					let version = 0;
 
 					/**
 					 * @type {import("webpack-dev-server").Configuration}
 					 */
 					const devServer = {
+						hot: false,
 						host: "localhost",
 						static: {
 							serveIndex: false,
@@ -108,11 +111,13 @@ export default function (env, _argv) {
 									// 	readFileSync("dist/client/__stats.json", "utf-8"),
 									// );
 
-									/** @type {import("./src/entry-server")} */
-									const mod = require(serverPath);
-									const nodeHandler = webToNodeHandler((request) =>
-										mod.handler(request),
-									);
+									const nodeHandler = webToNodeHandler(async (request) => {
+										/** @type {import("./src/entry-server")} */
+										const mod = await import(
+											`${serverPath}?version=${version}`
+										);
+										return mod.handler(request);
+									});
 									nodeHandler(req, res, next);
 								},
 							});
@@ -125,6 +130,7 @@ export default function (env, _argv) {
 					compiler.hooks.invalid.tap(name, () => {
 						// invalidate cjs
 						// TODO: also trigger browser reload?
+						version++;
 						delete require.cache[serverPath];
 					});
 				},
