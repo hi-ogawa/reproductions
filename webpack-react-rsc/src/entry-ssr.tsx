@@ -37,6 +37,7 @@ export async function handler(request: Request) {
 
 	// react dom ssr (react node -> html)
 	const htmlStream = await ReactDOMServer.renderToReadableStream(node, {
+		// TODO: hashed prod assets
 		bootstrapScripts: __define.DEV ? ["/assets/index.js"] : [],
 	});
 

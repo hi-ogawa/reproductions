@@ -56,7 +56,6 @@ export default function (env, _argv) {
 	const serverConfig = {
 		...commonConfig,
 		name: "server",
-		dependencies: ["browser"],
 		target: "node20",
 		entry: {
 			server: "./src/entry-ssr-layer",
