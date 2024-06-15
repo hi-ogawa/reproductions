@@ -136,8 +136,7 @@ export default function (env, _argv) {
 		},
 		output: {
 			path: path.resolve("./dist/client"),
-			filename:
-				1 || env.WEBPACK_BUILD ? "[name].[contenthash:8].js" : "[name].js",
+			filename: env.WEBPACK_BUILD ? "[name].[contenthash:8].js" : "[name].js",
 			clean: true,
 		},
 		plugins: [

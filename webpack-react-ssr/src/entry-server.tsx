@@ -11,10 +11,11 @@ export type Manifest = {
 
 export async function handler(_request: Request, manifest: Manifest) {
 	const clientEntry = manifest.clientStats.assetsByChunkName?.["client"];
-	tinyassert(clientEntry?.length === 1);
+	tinyassert(clientEntry);
 
 	const htmlStream = await ReactDOMServer.renderToReadableStream(<Root />, {
-		bootstrapScripts: clientEntry,
+		// exclude hot-update.js during dev?
+		bootstrapScripts: clientEntry.slice(0, 1),
 	});
 	return new Response(htmlStream, {
 		headers: {
