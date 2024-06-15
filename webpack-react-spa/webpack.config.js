@@ -26,7 +26,7 @@ export default {
 			// https://webpack.js.org/contribute/writing-a-loader/
 			{
 				test: /\.tsx$/,
-				use: path.resolve("./src/esbuild-loader.js"),
+				use: path.resolve("./extra/esbuild-loader.js"),
 			},
 			// https://webpack.js.org/guides/asset-management/#loading-css
 			{

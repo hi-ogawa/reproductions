@@ -1,4 +1,4 @@
-Practice Webpack (part 1)
+Practice Webpack (SPA)
 
 - [x] Guide https://webpack.js.org/guides/
 - [x] React SPA
