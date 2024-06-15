@@ -2,12 +2,12 @@ import React from "react";
 import ReactDOMServer from "react-dom/server.edge";
 import ReactClient from "react-server-dom-webpack/client.edge";
 import type { FlightData } from "./entry-server";
+import * as entryReactServer from "./entry-server-layer";
 
 export async function handler(request: Request) {
 	const url = new URL(request.url);
 
 	// react server (react node -> flight)
-	const entryReactServer = await import("./entry-server-layer");
 	const flightStream = await entryReactServer.handler(request);
 	if (url.searchParams.has("__f")) {
 		return new Response(flightStream, {
