@@ -9,7 +9,9 @@
 		"preview": "vite preview",
 		"lint": "biome check --write .",
 		"lint-check": "biome check .",
-		"vc-build": "pnpm build && node misc/vercel/build.js"
+		"vc-build": "pnpm build && node misc/vercel/build.js",
+		"vc-release": "vercel deploy --prebuilt --prod",
+		"vc-release-staging": "vercel deploy --prebuilt"
 	},
 	"dependencies": {
 		"react": "19.0.0-rc-dfd30974ab-20240613",
