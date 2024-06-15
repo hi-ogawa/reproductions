@@ -4,12 +4,18 @@ import { createRequire } from "node:module";
 import path from "node:path";
 import { webToNodeHandler } from "@hiogawa/utils-node";
 
+// require server code for dev ssr
 const require = createRequire(import.meta.url);
 
-// https://webpack.js.org/configuration/configuration-types/#exporting-multiple-configurations
+// https://webpack.js.org/configuration/configuration-types/
 // https://github.com/unstubbable/mfng/blob/251b5284ca6f10b4c46e16833dacf0fd6cf42b02/apps/aws-app/webpack.config.js
 
-export default () => {
+/**
+ * @param {{ WEBPACK_SERVE?: boolean, WEBPACK_BUILD?: boolean }} _env
+ * @param {unknown} _argv
+ * @returns {import("webpack").Configuration[]}
+ */
+export default function (_env, _argv) {
 	/**
 	 * @type {import("webpack").Configuration}
 	 */
@@ -134,4 +140,4 @@ export default () => {
 	};
 
 	return [serverConfig, clientConfig];
-};
+}
