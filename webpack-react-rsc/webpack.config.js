@@ -59,7 +59,7 @@ export default function (env, _argv) {
 		dependencies: ["client"],
 		target: "node20",
 		entry: {
-			server: "./src/entry-server-layer",
+			server: "./src/entry-ssr-layer",
 		},
 		output: {
 			path: path.resolve("./dist/server"),
@@ -124,7 +124,7 @@ export default function (env, _argv) {
 								name: "dev-ssr",
 								// @ts-ignore
 								middleware: (req, res, next) => {
-									/** @type {import("./src/entry-server")} */
+									/** @type {import("./src/entry-ssr-layer")} */
 									const mod = require(serverPath);
 									const nodeHandler = webToNodeHandler((request) =>
 										mod.handler(request),

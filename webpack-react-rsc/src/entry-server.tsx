@@ -4,25 +4,14 @@ import Page from "./routes/page";
 
 export type FlightData = React.ReactNode;
 
-export async function handler(request: Request) {
+export async function handler(_request: Request) {
 	// react server (react node -> flight)
-	const url = new URL(request.url);
 	const node = <Page />;
 	const flightStream = ReactServer.renderToReadableStream<FlightData>(
 		node,
 		createBundlerConfig(),
 	);
-	if (url.searchParams.has("__f")) {
-		return new Response(flightStream, {
-			headers: {
-				"content-type": "text/x-component;charset=utf-8",
-			},
-		});
-	}
-
-	// delegate to ssr
-	const entrySsr = await import("./entry-ssr-layer");
-	return entrySsr.handler(flightStream);
+	return flightStream;
 }
 
 function createBundlerConfig() {
