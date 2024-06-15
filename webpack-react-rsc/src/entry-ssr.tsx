@@ -78,16 +78,15 @@ function StreamTransfer(props: { stream: ReadableStream<Uint8Array> }) {
 		);
 	}
 
-	const initCode = `
+	return (
+		<>
+			{toScript(`
 self.__flightStream = new ReadableStream({
 	start(c) {
 		self.__flightStreamController = c;
 	}
 }).pipeThrough(new TextEncoderStream())
-`;
-	return (
-		<>
-			{toScript(initCode)}
+`)}
 			<React.Suspense>
 				<Recurse depth={0} />
 			</React.Suspense>
