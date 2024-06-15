@@ -3,7 +3,7 @@ Practice Webpack (RSC)
 - [x] layer and conditions
 - [x] flight server
 - [x] ssr
-- [ ] browser
+- [x] browser
 - [ ] client reference
 - [ ] server hmr
 - [ ] client hmr
