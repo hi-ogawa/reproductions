@@ -46,8 +46,16 @@ function App() {
 			<p className="read-the-docs">
 				Click on Webpack and React logos to learn more
 			</p>
+			<React.Suspense fallback={<div>Sleeping 1 sec...</div>}>
+				<Sleep />
+			</React.Suspense>
 		</div>
 	);
+}
+
+async function Sleep() {
+	await new Promise((r) => setTimeout(r, 1000));
+	return <div>Hello!</div>;
 }
 
 // function useHydrated() {

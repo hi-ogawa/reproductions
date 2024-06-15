@@ -1,3 +1,4 @@
+import React from "react";
 import ReactDOMServer from "react-dom/server.edge";
 import ReactClient from "react-server-dom-webpack/client.edge";
 import type { FlightData } from "./entry-server";
@@ -19,24 +20,25 @@ export async function handler(request: Request) {
 	const [flightStream1, flightStream2] = flightStream.tee();
 
 	// react client (flight -> react node)
-	let node = await ReactClient.createFromReadableStream<FlightData>(
+	const rootPromise = ReactClient.createFromReadableStream<FlightData>(
 		flightStream1,
 		{
 			ssrManifest: {},
 		},
 	);
 
-	// send a copy of flight stream together with ssr
-	const flightStreamCode = await getFlightStreamCode(flightStream2);
-	node = (
-		<>
-			{node}
-			<script dangerouslySetInnerHTML={{ __html: flightStreamCode }} />
-		</>
-	);
+	function SsrRoot() {
+		return (
+			<>
+				{React.use(rootPromise)}
+				{/* send a copy of flight stream together with ssr */}
+				<StreamTransfer stream={flightStream2} />;
+			</>
+		);
+	}
 
 	// react dom ssr (react node -> html)
-	const htmlStream = await ReactDOMServer.renderToReadableStream(node, {
+	const htmlStream = await ReactDOMServer.renderToReadableStream(<SsrRoot />, {
 		// TODO: hashed prod assets
 		bootstrapScripts: __define.DEV ? ["/assets/index.js"] : [],
 	});
@@ -48,28 +50,47 @@ export async function handler(request: Request) {
 	});
 }
 
-async function getFlightStreamCode(stream: ReadableStream<Uint8Array>) {
-	// TODO: stream
-	// TODO: escape script string
-	const flightString = await streamToString(stream);
-	return `\
-self.__flightStream = new ReadableStream({
-	start(ctrl) {
-		ctrl.enqueue(${JSON.stringify(flightString)});
-		ctrl.close();
-	}
-}).pipeThrough(new TextEncoderStream());
-`;
-}
+// based on https://github.com/remix-run/react-router/blob/09b52e491e3927e30e707abe67abdd8e9b9de946/packages/react-router/lib/dom/ssr/single-fetch.tsx#L49
+function StreamTransfer(props: { stream: ReadableStream<Uint8Array> }) {
+	const textStream = props.stream.pipeThrough(new TextDecoderStream());
+	const reader = textStream.getReader();
 
-async function streamToString(stream: ReadableStream<Uint8Array>) {
-	let s = "";
-	await stream.pipeThrough(new TextDecoderStream()).pipeTo(
-		new WritableStream({
-			write(c) {
-				s += c;
-			},
-		}),
+	const results = new Array<Promise<ReadableStreamReadResult<string>>>();
+
+	function toScript(code: string) {
+		return <script dangerouslySetInnerHTML={{ __html: code }} />;
+	}
+
+	function Recurse(props: { depth: number }) {
+		const result = React.use((results[props.depth] ??= reader.read()));
+		if (result.done) {
+			return toScript(`self.__flightStreamController.close()`);
+		}
+		// TODO: escape
+		const data = JSON.stringify(result.value);
+		return (
+			<>
+				{toScript(`self.__flightStreamController.enqueue(${data})`)}
+				<React.Suspense>
+					<Recurse depth={props.depth + 1} />
+				</React.Suspense>
+			</>
+		);
+	}
+
+	const initCode = `
+self.__flightStream = new ReadableStream({
+	start(c) {
+		self.__flightStreamController = c;
+	}
+}).pipeThrough(new TextEncoderStream())
+`;
+	return (
+		<>
+			{toScript(initCode)}
+			<React.Suspense>
+				<Recurse depth={0} />
+			</React.Suspense>
+		</>
 	);
-	return s;
 }

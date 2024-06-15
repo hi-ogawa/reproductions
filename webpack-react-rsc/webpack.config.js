@@ -123,6 +123,9 @@ export default function (env, _argv) {
 								name: "dev-ssr",
 								// @ts-ignore
 								middleware: (req, res, next) => {
+									// disable compression for streaming
+									delete req.headers["accept-encoding"];
+
 									/** @type {import("./src/entry-ssr-layer")} */
 									const mod = require(serverPath);
 									const nodeHandler = webToNodeHandler((request) =>
