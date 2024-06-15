@@ -5,17 +5,18 @@ import path from "node:path";
 import { webToNodeHandler } from "@hiogawa/utils-node";
 
 // require server code for dev ssr
+// TODO: try import("?timestamp") trick for esm output?
 const require = createRequire(import.meta.url);
 
 // https://webpack.js.org/configuration/configuration-types/
 // https://github.com/unstubbable/mfng/blob/251b5284ca6f10b4c46e16833dacf0fd6cf42b02/apps/aws-app/webpack.config.js
 
 /**
- * @param {{ WEBPACK_SERVE?: boolean, WEBPACK_BUILD?: boolean }} _env
+ * @param {{ WEBPACK_SERVE?: boolean, WEBPACK_BUILD?: boolean }} env
  * @param {unknown} _argv
  * @returns {import("webpack").Configuration[]}
  */
-export default function (_env, _argv) {
+export default function (env, _argv) {
 	/**
 	 * @type {import("webpack").Configuration}
 	 */
@@ -55,17 +56,15 @@ export default function (_env, _argv) {
 		// TODO: https://webpack.js.org/configuration/externals
 		externals: {},
 		entry: {
-			server: {
-				import: "./src/entry-server",
-				filename: "server.cjs",
-				library: {
-					// https://webpack.js.org/configuration/output/#outputlibrarytype
-					type: "commonjs-static",
-				},
-			},
+			server: "./src/entry-server",
 		},
 		output: {
 			path: path.resolve("./dist/server"),
+			filename: "[name].cjs",
+			library: {
+				// https://webpack.js.org/configuration/output/#outputlibrarytype
+				type: "commonjs-static",
+			},
 			clean: true,
 		},
 		plugins: [
@@ -95,11 +94,18 @@ export default function (_env, _argv) {
 								name: "dev-ssr",
 								// @ts-ignore
 								middleware: (req, res, next) => {
-									// TODO: pass it to server runtime?
+									// TODO: how to pass it to server runtime?
 									/** @type {import("webpack").MultiStats} */
 									const stats = res.locals.webpack.devMiddleware.stats;
 									const statsJson = stats.toJson();
-									0 && console.log(statsJson);
+									// console.log(statsJson)
+
+									const clientStats = statsJson.children?.find(
+										(s) => s.name === "client",
+									);
+									0 &&
+										console.log(JSON.stringify(clientStats?.assets, null, 2));
+									// 0 && console.log(statsJson);
 
 									/** @type {import("./src/entry-server")} */
 									const mod = require(serverPath);
@@ -117,6 +123,7 @@ export default function (_env, _argv) {
 					// https://webpack.js.org/api/compiler-hooks/
 					compiler.hooks.invalid.tap(name, () => {
 						// invalidate cjs
+						// TODO: also trigger browser reload?
 						delete require.cache[serverPath];
 					});
 				},
@@ -135,6 +142,7 @@ export default function (_env, _argv) {
 		},
 		output: {
 			path: path.resolve("./dist/client"),
+			filename: env.WEBPACK_BUILD ? "[name].[contenthash:8].js" : "[name].js",
 			clean: true,
 		},
 	};
