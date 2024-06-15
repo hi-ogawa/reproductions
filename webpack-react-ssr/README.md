@@ -13,7 +13,15 @@ Practice Webpack (SSR)
   - [x] raw and inline
   - [ ] url
 
-## links
+```sh
+# dev
+pnpm dev
 
-- https://webpack.js.org/contribute/writing-a-plugin/
-- https://github.com/webpack/webpack-dev-middleware#server-side-rendering
+# local preview
+pnpm build
+pnpm preview
+
+# vercel edge deploy
+pnpm vc-build
+pnpm vc-release
+```
