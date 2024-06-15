@@ -1,10 +1,11 @@
 {
-	"name": "webpack-react-spa",
+	"name": "webpack-react-ssr",
 	"private": true,
 	"version": "0.0.0",
 	"type": "module",
 	"scripts": {
 		"dev": "webpack serve",
+		"dev-webpack": "node --watch-path webpack.config.js --watch-preserve-output node_modules/webpack/bin/webpack.js serve",
 		"build": "webpack && cp -r public/. dist/client",
 		"preview": "vite preview",
 		"lint": "biome check --write .",
@@ -14,6 +15,7 @@
 		"vc-release-staging": "vercel deploy --prebuilt"
 	},
 	"dependencies": {
+		"@hiogawa/utils": "^1.7.0",
 		"react": "19.0.0-rc-dfd30974ab-20240613",
 		"react-dom": "19.0.0-rc-dfd30974ab-20240613"
 	},

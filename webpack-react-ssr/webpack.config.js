@@ -1,21 +1,26 @@
 // @ts-check
 
+import { writeFileSync } from "node:fs";
 import { createRequire } from "node:module";
 import path from "node:path";
 import { webToNodeHandler } from "@hiogawa/utils-node";
+import webpack from "webpack";
 
 // require server code for dev ssr
+// TODO: try import("?timestamp") trick for esm output?
 const require = createRequire(import.meta.url);
 
 // https://webpack.js.org/configuration/configuration-types/
 // https://github.com/unstubbable/mfng/blob/251b5284ca6f10b4c46e16833dacf0fd6cf42b02/apps/aws-app/webpack.config.js
 
 /**
- * @param {{ WEBPACK_SERVE?: boolean, WEBPACK_BUILD?: boolean }} _env
+ * @param {{ WEBPACK_SERVE?: boolean, WEBPACK_BUILD?: boolean }} env
  * @param {unknown} _argv
  * @returns {import("webpack").Configuration[]}
  */
-export default function (_env, _argv) {
+export default function (env, _argv) {
+	const dev = !env.WEBPACK_BUILD;
+
 	/**
 	 * @type {import("webpack").Configuration}
 	 */
@@ -51,29 +56,32 @@ export default function (_env, _argv) {
 	const serverConfig = {
 		...commonConfig,
 		name: "server",
+		dependencies: ["client"],
 		target: "node20",
 		// TODO: https://webpack.js.org/configuration/externals
 		externals: {},
 		entry: {
-			server: {
-				import: "./src/entry-server",
-				filename: "server.cjs",
-				library: {
-					// https://webpack.js.org/configuration/output/#outputlibrarytype
-					type: "commonjs-static",
-				},
-			},
+			server: "./src/entry-server",
 		},
 		output: {
 			path: path.resolve("./dist/server"),
+			filename: "[name].cjs",
+			library: {
+				// https://webpack.js.org/configuration/output/#outputlibrarytype
+				type: "commonjs-static",
+			},
 			clean: true,
 		},
 		plugins: [
+			new webpack.DefinePlugin({
+				"__define.SSR": "true",
+				"__define.DEV": dev,
+			}),
 			// https://webpack.js.org/contribute/writing-a-plugin/#example
-			{
-				name: "MyPlugin",
+			dev && {
+				name: "dev-ssr",
 				apply(compiler) {
-					const name = "MyPlugin";
+					const name = "dev-ssr";
 					const serverPath = path.resolve("./dist/server/server.cjs");
 
 					/**
@@ -95,11 +103,10 @@ export default function (_env, _argv) {
 								name: "dev-ssr",
 								// @ts-ignore
 								middleware: (req, res, next) => {
-									// TODO: pass it to server runtime?
-									/** @type {import("webpack").MultiStats} */
-									const stats = res.locals.webpack.devMiddleware.stats;
-									const statsJson = stats.toJson();
-									0 && console.log(statsJson);
+									// TODO: virtual module?
+									// const clientStats = JSON.parse(
+									// 	readFileSync("dist/client/__stats.json", "utf-8"),
+									// );
 
 									/** @type {import("./src/entry-server")} */
 									const mod = require(serverPath);
@@ -117,6 +124,7 @@ export default function (_env, _argv) {
 					// https://webpack.js.org/api/compiler-hooks/
 					compiler.hooks.invalid.tap(name, () => {
 						// invalidate cjs
+						// TODO: also trigger browser reload?
 						delete require.cache[serverPath];
 					});
 				},
@@ -134,9 +142,28 @@ export default function (_env, _argv) {
 			client: "./src/entry-client",
 		},
 		output: {
-			path: path.resolve("./dist/client"),
+			// https://webpack.js.org/guides/public-path/
+			publicPath: "/assets",
+			path: path.resolve("./dist/client/assets"),
+			filename: dev ? "[name].js" : "[name].[contenthash:8].js",
 			clean: true,
 		},
+		plugins: [
+			new webpack.DefinePlugin({
+				"__define.SSR": "false",
+				"__define.DEV": dev,
+			}),
+			!dev && {
+				name: "client-stats",
+				apply(compilation) {
+					compilation.hooks.done.tap("client-stats", (stats) => {
+						const statsJson = stats.toJson({ all: false, assets: true });
+						const code = `export default ${JSON.stringify(statsJson, null, 2)}`;
+						writeFileSync("./dist/client/__stats.js", code);
+					});
+				},
+			},
+		],
 	};
 
 	return [serverConfig, clientConfig];

@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@hiogawa/utils':
+        specifier: ^1.7.0
+        version: 1.7.0
       react:
         specifier: 19.0.0-rc-dfd30974ab-20240613
         version: 19.0.0-rc-dfd30974ab-20240613
@@ -251,6 +254,9 @@ packages:
 
   '@hiogawa/utils-node@0.0.1':
     resolution: {integrity: sha512-vEir6KhApTlPPT+0wX85wglFgZjxG/WZGjWGahSR7+ltNkpY0OpmxozbF5sLodYgXPObTK8cKgsQ4nzFLtZQ8g==}
+
+  '@hiogawa/utils@1.7.0':
+    resolution: {integrity: sha512-ghiEFWBR1NENoHn+lSuW7liicTIzVPN+8Srm5UedCTw43gus0mlse6Wp2lz6GmbOXJ/CalMPp/0Tz2X8tajkAg==}
 
   '@isaacs/cliui@8.0.2':
     resolution: {integrity: sha512-O8jcjabXaleOG9DQ0+ARXWZBTfnP4WNAqzuiJK7ll44AmxGKv/J2M4TPjxjY3znBCfvBXFzucm1twdyFybFqEA==}
@@ -1996,6 +2002,8 @@ snapshots:
     optional: true
 
   '@hiogawa/utils-node@0.0.1': {}
+
+  '@hiogawa/utils@1.7.0': {}
 
   '@isaacs/cliui@8.0.2':
     dependencies:
