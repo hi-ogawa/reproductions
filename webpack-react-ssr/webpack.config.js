@@ -103,11 +103,6 @@ export default function (env, _argv) {
 								name: "dev-ssr",
 								// @ts-ignore
 								middleware: (req, res, next) => {
-									// TODO: virtual module?
-									// const clientStats = JSON.parse(
-									// 	readFileSync("dist/client/__stats.json", "utf-8"),
-									// );
-
 									/** @type {import("./src/entry-server")} */
 									const mod = require(serverPath);
 									const nodeHandler = webToNodeHandler((request) =>
