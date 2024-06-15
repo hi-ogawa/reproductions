@@ -34,3 +34,42 @@ declare module "react-server-dom-webpack/server.edge" {
 		serverManifest?: unknown,
 	): Promise<unknown>;
 }
+
+// https://github.com/facebook/react/blob/89021fb4ec9aa82194b0788566e736a4cedfc0e4/packages/react-server-dom-webpack/src/ReactFlightDOMClientEdge.js
+declare module "react-server-dom-webpack/client.edge" {
+	export function createServerReference(
+		id: string,
+		callServer: unknown,
+	): Function;
+
+	export function createFromReadableStream<T>(
+		stream: ReadableStream<Uint8Array>,
+		options: {
+			ssrManifest: object;
+		},
+	): Promise<T>;
+}
+
+// https://github.com/facebook/react/blob/89021fb4ec9aa82194b0788566e736a4cedfc0e4/packages/react-server-dom-webpack/src/ReactFlightDOMClientBrowser.js
+declare module "react-server-dom-webpack/client.browser" {
+	export function createServerReference(
+		id: string,
+		callServer: unknown,
+	): Function;
+
+	export function createFromReadableStream<T>(
+		stream: ReadableStream<Uint8Array>,
+		options: {
+			callServer: unknown;
+		},
+	): Promise<T>;
+
+	export function createFromFetch<T>(
+		promiseForResponse: Promise<Response>,
+		options: {
+			callServer: unknown;
+		},
+	): Promise<T>;
+
+	export function encodeReply(v: unknown[]): Promise<string | FormData>;
+}

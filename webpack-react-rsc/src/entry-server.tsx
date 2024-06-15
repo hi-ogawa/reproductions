@@ -27,7 +27,8 @@ export async function handler(request: Request) {
 	);
 
 	// TODO: this doesn't trigger a separate layer?
-	// import("./entry-ssr");
+	// console.log(require("./entry-ssr"));
+	// const entrySsr: typeof import("./entry-ssr") = await import("./entry-ssr");
 
 	return entrySsr.handler(flightStream);
 }

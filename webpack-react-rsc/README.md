@@ -1,6 +1,6 @@
 Practice Webpack (RSC)
 
 - [x] flight server
-- [ ] ssr
+- [x] ssr
 - [ ] browser
 - [ ] client reference
