@@ -1,5 +1,6 @@
 // @ts-check
 
+import { readFileSync, writeFileSync } from "node:fs";
 import { createRequire } from "node:module";
 import path from "node:path";
 import { webToNodeHandler } from "@hiogawa/utils-node";
@@ -95,15 +96,15 @@ export default function (env, _argv) {
 								name: "dev-ssr",
 								// @ts-ignore
 								middleware: (req, res, next) => {
-									// TODO: how to pass on prod?
-									/** @type {import("webpack").MultiStats} */
-									const stats = res.locals.webpack.devMiddleware.stats;
-									const statsJson = stats.toJson();
+									// TODO: virtual module?
+									const clientStats = JSON.parse(
+										readFileSync("dist/client/__stats.json", "utf-8"),
+									);
 
 									/** @type {import("./src/entry-server")} */
 									const mod = require(serverPath);
 									const nodeHandler = webToNodeHandler((request) =>
-										mod.handler(request, { stats: statsJson }),
+										mod.handler(request, { clientStats }),
 									);
 									nodeHandler(req, res, next);
 								},
@@ -139,6 +140,18 @@ export default function (env, _argv) {
 				1 || env.WEBPACK_BUILD ? "[name].[contenthash:8].js" : "[name].js",
 			clean: true,
 		},
+		plugins: [
+			{
+				name: "client-stats",
+				apply(compilation) {
+					compilation.hooks.done.tap("client-stats", (stats) => {
+						const statsJson = stats.toJson({ all: false, assets: true });
+						const code = JSON.stringify(statsJson, null, 2);
+						writeFileSync("./dist/client/__stats.json", code);
+					});
+				},
+			},
+		],
 	};
 
 	return [serverConfig, clientConfig];

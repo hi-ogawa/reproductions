@@ -6,15 +6,15 @@ import css from "./index.css?raw";
 
 // TODO: virtual module?
 export type Manifest = {
-	stats: StatsCompilation;
+	clientStats: StatsCompilation;
 };
 
 export async function handler(_request: Request, manifest: Manifest) {
-	const clientStats = manifest.stats.children?.find((s) => s.name === "client");
-	tinyassert(clientStats?.assetsByChunkName);
+	const clientEntry = manifest.clientStats.assetsByChunkName?.["client"];
+	tinyassert(clientEntry?.length === 1);
 
 	const htmlStream = await ReactDOMServer.renderToReadableStream(<Root />, {
-		bootstrapScripts: clientStats.assetsByChunkName["client"],
+		bootstrapScripts: clientEntry,
 	});
 	return new Response(htmlStream, {
 		headers: {
