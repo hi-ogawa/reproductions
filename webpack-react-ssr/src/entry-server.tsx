@@ -4,18 +4,26 @@ import type { StatsCompilation } from "webpack";
 import { App } from "./App";
 import css from "./index.css?raw";
 
-// TODO: virtual module?
-export type Manifest = {
-	clientStats: StatsCompilation;
-};
-
-export async function handler(_request: Request, manifest: Manifest) {
-	const clientEntry = manifest.clientStats.assetsByChunkName?.["client"];
-	tinyassert(clientEntry);
+export async function handler(_request: Request) {
+	let scripts: string[];
+	if (__define.DEV) {
+		scripts = ["/assets/client.js"];
+	} else {
+		// https://webpack.js.org/api/module-methods/#magic-comments
+		const mod = await import(
+			/* webpackMode: "eager" */
+			"../dist/client/__stats.js" as string
+		);
+		const stats = mod.default as StatsCompilation;
+		const files = stats.assetsByChunkName?.["client"];
+		tinyassert(files);
+		scripts = files
+			.filter((f) => f.endsWith(".js"))
+			.map((file) => `/assets/${file}`);
+	}
 
 	const htmlStream = await ReactDOMServer.renderToReadableStream(<Root />, {
-		// exclude hot-update.js during dev?
-		bootstrapScripts: clientEntry.slice(0, 1),
+		bootstrapScripts: scripts,
 	});
 	return new Response(htmlStream, {
 		headers: {

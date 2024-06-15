@@ -1,9 +1,10 @@
 // @ts-check
 
-import { readFileSync, writeFileSync } from "node:fs";
+import { writeFileSync } from "node:fs";
 import { createRequire } from "node:module";
 import path from "node:path";
 import { webToNodeHandler } from "@hiogawa/utils-node";
+import webpack from "webpack";
 
 // require server code for dev ssr
 // TODO: try import("?timestamp") trick for esm output?
@@ -18,6 +19,8 @@ const require = createRequire(import.meta.url);
  * @returns {import("webpack").Configuration[]}
  */
 export default function (env, _argv) {
+	const dev = !env.WEBPACK_BUILD;
+
 	/**
 	 * @type {import("webpack").Configuration}
 	 */
@@ -70,11 +73,15 @@ export default function (env, _argv) {
 			clean: true,
 		},
 		plugins: [
+			new webpack.DefinePlugin({
+				"__define.SSR": "true",
+				"__define.DEV": dev,
+			}),
 			// https://webpack.js.org/contribute/writing-a-plugin/#example
-			{
-				name: "MyPlugin",
+			dev && {
+				name: "dev-ssr",
 				apply(compiler) {
-					const name = "MyPlugin";
+					const name = "dev-ssr";
 					const serverPath = path.resolve("./dist/server/server.cjs");
 
 					/**
@@ -97,14 +104,14 @@ export default function (env, _argv) {
 								// @ts-ignore
 								middleware: (req, res, next) => {
 									// TODO: virtual module?
-									const clientStats = JSON.parse(
-										readFileSync("dist/client/__stats.json", "utf-8"),
-									);
+									// const clientStats = JSON.parse(
+									// 	readFileSync("dist/client/__stats.json", "utf-8"),
+									// );
 
 									/** @type {import("./src/entry-server")} */
 									const mod = require(serverPath);
 									const nodeHandler = webToNodeHandler((request) =>
-										mod.handler(request, { clientStats }),
+										mod.handler(request),
 									);
 									nodeHandler(req, res, next);
 								},
@@ -135,18 +142,24 @@ export default function (env, _argv) {
 			client: "./src/entry-client",
 		},
 		output: {
-			path: path.resolve("./dist/client"),
-			filename: env.WEBPACK_BUILD ? "[name].[contenthash:8].js" : "[name].js",
+			// https://webpack.js.org/guides/public-path/
+			publicPath: "/assets",
+			path: path.resolve("./dist/client/assets"),
+			filename: dev ? "[name].js" : "[name].[contenthash:8].js",
 			clean: true,
 		},
 		plugins: [
-			{
+			new webpack.DefinePlugin({
+				"__define.SSR": "false",
+				"__define.DEV": dev,
+			}),
+			!dev && {
 				name: "client-stats",
 				apply(compilation) {
 					compilation.hooks.done.tap("client-stats", (stats) => {
 						const statsJson = stats.toJson({ all: false, assets: true });
-						const code = JSON.stringify(statsJson, null, 2);
-						writeFileSync("./dist/client/__stats.json", code);
+						const code = `export default ${JSON.stringify(statsJson, null, 2)}`;
+						writeFileSync("./dist/client/__stats.js", code);
 					});
 				},
 			},
