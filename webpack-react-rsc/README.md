@@ -5,3 +5,5 @@ Practice Webpack (RSC)
 - [x] ssr
 - [ ] browser
 - [ ] client reference
+- [ ] server hmr
+- [ ] client hmr
