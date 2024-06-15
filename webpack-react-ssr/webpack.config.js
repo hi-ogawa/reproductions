@@ -27,10 +27,9 @@ export default function (_env, _argv) {
 		},
 		module: {
 			rules: [
-				// https://webpack.js.org/contribute/writing-a-loader/
 				{
 					test: /\.tsx?$/,
-					use: path.resolve("./extra/esbuild-loader.js"),
+					use: "esbuild-loader",
 				},
 				// https://webpack.js.org/guides/asset-modules/#source-assets
 				// https://webpack.js.org/guides/asset-modules/#replacing-inline-loader-syntax
@@ -81,6 +80,7 @@ export default function (_env, _argv) {
 					 * @type {import("webpack-dev-server").Configuration}
 					 */
 					const devServer = {
+						host: "localhost",
 						static: {
 							serveIndex: false,
 						},
