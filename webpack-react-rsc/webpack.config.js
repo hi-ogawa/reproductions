@@ -56,7 +56,7 @@ export default function (env, _argv) {
 	const serverConfig = {
 		...commonConfig,
 		name: "server",
-		dependencies: ["client"],
+		dependencies: ["browser"],
 		target: "node20",
 		entry: {
 			server: "./src/entry-ssr-layer",
@@ -154,16 +154,16 @@ export default function (env, _argv) {
 	/**
 	 * @type {import("webpack").Configuration}
 	 */
-	const clientConfig = {
+	const browserConfig = {
 		...commonConfig,
-		name: "client",
+		name: "browser",
 		entry: {
-			client: "./src/entry-client",
+			index: "./src/entry-browser",
 		},
 		output: {
 			// https://webpack.js.org/guides/public-path/
 			publicPath: "/assets",
-			path: path.resolve("./dist/client/assets"),
+			path: path.resolve("./dist/browser/assets"),
 			filename: dev ? "[name].js" : "[name].[contenthash:8].js",
 			clean: true,
 		},
@@ -178,12 +178,12 @@ export default function (env, _argv) {
 					compilation.hooks.done.tap("client-stats", (stats) => {
 						const statsJson = stats.toJson({ all: false, assets: true });
 						const code = `export default ${JSON.stringify(statsJson, null, 2)}`;
-						writeFileSync("./dist/client/__stats.js", code);
+						writeFileSync("./dist/browser/__stats.js", code);
 					});
 				},
 			},
 		],
 	};
 
-	return [serverConfig, clientConfig];
+	return [serverConfig, browserConfig];
 }

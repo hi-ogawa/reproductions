@@ -16,19 +16,57 @@ export async function handler(request: Request) {
 		});
 	}
 
+	const [flightStream1, flightStream2] = flightStream.tee();
+
 	// react client (flight -> react node)
-	const node = await ReactClient.createFromReadableStream<FlightData>(
-		flightStream,
+	let node = await ReactClient.createFromReadableStream<FlightData>(
+		flightStream1,
 		{
 			ssrManifest: {},
 		},
 	);
 
+	// send a copy of flight stream together with ssr
+	const flightStreamCode = await getFlightStreamCode(flightStream2);
+	node = (
+		<>
+			{node}
+			<script dangerouslySetInnerHTML={{ __html: flightStreamCode }} />
+		</>
+	);
+
 	// react dom ssr (react node -> html)
-	const htmlStream = await ReactDOMServer.renderToReadableStream(node);
+	const htmlStream = await ReactDOMServer.renderToReadableStream(node, {
+		bootstrapScripts: __define.DEV ? ["/assets/index.js"] : [],
+	});
+
 	return new Response(htmlStream, {
 		headers: {
 			"content-type": "text/html;charset=utf-8",
 		},
 	});
+}
+
+async function getFlightStreamCode(stream: ReadableStream<Uint8Array>) {
+	const flightString = await streamToString(stream);
+	return `\
+self.__flightStream = new ReadableStream({
+	start(ctrl) {
+		ctrl.enqueue(${JSON.stringify(flightString)});
+		ctrl.close();
+	}
+}).pipeThrough(new TextEncoderStream());
+`;
+}
+
+async function streamToString(stream: ReadableStream<Uint8Array>) {
+	let s = "";
+	await stream.pipeThrough(new TextDecoderStream()).pipeTo(
+		new WritableStream({
+			write(c) {
+				s += c;
+			},
+		}),
+	);
+	return s;
 }
