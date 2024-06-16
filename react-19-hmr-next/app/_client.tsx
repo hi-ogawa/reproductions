@@ -14,6 +14,7 @@ export function Counter() {
 
 	return (
 		<div>
+			<p>({React.version})</p>
 			<p>Count: {count}</p>
 			<button onClick={() => setCount((c) => c - 1)}>-1</button>
 			<button onClick={() => setCount((c) => c + 1)}>+1</button>
