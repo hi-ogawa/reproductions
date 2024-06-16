@@ -25,7 +25,7 @@ export default function (env, _argv) {
 	 * @type {import("webpack").Configuration}
 	 */
 	const commonConfig = {
-		mode: "development",
+		mode: dev ? "development" : "production",
 		devtool: "source-map",
 		resolve: {
 			extensions: [".tsx", ".ts", "..."],
@@ -58,8 +58,6 @@ export default function (env, _argv) {
 		name: "server",
 		dependencies: ["client"],
 		target: "node20",
-		// TODO: https://webpack.js.org/configuration/externals
-		externals: {},
 		entry: {
 			server: "./src/entry-server",
 		},
@@ -72,6 +70,11 @@ export default function (env, _argv) {
 			},
 			clean: true,
 		},
+		optimization: {
+			minimize: false,
+		},
+		// TODO: https://webpack.js.org/configuration/externals
+		externals: {},
 		plugins: [
 			new webpack.DefinePlugin({
 				"__define.SSR": "true",

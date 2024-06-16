@@ -15,7 +15,7 @@ export function App() {
 					<img src={reactLogo} className="logo react" alt="React logo" />
 				</a>
 			</div>
-			<h1>Webpack + React</h1>
+			<h1>Webpack React SSR</h1>
 			<pre>{React.version}</pre>
 			<pre>[hydrated: {String(useHydrated())}]</pre>
 			<div className="card">
@@ -23,12 +23,17 @@ export function App() {
 					count is {count}
 				</button>
 				{/* TODO: HMR */}
-				<p>
+				<p style={{ display: "none" }}>
 					Edit <code>src/App.tsx</code> and save to test HMR
 				</p>
 			</div>
 			<p className="read-the-docs">
 				Click on Webpack and React logos to learn more
+			</p>
+			<p className="read-the-docs">
+				<a href="https://github.com/hi-ogawa/reproductions/tree/main/webpack-react-ssr">
+					View code on GitHub
+				</a>
 			</p>
 		</div>
 	);
