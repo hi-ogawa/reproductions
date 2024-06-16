@@ -23,7 +23,7 @@ export function App() {
 					count is {count}
 				</button>
 				{/* TODO: HMR */}
-				<p>
+				<p style={{ display: "none" }}>
 					Edit <code>src/App.tsx</code> and save to test HMR
 				</p>
 			</div>
