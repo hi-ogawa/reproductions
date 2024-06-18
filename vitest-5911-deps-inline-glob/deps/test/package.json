@@ -1,0 +1,6 @@
+{
+	"name": "@test-pkg/pkg",
+	"private": true,
+	"type": "module",
+	"exports": "./index.js"
+}
