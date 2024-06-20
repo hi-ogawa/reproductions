@@ -1,0 +1,13 @@
+{
+	"compilerOptions": {
+		"exactOptionalPropertyTypes": false,
+		"verbatimModuleSyntax": true,
+		"noEmit": true,
+		"moduleResolution": "Bundler",
+		"module": "ESNext",
+		"target": "ESNext",
+		"lib": ["ESNext", "DOM", "DOM.Iterable"],
+		"jsx": "react-jsx",
+		"types": ["react/experimental"]
+	}
+}
