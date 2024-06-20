@@ -1,0 +1,8 @@
+{
+	"name": "test-esm-dynamic-import-cjs",
+	"type": "module",
+	"exports": "./index.js",
+	"dependencies": {
+		"markdown-to-text": "0.1.1"
+	}
+}
