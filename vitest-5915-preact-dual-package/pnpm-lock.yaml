@@ -1,0 +1,61 @@
+lockfileVersion: '9.0'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
+importers:
+
+  .:
+    dependencies:
+      preact:
+        specifier: ^10.22.0
+        version: 10.22.0
+      preact-render-to-string:
+        specifier: ^6.5.5
+        version: 6.5.5(preact@10.22.0)
+      react:
+        specifier: npm:@preact/compat@^17.1.2
+        version: '@preact/compat@17.1.2(preact@10.22.0)'
+      react-dom:
+        specifier: npm:@preact/compat@^17.1.2
+        version: '@preact/compat@17.1.2(preact@10.22.0)'
+      use-sync-external-store:
+        specifier: ^1.2.2
+        version: 1.2.2(@preact/compat@17.1.2(preact@10.22.0))
+
+packages:
+
+  '@preact/compat@17.1.2':
+    resolution: {integrity: sha512-7pOZN9lMDDRQ+6aWvjwTp483KR8/zOpfS83wmOo3zfuLKdngS8/5RLbsFWzFZMGdYlotAhX980hJ75bjOHTwWg==}
+    peerDependencies:
+      preact: '*'
+
+  preact-render-to-string@6.5.5:
+    resolution: {integrity: sha512-KiMFTKNTmT/ccE79BURR/r6XRc2I2TCTZ0MpeWqHW2XnllbeghXvwGsdAfF/MzMilUcTfODtSmMxgoRFL9TM5g==}
+    peerDependencies:
+      preact: '>=10'
+
+  preact@10.22.0:
+    resolution: {integrity: sha512-RRurnSjJPj4rp5K6XoP45Ui33ncb7e4H7WiOHVpjbkvqvA3U+N8Z6Qbo0AE6leGYBV66n8EhEaFixvIu3SkxFw==}
+
+  use-sync-external-store@1.2.2:
+    resolution: {integrity: sha512-PElTlVMwpblvbNqQ82d2n6RjStvdSoNe9FG28kNfz3WiXilJm4DdNkEzRhCZuIDwY8U08WVihhGR5iRqAwfDiw==}
+    peerDependencies:
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0
+
+snapshots:
+
+  '@preact/compat@17.1.2(preact@10.22.0)':
+    dependencies:
+      preact: 10.22.0
+
+  preact-render-to-string@6.5.5(preact@10.22.0):
+    dependencies:
+      preact: 10.22.0
+
+  preact@10.22.0: {}
+
+  use-sync-external-store@1.2.2(@preact/compat@17.1.2(preact@10.22.0)):
+    dependencies:
+      react: '@preact/compat@17.1.2(preact@10.22.0)'
