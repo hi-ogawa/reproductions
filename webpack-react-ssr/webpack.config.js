@@ -148,7 +148,7 @@ export default function (env, _argv) {
 		},
 		module: {
 			rules: [
-				{
+				dev && {
 					test: /\.[jt]sx$/,
 					use: "@hiogawa/tiny-refresh/webpack",
 				},
