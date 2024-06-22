@@ -25,8 +25,11 @@ export default {
 		rules: [
 			// https://webpack.js.org/contribute/writing-a-loader/
 			{
-				test: /\.tsx$/,
-				use: path.resolve("./extra/esbuild-loader.js"),
+				test: /\.[jt]sx$/,
+				use: [
+					"@hiogawa/tiny-refresh/webpack",
+					path.resolve("./extra/esbuild-loader.js"),
+				],
 			},
 			// https://webpack.js.org/guides/asset-management/#loading-css
 			{
