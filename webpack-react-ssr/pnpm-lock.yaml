@@ -21,6 +21,9 @@ importers:
       '@biomejs/biome':
         specifier: ^1.8.1
         version: 1.8.1
+      '@hiogawa/tiny-refresh':
+        specifier: ^0.1.1
+        version: 0.1.1(vite@5.2.13(@types/node@20.14.2)(terser@5.31.1))
       '@hiogawa/utils-node':
         specifier: ^0.0.1
         version: 0.0.1
@@ -251,6 +254,14 @@ packages:
     engines: {node: '>=12'}
     cpu: [x64]
     os: [win32]
+
+  '@hiogawa/tiny-refresh@0.1.1':
+    resolution: {integrity: sha512-OHHtS14ywlDpPcQLgMTFq25XYQkl3ze2PuikxN7zATZ+DGQ/Uhtwa0uirSH7mSCb/YOg6ET1dsNfM8m9lbWHXg==}
+    peerDependencies:
+      vite: '*'
+    peerDependenciesMeta:
+      vite:
+        optional: true
 
   '@hiogawa/utils-node@0.0.1':
     resolution: {integrity: sha512-vEir6KhApTlPPT+0wX85wglFgZjxG/WZGjWGahSR7+ltNkpY0OpmxozbF5sLodYgXPObTK8cKgsQ4nzFLtZQ8g==}
@@ -2000,6 +2011,10 @@ snapshots:
 
   '@esbuild/win32-x64@0.20.2':
     optional: true
+
+  '@hiogawa/tiny-refresh@0.1.1(vite@5.2.13(@types/node@20.14.2)(terser@5.31.1))':
+    optionalDependencies:
+      vite: 5.2.13(@types/node@20.14.2)(terser@5.31.1)
 
   '@hiogawa/utils-node@0.0.1': {}
 

@@ -22,7 +22,7 @@ export default function (env, _argv) {
 	const dev = !env.WEBPACK_BUILD;
 
 	/**
-	 * @type {import("webpack").Configuration}
+	 * @satisfies {import("webpack").Configuration}
 	 */
 	const commonConfig = {
 		mode: dev ? "development" : "production",
@@ -145,6 +145,15 @@ export default function (env, _argv) {
 			path: path.resolve("./dist/client/assets"),
 			filename: dev ? "[name].js" : "[name].[contenthash:8].js",
 			clean: true,
+		},
+		module: {
+			rules: [
+				{
+					test: /\.[jt]sx$/,
+					use: "@hiogawa/tiny-refresh/webpack",
+				},
+				...commonConfig.module?.rules,
+			],
 		},
 		plugins: [
 			new webpack.DefinePlugin({

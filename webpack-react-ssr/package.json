@@ -21,6 +21,7 @@
 	},
 	"devDependencies": {
 		"@biomejs/biome": "^1.8.1",
+		"@hiogawa/tiny-refresh": "^0.1.1",
 		"@hiogawa/utils-node": "^0.0.1",
 		"@types/node": "^20.14.2",
 		"@types/react": "^18.3.3",
