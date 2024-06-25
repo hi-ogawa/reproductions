@@ -5,8 +5,11 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  '@hiogawa/react-server':
+    specifier: latest
+    version: 0.2.4(react-dom@19.0.0-rc-c21bcd627b-20240624)(react-server-dom-webpack@19.0.0-rc-c21bcd627b-20240624)(react@19.0.0-rc-c21bcd627b-20240624)(vite@5.3.1)
   next:
-    specifier: file:hiogawa-react-server-next-0.0.0-pre.0.tgz
+    specifier: file:./hiogawa-react-server-next-0.0.0-pre.0.tgz
     version: file:hiogawa-react-server-next-0.0.0-pre.0.tgz(@types/node@20.14.8)(react-dom@19.0.0-rc-c21bcd627b-20240624)(react-server-dom-webpack@19.0.0-rc-c21bcd627b-20240624)(react@19.0.0-rc-c21bcd627b-20240624)
   react:
     specifier: rc
@@ -20,22 +23,22 @@ dependencies:
 
 devDependencies:
   '@types/node':
-    specifier: ^20.14.8
+    specifier: ^20
     version: 20.14.8
   '@types/react':
-    specifier: ^18.3.3
+    specifier: ^18
     version: 18.3.3
   '@types/react-dom':
-    specifier: ^18.3.0
+    specifier: ^18
     version: 18.3.0
   postcss:
-    specifier: ^8.4.38
+    specifier: ^8
     version: 8.4.38
   tailwindcss:
-    specifier: ^3.4.4
+    specifier: ^3.4.1
     version: 3.4.4
   typescript:
-    specifier: ^5.5.2
+    specifier: ^5
     version: 5.5.2
 
 packages:
