@@ -2,6 +2,8 @@
 
 From [Next.js](https://github.com/vercel/next.js) to [`@hiogawa/react-server`](https://github.com/hi-ogawa/vite-plugins/tree/main/packages/react-server)
 
+[Try it on Stackblitz](https://stackblitz.com/github/hi-ogawa/reproductions/tree/main/vite-next?file=app%2Fpage.tsx)
+
 ```diff
 diff --git a/vite-next/package.json b/vite-next/package.json
 index 2c8e728..8bcd4a3 100644
