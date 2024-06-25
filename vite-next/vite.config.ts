@@ -1,6 +1,5 @@
-import { vitePluginReactServerNext } from "next/plugin";
+import next from "next/vite";
 
 export default {
-  clearScreen: false,
-  plugins: [vitePluginReactServerNext()],
+  plugins: [next()],
 };

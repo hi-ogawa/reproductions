@@ -10,7 +10,7 @@ dependencies:
     version: 0.2.4(react-dom@19.0.0-rc-c21bcd627b-20240624)(react-server-dom-webpack@19.0.0-rc-c21bcd627b-20240624)(react@19.0.0-rc-c21bcd627b-20240624)(vite@5.3.1)
   next:
     specifier: file:./hiogawa-react-server-next-0.0.0-pre.0.tgz
-    version: file:hiogawa-react-server-next-0.0.0-pre.0.tgz(@types/node@20.14.8)(react-dom@19.0.0-rc-c21bcd627b-20240624)(react-server-dom-webpack@19.0.0-rc-c21bcd627b-20240624)(react@19.0.0-rc-c21bcd627b-20240624)
+    version: file:hiogawa-react-server-next-0.0.0-pre.0.tgz(@hiogawa/react-server@0.2.4)(@types/node@20.14.8)(react@19.0.0-rc-c21bcd627b-20240624)
   react:
     specifier: rc
     version: 19.0.0-rc-c21bcd627b-20240624
@@ -2188,13 +2188,14 @@ packages:
     resolution: {integrity: sha512-rAbqEGa8ovJy4pyBxZM70hg4pE6gDgaQ0Sl9M3enG3I0d6H4XSAM3GeNGLKnsBpuijUow064sf7ww1nutC5/3w==}
     dev: false
 
-  file:hiogawa-react-server-next-0.0.0-pre.0.tgz(@types/node@20.14.8)(react-dom@19.0.0-rc-c21bcd627b-20240624)(react-server-dom-webpack@19.0.0-rc-c21bcd627b-20240624)(react@19.0.0-rc-c21bcd627b-20240624):
-    resolution: {integrity: sha512-sGRE+uDXLe/3aaiBQTeKgWFAkNCboa8HMyJ+NIdzN8DxChLn2NiZ5S3xVpiPamnTYcsRo1IdnfTriOC0/8IJLA==, tarball: file:hiogawa-react-server-next-0.0.0-pre.0.tgz}
+  file:hiogawa-react-server-next-0.0.0-pre.0.tgz(@hiogawa/react-server@0.2.4)(@types/node@20.14.8)(react@19.0.0-rc-c21bcd627b-20240624):
+    resolution: {integrity: sha512-W/5uNr3La9Ogw9xuOIKLBr3yTPrV39Es/Bys4q3whZbx2VoZo1G1ngyRfCash74+k36C0CG5nzUUSkT7gjrW8A==, tarball: file:hiogawa-react-server-next-0.0.0-pre.0.tgz}
     id: file:hiogawa-react-server-next-0.0.0-pre.0.tgz
     name: '@hiogawa/react-server-next'
     version: 0.0.0-pre.0
     hasBin: true
     peerDependencies:
+      '@hiogawa/react-server': 0.2.4
       react: '*'
     dependencies:
       '@hiogawa/react-server': 0.2.4(react-dom@19.0.0-rc-c21bcd627b-20240624)(react-server-dom-webpack@19.0.0-rc-c21bcd627b-20240624)(react@19.0.0-rc-c21bcd627b-20240624)(vite@5.3.1)
@@ -2206,8 +2207,6 @@ packages:
       - '@types/node'
       - less
       - lightningcss
-      - react-dom
-      - react-server-dom-webpack
       - sass
       - stylus
       - sugarss
