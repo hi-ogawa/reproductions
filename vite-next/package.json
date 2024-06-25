@@ -10,8 +10,8 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@hiogawa/react-server": "latest",
-    "next": "npm:@hiogawa/react-server-next@latest",
+    "@hiogawa/react-server": "0.2.5",
+    "next": "npm:@hiogawa/react-server-next@0.0.0",
     "react": "rc",
     "react-dom": "rc",
     "react-server-dom-webpack": "rc"
