@@ -55,4 +55,18 @@ index d8b9323..1cc745f 100644
        "@/*": ["./*"]
      }
    },
+diff --git a/vite-next/vite.config.ts b/vite-next/vite.config.ts
+new file mode 100644
+index 0000000..5016373
+--- /dev/null
++++ b/vite-next/vite.config.ts
+@@ -0,0 +1,8 @@
++import { vitePluginReactServerNext } from "@hiogawa/react-server/next/plugin";
++import react from "@vitejs/plugin-react";
++import { defineConfig } from "vite";
++
++export default defineConfig({
++  clearScreen: false,
++  plugins: [react(), vitePluginReactServerNext()],
++});
 ```
