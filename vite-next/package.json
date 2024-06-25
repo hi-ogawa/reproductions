@@ -4,13 +4,13 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "vite dev",
-    "build": "vite build",
-    "start": "vite preview",
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next next",
     "lint": "next lint"
   },
   "dependencies": {
-    "@hiogawa/react-server": "latest",
+    "next": "file:./hiogawa-react-server-next-0.0.0-pre.0.tgz",
     "react": "rc",
     "react-dom": "rc",
     "react-server-dom-webpack": "rc"
@@ -20,8 +20,6 @@
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
-    "@vitejs/plugin-react": "^4.3.1",
-    "vite": "latest",
     "postcss": "^8",
     "tailwindcss": "^3.4.1"
   },
