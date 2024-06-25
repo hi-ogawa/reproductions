@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@hiogawa/react-server": "latest",
-    "next": "file:./hiogawa-react-server-next-0.0.0-pre.0.tgz",
+    "next": "npm:@hiogawa/react-server-next@latest",
     "react": "rc",
     "react-dom": "rc",
     "react-server-dom-webpack": "rc"

@@ -9,8 +9,8 @@ dependencies:
     specifier: latest
     version: 0.2.4(react-dom@19.0.0-rc-c21bcd627b-20240624)(react-server-dom-webpack@19.0.0-rc-c21bcd627b-20240624)(react@19.0.0-rc-c21bcd627b-20240624)(vite@5.3.1)
   next:
-    specifier: file:hiogawa-react-server-next-0.0.0-pre.0.tgz
-    version: file:hiogawa-react-server-next-0.0.0-pre.0.tgz(@hiogawa/react-server@0.2.4)(@types/node@20.14.8)(react@19.0.0-rc-c21bcd627b-20240624)
+    specifier: npm:@hiogawa/react-server-next@latest
+    version: /@hiogawa/react-server-next@0.0.0-pre.0(@hiogawa/react-server@0.2.4)(@types/node@20.14.8)(react@19.0.0-rc-c21bcd627b-20240624)
   react:
     specifier: rc
     version: 19.0.0-rc-c21bcd627b-20240624
@@ -23,22 +23,22 @@ dependencies:
 
 devDependencies:
   '@types/node':
-    specifier: ^20.14.8
+    specifier: ^20
     version: 20.14.8
   '@types/react':
-    specifier: ^18.3.3
+    specifier: ^18
     version: 18.3.3
   '@types/react-dom':
-    specifier: ^18.3.0
+    specifier: ^18
     version: 18.3.0
   postcss:
-    specifier: ^8.4.38
+    specifier: ^8
     version: 8.4.38
   tailwindcss:
-    specifier: ^3.4.4
+    specifier: ^3.4.1
     version: 3.4.4
   typescript:
-    specifier: ^5.5.2
+    specifier: ^5
     version: 5.5.2
 
 packages:
@@ -486,6 +486,29 @@ packages:
     requiresBuild: true
     dev: false
     optional: true
+
+  /@hiogawa/react-server-next@0.0.0-pre.0(@hiogawa/react-server@0.2.4)(@types/node@20.14.8)(react@19.0.0-rc-c21bcd627b-20240624):
+    resolution: {integrity: sha512-QK337Hl9Y3+h3ADiuYSBEwr50ZdVEw7MqntVJoC1XheqoZLTK95HqGIjdMA2rUb+phdcwaH2Ez+pM35rZjTPeQ==}
+    hasBin: true
+    peerDependencies:
+      '@hiogawa/react-server': 0.2.4
+      react: '*'
+    dependencies:
+      '@hiogawa/react-server': 0.2.4(react-dom@19.0.0-rc-c21bcd627b-20240624)(react-server-dom-webpack@19.0.0-rc-c21bcd627b-20240624)(react@19.0.0-rc-c21bcd627b-20240624)(vite@5.3.1)
+      '@hiogawa/vite-plugin-ssr-middleware': 0.0.3(vite@5.3.1)
+      '@vitejs/plugin-react': 4.3.1(vite@5.3.1)
+      react: 19.0.0-rc-c21bcd627b-20240624
+      vite: 5.3.1(@types/node@20.14.8)
+    transitivePeerDependencies:
+      - '@types/node'
+      - less
+      - lightningcss
+      - sass
+      - stylus
+      - sugarss
+      - supports-color
+      - terser
+    dev: false
 
   /@hiogawa/react-server@0.2.4(react-dom@19.0.0-rc-c21bcd627b-20240624)(react-server-dom-webpack@19.0.0-rc-c21bcd627b-20240624)(react@19.0.0-rc-c21bcd627b-20240624)(vite@5.3.1):
     resolution: {integrity: sha512-bqm5qWQtFK/oNbInJ9hUkRTOfz86etAMSTXddXIZFRfGn7qPd88s15SRda7s9awVooBYIVX5e6bXKdKM6oYXHw==}
@@ -2186,30 +2209,4 @@ packages:
 
   /zimmerframe@1.1.2:
     resolution: {integrity: sha512-rAbqEGa8ovJy4pyBxZM70hg4pE6gDgaQ0Sl9M3enG3I0d6H4XSAM3GeNGLKnsBpuijUow064sf7ww1nutC5/3w==}
-    dev: false
-
-  file:hiogawa-react-server-next-0.0.0-pre.0.tgz(@hiogawa/react-server@0.2.4)(@types/node@20.14.8)(react@19.0.0-rc-c21bcd627b-20240624):
-    resolution: {integrity: sha512-2sHSc8ypXa45KJn+4z6pBhwzTqiQRlYL0d1pgReu5cKMJoOjiYkqxt3c4w/HpFkfPBtwNGPXd6muqtcNK4ZZ2Q==, tarball: file:hiogawa-react-server-next-0.0.0-pre.0.tgz}
-    id: file:hiogawa-react-server-next-0.0.0-pre.0.tgz
-    name: '@hiogawa/react-server-next'
-    version: 0.0.0-pre.0
-    hasBin: true
-    peerDependencies:
-      '@hiogawa/react-server': 0.2.4
-      react: '*'
-    dependencies:
-      '@hiogawa/react-server': 0.2.4(react-dom@19.0.0-rc-c21bcd627b-20240624)(react-server-dom-webpack@19.0.0-rc-c21bcd627b-20240624)(react@19.0.0-rc-c21bcd627b-20240624)(vite@5.3.1)
-      '@hiogawa/vite-plugin-ssr-middleware': 0.0.3(vite@5.3.1)
-      '@vitejs/plugin-react': 4.3.1(vite@5.3.1)
-      react: 19.0.0-rc-c21bcd627b-20240624
-      vite: 5.3.1(@types/node@20.14.8)
-    transitivePeerDependencies:
-      - '@types/node'
-      - less
-      - lightningcss
-      - sass
-      - stylus
-      - sugarss
-      - supports-color
-      - terser
     dev: false
