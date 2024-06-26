@@ -10,8 +10,8 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@hiogawa/react-server": "0.2.5",
-    "next": "npm:@hiogawa/react-server-next@0.0.0",
+    "@hiogawa/react-server": "0.2.6",
+    "next": "npm:@hiogawa/react-server-next@0.0.2",
     "react": "rc",
     "react-dom": "rc",
     "react-server-dom-webpack": "rc"
@@ -21,6 +21,7 @@
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "vite": "latest",
     "postcss": "^8",
     "tailwindcss": "^3.4.1"
   },

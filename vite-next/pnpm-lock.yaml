@@ -6,11 +6,11 @@ settings:
 
 dependencies:
   '@hiogawa/react-server':
-    specifier: 0.2.5
-    version: 0.2.5(react-dom@19.0.0-rc-c21bcd627b-20240624)(react-server-dom-webpack@19.0.0-rc-c21bcd627b-20240624)(react@19.0.0-rc-c21bcd627b-20240624)(vite@5.3.1)
+    specifier: 0.2.6
+    version: 0.2.6(react-dom@19.0.0-rc-c21bcd627b-20240624)(react-server-dom-webpack@19.0.0-rc-c21bcd627b-20240624)(react@19.0.0-rc-c21bcd627b-20240624)(vite@5.3.1)
   next:
-    specifier: npm:@hiogawa/react-server-next@0.0.0
-    version: /@hiogawa/react-server-next@0.0.0(@hiogawa/react-server@0.2.5)(@types/node@20.14.8)(react@19.0.0-rc-c21bcd627b-20240624)
+    specifier: npm:@hiogawa/react-server-next@0.0.2
+    version: /@hiogawa/react-server-next@0.0.2(@hiogawa/react-server@0.2.6)(react@19.0.0-rc-c21bcd627b-20240624)(vite@5.3.1)
   react:
     specifier: rc
     version: 19.0.0-rc-c21bcd627b-20240624
@@ -40,6 +40,9 @@ devDependencies:
   typescript:
     specifier: ^5
     version: 5.5.2
+  vite:
+    specifier: latest
+    version: 5.3.1(@types/node@20.14.8)
 
 packages:
 
@@ -286,7 +289,6 @@ packages:
     cpu: [ppc64]
     os: [aix]
     requiresBuild: true
-    dev: false
     optional: true
 
   /@esbuild/android-arm64@0.21.5:
@@ -295,7 +297,6 @@ packages:
     cpu: [arm64]
     os: [android]
     requiresBuild: true
-    dev: false
     optional: true
 
   /@esbuild/android-arm@0.21.5:
@@ -304,7 +305,6 @@ packages:
     cpu: [arm]
     os: [android]
     requiresBuild: true
-    dev: false
     optional: true
 
   /@esbuild/android-x64@0.21.5:
@@ -313,7 +313,6 @@ packages:
     cpu: [x64]
     os: [android]
     requiresBuild: true
-    dev: false
     optional: true
 
   /@esbuild/darwin-arm64@0.21.5:
@@ -322,7 +321,6 @@ packages:
     cpu: [arm64]
     os: [darwin]
     requiresBuild: true
-    dev: false
     optional: true
 
   /@esbuild/darwin-x64@0.21.5:
@@ -331,7 +329,6 @@ packages:
     cpu: [x64]
     os: [darwin]
     requiresBuild: true
-    dev: false
     optional: true
 
   /@esbuild/freebsd-arm64@0.21.5:
@@ -340,7 +337,6 @@ packages:
     cpu: [arm64]
     os: [freebsd]
     requiresBuild: true
-    dev: false
     optional: true
 
   /@esbuild/freebsd-x64@0.21.5:
@@ -349,7 +345,6 @@ packages:
     cpu: [x64]
     os: [freebsd]
     requiresBuild: true
-    dev: false
     optional: true
 
   /@esbuild/linux-arm64@0.21.5:
@@ -358,7 +353,6 @@ packages:
     cpu: [arm64]
     os: [linux]
     requiresBuild: true
-    dev: false
     optional: true
 
   /@esbuild/linux-arm@0.21.5:
@@ -367,7 +361,6 @@ packages:
     cpu: [arm]
     os: [linux]
     requiresBuild: true
-    dev: false
     optional: true
 
   /@esbuild/linux-ia32@0.21.5:
@@ -376,7 +369,6 @@ packages:
     cpu: [ia32]
     os: [linux]
     requiresBuild: true
-    dev: false
     optional: true
 
   /@esbuild/linux-loong64@0.21.5:
@@ -385,7 +377,6 @@ packages:
     cpu: [loong64]
     os: [linux]
     requiresBuild: true
-    dev: false
     optional: true
 
   /@esbuild/linux-mips64el@0.21.5:
@@ -394,7 +385,6 @@ packages:
     cpu: [mips64el]
     os: [linux]
     requiresBuild: true
-    dev: false
     optional: true
 
   /@esbuild/linux-ppc64@0.21.5:
@@ -403,7 +393,6 @@ packages:
     cpu: [ppc64]
     os: [linux]
     requiresBuild: true
-    dev: false
     optional: true
 
   /@esbuild/linux-riscv64@0.21.5:
@@ -412,7 +401,6 @@ packages:
     cpu: [riscv64]
     os: [linux]
     requiresBuild: true
-    dev: false
     optional: true
 
   /@esbuild/linux-s390x@0.21.5:
@@ -421,7 +409,6 @@ packages:
     cpu: [s390x]
     os: [linux]
     requiresBuild: true
-    dev: false
     optional: true
 
   /@esbuild/linux-x64@0.21.5:
@@ -430,7 +417,6 @@ packages:
     cpu: [x64]
     os: [linux]
     requiresBuild: true
-    dev: false
     optional: true
 
   /@esbuild/netbsd-x64@0.21.5:
@@ -439,7 +425,6 @@ packages:
     cpu: [x64]
     os: [netbsd]
     requiresBuild: true
-    dev: false
     optional: true
 
   /@esbuild/openbsd-x64@0.21.5:
@@ -448,7 +433,6 @@ packages:
     cpu: [x64]
     os: [openbsd]
     requiresBuild: true
-    dev: false
     optional: true
 
   /@esbuild/sunos-x64@0.21.5:
@@ -457,7 +441,6 @@ packages:
     cpu: [x64]
     os: [sunos]
     requiresBuild: true
-    dev: false
     optional: true
 
   /@esbuild/win32-arm64@0.21.5:
@@ -466,7 +449,6 @@ packages:
     cpu: [arm64]
     os: [win32]
     requiresBuild: true
-    dev: false
     optional: true
 
   /@esbuild/win32-ia32@0.21.5:
@@ -475,7 +457,6 @@ packages:
     cpu: [ia32]
     os: [win32]
     requiresBuild: true
-    dev: false
     optional: true
 
   /@esbuild/win32-x64@0.21.5:
@@ -484,34 +465,27 @@ packages:
     cpu: [x64]
     os: [win32]
     requiresBuild: true
-    dev: false
     optional: true
 
-  /@hiogawa/react-server-next@0.0.0(@hiogawa/react-server@0.2.5)(@types/node@20.14.8)(react@19.0.0-rc-c21bcd627b-20240624):
-    resolution: {integrity: sha512-XTq4sRtUpj/JKcIuInKLnNVgIZXR77xn2+irEDLHM61O2y8XTpAL5Zo/NJxXAjEXH3puP4BeydqsW36+KbR8DQ==}
+  /@hiogawa/react-server-next@0.0.2(@hiogawa/react-server@0.2.6)(react@19.0.0-rc-c21bcd627b-20240624)(vite@5.3.1):
+    resolution: {integrity: sha512-pI41NxVwMHlPxTKD5/mfN+XbFzUV9fS4SFEtEUCGoJvlMkVXwFjGyFkFOpQ0rPGyWyjJzQMEcfHFqx+JNNczew==}
     hasBin: true
     peerDependencies:
-      '@hiogawa/react-server': 0.2.4
+      '@hiogawa/react-server': '*'
       react: '*'
+      vite: '*'
     dependencies:
-      '@hiogawa/react-server': 0.2.5(react-dom@19.0.0-rc-c21bcd627b-20240624)(react-server-dom-webpack@19.0.0-rc-c21bcd627b-20240624)(react@19.0.0-rc-c21bcd627b-20240624)(vite@5.3.1)
+      '@hiogawa/react-server': 0.2.6(react-dom@19.0.0-rc-c21bcd627b-20240624)(react-server-dom-webpack@19.0.0-rc-c21bcd627b-20240624)(react@19.0.0-rc-c21bcd627b-20240624)(vite@5.3.1)
       '@hiogawa/vite-plugin-ssr-middleware': 0.0.3(vite@5.3.1)
       '@vitejs/plugin-react': 4.3.1(vite@5.3.1)
       react: 19.0.0-rc-c21bcd627b-20240624
       vite: 5.3.1(@types/node@20.14.8)
     transitivePeerDependencies:
-      - '@types/node'
-      - less
-      - lightningcss
-      - sass
-      - stylus
-      - sugarss
       - supports-color
-      - terser
     dev: false
 
-  /@hiogawa/react-server@0.2.5(react-dom@19.0.0-rc-c21bcd627b-20240624)(react-server-dom-webpack@19.0.0-rc-c21bcd627b-20240624)(react@19.0.0-rc-c21bcd627b-20240624)(vite@5.3.1):
-    resolution: {integrity: sha512-ykF8p3HxelyGzXCnuE7FRCzN7yZBZbbgf1CCYuwl5Ru5E1eidSoCLVs19keErZMM4n82P6ug3U9/DTVEUacQmQ==}
+  /@hiogawa/react-server@0.2.6(react-dom@19.0.0-rc-c21bcd627b-20240624)(react-server-dom-webpack@19.0.0-rc-c21bcd627b-20240624)(react@19.0.0-rc-c21bcd627b-20240624)(vite@5.3.1):
+    resolution: {integrity: sha512-jwR7cZ1kznQvAiv69OxRY1mNfMpVNaymFsa/3/ab0U2GT14OvXR7725LUtV83VS95lj95HdoFR4mIma6hI59Gg==}
     peerDependencies:
       react: 19.0.0-rc-c21bcd627b-20240624
       react-dom: 19.0.0-rc-c21bcd627b-20240624
@@ -521,6 +495,7 @@ packages:
       '@hiogawa/transforms': 0.0.0
       '@hiogawa/vite-plugin-ssr-middleware': 0.0.3(vite@5.3.1)
       '@tanstack/history': 1.40.0
+      es-module-lexer: 1.5.4
       fast-glob: 3.3.2
       react: 19.0.0-rc-c21bcd627b-20240624
       react-dom: 19.0.0-rc-c21bcd627b-20240624(react@19.0.0-rc-c21bcd627b-20240624)
@@ -619,7 +594,6 @@ packages:
     cpu: [arm]
     os: [android]
     requiresBuild: true
-    dev: false
     optional: true
 
   /@rollup/rollup-android-arm64@4.18.0:
@@ -627,7 +601,6 @@ packages:
     cpu: [arm64]
     os: [android]
     requiresBuild: true
-    dev: false
     optional: true
 
   /@rollup/rollup-darwin-arm64@4.18.0:
@@ -635,7 +608,6 @@ packages:
     cpu: [arm64]
     os: [darwin]
     requiresBuild: true
-    dev: false
     optional: true
 
   /@rollup/rollup-darwin-x64@4.18.0:
@@ -643,7 +615,6 @@ packages:
     cpu: [x64]
     os: [darwin]
     requiresBuild: true
-    dev: false
     optional: true
 
   /@rollup/rollup-linux-arm-gnueabihf@4.18.0:
@@ -651,7 +622,6 @@ packages:
     cpu: [arm]
     os: [linux]
     requiresBuild: true
-    dev: false
     optional: true
 
   /@rollup/rollup-linux-arm-musleabihf@4.18.0:
@@ -659,7 +629,6 @@ packages:
     cpu: [arm]
     os: [linux]
     requiresBuild: true
-    dev: false
     optional: true
 
   /@rollup/rollup-linux-arm64-gnu@4.18.0:
@@ -667,7 +636,6 @@ packages:
     cpu: [arm64]
     os: [linux]
     requiresBuild: true
-    dev: false
     optional: true
 
   /@rollup/rollup-linux-arm64-musl@4.18.0:
@@ -675,7 +643,6 @@ packages:
     cpu: [arm64]
     os: [linux]
     requiresBuild: true
-    dev: false
     optional: true
 
   /@rollup/rollup-linux-powerpc64le-gnu@4.18.0:
@@ -683,7 +650,6 @@ packages:
     cpu: [ppc64]
     os: [linux]
     requiresBuild: true
-    dev: false
     optional: true
 
   /@rollup/rollup-linux-riscv64-gnu@4.18.0:
@@ -691,7 +657,6 @@ packages:
     cpu: [riscv64]
     os: [linux]
     requiresBuild: true
-    dev: false
     optional: true
 
   /@rollup/rollup-linux-s390x-gnu@4.18.0:
@@ -699,7 +664,6 @@ packages:
     cpu: [s390x]
     os: [linux]
     requiresBuild: true
-    dev: false
     optional: true
 
   /@rollup/rollup-linux-x64-gnu@4.18.0:
@@ -707,7 +671,6 @@ packages:
     cpu: [x64]
     os: [linux]
     requiresBuild: true
-    dev: false
     optional: true
 
   /@rollup/rollup-linux-x64-musl@4.18.0:
@@ -715,7 +678,6 @@ packages:
     cpu: [x64]
     os: [linux]
     requiresBuild: true
-    dev: false
     optional: true
 
   /@rollup/rollup-win32-arm64-msvc@4.18.0:
@@ -723,7 +685,6 @@ packages:
     cpu: [arm64]
     os: [win32]
     requiresBuild: true
-    dev: false
     optional: true
 
   /@rollup/rollup-win32-ia32-msvc@4.18.0:
@@ -731,7 +692,6 @@ packages:
     cpu: [ia32]
     os: [win32]
     requiresBuild: true
-    dev: false
     optional: true
 
   /@rollup/rollup-win32-x64-msvc@4.18.0:
@@ -739,7 +699,6 @@ packages:
     cpu: [x64]
     os: [win32]
     requiresBuild: true
-    dev: false
     optional: true
 
   /@tanstack/history@1.40.0:
@@ -792,7 +751,6 @@ packages:
 
   /@types/estree@1.0.5:
     resolution: {integrity: sha512-/kYRxGDLWzHOB7q+wtSUQlFrtcdUccpfy+X+9iMBpHK8QLLhx2wIPYuS5DYtR9Wa/YlZAbIovy7qVdB1Aq6Lyw==}
-    dev: false
 
   /@types/json-schema@7.0.15:
     resolution: {integrity: sha512-5+fP8P8MFNC+AyZCDxrB2pkZFPGzqQWUzpSeuuVLvm8VMcorNYavBqoFcxK8bQz4Qsbn4oUEEem4wDLfcysGHA==}
@@ -1237,7 +1195,6 @@ packages:
       '@esbuild/win32-arm64': 0.21.5
       '@esbuild/win32-ia32': 0.21.5
       '@esbuild/win32-x64': 0.21.5
-    dev: false
 
   /escalade@3.1.2:
     resolution: {integrity: sha512-ErCHMCae19vR8vQGe50xIsVomy19rg6gFu3+r3jkEO46suLMWBksvVyoGgQV+jOfl84ZSOSlmv6Gxa89PmTGmA==}
@@ -1812,7 +1769,6 @@ packages:
       '@rollup/rollup-win32-ia32-msvc': 4.18.0
       '@rollup/rollup-win32-x64-msvc': 4.18.0
       fsevents: 2.3.3
-    dev: false
 
   /run-parallel@1.2.0:
     resolution: {integrity: sha512-5l4VyZR86LZ/lDxZTR6jqL8AFE2S0IFLMP26AbjsLVADxHdhB/c0GUsH+y39UfCi3dzz8OlQuPmnaJOMoDHQBA==}
@@ -2116,7 +2072,6 @@ packages:
       rollup: 4.18.0
     optionalDependencies:
       fsevents: 2.3.3
-    dev: false
 
   /watchpack@2.4.1:
     resolution: {integrity: sha512-8wrBCMtVhqcXP2Sup1ctSkga6uc2Bx0IIvKyT7yTFier5AXHooSI+QyQQAtTb7+E0IUCCKyTFmXqdqgum2XWGg==}
