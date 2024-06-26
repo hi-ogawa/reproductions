@@ -1,3 +1,6 @@
+> [!note]
+> See https://github.com/hi-ogawa/rsc-on-vite/tree/main/next-ts-tw for the latest version
+
 - https://github.com/hi-ogawa/vite-plugins/issues/406
 
 From [Next.js](https://github.com/vercel/next.js) to [`@hiogawa/react-server`](https://github.com/hi-ogawa/vite-plugins/tree/main/packages/react-server)
