@@ -68,3 +68,23 @@ test("assignability", () => {
     foo: (v: boolean) => void;
   };
 });
+
+test("overload", () => {
+  {
+    let spy: jest.Spied<Element["scrollTo"]>
+    spy = jest.spyOn(Element.prototype, "scrollTo");
+
+    // only 2nd overload argument types
+    spy.mock.calls satisfies [x: number, y: number][];
+  }
+
+  {
+    let mockFn: jest.Mock<Element["scrollTo"]>;
+    mockFn = jest.fn(Element.prototype.scrollTo);
+
+    mockFn(0, 1); // 2nd overload ok
+
+    // @ts-expect-error
+    mockFn({ top: 0 }); // 1st overload error
+  }
+})
