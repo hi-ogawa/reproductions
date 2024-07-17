@@ -11,6 +11,9 @@ importers:
       '@types/node':
         specifier: ^20.14.11
         version: 20.14.11
+      vite:
+        specifier: 5.3.4
+        version: 5.3.4(@types/node@20.14.11)
       vitest:
         specifier: 2.0.3
         version: 2.0.3(@types/node@20.14.11)
