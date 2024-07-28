@@ -1,7 +1,3 @@
-- https://github.com/honojs/hono/issues/2925
+Minimal reproduction of Remix HDR failure on Vite 6
 
-Using [`@hiogawa/tiny-referesh`](https://github.com/hi-ogawa/js-utils/tree/main/packages/tiny-refresh) with [`@hono/react-compat`](https://github.com/honojs/middleware/tree/main/packages/react-compat)
-
-```sh
-pnpm dev
-```
+- https://github.com/vitejs/vite/pull/16471
