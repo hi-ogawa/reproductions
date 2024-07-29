@@ -21,7 +21,9 @@ function Root() {
 				<script type="module" src="/@vite/client" />
 			</head>
 			<body>
-				<App />
+				<div id="root">
+					<App />
+				</div>
 				<script type="module" src="/src/entry-client.tsx" />
 			</body>
 		</html>
