@@ -1,7 +1,7 @@
-import { multibuild } from "@vavite/multibuild"
+import { multibuild } from "@vavite/multibuild";
 
 async function main() {
-  await multibuild()
+	await multibuild();
 }
 
 main();
