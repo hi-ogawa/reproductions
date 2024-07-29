@@ -46,3 +46,40 @@ dist/server/entry-server.js  0.03 kB
 ✓ built in 7ms
 [buildStepEnd] { who: 'wy90qak668' }
 ```
+
+---
+
+`config` called multiple times
+
+```sh
+$ pnpm build
+
+> @ build /home/hiroshi/code/personal/reproductions/vite-v6-vavite-multibuild
+> vite build -c vite.config.simple.ts
+
+[testPlugin] ab9y9rxm89
+[config] { who: 'ab9y9rxm89' }
+[testPlugin] 6e4uusczydu
+[config] { who: '6e4uusczydu' }
+vite v6.0.0-alpha.19 building for production...
+✓ 1 modules transformed.
+dist/client/assets/entry-client-B4xo99rY.js  0.03 kB │ gzip: 0.05 kB
+✓ built in 29ms
+
+
+$ pnpm build --ssr
+
+> @ build /home/hiroshi/code/personal/reproductions/vite-v6-vavite-multibuild
+> vite build -c vite.config.simple.ts "--ssr"
+
+[testPlugin] n23lvk4b5g
+[config] { who: 'n23lvk4b5g' }
+[testPlugin] gknwr3r1vhn
+[config] { who: 'gknwr3r1vhn' }
+[testPlugin] avkrleebwhk
+[config] { who: 'avkrleebwhk' }
+vite v6.0.0-alpha.19 building SSR bundle for production...
+✓ 1 modules transformed.
+dist/server/entry-server.js  0.03 kB
+✓ built in 27ms
+```
