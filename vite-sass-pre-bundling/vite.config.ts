@@ -10,6 +10,7 @@ export default defineConfig({
         sassPlugin({
           // not working with the default `type: "css"` which emits separate css files
           // as it removes `import "...css"` from js files.
+          // https://esbuild.github.io/content-types/#css-from-js
           type: "style",
         }),
       ]
