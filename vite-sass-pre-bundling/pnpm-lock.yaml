@@ -15,10 +15,16 @@ importers:
         specifier: ^3.6.13
         version: 3.6.13(vue@3.4.34)
     devDependencies:
+      esbuild:
+        specifier: ^0.21.5
+        version: 0.21.5
       esbuild-sass-plugin:
         specifier: ^3.3.1
         version: 3.3.1(esbuild@0.21.5)(sass-embedded@1.77.8)
       sass:
+        specifier: ^1.77.8
+        version: 1.77.8
+      sass-embedded:
         specifier: ^1.77.8
         version: 1.77.8
       vite:

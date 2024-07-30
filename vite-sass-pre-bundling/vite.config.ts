@@ -9,7 +9,7 @@ export default defineConfig({
       plugins: [
         sassPlugin({
           // not working with the default `type: "css"` which emits separate css files
-          // since `import "...scss"` side effect import seems dropped.
+          // as it removes `import "...css"` from js files.
           type: "style",
         }),
       ]
