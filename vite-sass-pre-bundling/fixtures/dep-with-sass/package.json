@@ -1,0 +1,12 @@
+{
+  "name": "dep-with-sass",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./index.js",
+    "./*": "./*"
+  },
+  "dependencies": {
+    "vuetify": "^3.6.13"
+  }
+}
