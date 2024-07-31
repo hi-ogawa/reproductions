@@ -7,7 +7,7 @@ export default async function handler(
 	res: ServerResponse,
 ) {
 	const htmlStream = ReactDOMServer.renderToPipeableStream(<Root />, {
-		bootstrapModules: ["/src/entry-client"],
+		bootstrapModules: ["/src/check-preamble.js", "/src/entry-client"],
 		onShellReady() {
 			res.setHeader("content-type", "text/html");
 			htmlStream.pipe(res);
