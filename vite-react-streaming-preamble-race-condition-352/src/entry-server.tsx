@@ -45,9 +45,7 @@ function Root() {
 				)}
 			</head>
 			<body>
-				<div id="root">
-					<App />
-				</div>
+				<App />
 			</body>
 		</html>
 	);
