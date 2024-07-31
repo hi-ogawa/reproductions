@@ -1,4 +1,5 @@
 import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
 
 export default defineConfig({
 	clearScreen: false,
@@ -6,6 +7,7 @@ export default defineConfig({
 		entries: ["./src/entry-client.tsx"],
 	},
 	plugins: [
+		react(),
 		{
 			name: "ssr-middleware",
 			configureServer(server) {
