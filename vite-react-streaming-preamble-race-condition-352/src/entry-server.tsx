@@ -1,16 +1,16 @@
 import type { IncomingMessage, OutgoingMessage } from "node:http";
-import ReactDOMServer from "react-dom/server"
+import ReactDOMServer from "react-dom/server";
 import { App } from "./app";
 
 export default async function handler(
 	_req: IncomingMessage,
 	res: OutgoingMessage,
 ) {
-  const htmlStream = ReactDOMServer.renderToPipeableStream(<Root />, {
-    bootstrapModules: ["/src/entry-client"]
-  })
-	res.setHeader("content-type", "text/html")
-  htmlStream.pipe(res)
+	const htmlStream = ReactDOMServer.renderToPipeableStream(<Root />, {
+		bootstrapModules: ["/src/entry-client"],
+	});
+	res.setHeader("content-type", "text/html");
+	htmlStream.pipe(res);
 }
 
 function Root() {
