@@ -5,3 +5,5 @@ Reproduction of browser hmr double module in https://github.com/hi-ogawa/vite-pl
 - modify `src/app.js` to trigger HMR
 - see http://localhost:5173/full-path-to/src/app.js?t=xxx is loaded
 - reload a page and see http://localhost:5173/src/app.js?t=xxx is loaded
+
+It turns out the same happens on Vite v5, so it's not a regression.
