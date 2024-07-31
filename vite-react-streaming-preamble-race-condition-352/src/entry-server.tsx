@@ -30,6 +30,8 @@ function Root() {
 					<>
 						<script type="module" src="/@vite/client" />
 						<script
+							// `async` doesn't seem to affect the result of `check-preamble.js`
+							async
 							type="module"
 							dangerouslySetInnerHTML={{
 								__html: `
