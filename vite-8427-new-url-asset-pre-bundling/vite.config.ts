@@ -9,15 +9,15 @@ export default defineConfig({
 		esbuildOptions: {
 			plugins: [
 				{
+					// replace
+					//   new URL("./vite.svg", import.meta.url)
+					// with
+					//   new URL("/(absolute-path-to)/vite.svg", import.meta.url)
 					name: "new-url-import-meta-url-replace",
 					setup(build) {
 						build.onLoad({ filter: /\.js$/ }, async (args) => {
 							const data = await fs.promises.readFile(args.path, "utf-8");
 							if (data.includes("import.meta.url")) {
-								// replace
-								//   new URL("./vite.svg", import.meta.url)
-								// with
-								//   new URL("/(absolute-path-to)/vite.svg", import.meta.url)
 								// https://github.com/vitejs/vite/blob/0f56e1724162df76fffd5508148db118767ebe32/packages/vite/src/node/plugins/assetImportMetaUrl.ts#L51-L52
 								const assetImportMetaUrlRE =
 									/\bnew\s+URL\s*\(\s*('[^']+'|"[^"]+"|`[^`]+`)\s*,\s*import\.meta\.url\s*(?:,\s*)?\)/dg;
