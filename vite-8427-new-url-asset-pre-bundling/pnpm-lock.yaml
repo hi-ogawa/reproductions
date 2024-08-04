@@ -17,6 +17,9 @@ importers:
       test-dep-image:
         specifier: file:./deps/image
         version: file:deps/image
+      test-dep-worker:
+        specifier: file:./deps/worker
+        version: file:deps/worker
       vite:
         specifier: ^5.3.5
         version: 5.3.5(@types/node@22.1.0)
@@ -287,6 +290,9 @@ packages:
   test-dep-image@file:deps/image:
     resolution: {directory: deps/image, type: directory}
 
+  test-dep-worker@file:deps/worker:
+    resolution: {directory: deps/worker, type: directory}
+
   undici-types@6.13.0:
     resolution: {integrity: sha512-xtFJHudx8S2DSoujjMd1WeWvn7KKWFRESZTMeL1RptAYERu29D6jphMjjY+vn96jvN3kVPDNxU/E13VTaXj6jg==}
 
@@ -513,6 +519,8 @@ snapshots:
   source-map-js@1.2.0: {}
 
   test-dep-image@file:deps/image: {}
+
+  test-dep-worker@file:deps/worker: {}
 
   undici-types@6.13.0: {}
 
