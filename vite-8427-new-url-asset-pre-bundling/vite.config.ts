@@ -10,9 +10,10 @@ export default defineConfig({
 			plugins: [
 				{
 					// replace
-					//   new URL("./vite.svg", import.meta.url)
+					//   new URL("./asset.svg", import.meta.url)
+					//   new URL("asset.svg", import.meta.url)
 					// with
-					//   new URL("/(absolute-path-to)/vite.svg", import.meta.url)
+					//   new URL("/(absolute-path-to)/asset.svg", import.meta.url)
 					name: "new-url-import-meta-url-replace",
 					setup(build) {
 						build.onLoad({ filter: /\.js$/ }, async (args) => {
