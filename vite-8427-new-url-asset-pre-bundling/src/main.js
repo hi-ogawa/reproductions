@@ -11,10 +11,15 @@ function main() {
 	// image
 	const img = document.createElement("img");
 	img.src = testDepImage.image1;
+	img.width = "40";
 	document.body.appendChild(img);
 
 	// worker
-	testDepWorker.startWorker();
+	testDepWorker.startWorker((e) => {
+		const div = document.createElement("div");
+		div.textContent = JSON.stringify(e.data);
+		document.body.appendChild(div);
+	});
 }
 
 main();
