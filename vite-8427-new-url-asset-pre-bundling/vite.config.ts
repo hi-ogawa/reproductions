@@ -26,7 +26,7 @@ export default defineConfig({
 								for (const match of matches) {
 									const rawUrl = match[1]!;
 									const url = rawUrl.slice(1, -1);
-									if (url[0] === ".") {
+									if (url[0] !== "/") {
 										const absUrl = path.resolve(args.path, "..", url);
 										if (fs.existsSync(absUrl)) {
 											const [start, end] = match.indices![1]!;
