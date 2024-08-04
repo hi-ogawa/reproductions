@@ -6,7 +6,9 @@ function main() {
 		null,
 		2,
 	);
-	document.body.appendChild(testDepImage.createImageElement());
+	const img = document.createElement("img");
+	img.src = testDepImage.image1;
+	document.body.appendChild(img);
 }
 
 main();
