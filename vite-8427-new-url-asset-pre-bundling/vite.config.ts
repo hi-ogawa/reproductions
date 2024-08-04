@@ -28,7 +28,7 @@ export default defineConfig({
 									const rawUrl = match[1]!;
 									const url = rawUrl.slice(1, -1);
 									if (url[0] !== "/") {
-										const absUrl = path.resolve(args.path, "..", url);
+										const absUrl = path.resolve(path.dirname(args.path), url);
 										if (fs.existsSync(absUrl)) {
 											const [start, end] = match.indices![1]!;
 											output.update(start, end, JSON.stringify(absUrl));
