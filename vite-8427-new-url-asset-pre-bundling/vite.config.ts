@@ -89,12 +89,14 @@ function workerNewUrlAssetPlugin(): esbuild.Plugin {
 									entryPoints: [absUrl],
 									bundle: true,
 									plugins: [newUrlAssetPlugin()],
+									banner: {
+										// without this separator, Vite breaks the code by
+										//   importScripts("/@vite/env")(() => ...)()
+										js: ";\n",
+									},
 								});
 								const [start, end] = match.indices![2]!;
 								output.update(start, end, JSON.stringify(outfile));
-
-								// TODO: why error?
-								// importScripts(...) is not a function
 							}
 						}
 					}
