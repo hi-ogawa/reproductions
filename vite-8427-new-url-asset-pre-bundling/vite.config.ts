@@ -2,6 +2,7 @@ import { defineConfig } from "vite";
 import fs from "node:fs";
 import MagicString from "magic-string";
 import path from "node:path";
+import crypto from "node:crypto";
 import * as esbuild from "esbuild";
 
 export default defineConfig({
@@ -73,21 +74,27 @@ function workerNewUrlAssetPlugin(): esbuild.Plugin {
 					const matches = data.matchAll(workerImportMetaUrlRE);
 					const output = new MagicString(data);
 					for (const match of matches) {
-						const rawUrl = match[1]!;
+						const rawUrl = match[2]!;
 						const url = rawUrl.slice(1, -1);
 						if (url[0] !== "/") {
 							const absUrl = path.resolve(path.dirname(args.path), url);
 							if (fs.existsSync(absUrl)) {
-								// TODO: trigger recursive build
-								if (0) {
-									await esbuild.build({
-										entryPoints: [absUrl],
-										bundle: true,
-										plugins: [workerNewUrlAssetPlugin(), newUrlAssetPlugin()],
-									});
-								}
-								const [start, end] = match.indices![1]!;
-								output.update(start, end, JSON.stringify(absUrl));
+								// bundle worker (TODO: cache?)
+								const outfile = path.resolve(
+									"node_modules/.vite/.worker",
+									hashString(absUrl) + ".js",
+								);
+								await esbuild.build({
+									outfile,
+									entryPoints: [absUrl],
+									bundle: true,
+									plugins: [newUrlAssetPlugin()],
+								});
+								const [start, end] = match.indices![2]!;
+								output.update(start, end, JSON.stringify(outfile));
+
+								// TODO: why error?
+								// importScripts(...) is not a function
 							}
 						}
 					}
@@ -102,4 +109,13 @@ function workerNewUrlAssetPlugin(): esbuild.Plugin {
 			});
 		},
 	};
+}
+
+function hashString(s: string) {
+	return crypto
+		.createHash("sha256")
+		.update(s)
+		.digest()
+		.toString("hex")
+		.slice(0, 10);
 }
