@@ -79,22 +79,24 @@ function workerNewUrlAssetPlugin(): esbuild.Plugin {
 						if (url[0] !== "/") {
 							const absUrl = path.resolve(path.dirname(args.path), url);
 							if (fs.existsSync(absUrl)) {
-								// bundle worker (TODO: cache?)
 								const outfile = path.resolve(
 									"node_modules/.vite/.worker",
 									hashString(absUrl) + ".js",
 								);
-								await esbuild.build({
-									outfile,
-									entryPoints: [absUrl],
-									bundle: true,
-									plugins: [newUrlAssetPlugin()],
-									banner: {
-										// without this separator, Vite breaks the code by
-										//   importScripts("/@vite/env")(() => ...)()
-										js: ";\n",
-									},
-								});
+								// bundle worker if not exist
+								if (!fs.existsSync(outfile)) {
+									await esbuild.build({
+										outfile,
+										entryPoints: [absUrl],
+										bundle: true,
+										plugins: [newUrlAssetPlugin()],
+										banner: {
+											// without this separator, Vite breaks the code by
+											//   importScripts("/@vite/env")(() => ...)()
+											js: ";\n",
+										},
+									});
+								}
 								const [start, end] = match.indices![2]!;
 								output.update(start, end, JSON.stringify(outfile));
 							}
