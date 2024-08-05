@@ -8,6 +8,7 @@
 	},
 	"devDependencies": {
 		"@types/node": "^22.1.0",
+		"esbuild": "^0.21.3",
 		"magic-string": "^0.30.11",
 		"test-dep-image": "file:./deps/image",
 		"test-dep-worker": "file:./deps/worker",
