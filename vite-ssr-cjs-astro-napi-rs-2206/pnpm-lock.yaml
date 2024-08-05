@@ -14,6 +14,9 @@ importers:
       astro:
         specifier: ^4.13.1
         version: 4.13.1(typescript@5.5.4)
+      test-dep-cjs:
+        specifier: link:./fixtures/test-dep-cjs
+        version: link:fixtures/test-dep-cjs
       typescript:
         specifier: ^5.5.4
         version: 5.5.4
