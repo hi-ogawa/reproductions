@@ -1,3 +1,3 @@
-self.onmessage = (e) => {
-	self.postMessage(e.data);
+self.onmessage = () => {
+	self.postMessage(self.location.href);
 };

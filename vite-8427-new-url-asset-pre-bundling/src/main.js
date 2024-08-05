@@ -3,7 +3,7 @@ import * as testDepWorker from "test-dep-worker";
 
 function main() {
 	document.getElementById("test").textContent = JSON.stringify(
-		[testDepImage.image1, testDepImage.image2, testDepWorker.workerUrl],
+		[testDepImage.image1, testDepImage.image2],
 		null,
 		2,
 	);
@@ -16,8 +16,8 @@ function main() {
 
 	// worker
 	testDepWorker.startWorker((e) => {
-		const div = document.createElement("div");
-		div.textContent = JSON.stringify(e.data);
+		const div = document.createElement("pre");
+		div.textContent = "worker = " + e.data;
 		document.body.appendChild(div);
 	});
 }
