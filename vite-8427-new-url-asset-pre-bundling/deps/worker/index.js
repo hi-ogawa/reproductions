@@ -1,9 +1,7 @@
-export const workerUrl = new URL("./worker.js", import.meta.url);
-
 export function startWorker(handler) {
-	const worker = new Worker(workerUrl);
+	const worker = new Worker(new URL("./worker.js", import.meta.url));
 	worker.addEventListener("message", (e) => {
 		handler(e);
 	});
-	worker.postMessage({ msg: "pong: worker" });
+	worker.postMessage("ping");
 }

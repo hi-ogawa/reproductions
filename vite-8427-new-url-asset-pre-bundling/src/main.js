@@ -1,9 +1,10 @@
 import * as testDepImage from "test-dep-image";
 import * as testDepWorker from "test-dep-worker";
+import initSwc, { transformSync } from "@swc/wasm-web";
 
-function main() {
+async function main() {
 	document.getElementById("test").textContent = JSON.stringify(
-		[testDepImage.image1, testDepImage.image2, testDepWorker.workerUrl],
+		[testDepImage.image1, testDepImage.image2],
 		null,
 		2,
 	);
@@ -16,10 +17,15 @@ function main() {
 
 	// worker
 	testDepWorker.startWorker((e) => {
-		const div = document.createElement("div");
-		div.textContent = JSON.stringify(e.data);
-		document.body.appendChild(div);
+		const el = document.createElement("pre");
+		el.textContent = "worker = " + e.data;
+		document.body.appendChild(el);
 	});
+
+	await initSwc();
+	const elSwc = document.createElement("pre");
+	elSwc.textContent = "@swc/wasm-web = " + transformSync("() => 42", {}).code;
+	document.body.appendChild(elSwc);
 }
 
 main();

@@ -1,3 +1,6 @@
-self.onmessage = (e) => {
-	self.postMessage(e.data);
+import { workerDep } from "./worker-dep.js";
+
+self.onmessage = () => {
+	console.log(workerDep);
+	self.postMessage(self.location.href);
 };
