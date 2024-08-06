@@ -6,6 +6,9 @@
 		"build": "vite build",
 		"preview": "vite preview"
 	},
+	"dependencies": {
+		"@swc/wasm-web": "^1.7.6"
+	},
 	"devDependencies": {
 		"@types/node": "^22.1.0",
 		"esbuild": "^0.21.3",
