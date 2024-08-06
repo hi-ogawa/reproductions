@@ -61,7 +61,7 @@ function newUrlAssetPlugin(): esbuild.Plugin {
 // with
 //   new URL("/(absolute-path-to)/bundled-worker.js", import.meta.url)
 function workerNewUrlAssetPlugin(): esbuild.Plugin {
-	// https://github.com/hi-ogawa/vite/blob/0f56e1724162df76fffd5508148db118767ebe32/packages/vite/src/node/plugins/workerImportMetaUrl.ts#L133-L134
+	// https://github.com/vitejs/vite/blob/0f56e1724162df76fffd5508148db118767ebe32/packages/vite/src/node/plugins/workerImportMetaUrl.ts#L133-L134
 	const workerImportMetaUrlRE =
 		/\bnew\s+(?:Worker|SharedWorker)\s*\(\s*(new\s+URL\s*\(\s*('[^']+'|"[^"]+"|`[^`]+`)\s*,\s*import\.meta\.url\s*\))/dg;
 
