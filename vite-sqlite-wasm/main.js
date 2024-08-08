@@ -59,8 +59,7 @@ sqlite3InitModule({
   }
 });
 
-// TODO: why build not picking up?
-const worker = new Worker('./worker.js', { type: 'module' });
+const worker = new Worker(new URL('./worker.js', import.meta.url), { type: 'module' });
 worker.onmessage = (e) => {
   e.data.type === 'log' ? workerLog(e.data.payload) : workerError(e.data.payload);
 };
