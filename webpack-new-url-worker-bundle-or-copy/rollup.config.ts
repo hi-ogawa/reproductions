@@ -13,6 +13,7 @@ export default defineConfig({
 		nodeResolve({
 			exportConditions: ["browser", "default"],
 		}),
+		workerImportMetaUrlPlugin(),
 		assetImportMetaUrlPlugin(),
 		{
 			name: "index-html",
@@ -27,8 +28,9 @@ export default defineConfig({
 	],
 });
 
-// TODO: also implement it without `import.meta.ROLLUP_FILE_URL_xxx`
+// TODO: implement it without `import.meta.ROLLUP_FILE_URL_xxx`
 // https://github.com/rolldown/rolldown/pull/1928
+
 function assetImportMetaUrlPlugin(): Plugin {
 	// https://github.com/vitejs/vite/blob/0f56e1724162df76fffd5508148db118767ebe32/packages/vite/src/node/plugins/assetImportMetaUrl.ts#L51-L52
 	const assetImportMetaUrlRE =
@@ -42,6 +44,8 @@ function assetImportMetaUrlPlugin(): Plugin {
 				//   new URL("./asset.svg", import.meta.url)
 				// with
 				//   new URL(import.meta.ROLLUP_FILE_URL_xxx)
+				// which in turn rollup repalces with
+				//   new URL(new URL("...", import.meta.url).href)
 				const output = new MagicString(code);
 				const matches = code.matchAll(assetImportMetaUrlRE);
 				for (const match of matches) {
@@ -59,6 +63,50 @@ function assetImportMetaUrlPlugin(): Plugin {
 								start,
 								end,
 								`new URL(import.meta.ROLLUP_FILE_URL_${referenceId})`,
+							);
+						}
+					}
+				}
+				if (output.hasChanged()) {
+					return {
+						code: output.toString(),
+						map: output.generateMap(),
+					};
+				}
+			}
+		},
+	};
+}
+
+function workerImportMetaUrlPlugin(): Plugin {
+	// https://github.com/vitejs/vite/blob/0f56e1724162df76fffd5508148db118767ebe32/packages/vite/src/node/plugins/workerImportMetaUrl.ts#L133-L134
+	const workerImportMetaUrlRE =
+		/\bnew\s+(?:Worker|SharedWorker)\s*\(\s*(new\s+URL\s*\(\s*('[^']+'|"[^"]+"|`[^`]+`)\s*,\s*import\.meta\.url\s*\))/dg;
+
+	return {
+		name: assetImportMetaUrlPlugin.name,
+		transform(code, id) {
+			if (code.includes("import.meta.url")) {
+				// replace
+				//   new Worker(new URL("./worker.js", import.meta.url))
+				// with
+				//   new Worker(import.meta.ROLLUP_FILE_URL_xxx)
+				const output = new MagicString(code);
+				const matches = code.matchAll(workerImportMetaUrlRE);
+				for (const match of matches) {
+					const url = match[2]!.slice(1, -1);
+					if (url[0] !== "/") {
+						const absUrl = path.resolve(path.dirname(id), url);
+						if (fs.existsSync(absUrl)) {
+							const referenceId = this.emitFile({
+								type: "chunk",
+								id: absUrl,
+							});
+							const [start, end] = match.indices![1]!;
+							output.update(
+								start,
+								end,
+								`import.meta.ROLLUP_FILE_URL_${referenceId}`,
 							);
 						}
 					}
