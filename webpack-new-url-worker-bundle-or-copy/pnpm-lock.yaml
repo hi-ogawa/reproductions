@@ -7,6 +7,10 @@ settings:
 importers:
 
   .:
+    dependencies:
+      test-dep-browser-or-worker:
+        specifier: file:./fixtures/test-dep-browser-or-worker
+        version: file:fixtures/test-dep-browser-or-worker
     devDependencies:
       html-webpack-plugin:
         specifier: ^5.6.0
@@ -1353,6 +1357,9 @@ packages:
     resolution: {integrity: sha512-pAfYn3NIZLyZpa83ZKigvj6Rn9c/vd5KfYGX7cN1mnzqgDcxWvrU5ZtAfIKhEXz9nRecw4z3LXkjaq96/qZqAA==}
     engines: {node: '>=10'}
     hasBin: true
+
+  test-dep-browser-or-worker@file:fixtures/test-dep-browser-or-worker:
+    resolution: {directory: fixtures/test-dep-browser-or-worker, type: directory}
 
   thingies@1.21.0:
     resolution: {integrity: sha512-hsqsJsFMsV+aD4s3CWKk85ep/3I9XzYV/IXaSouJMYIoDlgyi11cBhsqYe9/geRfB0YIikBQg6raRaM+nIMP9g==}
@@ -2898,6 +2905,8 @@ snapshots:
       acorn: 8.12.1
       commander: 2.20.3
       source-map-support: 0.5.21
+
+  test-dep-browser-or-worker@file:fixtures/test-dep-browser-or-worker: {}
 
   thingies@1.21.0(tslib@2.6.3):
     dependencies:
