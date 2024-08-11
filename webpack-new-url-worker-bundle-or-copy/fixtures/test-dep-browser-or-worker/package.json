@@ -1,0 +1,12 @@
+{
+	"name": "test-dep-browser-or-worker",
+	"private": true,
+	"type": "module",
+	"exports": {
+		".": {
+			"browser": "./index.browser.js",
+			"worker": "./index.worker.js",
+			"default": "./index.js"
+		}
+	}
+}

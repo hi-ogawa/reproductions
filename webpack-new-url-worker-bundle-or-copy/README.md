@@ -10,3 +10,4 @@ pnpm preview
 
 - https://webpack.js.org/guides/asset-modules/#url-assets
 - https://webpack.js.org/guides/web-workers/
+- https://github.com/webpack/webpack/issues/14681
