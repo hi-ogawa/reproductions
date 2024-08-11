@@ -14,7 +14,7 @@ export default {
 		}),
 	],
 	output: {
-		path: path.resolve("./dist"),
+		path: path.resolve("./dist/webpack"),
 		clean: true,
 	},
 };

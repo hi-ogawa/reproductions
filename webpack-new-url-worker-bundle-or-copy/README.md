@@ -6,6 +6,10 @@ https://github.com/users/hi-ogawa/projects/4/views/1?pane=issue&itemId=73410910
 pnpm dev
 pnpm bulid
 pnpm preview
+
+# also doing something similar on rollup
+pnpm build-rollup
+pnpm preview-rollup
 ```
 
 - https://webpack.js.org/guides/asset-modules/#url-assets
