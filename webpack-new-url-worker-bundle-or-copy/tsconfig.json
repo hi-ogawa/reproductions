@@ -1,0 +1,12 @@
+{
+	"exclude": ["node_modules"],
+	"compilerOptions": {
+		"strict": true,
+		"verbatimModuleSyntax": true,
+		"noEmit": true,
+		"moduleResolution": "Bundler",
+		"module": "ESNext",
+		"target": "ESNext",
+		"lib": ["ESNext", "DOM", "DOM.Iterable"]
+	}
+}
