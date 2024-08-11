@@ -1,5 +1,12 @@
+import testDepBrowserOrWorker from "test-dep-browser-or-worker";
+
 function main() {
-	for (const id of ["asset-svg", "asset-js", "worker-js"]) {
+	for (const id of [
+		"asset-svg",
+		"asset-js",
+		"test-dep-browser-or-worker",
+		"worker-js",
+	]) {
 		document.body.appendChild(
 			Object.assign(document.createElement("div"), { id }),
 		);
@@ -27,6 +34,14 @@ function main() {
 	// referencing non existing file breaks build (also cannot use magic comment webpackIgnore?)
 	// new URL("./deps/not-found.txt", import.meta.url).href;
 
+	render(
+		"test-dep-browser-or-worker",
+		`
+<h4>test-dep-browser-or-worker (main)</h4>
+<pre>${testDepBrowserOrWorker}</pre>
+`,
+	);
+
 	const testWorker = new Worker(new URL("./test-worker.js", import.meta.url));
 	testWorker.onmessage = (e) => {
 		render(
@@ -34,6 +49,7 @@ function main() {
 			`
 <h4>new Worker(new URL("./test-worker.js", import.meta.url))</h4>
 <div>self.location.href = <a href="${e.data.href}">${e.data.href}</a></div>
+<pre>test-dep-browser-or-worker: ${e.data.testDepBrowserOrWorker}</pre>
 `,
 		);
 	};
