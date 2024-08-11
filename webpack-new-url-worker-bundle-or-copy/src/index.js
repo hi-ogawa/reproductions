@@ -42,6 +42,13 @@ function main() {
 `,
 	);
 
+	render(
+		"worker-js",
+		`
+<h4>new Worker(new URL("./test-worker.js", import.meta.url))</h4>
+<div>...</div>
+`,
+	);
 	const testWorker = new Worker(new URL("./test-worker.js", import.meta.url));
 	testWorker.onmessage = (e) => {
 		render(
