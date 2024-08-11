@@ -9,6 +9,7 @@
 		"preview-rollup": "sirv dist/rollup"
 	},
 	"dependencies": {
+		"test-dep-asset": "file:./fixtures/test-dep-asset",
 		"test-dep-browser-or-worker": "file:./fixtures/test-dep-browser-or-worker"
 	},
 	"devDependencies": {

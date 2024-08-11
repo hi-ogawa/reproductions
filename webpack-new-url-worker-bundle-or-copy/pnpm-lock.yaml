@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      test-dep-asset:
+        specifier: file:./fixtures/test-dep-asset
+        version: file:fixtures/test-dep-asset
       test-dep-browser-or-worker:
         specifier: file:./fixtures/test-dep-browser-or-worker
         version: file:fixtures/test-dep-browser-or-worker
@@ -1661,6 +1664,9 @@ packages:
     resolution: {integrity: sha512-pAfYn3NIZLyZpa83ZKigvj6Rn9c/vd5KfYGX7cN1mnzqgDcxWvrU5ZtAfIKhEXz9nRecw4z3LXkjaq96/qZqAA==}
     engines: {node: '>=10'}
     hasBin: true
+
+  test-dep-asset@file:fixtures/test-dep-asset:
+    resolution: {directory: fixtures/test-dep-asset, type: directory}
 
   test-dep-browser-or-worker@file:fixtures/test-dep-browser-or-worker:
     resolution: {directory: fixtures/test-dep-browser-or-worker, type: directory}
@@ -3434,6 +3440,8 @@ snapshots:
       acorn: 8.12.1
       commander: 2.20.3
       source-map-support: 0.5.21
+
+  test-dep-asset@file:fixtures/test-dep-asset: {}
 
   test-dep-browser-or-worker@file:fixtures/test-dep-browser-or-worker: {}
 
