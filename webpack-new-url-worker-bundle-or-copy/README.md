@@ -7,7 +7,7 @@ pnpm dev
 pnpm bulid
 pnpm preview
 
-# also doing something similar on rollup
+# implementing something similar on rollup using plugins
 pnpm build-rollup
 pnpm preview-rollup
 ```
@@ -15,3 +15,4 @@ pnpm preview-rollup
 - https://webpack.js.org/guides/asset-modules/#url-assets
 - https://webpack.js.org/guides/web-workers/
 - https://github.com/webpack/webpack/issues/14681
+- https://github.com/hi-ogawa/vite-plugins/tree/main/packages/pre-bundle-new-url
