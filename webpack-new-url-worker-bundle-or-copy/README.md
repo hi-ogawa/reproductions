@@ -34,12 +34,6 @@ pnpm dev-no-bundler
 
 ## bundler comparison
 
-TODO: native, vite dev, vite build, webpack, rspack, parcel, esbuild PR, vite dev PR
-
-- "ignore"-ability. how to fallback when asset not found
-- `import.meta.resolve` like feature to reference assets from node_modules
-- self reference worker handling
-
 |                                                   | vite dev | vite dev (pre-bundle) | vite build | webpack    | parcel     | esbuild (PR-2508) | vite dev (pre-bundle PR-17837) |
 |---------------------------------------------------|----------|-----------------------|------------|------------|------------|-------------------|--------------------------------|
 | new URL("./test.svg", import.meta.url)            | ✅        | ❌                     | ✅          | ✅          | ✅          | ❓                 | ✅                              |
@@ -57,7 +51,9 @@ _Additional notes_
 - None of them seem to handle `worker` export condition when bundling `new Worker(...)`.
   - https://github.com/webpack/webpack/issues/14681
   - https://github.com/vitejs/vite/issues/7439
-  - Parcel doesn't seem to pick up `browser` condition either.
+  - Parcel doesn't even pick up `browser` condition?
 - The 3rd pattern `new URL("some-dep/test.svg", import.meta.url)` might be close to what `import.meta.resolve("some-dep/test.svg")` is expected to do.
   - https://github.com/vitejs/vite/discussions/14405
   - https://github.com/evanw/esbuild/issues/2866
+- Self reference worker handling
+  - TODO
