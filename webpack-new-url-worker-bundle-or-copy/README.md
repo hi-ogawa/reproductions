@@ -44,8 +44,10 @@ Here ✅ without (...) means it's handled as a raw asset reference.
 
 _Additional notes_
 
-- Esbuild seems hesitant to adapt `new Worker(new URL(...))` as a trigger and condiering `new URL(...)` to
-- On Webpack and Parcel, build fails when `new URL(...)` fails to resolve.
+- Esbuild seems hesitant to use `new Worker(new URL(...))` as a trigger and condiering `new URL(...)` to cover the worker use case. However this seems to cause some issues for a raw asset reference usage.
+  - https://github.com/evanw/esbuild/pull/2508#issuecomment-1486935873
+  - https://github.com/evanw/esbuild/pull/2508#issuecomment-1926574877
+- On Webpack and Parcel, the entire build fails when `new URL(...)` fails to resolve.
   - https://github.com/webpack/webpack/issues/16878
 - None of them seem to handle `worker` export condition when bundling `new Worker(...)`.
   - https://github.com/webpack/webpack/issues/14681
