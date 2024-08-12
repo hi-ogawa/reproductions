@@ -1,0 +1,9 @@
+{
+	"name": "test-dep-asset",
+	"private": true,
+	"type": "module",
+	"exports": {
+		".": "./index.js",
+		"./test.txt": "./test.txt"
+	}
+}
