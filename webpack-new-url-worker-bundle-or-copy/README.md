@@ -15,6 +15,9 @@ pnpm preview-rollup
 pnpm dev-parcel
 pnpm build-parcel
 pnpm preview-parcel
+
+# no bundler
+pnpm dev-no-bundler
 ```
 
 - https://webpack.js.org/guides/asset-modules/#url-assets
@@ -38,3 +41,10 @@ TODO: native, vite dev, vite build, webpack, rspack, parcel, esbuild PR, vite de
 - "ignore"-ability. how to fallback when asset not found
 - `import.meta.resolve` like feature to reference assets from node_modules
 - self reference worker handling
+
+|                                                   | vite dev | vite dev (pre-bundle) | vite build | webpack    | parcel     | esbuild (PR-2508) | vite dev (pre-bundle PR-17837) |
+|---------------------------------------------------|----------|-----------------------|------------|------------|------------|-------------------|--------------------------------|
+| new URL("./test.svg", import.meta.url)            | ✅        | ❌                     | ✅          | ✅          | ✅          | ❓                 | ✅                              |
+| new URL("./test.js", import.meta.url)             | ✅        | ❌                     | ✅          | ✅          | ✅ (bundle) | ✅ (bundle)        | ✅                              |
+| new URL("some-dep/test.svg", import.meta.url)     | ❌        | ❌                     | ❌          | ✅          | ❌          | ❓                 | ❌                              |
+| new Worker(new URL("./test.js", import.meta.url)) | ✅        | ❌                     | ✅ (bundle) | ✅ (bundle) | ✅ (bundle) | ✅ (bundle)        | ✅ (bundle)                     |
