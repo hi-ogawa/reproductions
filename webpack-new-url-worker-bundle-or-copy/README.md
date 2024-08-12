@@ -58,5 +58,8 @@ _Additional notes_
 - The 3rd pattern `new URL("some-dep/test.svg", import.meta.url)` might be close to what `import.meta.resolve("some-dep/test.svg")` is expected to do.
   - https://github.com/vitejs/vite/discussions/14405
   - https://github.com/evanw/esbuild/issues/2866
-- Self reference worker handling
-  - TODO
+- Self reference worker
+  - webpack: works but duplicate workers with warning `Circular dependency between chunks with runtime`
+  - parcel: works
+  - vite build: works by rewriting to `self.location.href`
+  - esbuild: probably works?
