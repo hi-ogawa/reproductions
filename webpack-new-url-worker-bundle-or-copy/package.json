@@ -10,8 +10,8 @@
 		"preview-webpack": "sirv dist/webpack",
 		"build-rollup": "rollup --config rollup.config.ts --configPlugin esbuild",
 		"preview-rollup": "sirv dist/rollup",
-		"dev-parcel": "ENV_PARCEL=1 parcel serve index-parcel.html",
-		"build-parcel": "ENV_PARCEL=1 parcel build index-parcel.html --dist-dir dist/parcel && mv dist/parcel/index-parcel.html dist/parcel/index.html",
+		"dev-parcel": "parcel serve index-parcel.html",
+		"build-parcel": "parcel build index-parcel.html --dist-dir dist/parcel && mv dist/parcel/index-parcel.html dist/parcel/index.html",
 		"preview-parcel": "sirv dist/parcel"
 	},
 	"dependencies": {
