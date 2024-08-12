@@ -28,8 +28,6 @@ pnpm preview-rollup
 | `new URL("some-dep/test.svg", import.meta.url)`     | ✅        | ❌                     | ✅          | ✅          | ❌          | ❓                 | ❌                              |
 | `new Worker(new URL("./test.js", import.meta.url))` | ✅        | ❌                     | ✅ (bundle) | ✅ (bundle) | ✅ (bundle) | ✅ (chunk)        | ✅ (bundle)                     |
 
-Here ✅ without (...) means it's handled as a raw asset reference.
-
 _Additional notes_
 
 - Esbuild seems hesitant to use `new Worker(new URL(...))` as a trigger and condiering `new URL(...)` to cover the worker use case. However this seems to cause some issues for a raw asset reference usage.
