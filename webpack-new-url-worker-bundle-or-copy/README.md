@@ -3,6 +3,7 @@ https://github.com/users/hi-ogawa/projects/4/views/1?pane=issue&itemId=73410910
 `new URL(..., import.meta.url)` alone triggers asset copy while `new Worker(new URL(..., import.meta.url))` triggers a separate worker entry bundle.
 
 ```sh
+# webpack
 pnpm dev
 pnpm bulid
 pnpm preview
@@ -35,9 +36,6 @@ pnpm dev-no-bundler
 
 TODO: native, vite dev, vite build, webpack, rspack, parcel, esbuild PR, vite dev PR
 
-- `new URL`
-- `new Worker(new URL)`
-- worker exports condition / environment separation
 - "ignore"-ability. how to fallback when asset not found
 - `import.meta.resolve` like feature to reference assets from node_modules
 - self reference worker handling
@@ -45,6 +43,21 @@ TODO: native, vite dev, vite build, webpack, rspack, parcel, esbuild PR, vite de
 |                                                   | vite dev | vite dev (pre-bundle) | vite build | webpack    | parcel     | esbuild (PR-2508) | vite dev (pre-bundle PR-17837) |
 |---------------------------------------------------|----------|-----------------------|------------|------------|------------|-------------------|--------------------------------|
 | new URL("./test.svg", import.meta.url)            | ✅        | ❌                     | ✅          | ✅          | ✅          | ❓                 | ✅                              |
-| new URL("./test.js", import.meta.url)             | ✅        | ❌                     | ✅          | ✅          | ✅ (bundle) | ✅ (bundle)        | ✅                              |
+| new URL("./test.js", import.meta.url)             | ✅        | ❌                     | ✅          | ✅          | ✅ (bundle) | ✅ (chunk)        | ✅                              |
 | new URL("some-dep/test.svg", import.meta.url)     | ❌        | ❌                     | ❌          | ✅          | ❌          | ❓                 | ❌                              |
-| new Worker(new URL("./test.js", import.meta.url)) | ✅        | ❌                     | ✅ (bundle) | ✅ (bundle) | ✅ (bundle) | ✅ (bundle)        | ✅ (bundle)                     |
+| new Worker(new URL("./test.js", import.meta.url)) | ✅        | ❌                     | ✅ (bundle) | ✅ (bundle) | ✅ (bundle) | ✅ (chunk)        | ✅ (bundle)                     |
+
+Here ✅ without (...) means it's handled as a raw asset reference.
+
+_Additional notes_
+
+- Esbuild seems hesitant to adapt `new Worker(new URL(...))` as a trigger and condiering `new URL(...)` to
+- On Webpack and Parcel, build fails when `new URL(...)` fails to resolve.
+  - https://github.com/webpack/webpack/issues/16878
+- None of them seem to handle `worker` export condition when bundling `new Worker(...)`.
+  - https://github.com/webpack/webpack/issues/14681
+  - https://github.com/vitejs/vite/issues/7439
+  - Parcel doesn't seem to pick up `browser` condition either.
+- The 3rd pattern `new URL("some-dep/test.svg", import.meta.url)` might be close to what `import.meta.resolve("some-dep/test.svg")` is expected to do.
+  - https://github.com/vitejs/vite/discussions/14405
+  - https://github.com/evanw/esbuild/issues/2866
