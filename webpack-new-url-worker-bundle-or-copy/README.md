@@ -8,6 +8,11 @@ pnpm dev
 pnpm bulid
 pnpm preview
 
+# vite
+pnpm dev-vite
+pnpm bulid-vite
+pnpm preview-vite
+
 # implementing something similar on rollup using plugins
 pnpm build-rollup
 pnpm preview-rollup
