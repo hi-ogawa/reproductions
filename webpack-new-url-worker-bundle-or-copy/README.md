@@ -24,13 +24,17 @@ pnpm preview-parcel
 - https://github.com/hi-ogawa/vite-plugins/tree/main/packages/pre-bundle-new-url
 - https://parceljs.org/languages/javascript/#url-dependencies
 - https://parceljs.org/languages/javascript/#web-workers
+- https://github.com/parcel-bundler/parcel/issues/8924#issuecomment-1494488167
 - https://github.com/evanw/esbuild/pull/2508
+- https://github.com/lgarron/loadeverything.net
 
 ## bundler comparison
 
-TODO: vite dev, vite build, webpack, parcel, esbuild PR, vite dev PR
+TODO: native, vite dev, vite build, webpack, rspack, parcel, esbuild PR, vite dev PR
 
+- `new URL`
+- `new Worker(new URL)`
 - worker exports condition / environment separation
-- self reference worker handling
 - "ignore"-ability. how to fallback when asset not found
-- import.meta.resolve like feature to reference assets from node_modules
+- `import.meta.resolve` like feature to reference assets from node_modules
+- self reference worker handling
