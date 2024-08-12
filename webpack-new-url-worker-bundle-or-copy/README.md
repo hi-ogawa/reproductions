@@ -23,7 +23,6 @@ pnpm dev-no-bundler
 
 - https://webpack.js.org/guides/asset-modules/#url-assets
 - https://webpack.js.org/guides/web-workers/
-- https://github.com/webpack/webpack/issues/14681
 - https://github.com/vitejs/vite/pull/17837
 - https://github.com/hi-ogawa/vite-plugins/tree/main/packages/pre-bundle-new-url
 - https://parceljs.org/languages/javascript/#url-dependencies
@@ -36,10 +35,10 @@ pnpm dev-no-bundler
 
 |                                                   | vite dev | vite dev (pre-bundle) | vite build | webpack    | parcel     | esbuild (PR-2508) | vite dev (pre-bundle PR-17837) |
 |---------------------------------------------------|----------|-----------------------|------------|------------|------------|-------------------|--------------------------------|
-| new URL("./test.svg", import.meta.url)            | ✅        | ❌                     | ✅          | ✅          | ✅          | ❓                 | ✅                              |
-| new URL("./test.js", import.meta.url)             | ✅        | ❌                     | ✅          | ✅          | ✅ (bundle) | ✅ (chunk)        | ✅                              |
-| new URL("some-dep/test.svg", import.meta.url)     | ❌        | ❌                     | ❌          | ✅          | ❌          | ❓                 | ❌                              |
-| new Worker(new URL("./test.js", import.meta.url)) | ✅        | ❌                     | ✅ (bundle) | ✅ (bundle) | ✅ (bundle) | ✅ (chunk)        | ✅ (bundle)                     |
+| `new URL("./test.svg", import.meta.url)`            | ✅        | ❌                     | ✅          | ✅          | ✅          | ❓                 | ✅                              |
+| `new URL("./test.js", import.meta.url)`             | ✅        | ❌                     | ✅          | ✅          | ✅ (bundle) | ✅ (chunk)        | ✅                              |
+| `new URL("some-dep/test.svg", import.meta.url)`     | ❌        | ❌                     | ❌          | ✅          | ❌          | ❓                 | ❌                              |
+| `new Worker(new URL("./test.js", import.meta.url))` | ✅        | ❌                     | ✅ (bundle) | ✅ (bundle) | ✅ (bundle) | ✅ (chunk)        | ✅ (bundle)                     |
 
 Here ✅ without (...) means it's handled as a raw asset reference.
 
