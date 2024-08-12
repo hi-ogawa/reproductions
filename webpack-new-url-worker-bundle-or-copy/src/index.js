@@ -4,6 +4,7 @@ function main() {
 	for (const id of [
 		"asset-svg",
 		"asset-js",
+		"asset-in-dep",
 		"test-dep-browser-or-worker",
 		"worker-js",
 	]) {
@@ -28,6 +29,15 @@ function main() {
 		`
 <h4>new URL("./test.js", import.meta.url)</h4>
 <a href="${assetJs}">${assetJs}</a>
+`,
+	);
+
+	const assetInDep = new URL("test-dep-asset/test.txt", import.meta.url).href;
+	render(
+		"asset-in-dep",
+		`
+<h4>new URL("test-dep-asset/test.txt", import.meta.url)</h4>
+<a href="${assetInDep}">${assetInDep}</a>
 `,
 	);
 
