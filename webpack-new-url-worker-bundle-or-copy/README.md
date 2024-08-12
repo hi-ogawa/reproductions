@@ -1,4 +1,4 @@
-Bundler comparison on `new URL(..., import.meta.url)` and `new Worker` support
+Bundler comparison of `new URL(..., import.meta.url)` and `new Worker` support
 
 ```sh
 # webpack
