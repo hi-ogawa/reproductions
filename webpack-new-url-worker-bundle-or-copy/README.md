@@ -21,7 +21,7 @@ pnpm build-rollup
 pnpm preview-rollup
 ```
 
-|                                                   | vite dev | vite dev (pre-bundle) | vite build | webpack    | parcel     | esbuild (PR-2508) | vite dev (pre-bundle PR-17837) |
+|                                                   | vite dev | vite dev (optimizer) | vite build | webpack    | parcel     | esbuild [PR-2508](https://github.com/evanw/esbuild/pull/2508) | vite dev (optimizer [PR-17837](https://github.com/vitejs/vite/pull/17837)) |
 |---------------------------------------------------|----------|-----------------------|------------|------------|------------|-------------------|--------------------------------|
 | `new URL("./test.svg", import.meta.url)`            | ✅        | ❌                     | ✅          | ✅          | ✅          | ❓                 | ✅                              |
 | `new URL("./test.js", import.meta.url)`             | ✅        | ❌                     | ✅          | ✅          | ✅ (bundle) | ✅ (chunk)        | ✅                              |
@@ -52,13 +52,15 @@ _Additional notes_
 
 ### other links
 
-- https://webpack.js.org/guides/asset-modules/#url-assets
-- https://webpack.js.org/guides/web-workers/
-- https://github.com/vitejs/vite/pull/17837
-- https://github.com/hi-ogawa/vite-plugins/tree/main/packages/pre-bundle-new-url
-- https://parceljs.org/languages/javascript/#url-dependencies
-- https://parceljs.org/languages/javascript/#web-workers
-- https://github.com/parcel-bundler/parcel/issues/8924#issuecomment-1494488167
+- Webpack
+  - https://webpack.js.org/guides/asset-modules/#url-assets
+  - https://webpack.js.org/guides/web-workers/
+- Parcel
+  - https://parceljs.org/languages/javascript/#url-dependencies
+  - https://parceljs.org/languages/javascript/#web-workers
 - https://github.com/evanw/esbuild/pull/2508
+- https://github.com/vitejs/vite/pull/17837
+- https://github.com/parcel-bundler/parcel/issues/8924#issuecomment-1494488167
 - https://github.com/lgarron/loadeverything.net
+- https://github.com/hi-ogawa/vite-plugins/tree/main/packages/pre-bundle-new-url
 - https://github.com/users/hi-ogawa/projects/4/views/1?pane=issue&itemId=73410910
