@@ -32,14 +32,15 @@ function main() {
 `,
 	);
 
-	const assetInDep = new URL("test-dep-asset/test.txt", import.meta.url).href;
-	render(
-		"asset-in-dep",
-		`
-<h4>new URL("test-dep-asset/test.txt", import.meta.url)</h4>
-<a href="${assetInDep}">${assetInDep}</a>
-`,
-	);
+	// This works on Webpack and Vite but fails on Parcel
+	// const assetInDep = new URL("test-dep-asset/test.txt", import.meta.url).href;
+	// 	render(
+	// 		"asset-in-dep",
+	// 		`
+	// <h4>new URL("test-dep-asset/test.txt", import.meta.url)</h4>
+	// <a href="${assetInDep}">${assetInDep}</a>
+	// `,
+	// 	);
 
 	// referencing non existing file breaks build (also cannot use magic comment webpackIgnore?)
 	// new URL("./deps/not-found.txt", import.meta.url).href;

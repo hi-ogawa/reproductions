@@ -4,8 +4,8 @@
 	"type": "module",
 	"exports": {
 		".": {
-			"browser": "./index.browser.js",
 			"worker": "./index.worker.js",
+			"browser": "./index.browser.js",
 			"default": "./index.js"
 		}
 	}

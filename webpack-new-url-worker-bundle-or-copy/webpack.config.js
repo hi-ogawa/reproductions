@@ -10,7 +10,7 @@ export default {
 	entry: "./src/index.js",
 	plugins: [
 		new HtmlWebpackPlugin({
-			template: "index.html",
+			template: "index-webpack.html",
 		}),
 	],
 	output: {
