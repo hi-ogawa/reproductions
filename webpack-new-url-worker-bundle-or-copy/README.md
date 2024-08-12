@@ -1,4 +1,4 @@
-Sample app to compare bundler's support on `new URL(..., import.meta.url)` and `new Worker`.
+Bundler comparison on `new URL(..., import.meta.url)` and `new Worker` support
 
 ```sh
 # webpack
@@ -21,6 +21,21 @@ pnpm build-rollup
 pnpm preview-rollup
 ```
 
+## Documentations
+
+- Webpack
+  - https://webpack.js.org/guides/asset-modules/#url-assets
+  - https://webpack.js.org/guides/web-workers/
+- Parcel
+  - https://parceljs.org/languages/javascript/#url-dependencies
+  - https://parceljs.org/languages/javascript/#web-workers
+- Vite
+  - https://vitejs.dev/guide/assets.html#new-url-url-import-meta-url
+  - https://vitejs.dev/guide/features.html#web-workers
+
+
+## Table
+
 |                                                   | vite dev | vite dev (optimizer) | vite build | webpack    | parcel     | esbuild [PR-2508](https://github.com/evanw/esbuild/pull/2508) | vite dev (optimizer [PR-17837](https://github.com/vitejs/vite/pull/17837)) |
 |---------------------------------------------------|----------|-----------------------|------------|------------|------------|-------------------|--------------------------------|
 | `new URL("./test.svg", import.meta.url)`            | ✅        | ❌                     | ✅          | ✅          | ✅          | ❓                 | ✅                              |
@@ -28,7 +43,7 @@ pnpm preview-rollup
 | `new URL("some-dep/test.svg", import.meta.url)`     | ✅        | ❌                     | ✅          | ✅          | ❌          | ❓                 | ❌                              |
 | `new Worker(new URL("./test.js", import.meta.url))` | ✅        | ❌                     | ✅ (bundle) | ✅ (bundle) | ✅ (bundle) | ✅ (chunk)        | ✅ (bundle)                     |
 
-_Additional notes_
+### Additional notes
 
 - Esbuild seems hesitant to use `new Worker(new URL(...))` as a trigger and condiering `new URL(...)` to cover the worker use case. However this seems to cause some issues for a raw asset reference usage.
   - https://github.com/evanw/esbuild/pull/2508#issuecomment-1486935873
@@ -48,14 +63,8 @@ _Additional notes_
   - vite build: works by rewriting to `self.location.href`
   - esbuild: probably works?
 
-### other links
+## Other links
 
-- Webpack
-  - https://webpack.js.org/guides/asset-modules/#url-assets
-  - https://webpack.js.org/guides/web-workers/
-- Parcel
-  - https://parceljs.org/languages/javascript/#url-dependencies
-  - https://parceljs.org/languages/javascript/#web-workers
 - https://github.com/evanw/esbuild/pull/2508
 - https://github.com/vitejs/vite/pull/17837
 - https://github.com/parcel-bundler/parcel/issues/8924#issuecomment-1494488167
