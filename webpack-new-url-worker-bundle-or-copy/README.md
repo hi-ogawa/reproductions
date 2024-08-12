@@ -23,3 +23,8 @@ pnpm preview-parcel
 - https://github.com/hi-ogawa/vite-plugins/tree/main/packages/pre-bundle-new-url
 - https://parceljs.org/languages/javascript/#url-dependencies
 - https://parceljs.org/languages/javascript/#web-workers
+- https://github.com/evanw/esbuild/pull/2508
+
+## bundler comparison
+
+TODO: vite dev, vite build, webpack, parcel, esbuild PR
