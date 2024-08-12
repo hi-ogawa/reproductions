@@ -4,26 +4,23 @@ https://github.com/users/hi-ogawa/projects/4/views/1?pane=issue&itemId=73410910
 
 ```sh
 # webpack
+pnpm dev-webpack
+pnpm bulid-webpack
+pnpm preview-webpack
+
+# vite
 pnpm dev
 pnpm bulid
 pnpm preview
-
-# vite
-pnpm dev-vite
-pnpm bulid-vite
-pnpm preview-vite
 
 # implementing something similar on rollup using plugins
 pnpm build-rollup
 pnpm preview-rollup
 
-# comparing with parcel
+# parcel
 pnpm dev-parcel
 pnpm build-parcel
 pnpm preview-parcel
-
-# no bundler
-pnpm dev-no-bundler
 ```
 
 - https://webpack.js.org/guides/asset-modules/#url-assets
@@ -42,7 +39,7 @@ pnpm dev-no-bundler
 |---------------------------------------------------|----------|-----------------------|------------|------------|------------|-------------------|--------------------------------|
 | `new URL("./test.svg", import.meta.url)`            | ✅        | ❌                     | ✅          | ✅          | ✅          | ❓                 | ✅                              |
 | `new URL("./test.js", import.meta.url)`             | ✅        | ❌                     | ✅          | ✅          | ✅ (bundle) | ✅ (chunk)        | ✅                              |
-| `new URL("some-dep/test.svg", import.meta.url)`     | ❌        | ❌                     | ❌          | ✅          | ❌          | ❓                 | ❌                              |
+| `new URL("some-dep/test.svg", import.meta.url)`     | ✅        | ❌                     | ✅          | ✅          | ❌          | ❓                 | ❌                              |
 | `new Worker(new URL("./test.js", import.meta.url))` | ✅        | ❌                     | ✅ (bundle) | ✅ (bundle) | ✅ (bundle) | ✅ (chunk)        | ✅ (bundle)                     |
 
 Here ✅ without (...) means it's handled as a raw asset reference.
