@@ -38,9 +38,9 @@ pnpm preview-rollup
 
 |                                                   | vite dev | vite dev (optimizer) | vite build | webpack    | parcel     | esbuild [PR-2508](https://github.com/evanw/esbuild/pull/2508) | vite dev (optimizer [PR-17837](https://github.com/vitejs/vite/pull/17837)) |
 |---------------------------------------------------|----------|-----------------------|------------|------------|------------|-------------------|--------------------------------|
-| `new URL("./test.svg", import.meta.url)`            | ✅        | ❌                     | ✅          | ✅          | ✅          | ❓                 | ✅                              |
-| `new URL("./test.js", import.meta.url)`             | ✅        | ❌                     | ✅          | ✅          | ✅ (bundle) | ✅ (chunk)        | ✅                              |
-| `new URL("some-dep/test.svg", import.meta.url)`     | ✅        | ❌                     | ✅          | ✅          | ❌          | ❓                 | ❌                              |
+| `new URL("./test.svg", import.meta.url)`            | ✅        | ❌                     | ✅ (copy)   | ✅ (copy)   | ✅ (bundle) | ❓                 | ✅ (copy)                       |
+| `new URL("./test.js", import.meta.url)`             | ✅        | ❌                     | ✅ (copy)   | ✅ (copy)   | ✅ (bundle) | ✅ (chunk)        | ✅ (copy)                        |
+| `new URL("some-dep/test.svg", import.meta.url)`     | ✅        | ❌                     | ✅ (copy)   | ✅ (copy)   | ❌          | ❓                 | ❌                              |
 | `new Worker(new URL("./test.js", import.meta.url))` | ✅        | ❌                     | ✅ (bundle) | ✅ (bundle) | ✅ (bundle) | ✅ (chunk)        | ✅ (bundle)                     |
 
 ### Additional notes
@@ -50,6 +50,7 @@ pnpm preview-rollup
   - https://github.com/evanw/esbuild/pull/2508#issuecomment-1926574877
 - On Webpack and Parcel, the entire build fails when `new URL(...)` fails to resolve.
   - https://github.com/webpack/webpack/issues/16878
+- Parcel probably handles any asset reference as "dependency" which goes through their transform pipeline. For example, `test.svg` gets minified and it's not an exact copy of original assets.
 - None of them seem to handle `worker` export condition when bundling `new Worker(...)`.
   - https://github.com/webpack/webpack/issues/14681
   - https://github.com/vitejs/vite/issues/7439
