@@ -45,7 +45,7 @@ pnpm preview-rollup
 
 ### Additional notes
 
-- Esbuild might not go with using `new Worker(new URL(...))` as a trigger and considering `new URL(...)` to cover the worker use case. However this can cause some issues for a raw asset reference usage.
+- Esbuild might not go with using `new Worker(new URL(...))` as a trigger. Instead it might use `new URL(...)` to cover the worker use case. However this can cause some issues for a raw asset reference usage.
   - https://github.com/evanw/esbuild/pull/2508#issuecomment-1486935873
   - https://github.com/evanw/esbuild/pull/2508#issuecomment-1926574877
 - On Webpack and Parcel, the entire build fails when `new URL(...)` fails to resolve.
@@ -63,6 +63,8 @@ pnpm preview-rollup
   - parcel: works
   - vite build: works by rewriting to `self.location.href`
   - esbuild: probably works?
+- Glob support (e.g. ``new URL(`./images/${name}.svg`, import.meta.url)``)
+  - TODO: I haven't checked yet... probably vite build and webpack support them in a similar way?
 
 ## Other links
 
@@ -72,3 +74,7 @@ pnpm preview-rollup
 - https://github.com/lgarron/loadeverything.net
 - https://github.com/hi-ogawa/vite-plugins/tree/main/packages/pre-bundle-new-url
 - https://github.com/users/hi-ogawa/projects/4/views/1?pane=issue&itemId=73410910
+
+### Things to discuss
+
+- Should Vite wait for esbuild or rolldown to support `new URL` and `new Worker` in pre-bundling? Or should Vite try to support on top of current esbuild optimizer?
