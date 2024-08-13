@@ -1,0 +1,6 @@
+{
+	"name": "test-dep-ts-enum",
+	"private": true,
+	"type": "module",
+	"exports": "./index.ts"
+}
