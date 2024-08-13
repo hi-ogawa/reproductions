@@ -45,7 +45,7 @@ pnpm preview-rollup
 
 ### Additional notes
 
-- Esbuild seems hesitant to use `new Worker(new URL(...))` as a trigger and condiering `new URL(...)` to cover the worker use case. However this seems to cause some issues for a raw asset reference usage.
+- Esbuild might not go with using `new Worker(new URL(...))` as a trigger and considering `new URL(...)` to cover the worker use case. However this can cause some issues for a raw asset reference usage.
   - https://github.com/evanw/esbuild/pull/2508#issuecomment-1486935873
   - https://github.com/evanw/esbuild/pull/2508#issuecomment-1926574877
 - On Webpack and Parcel, the entire build fails when `new URL(...)` fails to resolve.
