@@ -13,8 +13,8 @@ importers:
         version: 3.46.0-build2
     devDependencies:
       '@hiogawa/vite-plugin-pre-bundle-new-url':
-        specifier: 0.0.0-pre.5
-        version: 0.0.0-pre.5(vite@5.4.0)
+        specifier: 0.0.0-pre.7
+        version: 0.0.0-pre.7(esbuild@0.21.5)(vite@5.4.0)
       vite:
         specifier: ^5.4.0
         version: 5.4.0
@@ -159,9 +159,10 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@hiogawa/vite-plugin-pre-bundle-new-url@0.0.0-pre.5':
-    resolution: {integrity: sha512-vbXKkpQHPUcGHg8OM3b5v155ATl0oRn8L7S42JFlkHMhVUrTjdTwQ5CISEcBAuet3A9cEsF/0dZWB5FcpyVWwQ==}
+  '@hiogawa/vite-plugin-pre-bundle-new-url@0.0.0-pre.7':
+    resolution: {integrity: sha512-82B7VUD04kQEaFGzQrvcfjrpJgMVCHiBWdz/Bi5xgSdONiKSFTt/725CfVc8b7hwJ8PHqYM1qurA/LKPtNztoQ==}
     peerDependencies:
+      esbuild: '*'
       vite: '*'
 
   '@jridgewell/sourcemap-codec@1.5.0':
@@ -390,7 +391,7 @@ snapshots:
   '@esbuild/win32-x64@0.21.5':
     optional: true
 
-  '@hiogawa/vite-plugin-pre-bundle-new-url@0.0.0-pre.5(vite@5.4.0)':
+  '@hiogawa/vite-plugin-pre-bundle-new-url@0.0.0-pre.7(esbuild@0.21.5)(vite@5.4.0)':
     dependencies:
       esbuild: 0.21.5
       magic-string: 0.30.11
