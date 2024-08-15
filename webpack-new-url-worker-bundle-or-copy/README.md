@@ -54,7 +54,7 @@ pnpm preview-rollup
 - None of them seem to handle `worker` export condition when bundling `new Worker(...)`.
   - https://github.com/webpack/webpack/issues/14681
   - https://github.com/vitejs/vite/issues/7439
-  - Parcel doesn't even pick up `browser` condition, but technically they should be able to handle proper bundle environment separation by their `EnvironmentContext`?
+  - Parcel doesn't even pick up `browser` condition, but technically they should be able to handle proper bundle environment separation by their `EnvironmentContext`. (cf. https://github.com/parcel-bundler/parcel/pull/8807)
 - The 3rd pattern `new URL("some-dep/test.svg", import.meta.url)` might be close to what `import.meta.resolve("some-dep/test.svg")` is expected to do.
   - https://github.com/vitejs/vite/discussions/14405
   - https://github.com/evanw/esbuild/issues/2866
