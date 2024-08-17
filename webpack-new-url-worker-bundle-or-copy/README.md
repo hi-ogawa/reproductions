@@ -58,6 +58,7 @@ pnpm preview-rollup
 - The 3rd pattern `new URL("some-dep/test.svg", import.meta.url)` might be close to what `import.meta.resolve("some-dep/test.svg")` is expected to do.
   - https://github.com/vitejs/vite/discussions/14405
   - https://github.com/evanw/esbuild/issues/2866
+  - However, Rollup rewrites [`import.meta.ROLLUP_FILE_URL_referenceId`](https://rollupjs.org/plugin-development/#file-urls) to `new URL("some-asset-xxx.svg", import.meta.url)` without `"./"` prefix.
 - Self reference worker
   - webpack: works but duplicate workers with warning `Circular dependency between chunks with runtime`
   - parcel: works
