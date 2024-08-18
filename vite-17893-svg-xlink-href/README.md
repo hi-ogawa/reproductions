@@ -12,3 +12,8 @@ pnpm dlx sirv-cli --dev
   - Chrome doesn't request `ui-icons.svg` and it still shows search icon.
     Devtool's "disable cache" doesn't affect anything. (cf. https://issues.chromium.org/issues/348598125)
   - Firefox always requests `ui-icons.svg` and search icon disappears.
+
+Tested on
+
+- Chromium: 128.0.6613.36
+- Firefox: 129.0.1
