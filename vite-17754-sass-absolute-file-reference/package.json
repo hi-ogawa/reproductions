@@ -1,0 +1,9 @@
+{
+	"name": "vite-17754-sass-absolute-file-reference",
+	"private": true,
+	"version": "0.0.0",
+	"type": "module",
+	"devDependencies": {
+		"sass": "^1.77.8"
+	}
+}
