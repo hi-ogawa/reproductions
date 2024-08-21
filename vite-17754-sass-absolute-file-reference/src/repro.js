@@ -2,10 +2,12 @@
 
 import * as sass from "sass";
 import path from "node:path";
-import { pathToFileURL } from "node:url";
+import { fileURLToPath, pathToFileURL } from "node:url";
+
+const __dirname = fileURLToPath(new URL(".", import.meta.url));
 
 async function main() {
-	const importeePath = path.resolve(import.meta.dirname, "importee.scss");
+	const importeePath = path.resolve(__dirname, "importee.scss");
 	const importGood = `@import "${importeePath}"`;
 	const importBad = `@import "${pathToFileURL(importeePath)}"`;
 	const file = "/test.scss";
