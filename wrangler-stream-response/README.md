@@ -6,8 +6,7 @@ Streaming compressed response inconsistency between `wrangler dev` and deployed 
 
 - https://repro-wrangler-stream-response.hiro18181.workers.dev
 
-[Screencast from 2024-08-24 19-18-00.webm](https://github.com/user-attachments/assets/
-9ebd006d-8181-48dd-8954-74c3e5e0ff4e)
+[Screencast from 2024-08-24 19-18-00.webm](https://github.com/user-attachments/assets/9ebd006d-8181-48dd-8954-74c3e5e0ff4e)
 
 ```sh
 # ok (<= 3.49.0), not ok (> 3.49.0)
