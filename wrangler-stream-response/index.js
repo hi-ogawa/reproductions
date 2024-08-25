@@ -17,7 +17,7 @@ function handler(request) {
 				`<!DOCTYPE html><html><head><meta charset="UTF-8" /></head><body>\n`,
 			);
 			// need certain amount of data to start pushing compressed stream?
-			controller.enqueue(`<!-- test -->\n`.repeat(10000));
+			controller.enqueue(`<!-- test -->\n`.repeat(100));
 			controller.enqueue("<div>START</div>\n");
 			for (let i = 0; i < 5; i++) {
 				await sleep(500);

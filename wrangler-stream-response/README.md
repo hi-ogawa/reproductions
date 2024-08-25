@@ -22,8 +22,15 @@ deno run --allow-net index-deno.js
 Something similar can be observed from `curl` progress output
 
 ```sh
+# no gradual progress
 curl -H 'accept-encoding: gzip' http://localhost:8787 > /dev/null
+
+# see gradual progress
 curl -H 'accept-encoding: gzip' https://repro-wrangler-stream-response.hiro18181.workers.dev > /dev/null
+
+# both work without compression
+curl -N http://localhost:8787
+curl -N https://repro-wrangler-stream-response.hiro18181.workers.dev
 ```
 
 ## links
