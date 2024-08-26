@@ -1,0 +1,10 @@
+{
+	"name": "my-dep",
+	"private": true,
+	"type": "module",
+	"exports": {
+		".": {
+			"sass": "./index.scss"
+		}
+	}
+}
