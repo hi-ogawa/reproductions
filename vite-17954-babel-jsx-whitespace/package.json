@@ -1,0 +1,8 @@
+{
+	"type": "module",
+	"scripts": {},
+	"dependencies": {},
+	"devDependencies": {
+		"@babel/core": "^7.25.2"
+	}
+}
