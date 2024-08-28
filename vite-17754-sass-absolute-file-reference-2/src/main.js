@@ -1,4 +1,3 @@
-// import "/node_modules/.cache/test1.scss";
 import "../node_modules/.cache/test1.scss";
 
 document.querySelector("#app").innerHTML = `
