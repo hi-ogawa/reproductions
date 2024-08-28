@@ -1,0 +1,5 @@
+// [ok]
+// @import "./test.scss"
+
+// [not ok] this goes through Vite's custom importer
+@import "/src/test.scss"
