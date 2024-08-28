@@ -1,0 +1,5 @@
+@media (--modern) {
+  :root {
+    --test: #fff;
+  }
+}
