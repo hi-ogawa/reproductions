@@ -1,6 +1,6 @@
 https://github.com/facebook/react/issues/29115
 
-- run `pnpm dev`
+- run `pnpm dev` (same for `pnpm dev --turbo`)
 - modify `app/_client-dep.tsx` -> no hmr ❌
 - modify `app/_client.tsx` -> hmr ✔
 
