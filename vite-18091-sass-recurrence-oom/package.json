@@ -1,0 +1,8 @@
+{
+	"type": "module",
+	"scripts": {},
+	"devDependencies": {
+		"sass": "^1.78.0",
+		"sass-embedded": "^1.78.0"
+	}
+}
