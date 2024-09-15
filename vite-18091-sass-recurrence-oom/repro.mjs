@@ -3,7 +3,6 @@ async function main() {
 		process.argv[2] === "sass"
 			? await import("sass")
 			: await import("sass-embedded");
-	const url = new URL("./test.scss", import.meta.url);
 	const code = `
 		@mixin test {
 			@include test();
@@ -12,7 +11,9 @@ async function main() {
 			@include test();
 		}
 	`;
-	const res = await sass.compileStringAsync(code, { url });
+	const res = await sass.compileStringAsync(code, {
+		url: new URL("file:///test.scss"),
+	});
 	console.log(res);
 }
 
