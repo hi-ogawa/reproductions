@@ -1,0 +1,9 @@
+{
+	"include": ["src"],
+	"compilerOptions": {
+		"noEmit": true,
+		"outDir": "dist/tsc",
+		"target": "es2020",
+		"useDefineForClassFields": false
+	}
+}
