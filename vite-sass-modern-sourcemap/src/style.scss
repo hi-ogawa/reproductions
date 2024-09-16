@@ -1,3 +1,9 @@
+// [not ok] Vite custom importer
+@import "/variables.scss";
+
+// [ok] sass's own resolve
+// @import "../variables.scss";
+
 body {
   color: $primary;
 }
