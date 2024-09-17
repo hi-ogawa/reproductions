@@ -21,7 +21,10 @@ $ node repro.mjs modern
   map: {
     version: 3,
     sourceRoot: '',
-    sources: [ 'file:///main.scss', 'data:;charset=utf-8,$primary:%20blue;' ],
+    sources: [
+      'file:///main.scss',
+      'file:///home/hiroshi/code/personal/reproductions/vite-sass-modern-sourcemap/variables.scss'
+    ],
     names: [],
     mappings: 'AAEI;EACE,OCHI'
   }

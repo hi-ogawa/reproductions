@@ -24,6 +24,7 @@ async function main() {
             return {
               contents: fs.readFileSync(canonicalUrl, "utf-8"),
               syntax: "scss",
+              sourceMapUrl: canonicalUrl,
             };
           },
         },
