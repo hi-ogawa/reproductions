@@ -1,3 +1,5 @@
+- https://github.com/rolldown/rolldown/issues/2269
+
 ```sh
 # see dist/rolldown
 $ pnpm build-rolldown
