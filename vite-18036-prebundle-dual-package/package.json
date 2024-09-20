@@ -1,0 +1,25 @@
+{
+  "name": "vite-project",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@vitejs/test-dep1": "file:./deps/dep1",
+    "@vitejs/test-dep2": "file:./deps/dep2",
+    "@vitejs/test-dep1.pdf": "file:./deps/dep1.pdf",
+    "@vitejs/test-dep2.pdf": "file:./deps/dep2.pdf",
+    "vite": "^5.4.1"
+  },
+  "pnpm": {
+    "overrides": {
+      "@vitejs/test-dep1": "$@vitejs/test-dep1",
+      "@vitejs/test-dep1.pdf": "$@vitejs/test-dep1.pdf"
+    }
+  },
+  "packageManager": "pnpm@9.10.0+sha512.73a29afa36a0d092ece5271de5177ecbf8318d454ecd701343131b8ebc0c1a91c487da46ab77c8e596d6acf1461e3594ced4becedf8921b074fbd8653ed7051c"
+}
