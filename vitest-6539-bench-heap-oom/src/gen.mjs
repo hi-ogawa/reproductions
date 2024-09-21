@@ -1,9 +1,6 @@
 import fs from "node:fs";
 import path from "node:path";
 
-// node examples/basic/src/repro/gen.mjs
-// pnpm -C examples/basic test bench
-
 async function main() {
   const count = Number(process.argv[2] ?? 100);
 

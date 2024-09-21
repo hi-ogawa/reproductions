@@ -1,6 +1,8 @@
 - https://github.com/vitest-dev/vitest/issues/6539
 
 ```sh
-# check heap.csv
+node src/gen.mjs
+
+# wait for OOM or check heap.csv
 pnpm test bench
 ```
