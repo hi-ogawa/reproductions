@@ -8,6 +8,9 @@ importers:
 
   .:
     devDependencies:
+      slash:
+        specifier: github:sindresorhus/slash#path:/
+        version: https://codeload.github.com/sindresorhus/slash/tar.gz/98b618f5a3bfcb5dd374b204868818845b87bb2f#path:/
       test-vite-17459:
         specifier: git+https://gitea.com/hi-ogawa/test-vite-17459
         version: git+https://gitea.com/hi-ogawa/test-vite-17459#76ebfeb28d389f2b48ab34b7d5496c2b98b971b1
@@ -265,6 +268,11 @@ packages:
     engines: {node: '>=18.0.0', npm: '>=8.0.0'}
     hasBin: true
 
+  slash@https://codeload.github.com/sindresorhus/slash/tar.gz/98b618f5a3bfcb5dd374b204868818845b87bb2f#path:/:
+    resolution: {path: /, tarball: https://codeload.github.com/sindresorhus/slash/tar.gz/98b618f5a3bfcb5dd374b204868818845b87bb2f}
+    version: 5.1.0
+    engines: {node: '>=14.16'}
+
   source-map-js@1.2.0:
     resolution: {integrity: sha512-itJW8lvSA0TXEphiRoawsCksnlf8SyvmFzIhltqAHluXd88pkCd+cXJVHTDwdCr0IzwptSm035IHQktUu1QUMg==}
     engines: {node: '>=0.10.0'}
@@ -485,6 +493,8 @@ snapshots:
       '@rollup/rollup-win32-ia32-msvc': 4.20.0
       '@rollup/rollup-win32-x64-msvc': 4.20.0
       fsevents: 2.3.3
+
+  slash@https://codeload.github.com/sindresorhus/slash/tar.gz/98b618f5a3bfcb5dd374b204868818845b87bb2f#path:/: {}
 
   source-map-js@1.2.0: {}
 

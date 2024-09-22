@@ -9,6 +9,7 @@
 		"preview": "vite preview"
 	},
 	"devDependencies": {
+		"slash": "github:sindresorhus/slash#path:/",
 		"test-vite-17459": "git+https://gitea.com/hi-ogawa/test-vite-17459",
 		"vite": "^5.4.0"
 	},
