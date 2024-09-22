@@ -7,10 +7,10 @@ export default defineConfig({
 	worker: {
 		// need either of two options
 		// format: "es",
-		rollupOptions: {
-			output: {
-				inlineDynamicImports: true,
-			},
-		},
+		// rollupOptions: {
+		// 	output: {
+		// 		inlineDynamicImports: true,
+		// 	},
+		// },
 	},
 });
