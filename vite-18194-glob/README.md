@@ -1,0 +1,1 @@
+- https://github.com/vitejs/vite/pull/18194
