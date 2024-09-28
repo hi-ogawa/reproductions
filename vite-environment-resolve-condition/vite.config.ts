@@ -27,6 +27,12 @@ export default defineConfig((_env) => ({
         noExternal: true,
       },
     },
+    custom3: {
+      resolve: {
+        conditions: ["custom3"],
+        noExternal: true,
+      },
+    },
   },
   plugins: [
     {

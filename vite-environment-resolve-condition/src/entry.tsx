@@ -11,6 +11,7 @@ if (typeof document !== 'undefined') {
       <li><a href="/worker">/worker</a></li>
       <li><a href="/custom1">/custom1</a></li>
       <li><a href="/custom2">/custom2</a></li>
+      <li><a href="/custom3">/custom3</a></li>
     </ul>
 
   `
