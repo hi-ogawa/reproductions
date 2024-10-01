@@ -1,0 +1,15 @@
+- https://github.com/vitest-dev/vitest/pull/6512
+- https://github.com/vitest-dev/vitest/issues/6449
+
+```sh
+# start html app
+npx sirv app -D
+
+# run webdriverio
+# here there's no log for
+#   [log.entryAdded] click inner! (scaled)
+node repro.mjs
+[log.entryAdded] click inner! (normal)
+[log.entryAdded] click outer! (normal)
+[log.entryAdded] click outer! (scaled)
+```
