@@ -7,6 +7,7 @@ const server = await createServer({
 		middlewareMode: true,
 	},
 	optimizeDeps: {
+		force: true,
 		include: []
 	},
 	ssr: {

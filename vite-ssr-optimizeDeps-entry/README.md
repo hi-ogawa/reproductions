@@ -1,4 +1,4 @@
-Deps optimization is not applied when loading a dependency directly as `ssrLoadModule("react")`.
+Deps optimization is not applied when loading a dependency directly as `ssrLoadModule("react")` on Vite 5. It works on Vite 6 (beta).
 
 ```sh
 $ DEBUG=vite:resolve node repro.mjs
