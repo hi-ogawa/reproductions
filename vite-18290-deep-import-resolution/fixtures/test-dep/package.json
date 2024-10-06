@@ -1,0 +1,8 @@
+{
+  "name": "test-dep",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./deep/*": "./deep/*"
+  }
+}
