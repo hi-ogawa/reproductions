@@ -11,6 +11,6 @@ import testDep from "test-dep/deep/foo";
 // [ok]
 // import testDep from "test-dep-2/deep/foo.js";
 
-document.getElementById("root")!.innerHTML = `
+document.getElementById("root").innerHTML = `
 <pre>${testDep}</pre>
 `;
