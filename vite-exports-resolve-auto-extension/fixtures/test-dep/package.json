@@ -1,0 +1,9 @@
+{
+  "name": "test-dep",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./good": "./good.js",
+    "./bad": "./bad"
+  }
+}
