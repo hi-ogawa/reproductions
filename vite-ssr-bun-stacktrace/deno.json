@@ -1,0 +1,8 @@
+{
+  "tasks": {
+    "repro": "deno run -A --node-modules-dir repro.mjs"
+  },
+  "imports": {
+    "vite": "npm:vite@6.0.0-beta.2"
+  }
+}
