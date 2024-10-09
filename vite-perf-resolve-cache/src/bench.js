@@ -1,3 +1,4 @@
+import { readFileSync } from "fs";
 import { createServer } from "vite";
 
 async function main() {
@@ -9,19 +10,17 @@ async function main() {
         resolveId() {},
       },
     ],
-    server: {
-      preTransformRequests: false,
-    },
     optimizeDeps: {
       noDiscovery: true,
       include: [],
     },
   });
 
-  await server.transformRequest("/src/entry");
-  for (let i = 0; i < 10; i++) {
-    server.moduleGraph.invalidateAll();
-    await server.transformRequest("/src/entry");
+  const { dependencies } = JSON.parse(readFileSync("./package.json", "utf-8"));
+  for (const id in dependencies) {
+    for (let i = 0; i < 10000; i++) {
+      await server.pluginContainer.resolveId(id);
+    }
   }
   await server.close();
 }
