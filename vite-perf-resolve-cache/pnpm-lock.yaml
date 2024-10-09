@@ -25,8 +25,8 @@ importers:
         specifier: ^22.7.5
         version: 22.7.5
       vite:
-        specifier: beta
-        version: 6.0.0-beta.2(@types/node@22.7.5)
+        specifier: file:./vite-6.0.0-beta.2.tgz
+        version: file:vite-6.0.0-beta.2.tgz(@types/node@22.7.5)
 
 packages:
 
@@ -310,8 +310,9 @@ packages:
   undici-types@6.19.8:
     resolution: {integrity: sha512-ve2KP6f/JnbPBFyobGHuerC9g1FYGn/F8n1LWTwNxCEzd6IfqTwUQcNXgEtmmQ6DlRrC1hrSrBnCZPokRrDHjw==}
 
-  vite@6.0.0-beta.2:
-    resolution: {integrity: sha512-TdrjEhCnVNjT3kjohFhVJQL9V3SguxMAphP2RW085QbE0Xc+lRvql9l5hTIr/mttO2jhivYXEP4xfaIRPjzqiw==}
+  vite@file:vite-6.0.0-beta.2.tgz:
+    resolution: {integrity: sha512-VQYF6EqP7M7k3mkhC25cNAA11yrU/CuSQq/utQNAeAajMn9ywgytmmkpIsGnYtwuL25Ug+NsWrP4oFDya1ooag==, tarball: file:vite-6.0.0-beta.2.tgz}
+    version: 6.0.0-beta.2
     engines: {node: ^18.0.0 || >=20.0.0}
     hasBin: true
     peerDependencies:
@@ -549,7 +550,7 @@ snapshots:
 
   undici-types@6.19.8: {}
 
-  vite@6.0.0-beta.2(@types/node@22.7.5):
+  vite@file:vite-6.0.0-beta.2.tgz(@types/node@22.7.5):
     dependencies:
       esbuild: 0.24.0
       postcss: 8.4.47
