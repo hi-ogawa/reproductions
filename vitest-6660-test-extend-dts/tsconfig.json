@@ -1,0 +1,14 @@
+{
+  "include": ["src"],
+  "compilerOptions": {
+    "outDir": "dist",
+    "strict": true,
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "verbatimModuleSyntax": true,
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "Bundler"
+  }
+}
