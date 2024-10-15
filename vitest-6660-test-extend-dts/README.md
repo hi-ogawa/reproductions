@@ -1,7 +1,7 @@
 - https://github.com/vitest-dev/vitest/issues/6660
 
 ```sh
-pnpm tsc
+pnpm build
 ```
 
 On `vitest@2.1.0-beta.1`

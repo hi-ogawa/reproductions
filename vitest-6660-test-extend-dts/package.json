@@ -1,8 +1,8 @@
 {
   "private": true,
   "scripts": {
-    "tsc": "rm -rf dist && tsc -b",
-    "tsc-dev": "tsc -b -w --preserveWatchOutput"
+    "build": "rm -rf dist && tsc -b",
+    "test": "tsc -p tsconfig.check.json"
   },
   "devDependencies": {
     "@types/node": "^22.7.5",
