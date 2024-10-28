@@ -3,6 +3,7 @@
   "specifiers": {
     "jsr:@std/assert@1": "1.0.6",
     "jsr:@std/internal@^1.0.4": "1.0.4",
+    "npm:@deno/vite-plugin@1": "1.0.0_vite@5.4.8",
     "npm:chalk@5": "5.3.0",
     "npm:vite@*": "5.4.8",
     "npm:vite@5": "5.4.8"
@@ -19,6 +20,12 @@
     }
   },
   "npm": {
+    "@deno/vite-plugin@1.0.0_vite@5.4.8": {
+      "integrity": "sha512-Q9UeWqs3s7B5lqzu1Z5QrzYAzqTj3+F9YW17tWobGRbT2G40ihwis6zK/+QgMgcG4fm3IqdIfXmpQYhkZpdMfw==",
+      "dependencies": [
+        "vite"
+      ]
+    },
     "@esbuild/aix-ppc64@0.21.5": {
       "integrity": "sha512-1SDgH6ZSPTlggy1yI6+Dbkiz8xzpHJEVAlF/AM1tHPLsf5STom9rwtjE4hKAF20FfXXNTFqEYXyJNWh1GiZedQ=="
     },
@@ -226,6 +233,7 @@
   "workspace": {
     "dependencies": [
       "jsr:@std/assert@1",
+      "npm:@deno/vite-plugin@1",
       "npm:chalk@5",
       "npm:vite@5"
     ]
