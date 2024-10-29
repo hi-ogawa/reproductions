@@ -17,14 +17,14 @@ async function main() {
 
   // not working
   {
-    await browser.switchToFrame(await $("iframe#scaled"));
+    await browser.switchFrame(await $("iframe#scaled"));
     await $("button").click();
     await browser.switchToParentFrame();
   }
 
   // working
   {
-    await browser.switchToFrame(await $("iframe#normal"));
+    await browser.switchFrame(await $("iframe#normal"));
     await $("button").click();
     await browser.switchToParentFrame();
   }
