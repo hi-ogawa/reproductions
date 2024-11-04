@@ -4,9 +4,12 @@
 
 ```sh
 pnpm test
+ATTEST_skipTypes=1 pnpm test
 ```
 
 ## todo
 
 - faster re-run by keeping ts server and invalidate changed files?
 - how to `skipTypes` for vitest snapshot?
+  - might need to change core to allow skpping snapshot assertion conditionally.
+    (see `vitest-attest-snapshot/patches/vitest.patch`)

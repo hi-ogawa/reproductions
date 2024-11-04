@@ -1,0 +1,50 @@
+diff --git a/dist/chunks/vi.JMQoNY_Z.js b/dist/chunks/vi.JMQoNY_Z.js
+index e75ae84a3fe80dd116f8c599deb483958b843c17..04104f9a7b8577543570eba58539bd35939085ab 100644
+--- a/dist/chunks/vi.JMQoNY_Z.js
++++ b/dist/chunks/vi.JMQoNY_Z.js
+@@ -194,7 +194,7 @@ function requireChaiSubset () {
+ 				}
+ 			});
+ 
+-		}).call(chaiSubset); 
++		}).call(chaiSubset);
+ 	} (chaiSubset$1));
+ 	return chaiSubset$1.exports;
+ }
+@@ -322,6 +322,18 @@ const SnapshotPlugin = (chai, utils) => {
+         );
+       }
+       const expected = utils.flag(this, "object");
++      if (globalThis.process?.env?.ATTEST_skipTypes) {
++        const val = expected
++        if (
++          !!val &&
++          typeof val === 'object' &&
++          'constructor' in val &&
++          typeof val.constructor === 'function' &&
++          val.constructor.name === 'ChainableAssertions'
++        ) {
++          return
++        }
++      }
+       const error = utils.flag(this, "error");
+       if (typeof properties === "string") {
+         message = inlineSnapshot;
+@@ -810,7 +822,7 @@ function requireDeprecated () {
+ 		    } else {
+ 		        console.log(msg);
+ 		    }
+-		}; 
++		};
+ 	} (deprecated));
+ 	return deprecated;
+ }
+@@ -1371,7 +1383,7 @@ function requireTypeDetect () {
+ 
+ 		return typeDetect;
+ 
+-		}))); 
++		})));
+ 	} (typeDetect$1));
+ 	return typeDetect$1.exports;
+ }
