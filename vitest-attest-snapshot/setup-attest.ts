@@ -10,11 +10,15 @@ async function setup2() {
   mkdirSync(".attest/assertions", { recursive: true });
   execFileSync("attest", ["precache", ".attest/assertions/typescript.json"], {
     stdio: "inherit",
+    env: {
+      ...process.env,
+      ATTEST_attestAliases: JSON.stringify(["attest", "expectType"]),
+    },
   });
 }
 
 export default async (ctx: GlobalSetupContext) => {
-  if (process.env["ATTEST_skipTypes"] === "1") {
+  if (process.env["ATTEST_skipTypes"]) {
     return;
   }
 
