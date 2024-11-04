@@ -4,11 +4,6 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
-patchedDependencies:
-  vitest:
-    hash: xsq4cxbojqdrxtnjbvx5p6n6lm
-    path: patches/vitest.patch
-
 importers:
 
   .:
@@ -19,15 +14,12 @@ importers:
       '@types/node':
         specifier: ^22.8.7
         version: 22.8.7
-      tinyexec:
-        specifier: ^0.3.1
-        version: 0.3.1
       typescript:
         specifier: ^5.6.3
         version: 5.6.3
       vitest:
         specifier: https://pkg.pr.new/vitest@6803
-        version: https://pkg.pr.new/vitest@6803(patch_hash=xsq4cxbojqdrxtnjbvx5p6n6lm)(@types/node@22.8.7)
+        version: https://pkg.pr.new/vitest@6803(@types/node@22.8.7)
 
 packages:
 
@@ -1113,7 +1105,7 @@ snapshots:
       '@types/node': 22.8.7
       fsevents: 2.3.3
 
-  vitest@https://pkg.pr.new/vitest@6803(patch_hash=xsq4cxbojqdrxtnjbvx5p6n6lm)(@types/node@22.8.7):
+  vitest@https://pkg.pr.new/vitest@6803(@types/node@22.8.7):
     dependencies:
       '@vitest/expect': https://pkg.pr.new/vitest-dev/vitest/@vitest/expect@92a44ad
       '@vitest/mocker': https://pkg.pr.new/vitest-dev/vitest/@vitest/mocker@92a44ad(vite@5.4.10(@types/node@22.8.7))

@@ -13,3 +13,4 @@ ATTEST_skipTypes=1 pnpm test
 - how to `skipTypes` for vitest snapshot?
   - might need to change core to allow skpping snapshot assertion conditionally.
     (see `vitest-attest-snapshot/patches/vitest.patch`)
+- `attest` requires fs access. how to support it in browser mode?

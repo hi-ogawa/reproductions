@@ -1,5 +1,5 @@
 import type { GlobalSetupContext } from "vitest/node";
-import { execFileSync, execSync } from "child_process";
+import { execFileSync } from "child_process";
 import { mkdirSync } from "fs";
 
 // TODO: for now we use cli since running `setup` repeatedly doesn't work
