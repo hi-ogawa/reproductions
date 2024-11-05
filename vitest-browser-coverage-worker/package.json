@@ -1,13 +1,17 @@
 {
-  "name": "webdriverio-css-transform",
+  "name": "@vitest/example-test",
+  "private": true,
+  "license": "MIT",
   "type": "module",
+  "main": "index.js",
   "scripts": {
-    "dev": "sirv app -D",
-    "repl": "node --import ./repro.mjs"
+    "test": "vitest"
   },
   "devDependencies": {
-    "sirv-cli": "^2.0.2",
-    "webdriverio": "^9.2.4"
+    "@vitest/browser": "^2.1.4",
+    "@vitest/coverage-v8": "2.1.4",
+    "playwright": "^1.48.2",
+    "vitest": "^2.1.4"
   },
   "packageManager": "pnpm@9.12.3+sha512.cce0f9de9c5a7c95bef944169cc5dfe8741abfb145078c0d508b868056848a87c81e626246cb60967cbd7fd29a6c062ef73ff840d96b3c86c40ac92cf4a813ee"
 }
