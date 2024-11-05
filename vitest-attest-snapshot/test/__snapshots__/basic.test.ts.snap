@@ -1,3 +1,3 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`custom 2`] = `"(radix?: number | undefined) => string"`;
+exports[`custom attest alias 2`] = `"(precision?: number | undefined) => string"`;
