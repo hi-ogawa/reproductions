@@ -23,7 +23,7 @@ export default async (ctx: GlobalSetupContext) => {
   }
 
   await setup2();
-  ctx.onWatcherRerun(async () => {
+  ctx.onTestsRerun(async () => {
     await setup2();
   });
 };

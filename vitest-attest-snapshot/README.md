@@ -1,3 +1,4 @@
+- https://github.com/vitest-dev/vitest/pull/6852
 - https://github.com/vitest-dev/vitest/issues/5857
 - `attest` snapshot via custom Vitest serializer
 - custom Attest alias (this approach allows incorporating `skipTypes` easily)
