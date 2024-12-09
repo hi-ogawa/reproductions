@@ -9,12 +9,10 @@ export default defineConfig({
 	plugins: [
 		{
 			name: 'repro',
-			transform(_code, id) {
-				if (id.includes("dep2")) {
-					return {
-						code: 'export default "generated!"',
-						map: { mappings: '' }
-					}
+			transform(code) {
+				return {
+					code: code + '\nconsole.log("injected!!")',
+					map: null
 				}
 			}
 		}
