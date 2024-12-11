@@ -1,0 +1,6 @@
+{
+  "name": "@vitejs/test-esm-only",
+  "private": true,
+  "type": "module",
+  "exports": "./index.js"
+}
