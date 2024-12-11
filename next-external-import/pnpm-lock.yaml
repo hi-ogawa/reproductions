@@ -11,6 +11,9 @@ importers:
       '@vitejs/test-esm-only':
         specifier: file:./deps/esm-only
         version: file:deps/esm-only
+      '@vitejs/test-external-indirect':
+        specifier: file:./deps/external-indirect
+        version: file:deps/external-indirect
       next:
         specifier: 15.1.0
         version: 15.1.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
@@ -27,8 +30,14 @@ importers:
 
 packages:
 
+  '@emnapi/core@1.3.1':
+    resolution: {integrity: sha512-pVGjBIt1Y6gg3EJN8jTcfpP/+uuRksIo055oE/OBkDNcjZqVbfkWCksG1Jp4yZnj3iKWyWX8fdG/j6UDYPbFog==}
+
   '@emnapi/runtime@1.3.1':
     resolution: {integrity: sha512-kEBmG8KyqtxJZv+ygbEim+KCGtIq1fC22Ms3S4ziXmYKm8uyoLX0MHONVKwp+9opg390VaKRNt4a7A9NwmpNhw==}
+
+  '@emnapi/wasi-threads@1.0.1':
+    resolution: {integrity: sha512-iIBu7mwkq4UQGeMEM8bLwNK962nXdhodeScX4slfQnRhEMMzvYivHhutCIk8uojvmASXXPC2WNEjwxFWk72Oqw==}
 
   '@img/sharp-darwin-arm64@0.33.5':
     resolution: {integrity: sha512-UT4p+iz/2H4twwAoLCqfA9UH5pI6DggwKEGuaPy7nCVQ8ZsiY5PIcrRvD1DzuY3qYL07NtIQcWnBSY/heikIFQ==}
@@ -135,6 +144,9 @@ packages:
     cpu: [x64]
     os: [win32]
 
+  '@napi-rs/wasm-runtime@0.2.5':
+    resolution: {integrity: sha512-kwUxR7J9WLutBbulqg1dfOrMTwhMdXLdcGUhcbCcGwnPLt3gz19uHVdwH1syKVDbE022ZS2vZxOWflFLS0YTjw==}
+
   '@next/env@15.1.0':
     resolution: {integrity: sha512-UcCO481cROsqJuszPPXJnb7GGuLq617ve4xuAyyNG4VSSocJNtMU5Fsx+Lp6mlN8c7W58aZLc5y6D/2xNmaK+w==}
 
@@ -186,6 +198,93 @@ packages:
     cpu: [x64]
     os: [win32]
 
+  '@node-rs/bcrypt-android-arm-eabi@1.10.7':
+    resolution: {integrity: sha512-8dO6/PcbeMZXS3VXGEtct9pDYdShp2WBOWlDvSbcRwVqyB580aCBh0BEFmKYtXLzLvUK8Wf+CG3U6sCdILW1lA==}
+    engines: {node: '>= 10'}
+    cpu: [arm]
+    os: [android]
+
+  '@node-rs/bcrypt-android-arm64@1.10.7':
+    resolution: {integrity: sha512-UASFBS/CucEMHiCtL/2YYsAY01ZqVR1N7vSb94EOvG5iwW7BQO06kXXCTgj+Xbek9azxixrCUmo3WJnkJZ0hTQ==}
+    engines: {node: '>= 10'}
+    cpu: [arm64]
+    os: [android]
+
+  '@node-rs/bcrypt-darwin-arm64@1.10.7':
+    resolution: {integrity: sha512-DgzFdAt455KTuiJ/zYIyJcKFobjNDR/hnf9OS7pK5NRS13Nq4gLcSIIyzsgHwZHxsJWbLpHmFc1H23Y7IQoQBw==}
+    engines: {node: '>= 10'}
+    cpu: [arm64]
+    os: [darwin]
+
+  '@node-rs/bcrypt-darwin-x64@1.10.7':
+    resolution: {integrity: sha512-SPWVfQ6sxSokoUWAKWD0EJauvPHqOGQTd7CxmYatcsUgJ/bruvEHxZ4bIwX1iDceC3FkOtmeHO0cPwR480n/xA==}
+    engines: {node: '>= 10'}
+    cpu: [x64]
+    os: [darwin]
+
+  '@node-rs/bcrypt-freebsd-x64@1.10.7':
+    resolution: {integrity: sha512-gpa+Ixs6GwEx6U6ehBpsQetzUpuAGuAFbOiuLB2oo4N58yU4AZz1VIcWyWAHrSWRs92O0SHtmo2YPrMrwfBbSw==}
+    engines: {node: '>= 10'}
+    cpu: [x64]
+    os: [freebsd]
+
+  '@node-rs/bcrypt-linux-arm-gnueabihf@1.10.7':
+    resolution: {integrity: sha512-kYgJnTnpxrzl9sxYqzflobvMp90qoAlaX1oDL7nhNTj8OYJVDIk0jQgblj0bIkjmoPbBed53OJY/iu4uTS+wig==}
+    engines: {node: '>= 10'}
+    cpu: [arm]
+    os: [linux]
+
+  '@node-rs/bcrypt-linux-arm64-gnu@1.10.7':
+    resolution: {integrity: sha512-7cEkK2RA+gBCj2tCVEI1rDSJV40oLbSq7bQ+PNMHNI6jCoXGmj9Uzo7mg7ZRbNZ7piIyNH5zlJqutjo8hh/tmA==}
+    engines: {node: '>= 10'}
+    cpu: [arm64]
+    os: [linux]
+
+  '@node-rs/bcrypt-linux-arm64-musl@1.10.7':
+    resolution: {integrity: sha512-X7DRVjshhwxUqzdUKDlF55cwzh+wqWJ2E/tILvZPboO3xaNO07Um568Vf+8cmKcz+tiZCGP7CBmKbBqjvKN/Pw==}
+    engines: {node: '>= 10'}
+    cpu: [arm64]
+    os: [linux]
+
+  '@node-rs/bcrypt-linux-x64-gnu@1.10.7':
+    resolution: {integrity: sha512-LXRZsvG65NggPD12hn6YxVgH0W3VR5fsE/o1/o2D5X0nxKcNQGeLWnRzs5cP8KpoFOuk1ilctXQJn8/wq+Gn/Q==}
+    engines: {node: '>= 10'}
+    cpu: [x64]
+    os: [linux]
+
+  '@node-rs/bcrypt-linux-x64-musl@1.10.7':
+    resolution: {integrity: sha512-tCjHmct79OfcO3g5q21ME7CNzLzpw1MAsUXCLHLGWH+V6pp/xTvMbIcLwzkDj6TI3mxK6kehTn40SEjBkZ3Rog==}
+    engines: {node: '>= 10'}
+    cpu: [x64]
+    os: [linux]
+
+  '@node-rs/bcrypt-wasm32-wasi@1.10.7':
+    resolution: {integrity: sha512-4qXSihIKeVXYglfXZEq/QPtYtBUvR8d3S85k15Lilv3z5B6NSGQ9mYiNleZ7QHVLN2gEc5gmi7jM353DMH9GkA==}
+    engines: {node: '>=14.0.0'}
+    cpu: [wasm32]
+
+  '@node-rs/bcrypt-win32-arm64-msvc@1.10.7':
+    resolution: {integrity: sha512-FdfUQrqmDfvC5jFhntMBkk8EI+fCJTx/I1v7Rj+Ezlr9rez1j1FmuUnywbBj2Cg15/0BDhwYdbyZ5GCMFli2aQ==}
+    engines: {node: '>= 10'}
+    cpu: [arm64]
+    os: [win32]
+
+  '@node-rs/bcrypt-win32-ia32-msvc@1.10.7':
+    resolution: {integrity: sha512-lZLf4Cx+bShIhU071p5BZft4OvP4PGhyp542EEsb3zk34U5GLsGIyCjOafcF/2DGewZL6u8/aqoxbSuROkgFXg==}
+    engines: {node: '>= 10'}
+    cpu: [ia32]
+    os: [win32]
+
+  '@node-rs/bcrypt-win32-x64-msvc@1.10.7':
+    resolution: {integrity: sha512-hdw7tGmN1DxVAMTzICLdaHpXjy+4rxaxnBMgI8seG1JL5e3VcRGsd1/1vVDogVp2cbsmgq+6d6yAY+D9lW/DCg==}
+    engines: {node: '>= 10'}
+    cpu: [x64]
+    os: [win32]
+
+  '@node-rs/bcrypt@1.10.7':
+    resolution: {integrity: sha512-1wk0gHsUQC/ap0j6SJa2K34qNhomxXRcEe3T8cI5s+g6fgHBgLTN7U9LzWTG/HE6G4+2tWWLeCabk1wiYGEQSA==}
+    engines: {node: '>= 10'}
+
   '@phc/format@1.0.0':
     resolution: {integrity: sha512-m7X9U6BG2+J+R1lSOdCiITLLrxm+cWlNI3HUFA92oLO77ObGNzaKdh8pMLqdZcshtkKuV84olNNXDfMc4FezBQ==}
     engines: {node: '>=10'}
@@ -196,8 +295,14 @@ packages:
   '@swc/helpers@0.5.15':
     resolution: {integrity: sha512-JQ5TuMi45Owi4/BIMAJBoSQoOJu12oOk/gADqlcUL9JEdHB8vyjUSsxqeNXnmXHjYKMi2WcYtezGEEhqUI/E2g==}
 
+  '@tybys/wasm-util@0.9.0':
+    resolution: {integrity: sha512-6+7nlbMVX/PVDCwaIQ8nTOPveOcFLSt8GcXdx8hD0bt39uWxYT88uXzqTd4fTvqta7oeUJqudepapKNt2DYJFw==}
+
   '@vitejs/test-esm-only@file:deps/esm-only':
     resolution: {directory: deps/esm-only, type: directory}
+
+  '@vitejs/test-external-indirect@file:deps/external-indirect':
+    resolution: {directory: deps/external-indirect, type: directory}
 
   argon2@0.41.1:
     resolution: {integrity: sha512-dqCW8kJXke8Ik+McUcMDltrbuAWETPyU6iq+4AhxqKphWi7pChB/Zgd/Tp/o8xRLbg8ksMj46F/vph9wnxpTzQ==}
@@ -325,7 +430,18 @@ packages:
 
 snapshots:
 
+  '@emnapi/core@1.3.1':
+    dependencies:
+      '@emnapi/wasi-threads': 1.0.1
+      tslib: 2.8.1
+    optional: true
+
   '@emnapi/runtime@1.3.1':
+    dependencies:
+      tslib: 2.8.1
+    optional: true
+
+  '@emnapi/wasi-threads@1.0.1':
     dependencies:
       tslib: 2.8.1
     optional: true
@@ -405,6 +521,13 @@ snapshots:
   '@img/sharp-win32-x64@0.33.5':
     optional: true
 
+  '@napi-rs/wasm-runtime@0.2.5':
+    dependencies:
+      '@emnapi/core': 1.3.1
+      '@emnapi/runtime': 1.3.1
+      '@tybys/wasm-util': 0.9.0
+    optional: true
+
   '@next/env@15.1.0': {}
 
   '@next/swc-darwin-arm64@15.1.0':
@@ -431,6 +554,67 @@ snapshots:
   '@next/swc-win32-x64-msvc@15.1.0':
     optional: true
 
+  '@node-rs/bcrypt-android-arm-eabi@1.10.7':
+    optional: true
+
+  '@node-rs/bcrypt-android-arm64@1.10.7':
+    optional: true
+
+  '@node-rs/bcrypt-darwin-arm64@1.10.7':
+    optional: true
+
+  '@node-rs/bcrypt-darwin-x64@1.10.7':
+    optional: true
+
+  '@node-rs/bcrypt-freebsd-x64@1.10.7':
+    optional: true
+
+  '@node-rs/bcrypt-linux-arm-gnueabihf@1.10.7':
+    optional: true
+
+  '@node-rs/bcrypt-linux-arm64-gnu@1.10.7':
+    optional: true
+
+  '@node-rs/bcrypt-linux-arm64-musl@1.10.7':
+    optional: true
+
+  '@node-rs/bcrypt-linux-x64-gnu@1.10.7':
+    optional: true
+
+  '@node-rs/bcrypt-linux-x64-musl@1.10.7':
+    optional: true
+
+  '@node-rs/bcrypt-wasm32-wasi@1.10.7':
+    dependencies:
+      '@napi-rs/wasm-runtime': 0.2.5
+    optional: true
+
+  '@node-rs/bcrypt-win32-arm64-msvc@1.10.7':
+    optional: true
+
+  '@node-rs/bcrypt-win32-ia32-msvc@1.10.7':
+    optional: true
+
+  '@node-rs/bcrypt-win32-x64-msvc@1.10.7':
+    optional: true
+
+  '@node-rs/bcrypt@1.10.7':
+    optionalDependencies:
+      '@node-rs/bcrypt-android-arm-eabi': 1.10.7
+      '@node-rs/bcrypt-android-arm64': 1.10.7
+      '@node-rs/bcrypt-darwin-arm64': 1.10.7
+      '@node-rs/bcrypt-darwin-x64': 1.10.7
+      '@node-rs/bcrypt-freebsd-x64': 1.10.7
+      '@node-rs/bcrypt-linux-arm-gnueabihf': 1.10.7
+      '@node-rs/bcrypt-linux-arm64-gnu': 1.10.7
+      '@node-rs/bcrypt-linux-arm64-musl': 1.10.7
+      '@node-rs/bcrypt-linux-x64-gnu': 1.10.7
+      '@node-rs/bcrypt-linux-x64-musl': 1.10.7
+      '@node-rs/bcrypt-wasm32-wasi': 1.10.7
+      '@node-rs/bcrypt-win32-arm64-msvc': 1.10.7
+      '@node-rs/bcrypt-win32-ia32-msvc': 1.10.7
+      '@node-rs/bcrypt-win32-x64-msvc': 1.10.7
+
   '@phc/format@1.0.0': {}
 
   '@swc/counter@0.1.3': {}
@@ -439,7 +623,16 @@ snapshots:
     dependencies:
       tslib: 2.8.1
 
+  '@tybys/wasm-util@0.9.0':
+    dependencies:
+      tslib: 2.8.1
+    optional: true
+
   '@vitejs/test-esm-only@file:deps/esm-only': {}
+
+  '@vitejs/test-external-indirect@file:deps/external-indirect':
+    dependencies:
+      '@node-rs/bcrypt': 1.10.7
 
   argon2@0.41.1:
     dependencies:

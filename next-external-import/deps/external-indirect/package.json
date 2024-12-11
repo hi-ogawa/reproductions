@@ -1,0 +1,9 @@
+{
+  "name": "@vitejs/test-external-indirect",
+  "private": true,
+  "type": "module",
+  "exports": "./index.js",
+  "dependencies": {
+    "@node-rs/bcrypt": "1.10.7"
+  }
+}

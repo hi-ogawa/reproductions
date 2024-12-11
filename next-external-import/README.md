@@ -141,3 +141,14 @@ module.exports = {
 					function Home() {
             ...
 ```
+
+## externalized indirect dependency not supported
+
+```
+ ⚠ ./node_modules/.pnpm/@vitejs+test-external-indirect@file+deps+external-indirect/node_modules/@vitejs/test-external-indirect
+Package @node-rs/bcrypt can't be external
+The request @node-rs/bcrypt matches serverExternalPackages (or the default list).
+The request could not be resolved by Node.js from the project directory.
+Packages that should be external need to be installed in the project directory, so they can be resolved from the output files.
+Try to install it into the project directory by running npm install @node-rs/bcrypt from the project directory.
+```
