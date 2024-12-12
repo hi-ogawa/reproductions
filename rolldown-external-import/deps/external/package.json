@@ -1,0 +1,6 @@
+{
+	"name": "@rolldown/test-dep-external",
+	"private": true,
+	"type": "module",
+	"exports": "./index.js"
+}
