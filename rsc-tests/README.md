@@ -5,8 +5,8 @@ Testing example packages, which likely casues an issue with Vite's dep optimizat
 | next       |  ✅  |  ✅  |    ✅   |    ✅    |    ✅    |
 | next-vite  |  ❌  |  ✅  |    ❌   |    ✅    |    ✅    |
 | waku       |  ❓  |  ❓  |    ❓   |    ❓    |    ❓    |
-| jacob      |  ❓  |  ❓  |    ❓   |    ❓    |    ❓    |
-| lazarv     |  ❓  |  ❓  |    ❓   |    ❓    |    ❓    |
+| jacob      |  ❌  |  ❌  |    ❓   |    ❓    |    ❌    |
+| lazarv     |  ❌  |  ❌  |    ❓   |    ❓    |    ❌    |
 
 ## references
 

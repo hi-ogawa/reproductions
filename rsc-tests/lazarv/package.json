@@ -1,0 +1,13 @@
+{
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "react-server"
+  },
+  "dependencies": {
+    "@hiogawa/test-dep-cjs": "hi-ogawa/vite-plugins#path:/packages/react-server/examples/basic/deps/cjs",
+    "@hiogawa/test-dep-context": "hi-ogawa/vite-plugins#path:/packages/react-server/examples/basic/deps/context",
+    "@lazarv/react-server": "0.0.0-experimental-a70e816-20241208-639a9329"
+  },
+  "packageManager": "pnpm@9.15.0+sha512.76e2379760a4328ec4415815bcd6628dee727af3779aaa4c914e3944156c4299921a89f976381ee107d41f12cfa4b66681ca9c718f0668fa0831ed4c6d8ba56c"
+}
