@@ -2,8 +2,8 @@ Testing example packages, which likely casues an issue with Vite's dep optimizat
 
 |            | cjs | cjs2 | context | context2 | context3 |
 |------------|:---:|:----:|:-------:|:--------:|:--------:|
-| next       |  ✅  |  ✅  |    ✅   |    ✅    |    ❓    |
-| next-vite  |  ❌  |  ✅  |    ❌   |    ✅    |    ❓    |
+| next       |  ✅  |  ✅  |    ✅   |    ✅    |    ✅    |
+| next-vite  |  ❌  |  ✅  |    ❌   |    ✅    |    ✅    |
 | waku       |  ❓  |  ❓  |    ❓   |    ❓    |    ❓    |
 | jacob      |  ❓  |  ❓  |    ❓   |    ❓    |    ❓    |
 | lazarv     |  ❓  |  ❓  |    ❓   |    ❓    |    ❓    |
