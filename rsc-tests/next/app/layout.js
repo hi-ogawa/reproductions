@@ -10,6 +10,7 @@ export default function RootLayout({ children }) {
           <Link href="/cjs2">[/cjs2]</Link>
           <Link href="/context">[/context]</Link>
           <Link href="/context2">[/context2]</Link>
+          <Link href="/context3">[/context3]</Link>
         </div>
         {children}
       </body>
