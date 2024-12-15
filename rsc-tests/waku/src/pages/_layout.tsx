@@ -22,6 +22,9 @@ export default async function RootLayout({ children }: RootLayoutProps) {
         <Link to="/context2">
           [/context2]
         </Link>
+        <Link to="/context3">
+          [/context3]
+        </Link>
       </div>
       {children}
     </div>

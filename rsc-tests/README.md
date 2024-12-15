@@ -4,7 +4,7 @@ Testing example packages, which likely casues an issue with Vite's dep optimizat
 |------------|:---:|:----:|:-------:|:--------:|:--------:|
 | next       |  ✅  |  ✅  |    ✅   |    ✅    |    ✅    |
 | next-vite  |  ❌  |  ✅  |    ❌   |    ✅    |    ✅    |
-| waku       |  ❓  |  ❓  |    ❓   |    ❓    |    ❓    |
+| waku       |  ❌  |  ❌  |    ❓   |    ❓    |    ❌    |
 | jacob      |  ❌  |  ❌  |    ❓   |    ❓    |    ❌    |
 | lazarv     |  ❌  |  ❌  |    ❓   |    ❓    |    ❌    |
 

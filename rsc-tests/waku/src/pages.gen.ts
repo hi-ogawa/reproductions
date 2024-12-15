@@ -7,6 +7,8 @@ type Page = {
 | {path: '/cjs2'; render: 'dynamic'}
 | {path: '/context'; render: 'dynamic'}
 | {path: '/context2'; render: 'dynamic'}
+| {path: '/context3-client'; render: 'dynamic'}
+| {path: '/context3'; render: 'dynamic'}
 | ({path: '/'} & GetConfigResponse<typeof Index_getConfig>)
 };
 
