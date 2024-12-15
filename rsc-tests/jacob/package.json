@@ -1,0 +1,32 @@
+{
+	"private": true,
+	"type": "module",
+	"scripts": {
+		"build": "vite build --app",
+		"dev": "vite dev",
+		"format": "npx biome format --write",
+		"start": "cross-env NODE_ENV=production node serve.js dist/prerender/entry.prerender.js dist/server/entry.server.js dist/browser",
+		"test": "playwright test"
+	},
+	"dependencies": {
+    "@hiogawa/test-dep-cjs": "hi-ogawa/vite-plugins#path:/packages/react-server/examples/basic/deps/cjs",
+    "@hiogawa/test-dep-context": "hi-ogawa/vite-plugins#path:/packages/react-server/examples/basic/deps/context",
+		"@jacob-ebey/react-server-dom-vite": "19.0.0-experimental.14",
+		"@jacob-ebey/vite-react-server-dom": "0.0.6",
+		"@mjackson/node-fetch-server": "0.5.0",
+		"compression": "^1.7.5",
+		"express": "^4.21.2",
+		"react": "^19.0.0",
+		"react-dom": "^19.0.0",
+		"rsc-html-stream": "0.0.4"
+	},
+	"devDependencies": {
+		"@types/dom-navigation": "^1.0.4",
+		"@types/node": "^22.0.0",
+		"@types/react": "^19.0.1",
+		"@types/react-dom": "^19.0.1",
+		"cross-env": "^7.0.3",
+		"vite": "^6.0.3"
+	},
+	"packageManager": "pnpm@9.15.0+sha512.76e2379760a4328ec4415815bcd6628dee727af3779aaa4c914e3944156c4299921a89f976381ee107d41f12cfa4b66681ca9c718f0668fa0831ed4c6d8ba56c"
+}
