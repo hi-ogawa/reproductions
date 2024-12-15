@@ -1,8 +1,8 @@
 // @ts-ignore
-import { TestServer } from "@hiogawa/test-dep-context/server2"
+import { TestClientProvider } from "@hiogawa/test-dep-context/client"
 // @ts-ignore
-import { TestClient } from "./context3-client.js"
+import { TestClient } from "./context3-client"
 
 export default function Page() {
-  return <TestServer><TestClient/></TestServer> // should show [ok]
+  return <TestClientProvider><TestClient/></TestClientProvider> // should show [ok]
 }

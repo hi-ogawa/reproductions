@@ -10,10 +10,10 @@ importers:
     dependencies:
       '@hiogawa/test-dep-cjs':
         specifier: hi-ogawa/vite-plugins#path:/packages/react-server/examples/basic/deps/cjs
-        version: https://codeload.github.com/hi-ogawa/vite-plugins/tar.gz/c091d41d34f075a1cca3a7a188b97b57e0ed9347#path:/packages/react-server/examples/basic/deps/cjs(react@19.0.0)
+        version: https://codeload.github.com/hi-ogawa/vite-plugins/tar.gz/c250fc593befde3b691437895ce87394969a6c36#path:/packages/react-server/examples/basic/deps/cjs(react@19.0.0)
       '@hiogawa/test-dep-context':
         specifier: hi-ogawa/vite-plugins#path:/packages/react-server/examples/basic/deps/context
-        version: https://codeload.github.com/hi-ogawa/vite-plugins/tar.gz/c091d41d34f075a1cca3a7a188b97b57e0ed9347#path:/packages/react-server/examples/basic/deps/context(react@19.0.0)
+        version: https://codeload.github.com/hi-ogawa/vite-plugins/tar.gz/c250fc593befde3b691437895ce87394969a6c36#path:/packages/react-server/examples/basic/deps/context(react@19.0.0)
       '@jacob-ebey/react-server-dom-vite':
         specifier: 19.0.0-experimental.14
         version: 19.0.0-experimental.14(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
@@ -319,14 +319,14 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@hiogawa/test-dep-cjs@https://codeload.github.com/hi-ogawa/vite-plugins/tar.gz/c091d41d34f075a1cca3a7a188b97b57e0ed9347#path:/packages/react-server/examples/basic/deps/cjs':
-    resolution: {path: /packages/react-server/examples/basic/deps/cjs, tarball: https://codeload.github.com/hi-ogawa/vite-plugins/tar.gz/c091d41d34f075a1cca3a7a188b97b57e0ed9347}
+  '@hiogawa/test-dep-cjs@https://codeload.github.com/hi-ogawa/vite-plugins/tar.gz/c250fc593befde3b691437895ce87394969a6c36#path:/packages/react-server/examples/basic/deps/cjs':
+    resolution: {path: /packages/react-server/examples/basic/deps/cjs, tarball: https://codeload.github.com/hi-ogawa/vite-plugins/tar.gz/c250fc593befde3b691437895ce87394969a6c36}
     version: 0.0.0
     peerDependencies:
       react: '*'
 
-  '@hiogawa/test-dep-context@https://codeload.github.com/hi-ogawa/vite-plugins/tar.gz/c091d41d34f075a1cca3a7a188b97b57e0ed9347#path:/packages/react-server/examples/basic/deps/context':
-    resolution: {path: /packages/react-server/examples/basic/deps/context, tarball: https://codeload.github.com/hi-ogawa/vite-plugins/tar.gz/c091d41d34f075a1cca3a7a188b97b57e0ed9347}
+  '@hiogawa/test-dep-context@https://codeload.github.com/hi-ogawa/vite-plugins/tar.gz/c250fc593befde3b691437895ce87394969a6c36#path:/packages/react-server/examples/basic/deps/context':
+    resolution: {path: /packages/react-server/examples/basic/deps/context, tarball: https://codeload.github.com/hi-ogawa/vite-plugins/tar.gz/c250fc593befde3b691437895ce87394969a6c36}
     version: 0.0.0
     peerDependencies:
       react: '*'
@@ -1329,11 +1329,11 @@ snapshots:
   '@esbuild/win32-x64@0.24.0':
     optional: true
 
-  '@hiogawa/test-dep-cjs@https://codeload.github.com/hi-ogawa/vite-plugins/tar.gz/c091d41d34f075a1cca3a7a188b97b57e0ed9347#path:/packages/react-server/examples/basic/deps/cjs(react@19.0.0)':
+  '@hiogawa/test-dep-cjs@https://codeload.github.com/hi-ogawa/vite-plugins/tar.gz/c250fc593befde3b691437895ce87394969a6c36#path:/packages/react-server/examples/basic/deps/cjs(react@19.0.0)':
     dependencies:
       react: 19.0.0
 
-  '@hiogawa/test-dep-context@https://codeload.github.com/hi-ogawa/vite-plugins/tar.gz/c091d41d34f075a1cca3a7a188b97b57e0ed9347#path:/packages/react-server/examples/basic/deps/context(react@19.0.0)':
+  '@hiogawa/test-dep-context@https://codeload.github.com/hi-ogawa/vite-plugins/tar.gz/c250fc593befde3b691437895ce87394969a6c36#path:/packages/react-server/examples/basic/deps/context(react@19.0.0)':
     dependencies:
       react: 19.0.0
 

@@ -10,10 +10,10 @@ importers:
     dependencies:
       '@hiogawa/test-dep-cjs':
         specifier: hi-ogawa/vite-plugins#path:/packages/react-server/examples/basic/deps/cjs
-        version: https://codeload.github.com/hi-ogawa/vite-plugins/tar.gz/c091d41d34f075a1cca3a7a188b97b57e0ed9347#path:/packages/react-server/examples/basic/deps/cjs(react@0.0.0-experimental-204a551e-20240926)
+        version: https://codeload.github.com/hi-ogawa/vite-plugins/tar.gz/c250fc593befde3b691437895ce87394969a6c36#path:/packages/react-server/examples/basic/deps/cjs(react@0.0.0-experimental-204a551e-20240926)
       '@hiogawa/test-dep-context':
         specifier: hi-ogawa/vite-plugins#path:/packages/react-server/examples/basic/deps/context
-        version: https://codeload.github.com/hi-ogawa/vite-plugins/tar.gz/c091d41d34f075a1cca3a7a188b97b57e0ed9347#path:/packages/react-server/examples/basic/deps/context(react@0.0.0-experimental-204a551e-20240926)
+        version: https://codeload.github.com/hi-ogawa/vite-plugins/tar.gz/c250fc593befde3b691437895ce87394969a6c36#path:/packages/react-server/examples/basic/deps/context(react@0.0.0-experimental-204a551e-20240926)
       '@lazarv/react-server':
         specifier: 0.0.0-experimental-a70e816-20241208-639a9329
         version: 0.0.0-experimental-a70e816-20241208-639a9329(@types/node@22.10.2)(rollup@4.28.1)(terser@5.37.0)(webpack@5.97.1)
@@ -455,14 +455,14 @@ packages:
   '@hattip/polyfills@0.0.34':
     resolution: {integrity: sha512-zD0BemBQ4iqwKyX0jNu7YTSZtG4zH7sOB3XIBa5FkxRHZEjEc1dtKHsQpWhNqZW9+h5c8TWS9EiTMstqbtL2SQ==}
 
-  '@hiogawa/test-dep-cjs@https://codeload.github.com/hi-ogawa/vite-plugins/tar.gz/c091d41d34f075a1cca3a7a188b97b57e0ed9347#path:/packages/react-server/examples/basic/deps/cjs':
-    resolution: {path: /packages/react-server/examples/basic/deps/cjs, tarball: https://codeload.github.com/hi-ogawa/vite-plugins/tar.gz/c091d41d34f075a1cca3a7a188b97b57e0ed9347}
+  '@hiogawa/test-dep-cjs@https://codeload.github.com/hi-ogawa/vite-plugins/tar.gz/c250fc593befde3b691437895ce87394969a6c36#path:/packages/react-server/examples/basic/deps/cjs':
+    resolution: {path: /packages/react-server/examples/basic/deps/cjs, tarball: https://codeload.github.com/hi-ogawa/vite-plugins/tar.gz/c250fc593befde3b691437895ce87394969a6c36}
     version: 0.0.0
     peerDependencies:
       react: '*'
 
-  '@hiogawa/test-dep-context@https://codeload.github.com/hi-ogawa/vite-plugins/tar.gz/c091d41d34f075a1cca3a7a188b97b57e0ed9347#path:/packages/react-server/examples/basic/deps/context':
-    resolution: {path: /packages/react-server/examples/basic/deps/context, tarball: https://codeload.github.com/hi-ogawa/vite-plugins/tar.gz/c091d41d34f075a1cca3a7a188b97b57e0ed9347}
+  '@hiogawa/test-dep-context@https://codeload.github.com/hi-ogawa/vite-plugins/tar.gz/c250fc593befde3b691437895ce87394969a6c36#path:/packages/react-server/examples/basic/deps/context':
+    resolution: {path: /packages/react-server/examples/basic/deps/context, tarball: https://codeload.github.com/hi-ogawa/vite-plugins/tar.gz/c250fc593befde3b691437895ce87394969a6c36}
     version: 0.0.0
     peerDependencies:
       react: '*'
@@ -2483,11 +2483,11 @@ snapshots:
       '@hattip/core': 0.0.34
       node-fetch-native: 1.6.4
 
-  '@hiogawa/test-dep-cjs@https://codeload.github.com/hi-ogawa/vite-plugins/tar.gz/c091d41d34f075a1cca3a7a188b97b57e0ed9347#path:/packages/react-server/examples/basic/deps/cjs(react@0.0.0-experimental-204a551e-20240926)':
+  '@hiogawa/test-dep-cjs@https://codeload.github.com/hi-ogawa/vite-plugins/tar.gz/c250fc593befde3b691437895ce87394969a6c36#path:/packages/react-server/examples/basic/deps/cjs(react@0.0.0-experimental-204a551e-20240926)':
     dependencies:
       react: 0.0.0-experimental-204a551e-20240926
 
-  '@hiogawa/test-dep-context@https://codeload.github.com/hi-ogawa/vite-plugins/tar.gz/c091d41d34f075a1cca3a7a188b97b57e0ed9347#path:/packages/react-server/examples/basic/deps/context(react@0.0.0-experimental-204a551e-20240926)':
+  '@hiogawa/test-dep-context@https://codeload.github.com/hi-ogawa/vite-plugins/tar.gz/c250fc593befde3b691437895ce87394969a6c36#path:/packages/react-server/examples/basic/deps/context(react@0.0.0-experimental-204a551e-20240926)':
     dependencies:
       react: 0.0.0-experimental-204a551e-20240926
 
