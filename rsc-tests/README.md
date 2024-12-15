@@ -1,4 +1,4 @@
-Testing example packages, which likely casues an issue with Vite's dep optimization.
+Testing fixture packages from https://github.com/hi-ogawa/vite-plugins/tree/main/packages/react-server/examples/basic/deps in other frameworks.
 
 |            | cjs | cjs2 | context | context2 | context3 |
 |------------|:---:|:----:|:-------:|:--------:|:--------:|
@@ -7,7 +7,3 @@ Testing example packages, which likely casues an issue with Vite's dep optimizat
 | waku       |  ❌  |  ❌  |    ✅   |    ✅    |    ❌    |
 | jacob      |  ❌  |  ❌  |    ✅   |    ✅    |    ❌    |
 | lazarv     |  ❌  |  ❌  |    ❓   |    ❓    |    ❓    |
-
-## references
-
-- https://github.com/hi-ogawa/vite-plugins/tree/main/packages/react-server/examples/basic/deps
