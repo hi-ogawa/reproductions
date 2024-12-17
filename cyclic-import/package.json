@@ -1,0 +1,27 @@
+{
+	"name": "@example/basic",
+	"private": true,
+	"type": "module",
+	"scripts": {
+		"build": "rolldown -c",
+		"build-rollup": "rollup -c rolldown.config.js --dir dist-rollup",
+		"build-esbuild": "esbuild ./src/entry.js --external:@rolldown/test-dep-external --bundle --format=esm --outdir=dist-esbuild",
+		"build-webpack": "webpack",
+		"build-rspack": "rspack build"
+	},
+	"devDependencies": {
+		"@rspack/cli": "^1.1.4",
+		"@rspack/core": "^1.1.4",
+		"esbuild": "^0.24.0",
+		"rolldown": "0.15.0-snapshot-3cea4f5-20241211003613",
+		"rollup": "^4.28.1",
+		"vite": "^6.0.3",
+		"webpack": "^5.97.1",
+		"webpack-cli": "^5.1.4"
+	},
+	"packageManager": "pnpm@9.15.0+sha512.76e2379760a4328ec4415815bcd6628dee727af3779aaa4c914e3944156c4299921a89f976381ee107d41f12cfa4b66681ca9c718f0668fa0831ed4c6d8ba56c",
+	"stackblitz": {
+		"installDependencies": false,
+		"startCommand": "npm install --cpu=wasm32 && npm run build"
+	}
+}
