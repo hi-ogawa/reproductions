@@ -1,0 +1,23 @@
+{
+	"name": "@example/basic",
+	"private": true,
+	"type": "module",
+	"scripts": {
+		"build": "rolldown -c",
+		"build-rollup": "rollup -c",
+		"build-systemjs": "rolldown -c rolldown.config.system.js"
+	},
+	"dependencies": {
+		"@babel/core": "^7.26.0",
+		"@babel/plugin-transform-dynamic-import": "^7.25.9",
+		"@babel/plugin-transform-modules-systemjs": "^7.25.9",
+		"rolldown": "1.0.0-beta.1",
+		"rollup": "^4.28.0",
+		"systemjs": "^6.15.1"
+	},
+	"packageManager": "pnpm@9.15.2+sha512.93e57b0126f0df74ce6bff29680394c0ba54ec47246b9cf321f0121d8d9bb03f750a705f24edc3c1180853afd7c2c3b94196d0a3d53d3e069d9e2793ef11f321",
+	"stackblitz": {
+		"installDependencies": false,
+		"startCommand": "npm install --cpu=wasm32 && npm run build-systemjs"
+	}
+}
