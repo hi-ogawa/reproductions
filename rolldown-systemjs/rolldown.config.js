@@ -6,4 +6,7 @@ export default defineConfig({
 		dir: "dist",
 		format: "esm",
 	},
+	experimental: {
+		resolveNewUrlToAsset: true,
+	},
 });

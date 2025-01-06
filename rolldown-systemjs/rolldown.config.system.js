@@ -10,6 +10,9 @@ export default defineConfig({
 		format: "esm",
 		sourcemap: true,
 	},
+	experimental: {
+		resolveNewUrlToAsset: true,
+	},
 	plugins: [
 		{
 			name: "transform-chunk-systemjs",
