@@ -1,0 +1,19 @@
+{
+  "private": true,
+  "version": "6.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "unbuild --stub && node dist/index.mjs",
+    "build": "unbuild && pnpm run patch-cjs",
+    "patch-cjs": "tsx ../../scripts/patchCJS.ts",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "@babel/core": "7.26.0",
+    "@types/babel__core": "^7.20.5",
+    "jiti": "2.4.1",
+    "unbuild": "3.0.1",
+    "vite": "^6.0.0"
+  },
+  "packageManager": "pnpm@9.15.2+sha512.93e57b0126f0df74ce6bff29680394c0ba54ec47246b9cf321f0121d8d9bb03f750a705f24edc3c1180853afd7c2c3b94196d0a3d53d3e069d9e2793ef11f321"
+}
