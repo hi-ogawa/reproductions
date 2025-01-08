@@ -4,6 +4,7 @@ import MagicString from "magic-string"
 export default defineConfig({
   test: {
     coverage: {
+      // provider: "istanbul",
       reporter: ['text', 'text-summary', 'html', 'clover', 'json'],
     },
   },
