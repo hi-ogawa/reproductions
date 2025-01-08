@@ -1,0 +1,8 @@
+{
+  "name": "@vitejs/test-dep2",
+  "type": "commonjs",
+  "exports": {
+    "import": "./index.mjs",
+    "default": "./index.cjs"
+  }
+}
