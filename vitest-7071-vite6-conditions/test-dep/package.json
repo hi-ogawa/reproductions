@@ -1,0 +1,12 @@
+{
+  "name": "@vitejs/test-dep",
+  "private": true,
+  "exports": {
+    "module": "./index.module.js",
+    "import": {
+      "node": "./index.import-node.js",
+      "default": "./index.import-default.js"
+    },
+    "default": "./index.default.js"
+  }
+}
