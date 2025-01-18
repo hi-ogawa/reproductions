@@ -1,0 +1,13 @@
+{
+  "name": "@vitest/test-dep",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": {
+        "custom": "./import-custom.js"
+      },
+      "default": "./default.js"
+    }
+  }
+}
