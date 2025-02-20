@@ -1,9 +1,9 @@
 import React from "react";
-import type * as oxc from "oxc-transform";
+import type { TransformResult } from "rolldown/experimental";
 
 export function App() {
   const [input, setInput] = React.useState("");
-  const [result, setResult] = React.useState<oxc.TransformResult>();
+  const [result, setResult] = React.useState<TransformResult>();
 
   const handleSubmit = () =>
     React.startTransition(async () => {

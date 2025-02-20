@@ -1,6 +1,6 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
-import * as oxc from "oxc-transform";
+import { transform } from "rolldown/experimental";
 
 export default defineConfig({
   plugins: [
@@ -12,7 +12,7 @@ export default defineConfig({
           const url = new URL(req.url ?? "/", "http://localhost");
           if (url.pathname === "/api/oxc") {
             const input = url.searchParams.get("input")!;
-            const result = oxc.transform("test.js", input, {
+            const result = transform("test.js", input, {
               sourceType: "module",
               lang: "tsx",
               sourcemap: true,
