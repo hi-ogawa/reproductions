@@ -4,6 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "copy-evanw": "git clone --depth 1 https://github.com/evanw/source-map-visualization public/evanw && rm -rf public/evanw/.git",
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview"

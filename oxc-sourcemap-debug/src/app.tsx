@@ -76,5 +76,7 @@ export function App() {
 
 function generateSourcemapVisualizerLink(code: string, map: string) {
   const hash = btoa(`${code.length}\0${code}${map.length}\0${map}`);
-  return `https://evanw.github.io/source-map-visualization/#` + hash;
+  // https://github.com/evanw/source-map-visualization/ is vendored in public/evanw
+  // to avoid CORS issue on stackblitz
+  return `/evanw/index.html#` + hash;
 }
