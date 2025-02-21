@@ -1,0 +1,13 @@
+diff --git a/dist/lib/builder/build.js b/dist/lib/builder/build.js
+index 9f880fd595944148cacc4a69607fd226e0972d02..4a5258372479439c207e923a110cdf77a22e24ea 100644
+--- a/dist/lib/builder/build.js
++++ b/dist/lib/builder/build.js
+@@ -307,7 +307,7 @@ const buildSsrBundle = async (rootDir, env, config, clientEntryFiles, serverEntr
+ };
+ // For Browsers
+ const buildClientBundle = async (rootDir, env, config, clientEntryFiles, serverEntryFiles, serverBuildOutput, partial)=>{
+-    const nonJsAssets = serverBuildOutput.output.flatMap(({ type, fileName })=>type === 'asset' && !fileName.endsWith('.js') ? [
++    const nonJsAssets = serverBuildOutput.output.flatMap(({ type, fileName })=>type === 'asset' && !fileName.endsWith('.js') && !fileName.endsWith('.wasm') ? [
+             fileName
+         ] : []);
+     const cssAssets = nonJsAssets.filter((asset)=>asset.endsWith('.css'));
