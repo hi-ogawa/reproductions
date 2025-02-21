@@ -2,7 +2,9 @@ import React from "react";
 import { ApiResult } from "../vite.config";
 
 export function App() {
-  const [input, setInput] = React.useState("");
+  const [input, setInput] = React.useState(
+    `console.log("hello", <div>world</div>);`,
+  );
   const [result, setResult] = React.useState<ApiResult>();
 
   const handleSubmit = () =>
@@ -18,8 +20,17 @@ export function App() {
     });
 
   return (
-    <div style={{ display: "flex", flexDirection: "column", gap: "0.5rem" }}>
-      <h4>Oxc transform source map debugger</h4>
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        gap: "0.5rem",
+        maxWidth: "100%",
+        width: "900px",
+        margin: "1rem auto",
+      }}
+    >
+      <h4 style={{ margin: 0 }}>Oxc transform source map debugger</h4>
       <label>Input</label>
       <textarea
         rows={10}
@@ -34,6 +45,9 @@ export function App() {
           }
         }}
       />
+      <button onClick={() => handleSubmit()}>
+        Transform (Control + Enter)
+      </button>
       <label>
         Oxc output{" "}
         {result?.oxc.map && (
