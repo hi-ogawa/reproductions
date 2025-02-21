@@ -26,7 +26,10 @@ export default async function Page(props: PageProps<"/">) {
     <div>
       <div style={{ display: "flex", alignItems: "center", gap: "1rem" }}>
         <h4>Waku + Shiki + Cloudflare</h4>
-        <a href="https://github.com/hi-ogawa/reproductions" target="_blank">
+        <a
+          href="https://github.com/hi-ogawa/reproductions/tree/main/waku-1245-cloudflare-wasm"
+          target="_blank"
+        >
           GitHub
         </a>
       </div>
