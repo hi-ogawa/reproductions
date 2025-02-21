@@ -1,16 +1,17 @@
+import { createOnigurumaEngine } from "shiki";
 import { createHighlighterCore, HighlighterCore } from "shiki/core";
 import js from "shiki/langs/javascript.mjs";
 import nord from "shiki/themes/nord.mjs";
 import { PageProps } from "waku/router";
 
 // same setup as
-// https://github.com/hi-ogawa/vite-plugins/blob/e154a878efd3a40e8691df6ffa55bc9389d07805/packages/react-server/examples/basic/src/routes/test/wasm/page.tsx
+// https://github.com/hi-ogawa/vite-plugins/blob/6eb7fb954a935a0b05fa2b043f6636654c83059f/packages/react-server/examples/basic/src/routes/test/wasm/page.tsx
 
 const getHighlither = (): Promise<HighlighterCore> => {
   return ((globalThis as any).__shikiHighlither ??= createHighlighterCore({
     themes: [nord],
     langs: [js],
-    loadWasm: import("shiki/onig.wasm?module" as string),
+    engine: createOnigurumaEngine(import("shiki/onig.wasm?module" as string))
   }));
 };
 
