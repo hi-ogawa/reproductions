@@ -25,8 +25,6 @@ export function App() {
         display: "flex",
         flexDirection: "column",
         gap: "0.5rem",
-        maxWidth: "100%",
-        width: "900px",
         margin: "1rem auto",
       }}
     >
@@ -48,42 +46,35 @@ export function App() {
       <button onClick={() => handleSubmit()}>
         Transform (Control + Enter)
       </button>
-      <label>
-        Oxc output{" "}
-        {result?.oxc.map && (
-          <a
-            href={generateSourcemapVisualizerLink(
+      {result?.oxc && (
+        <>
+          <label>Oxc output</label>
+          <iframe
+            style={{ minHeight: "250px" }}
+            src={generateSourcemapVisualizerLink(
               result.oxc.code,
               JSON.stringify(result.oxc.map),
             )}
-            target="_blank"
-          >
-            (source map)
-          </a>
-        )}
-      </label>
-      <textarea rows={10} readOnly value={result?.oxc.code} />
-      <label>
-        Esbuild output{" "}
-        {result?.esbuild.map && (
-          <a
-            href={generateSourcemapVisualizerLink(
+          />
+        </>
+      )}
+      {result && (
+        <>
+          <label>Esbuild output</label>
+          <iframe
+            style={{ minHeight: "250px" }}
+            src={generateSourcemapVisualizerLink(
               result.esbuild.code,
               result.esbuild.map,
             )}
-            target="_blank"
-          >
-            (source map)
-          </a>
-        )}
-      </label>
-      <textarea rows={10} readOnly value={result?.esbuild.code} />
+          />
+        </>
+      )}
     </div>
   );
 }
 
 function generateSourcemapVisualizerLink(code: string, map: string) {
-  const hashRaw = `${code.length}\0${code}${map.length}\0${map}`;
-  const hash = btoa(hashRaw);
+  const hash = btoa(`${code.length}\0${code}${map.length}\0${map}`);
   return `https://evanw.github.io/source-map-visualization/#` + hash;
 }
