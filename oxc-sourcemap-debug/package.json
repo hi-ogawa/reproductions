@@ -9,9 +9,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "rolldown": "1.0.0-beta.3-commit.b546e53",
+    "esbuild": "^0.25.0",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "rolldown": "1.0.0-beta.3-commit.b546e53"
   },
   "devDependencies": {
     "@types/node": "^22.13.4",
