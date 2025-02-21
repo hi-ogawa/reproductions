@@ -7,7 +7,7 @@
     "dev": "waku dev",
     "build": "waku build",
     "start": "waku start",
-    "cf-build": "waku build --with-cloudflare",
+    "cf-build": "NODE_OPTIONS='--import ./wasm-loader.js' waku build --with-cloudflare",
     "cf-preview": "wrangler dev",
     "cf-deploy": "wrangler deploy"
   },

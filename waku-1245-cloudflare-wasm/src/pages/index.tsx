@@ -1,35 +1,45 @@
-import { Link } from 'waku';
+import { createHighlighterCore, HighlighterCore } from "shiki/core";
+import js from "shiki/langs/javascript.mjs";
+import nord from "shiki/themes/nord.mjs";
+import { PageProps } from "waku/router";
 
-import { Counter } from '../components/counter';
+// same setup as
+// https://github.com/hi-ogawa/vite-plugins/blob/e154a878efd3a40e8691df6ffa55bc9389d07805/packages/react-server/examples/basic/src/routes/test/wasm/page.tsx
 
-export default async function HomePage() {
-  const data = await getData();
+const getHighlither = (): Promise<HighlighterCore> => {
+  return ((globalThis as any).__shikiHighlither ??= createHighlighterCore({
+    themes: [nord],
+    langs: [js],
+    loadWasm: import("shiki/onig.wasm?module" as string),
+  }));
+};
 
+export default async function Page(props: PageProps<"/">) {
+  const highligher = await getHighlither();
+  const code =
+    new URLSearchParams(props.query).get("code") ?? `export default "test"`;
+  const html = highligher.codeToHtml(code, {
+    theme: "nord",
+    lang: "js",
+  });
   return (
     <div>
-      <title>{data.title}</title>
-      <h1 className="text-4xl font-bold tracking-tight">{data.headline}</h1>
-      <p>{data.body}</p>
-      <Counter />
-      <Link to="/about" className="mt-4 inline-block underline">
-        About page
-      </Link>
+      <h4>Waku + Shiki + Cloudflare</h4>
+      <style>{`
+        .shiki {
+          padding: 0.5rem 1rem;
+        }
+      `}</style>
+      <form method="GET" action="/">
+        <input name="code" defaultValue={code} />
+      </form>
+      <div dangerouslySetInnerHTML={{ __html: html }}></div>
     </div>
   );
 }
 
-const getData = async () => {
-  const data = {
-    title: 'Waku',
-    headline: 'Waku',
-    body: 'Hello world!',
-  };
-
-  return data;
-};
-
 export const getConfig = async () => {
   return {
-    render: 'static',
+    render: "dynamic",
   } as const;
 };
