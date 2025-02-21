@@ -19,3 +19,4 @@ declare module 'waku/router' {
     pages: Page;
   }
 }
+  

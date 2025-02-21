@@ -24,7 +24,12 @@ export default async function Page(props: PageProps<"/">) {
   });
   return (
     <div>
-      <h4>Waku + Shiki + Cloudflare</h4>
+      <div style={{ display: "flex", alignItems: "center", gap: "1rem" }}>
+        <h4>Waku + Shiki + Cloudflare</h4>
+        <a href="https://github.com/hi-ogawa/reproductions" target="_blank">
+          GitHub
+        </a>
+      </div>
       <style>{`
         .shiki {
           padding: 0.5rem 1rem;

@@ -11,3 +11,5 @@ pnpm cf-build
 pnpm cf-preview
 pnpm cf-deploy
 ```
+
+Deployed at https://waku-1245-cloudflare-wasm.hiro18181.workers.dev
