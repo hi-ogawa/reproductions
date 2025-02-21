@@ -1,0 +1,18 @@
+{
+	"name": "rolldown-vite-using-syntax",
+	"private": true,
+	"version": "0.0.0",
+	"type": "module",
+	"scripts": {
+		"build-rollup": "rollup -c",
+		"build-tsup": "tsup"
+	},
+	"devDependencies": {
+		"rollup": "^4.34.8",
+		"rollup-plugin-dts": "^6.1.1",
+		"tsup": "^8.3.6",
+		"typescript": "^5.7.3",
+		"vite": "https://pkg.pr.new/rolldown/vite@7e5a8b6"
+	},
+	"packageManager": "pnpm@10.4.1+sha512.c753b6c3ad7afa13af388fa6d808035a008e30ea9993f58c6663e2bc5ff21679aa834db094987129aa4d488b86df57f7b634981b2f827cdcacc698cc0cfb88af"
+}
