@@ -1,6 +1,6 @@
 
 # See https://developers.cloudflare.com/pages/functions/wrangler-configuration/
-name = "waku-project"
+name = "waku-1245-cloudflare-wasm"
 compatibility_date = "2024-09-23"
 compatibility_flags = [ "nodejs_als" ]
 main = "./dist/worker/serve-cloudflare.js"

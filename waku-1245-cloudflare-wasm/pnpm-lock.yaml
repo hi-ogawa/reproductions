@@ -4,6 +4,11 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+patchedDependencies:
+  waku:
+    hash: de47ea2c81881247a993375f1f1ed7d6529ade24e9c552d88b8d2f580d48388f
+    path: patches/waku.patch
+
 importers:
 
   .:
@@ -22,7 +27,7 @@ importers:
         version: 1.29.2
       waku:
         specifier: 0.21.20
-        version: 0.21.20(@types/node@22.13.4)(jiti@2.4.2)(lightningcss@1.29.1)(react-dom@19.0.0(react@19.0.0))(react-server-dom-webpack@19.0.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(webpack@5.98.0(esbuild@0.17.19)))(react@19.0.0)(terser@5.39.0)
+        version: 0.21.20(patch_hash=de47ea2c81881247a993375f1f1ed7d6529ade24e9c552d88b8d2f580d48388f)(@types/node@22.13.4)(jiti@2.4.2)(lightningcss@1.29.1)(react-dom@19.0.0(react@19.0.0))(react-server-dom-webpack@19.0.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(webpack@5.98.0(esbuild@0.17.19)))(react@19.0.0)(terser@5.39.0)
     devDependencies:
       '@hiogawa/vite-plugin-server-asset':
         specifier: ^0.0.0
@@ -3012,7 +3017,7 @@ snapshots:
       lightningcss: 1.29.1
       terser: 5.39.0
 
-  waku@0.21.20(@types/node@22.13.4)(jiti@2.4.2)(lightningcss@1.29.1)(react-dom@19.0.0(react@19.0.0))(react-server-dom-webpack@19.0.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(webpack@5.98.0(esbuild@0.17.19)))(react@19.0.0)(terser@5.39.0):
+  waku@0.21.20(patch_hash=de47ea2c81881247a993375f1f1ed7d6529ade24e9c552d88b8d2f580d48388f)(@types/node@22.13.4)(jiti@2.4.2)(lightningcss@1.29.1)(react-dom@19.0.0(react@19.0.0))(react-server-dom-webpack@19.0.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(webpack@5.98.0(esbuild@0.17.19)))(react@19.0.0)(terser@5.39.0):
     dependencies:
       '@hono/node-server': 1.13.8(hono@4.7.1)
       '@swc/core': 1.10.16
