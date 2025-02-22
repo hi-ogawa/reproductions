@@ -1,13 +1,22 @@
 diff --git a/dist/lib/builder/build.js b/dist/lib/builder/build.js
-index 9f880fd595944148cacc4a69607fd226e0972d02..4a5258372479439c207e923a110cdf77a22e24ea 100644
+index 9f880fd595944148cacc4a69607fd226e0972d02..f4b11443c6eee52d5e3b4e5a1b4ccc66bf5bf5bb 100644
 --- a/dist/lib/builder/build.js
 +++ b/dist/lib/builder/build.js
-@@ -307,7 +307,7 @@ const buildSsrBundle = async (rootDir, env, config, clientEntryFiles, serverEntr
+@@ -7,7 +7,7 @@ import { resolveConfig } from '../config.js';
+ import { EXTENSIONS } from '../constants.js';
+ import { decodeFilePathFromAbsolute, extname, filePathToFileURL, fileURLToFilePath, joinPath } from '../utils/path.js';
+ import { extendViteConfig } from '../utils/vite-config.js';
+-import { appendFile, createWriteStream, existsSync, mkdir, readdir, readFile, rename, unlink, writeFile } from '../utils/node-fs.js';
++import { appendFile, createWriteStream, existsSync, mkdir, readdir, readFile, rename, unlink, writeFile, copyFile } from '../utils/node-fs.js';
+ import { encodeRscPath, generatePrefetchCode } from '../renderers/utils.js';
+ import { collectClientModules, renderRsc } from '../renderers/rsc.js';
+ import { renderHtml } from '../renderers/html.js';
+@@ -363,7 +363,7 @@ const buildClientBundle = async (rootDir, env, config, clientEntryFiles, serverE
+     for (const nonJsAsset of nonJsAssets){
+         const from = joinPath(rootDir, config.distDir, nonJsAsset);
+         const to = joinPath(rootDir, config.distDir, DIST_PUBLIC, nonJsAsset);
+-        await rename(from, to);
++        await copyFile(from, to);
+     }
+     return clientBuildOutput;
  };
- // For Browsers
- const buildClientBundle = async (rootDir, env, config, clientEntryFiles, serverEntryFiles, serverBuildOutput, partial)=>{
--    const nonJsAssets = serverBuildOutput.output.flatMap(({ type, fileName })=>type === 'asset' && !fileName.endsWith('.js') ? [
-+    const nonJsAssets = serverBuildOutput.output.flatMap(({ type, fileName })=>type === 'asset' && !fileName.endsWith('.js') && !fileName.endsWith('.wasm') ? [
-             fileName
-         ] : []);
-     const cssAssets = nonJsAssets.filter((asset)=>asset.endsWith('.css'));

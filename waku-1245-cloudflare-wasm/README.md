@@ -9,7 +9,7 @@ Deployed at https://waku-1245-cloudflare-wasm.hiro18181.workers.dev
 - `./patches/waku.patch`
   - Need to patch https://github.com/dai-shi/waku/blob/29af481f1937abc34ef8cdec4a312f5edd5947d7/packages/waku/src/lib/builder/build.ts#L392-L394 to prevent `.wasm` assets to be moved from rsc build to client build.
 - `./wasm-loader.js`
-  - Additionally, this custom loader allows importing `.wasm` on NodeJS for pre-rendering.
+  - Additionally, this custom loader allows importing `.wasm` on NodeJS for pre-rendering (though I haven't actually tested).
 
 ```sh
 pnpm cf-build
