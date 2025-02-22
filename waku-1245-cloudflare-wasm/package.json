@@ -7,7 +7,7 @@
     "dev": "waku dev",
     "build": "waku build",
     "start": "waku start",
-    "cf-build": "NODE_OPTIONS='--import ./wasm-loader.js' waku build --with-cloudflare",
+    "cf-build": "NODE_OPTIONS='--import @hiogawa/vite-plugin-server-asset/hooks/register-wasm' waku build --with-cloudflare",
     "cf-preview": "wrangler dev",
     "cf-deploy": "wrangler deploy"
   },
@@ -19,7 +19,7 @@
     "waku": "0.21.20"
   },
   "devDependencies": {
-    "@hiogawa/vite-plugin-server-asset": "^0.0.0",
+    "@hiogawa/vite-plugin-server-asset": "^0.0.1",
     "@types/react": "19.0.10",
     "@types/react-dom": "19.0.4",
     "typescript": "5.7.3",

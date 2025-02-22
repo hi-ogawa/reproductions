@@ -30,8 +30,8 @@ importers:
         version: 0.21.20(patch_hash=2861901e5e77c71a9d9b55d9fb557f854c3c23e8b9c4887a396d762c9b0f5779)(@types/node@22.13.4)(jiti@2.4.2)(lightningcss@1.29.1)(react-dom@19.0.0(react@19.0.0))(react-server-dom-webpack@19.0.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(webpack@5.98.0(esbuild@0.17.19)))(react@19.0.0)(terser@5.39.0)
     devDependencies:
       '@hiogawa/vite-plugin-server-asset':
-        specifier: ^0.0.0
-        version: 0.0.0(vite@6.1.0(@types/node@22.13.4)(jiti@2.4.2)(lightningcss@1.29.1)(terser@5.39.0))
+        specifier: ^0.0.1
+        version: 0.0.1(vite@6.1.0(@types/node@22.13.4)(jiti@2.4.2)(lightningcss@1.29.1)(terser@5.39.0))
       '@types/react':
         specifier: 19.0.10
         version: 19.0.10
@@ -467,8 +467,8 @@ packages:
     resolution: {integrity: sha512-vBZP4NlzfOlerQTnba4aqZoMhE/a9HY7HRqoOPaETQcSQuWEIyZMHGfVu6w9wGtGK5fED5qRs2DteVCjOH60sA==}
     engines: {node: '>=14'}
 
-  '@hiogawa/vite-plugin-server-asset@0.0.0':
-    resolution: {integrity: sha512-kKHrKQbQSUau03r6cj9QBm51EtoxB/mUA5r+Ou9isPQmhFXoxhL42BuQ2H18jhVcX2NkVmzyfTo+4yjYxHNzyw==}
+  '@hiogawa/vite-plugin-server-asset@0.0.1':
+    resolution: {integrity: sha512-ZrJ+CjJowaVOoTRzuGdjB6lv2Bh35+O2H278TKAIHa2xer7fdipHCUxFZeSJu7aDvR+C0Pmw3phCMGa07T8QAw==}
     peerDependencies:
       vite: '*'
 
@@ -1929,7 +1929,7 @@ snapshots:
 
   '@fastify/busboy@2.1.1': {}
 
-  '@hiogawa/vite-plugin-server-asset@0.0.0(vite@6.1.0(@types/node@22.13.4)(jiti@2.4.2)(lightningcss@1.29.1)(terser@5.39.0))':
+  '@hiogawa/vite-plugin-server-asset@0.0.1(vite@6.1.0(@types/node@22.13.4)(jiti@2.4.2)(lightningcss@1.29.1)(terser@5.39.0))':
     dependencies:
       magic-string: 0.30.17
       vite: 6.1.0(@types/node@22.13.4)(jiti@2.4.2)(lightningcss@1.29.1)(terser@5.39.0)
