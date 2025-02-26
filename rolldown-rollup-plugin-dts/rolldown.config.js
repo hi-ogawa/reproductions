@@ -4,7 +4,7 @@ import dts from "rollup-plugin-dts";
 export default defineConfig({
 	input: ["./src/entry.ts"],
 	output: {
-		dir: "dist/rolldown-dts",
+		dir: "dist/rolldown",
 	},
-	plugins: [dts()]
+	plugins: [dts()],
 });

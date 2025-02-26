@@ -1,45 +1,52 @@
 import { defineConfig } from "rollup";
 import dts from "rollup-plugin-dts";
-import * as esrap from "esrap"
+import * as esrap from "esrap";
+import path from "node:path";
 
-// debug dts proxy ast
+// debug rollup-plugin-dts's internal transform
 const dtsPlugin = dts();
-const original = dtsPlugin.transform
+const original = dtsPlugin.transform;
 dtsPlugin.transform = async function (...args) {
-	const result = await original.apply(this, args)
+	const result = await original.apply(this, args);
 	if (result && typeof result === "object" && "ast" in result) {
-		const ___ = "```";
-		console.log(`
-### ${args[1]}
+		const [input, id] = args;
+		const { code, map } = esrap.print(result.ast);
+		// TODO: evanw sourcemap link
+		map.toString();
+		const debugOutput = `\
+// @ts-nocheck
 
-- input
+////
+//// input
+////
+${input}
 
-${___}ts
-${args[0]}
-${___}
-
-- dts emit + pre-process
-
-${___}ts
+////
+//// dts + pre-process
+////
 ${result.code}
-${___}
 
-- proxy ast
-
-${___}ts
-${esrap.print(result.ast).code}
-${___}
-
-`);
+////
+//// proxy ast
+////
+${code}
+`;
+		this.emitFile({
+			type: "asset",
+			fileName:
+				"debug-dts/" +
+				path.relative(path.resolve(), id).replace(/[./]/g, "_") +
+				".ts",
+			source: debugOutput,
+		});
 	}
 	return result;
-}
-
+};
 
 export default defineConfig({
 	input: ["./src/entry.ts"],
 	output: {
-		dir: "dist/rollup-dts",
+		dir: "dist/rollup",
 	},
-	plugins: [dtsPlugin]
+	plugins: [dtsPlugin],
 });
