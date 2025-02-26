@@ -10,9 +10,7 @@ dtsPlugin.transform = async function (...args) {
 	const result = await original.apply(this, args);
 	if (result && typeof result === "object" && "ast" in result) {
 		const [input, id] = args;
-		const { code, map } = esrap.print(result.ast);
-		// TODO: evanw sourcemap link
-		map.toString();
+		const { code } = esrap.print(result.ast);
 		const debugOutput = `\
 // @ts-nocheck
 
