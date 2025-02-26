@@ -2,5 +2,5 @@
 
 ```sh
 # see dist/debug-dts
-$ pnpm dev
+$ npm run dev
 ```
