@@ -1,0 +1,13 @@
+{
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "./node_modules/rollup/dist/bin/rollup -c",
+    "build-wasm": "./node_modules/@rollup/wasm-node/dist/bin/rollup -c"
+  },
+  "devDependencies": {
+    "@rollup/wasm-node": "^4.34.8",
+    "rollup": "^4.34.8"
+  },
+  "packageManager": "pnpm@10.4.1+sha512.c753b6c3ad7afa13af388fa6d808035a008e30ea9993f58c6663e2bc5ff21679aa834db094987129aa4d488b86df57f7b634981b2f827cdcacc698cc0cfb88af"
+}
