@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 7, "column": 0}, "map": {"version":3,"sources":["file:///home/hiroshi/code/personal/reproductions/next-index-source-map/app/_client-dep.js"],"sourcesContent":["export default function clientDep() {\n  console.trace('__client_dep_trace__')\n  console.log(new Error(\"__client_dep_error__\"))\n}\n"],"names":[],"mappings":";;;AAAe,SAAS;IACtB,QAAQ,KAAK,CAAC;IACd,QAAQ,GAAG,CAAC,IAAI,MAAM;AACxB","debugId":null}},
+    {"offset": {"line": 23, "column": 0}, "map": {"version":3,"sources":["file:///home/hiroshi/code/personal/reproductions/next-index-source-map/app/_client.js"],"sourcesContent":["\"use client\"\n\nimport clientDep from \"./_client-dep.js\"\n\nexport default function TestClient() {\n  clientDep()\n  return <div>TestClient</div>\n}\n"],"names":[],"mappings":";;;;AAEA;AAFA;;;AAIe,SAAS;IACtB,CAAA,GAAA,wHAAA,CAAA,UAAS,AAAD;IACR,qBAAO,2UAAC;kBAAI;;;;;;AACd;KAHwB","debugId":null}}]
+}
