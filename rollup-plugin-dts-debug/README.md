@@ -3,6 +3,6 @@
 [Try it on Stackblitz](https://stackblitz.com/github/hi-ogawa/reproductions/tree/main/rollup-plugin-dts-debug?file=rollup.config.js)
 
 ```sh
-# see dist/debug-dts
+# see dist/rollup/debug-dts
 $ npm run dev
 ```
