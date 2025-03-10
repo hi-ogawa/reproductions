@@ -1,0 +1,1 @@
+- Related https://github.com/vitejs/rolldown-vite/pull/85
