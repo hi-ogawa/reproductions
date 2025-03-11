@@ -2,6 +2,7 @@
   "type": "module",
   "scripts": {},
   "devDependencies": {
+    "magic-string": "^0.30.17",
     "oxc-transform": "^0.57.0",
     "vite": "^6.2.1"
   },

@@ -44,6 +44,21 @@ Trace: __TEST__
 Trace: __TEST__
     at yyy (/dir/repro.js:4:13)
     at eval (/dir/repro.js:15:9)
+
+$ node generate-magic-string.js repro.js
+$ node --enable-source-maps dist/magic/repro.js
+Trace: __TEST__
+    at Object.yyy (/dir/repro.js:4:13)
+    at <anonymous> (/dir/repro.js:8:5)
+Trace: __TEST__
+    at yyy (/dir/repro.js:4:13)
+    at <anonymous> (/dir/repro.js:10:13)
+Trace: __TEST__
+    at yyy (/dir/repro.js:4:13)
+    at <anonymous> (/dir/repro.js:13:1)
+Trace: __TEST__
+    at yyy (/dir/repro.js:4:13)
+    at <anonymous> (/dir/repro.js:15:9)
 ```
 
 ```sh

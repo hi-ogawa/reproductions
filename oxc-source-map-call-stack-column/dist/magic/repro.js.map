@@ -1,0 +1,13 @@
+{
+  "version": 3,
+  "file": "repro.js",
+  "sources": [
+    "repro.js"
+  ],
+  "sourcesContent": [
+    "const xxx = {\n  yyy() {\n    Error.stackTraceLimit = 2;\n    console.trace(\"__TEST__\");\n  },\n};\n\nxxx.yyy();\n\n(0, xxx.yyy)();\n\nconst yyy = xxx.yyy;\nyyy();\n\n(0, yyy)();\n"
+  ],
+  "names": [],
+  "mappings": ";;AAAA,KAAK,CAAC,GAAG,CAAC,CAAC,CAAC;AACZ,CAAC,CAAC,GAAG,CAAC,CAAC,CAAC;AACR,CAAC,CAAC,CAAC,CAAC,KAAK,CAAC,eAAe,CAAC,CAAC,CAAC,CAAC;AAC7B,CAAC,CAAC,CAAC,CAAC,OAAO,CAAC,KAAK,CAAC,CAAC,QAAQ,CAAC,CAAC;AAC7B,CAAC,CAAC,CAAC;AACH,CAAC;;AAED,GAAG,CAAC,GAAG,CAAC,CAAC;;AAET,CAAC,CAAC,CAAC,CAAC,GAAG,CAAC,GAAG,CAAC,CAAC,CAAC;;AAEd,KAAK,CAAC,GAAG,CAAC,CAAC,CAAC,GAAG,CAAC,GAAG;AACnB,GAAG,CAAC,CAAC;;AAEL,CAAC,CAAC,CAAC,CAAC,GAAG,CAAC,CAAC,CAAC;",
+  "sourceRoot": "file:///home/hiroshi/code/personal/reproductions/oxc-source-map-call-stack-column/"
+}
