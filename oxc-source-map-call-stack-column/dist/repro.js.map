@@ -1,0 +1,12 @@
+{
+  "mappings": "AAAA,MAAM,MAAM,EACV,MAAM;AACJ,OAAM,kBAAkB;AACxB,SAAQ,MAAM,WAAW;AAC1B,EACF;AAED,IAAI,KAAK;AAET,CAAC,GAAG,IAAI,MAAM;AAEd,MAAM,MAAM,IAAI;AAChB,KAAK;AAEL,CAAC,GAAG,MAAM",
+  "names": [],
+  "sources": [
+    "repro.js"
+  ],
+  "sourcesContent": [
+    "const xxx = {\n  yyy() {\n    Error.stackTraceLimit = 2;\n    console.trace(\"__TEST__\")\n  }\n};\n\nxxx.yyy();\n\n(0, xxx.yyy)();\n\nconst yyy = xxx.yyy;\nyyy();\n\n(0, yyy)();\n"
+  ],
+  "version": 3,
+  "sourceRoot": "file:///home/hiroshi/code/personal/reproductions/oxc-source-map-call-stack-column/"
+}

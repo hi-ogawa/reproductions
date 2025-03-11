@@ -1,0 +1,12 @@
+{
+  "mappings": "AAAA,OAAO,SAAS,YAAY;AAC1B,OAAM,kBAAkB;AACxB,SAAQ,MAAM,WAAW;AAC1B",
+  "names": [],
+  "sources": [
+    "repro2-dep.js"
+  ],
+  "sourcesContent": [
+    "export function repro2Dep() {\n  Error.stackTraceLimit = 2;\n  console.trace(\"__TEST__\");\n}\n"
+  ],
+  "version": 3,
+  "sourceRoot": "file:///home/hiroshi/code/personal/reproductions/oxc-source-map-call-stack-column/"
+}
