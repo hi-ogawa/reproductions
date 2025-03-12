@@ -1,2 +1,7 @@
 import { runnerImport } from "vite";
-await runnerImport(process.argv[2]);
+
+async function main() {
+  await runnerImport(process.argv[2]);
+}
+
+main();
