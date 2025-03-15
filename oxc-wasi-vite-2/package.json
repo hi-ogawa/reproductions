@@ -9,8 +9,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@oxc-parser/binding-wasm32-wasi": "file:/home/hiroshi/code/others/oxc/napi/parser/npm-dir/wasm32-wasi",
-    "oxc-parser": "link:/home/hiroshi/code/others/oxc/napi/parser"
+    "@oxc-parser/binding-wasm32-wasi": "file:/home/hiroshi/code/others/oxc/napi/parser/npm-dir/wasm32-wasi/oxc-parser-binding-wasm32-wasi-0.58.1.tgz",
+    "oxc-parser": "file:/home/hiroshi/code/others/oxc/napi/parser/oxc-parser-0.58.1.tgz"
   },
   "devDependencies": {
     "vite": "^6.2.0"
