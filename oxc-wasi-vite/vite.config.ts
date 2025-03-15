@@ -15,7 +15,7 @@ export default defineConfig({
       name: "wasi-workaround",
       enforce: "pre",
       transform(code, id) {
-        // TODO: Vite bug? sometimes, the request with `?import&url` fails as Vite respond  wasm binary.
+        // TODO: Vite bug? sometimes, the request with `?import&url` fails as Vite responds wasm binary.
         //   node_modules/@oxc-parser/binding-wasm32-wasi/parser.wasm32-wasi.wasm?import&url
         // Using `new URL(...)` seems to work more consistently.
         if (
@@ -23,10 +23,14 @@ export default defineConfig({
         ) {
           return code.replace(
             `import __wasmUrl from './parser.wasm32-wasi.wasm?url'`,
-            `const __wasmUrl = new URL("./parser.wasm32-wasi.wasm", import.meta.url).href;`,
+            `const __wasmUrl = new URL("./parser.wasm32-wasi.wasm", import.meta.url);`,
           );
         }
       },
     },
   ],
+  build: {
+    // napi-rs wasi-browser.js output relies on top-level await
+    target: "es2022",
+  },
 });
