@@ -1,0 +1,22 @@
+{
+  "name": "@vitest/example-test",
+  "type": "module",
+  "private": true,
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": {
+    "test": "vitest"
+  },
+  "devDependencies": {
+    "@types/chai-as-promised": "^8.0.2",
+    "@types/node": "^22.15.9",
+    "chai-as-promised": "^8.0.1",
+    "chai-dom": "^1.12.1",
+    "typescript": "^5.8.3",
+    "vitest": "https://pkg.pr.new/vitest@7937"
+  },
+  "stackblitz": {
+    "startCommand": "vitest"
+  },
+  "packageManager": "pnpm@10.10.0+sha512.d615db246fe70f25dcfea6d8d73dee782ce23e2245e3c4f6f888249fb568149318637dca73c2c5c8ef2a4ca0d5657fb9567188bfab47f566d1ee6ce987815c39"
+}
