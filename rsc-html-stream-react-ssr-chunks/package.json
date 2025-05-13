@@ -1,0 +1,17 @@
+{
+  "name": "rsc-html-stream-react-ssr-chunks",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "TEST_STREAM=1 TEST_COUNT=2005 node repro.js"
+  },
+  "devDependencies": {
+    "@types/react": "^19.1.4",
+    "@types/react-dom": "^19.1.4",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "rsc-html-stream": "^0.0.6"
+  },
+  "packageManager": "pnpm@10.10.0+sha512.d615db246fe70f25dcfea6d8d73dee782ce23e2245e3c4f6f888249fb568149318637dca73c2c5c8ef2a4ca0d5657fb9567188bfab47f566d1ee6ce987815c39"
+}
