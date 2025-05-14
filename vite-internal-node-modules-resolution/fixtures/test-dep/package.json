@@ -1,0 +1,7 @@
+{
+  "name": "@vitejs/test-dep",
+  "type": "module",
+  "exports": {
+    "./*": "./*"
+  }
+}
