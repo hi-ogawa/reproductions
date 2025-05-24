@@ -1,10 +1,7 @@
-Trying to learn how Parcel code splits js/css from client references,
-but they always ends up in main client bundle even if not rendered?
+Simple example to demonstrate how Parcel code splits js and css assets
+via dynamic import and `"use server-entry"`.
+See various client references import patterns in `src/root.tsx`.
 
 ```js
-node generate.js
-pnpm build
-pnpm start
+pnpm dev
 ```
-
-then open http://localhost:3001/?hide
