@@ -7,7 +7,7 @@ import Link from "next/link";
 export default async function Page({ searchParams }) {
   // js split  [no]
   // css split [no]
-  const { TestClient } = await import("./client")
+  const { TestClient } = await import("./client");
 
   return (
     <div style={{ border: "1px solid blue", padding: "20px" }}>
