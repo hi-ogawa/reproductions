@@ -5,7 +5,7 @@ It looks like they don't have client references level code spliting, but only pe
 
 ## example 1
 
-No code splitting based on client render rendering.
+No code splitting based on client reference deserialization.
 
 - run `pnpm dev`
 - open http://localhost:3000/?hide=1
