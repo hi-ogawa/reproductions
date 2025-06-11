@@ -15,8 +15,8 @@ export default defineConfig({
 				}
 			},
 			renderChunk(code) {
-				console.log("[renderChunk]", [code]);
-				return code.replace("\0virtual:test-dep", "./test-dep.js");
+				console.log("[renderChunk]", { code });
+				return code.replaceAll("\0virtual:test-dep", "./test-dep.js");
 			},
 		},
 	],
