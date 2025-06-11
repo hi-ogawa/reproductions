@@ -1,0 +1,16 @@
+{
+	"name": "@example/basic",
+	"private": true,
+	"type": "module",
+	"scripts": {
+		"build": "rolldown -c",
+		"build-rollup": "rollup -c rolldown.config.js",
+		"build-vite": "vite build"
+	},
+	"devDependencies": {
+		"rolldown": "1.0.0-beta.11-commit.0a985f3",
+		"rollup": "^4.42.0",
+		"vite": "npm:rolldown-vite@6.3.18"
+	},
+	"packageManager": "pnpm@10.11.1+sha512.e519b9f7639869dc8d5c3c5dfef73b3f091094b0a006d7317353c72b124e80e1afd429732e28705ad6bfa1ee879c1fce46c128ccebd3192101f43dd67c667912"
+}
