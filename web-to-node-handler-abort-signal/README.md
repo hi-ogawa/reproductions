@@ -1,7 +1,6 @@
-https://github.com/remix-run/remix/issues/9438
-https://github.com/hi-ogawa/js-utils/pull/252
+Comparing `request.signal` abort behaviors of various "Web -> Node" handler implementations.
 
-Each tested with `pnpm test` which calls `/api/simple` and `/api/stream`.
+Run a server in one terminal and then run `pnpm test` in another terminal, which requests two endpoints `/api/simple` and `/api/stream`.
 
 ```sh
 $ SERVER_ENTRY=/src/hono pnpm dev
@@ -11,17 +10,9 @@ sending i = 0
 sending i = 1
 abort!
 cancel!
+```
 
-# mine mostly copied from hono, remix, hydrogen, hattip to bahave similar to hono
-$ SERVER_ENTRY=/src/mine pnpm dev
-[pathname] /api/simple
-[pathname] /api/stream
-sending i = 0
-sending i = 1
-abort!
-cancel!
-
-# doesn't terminate stream
+```sh
 $ SERVER_ENTRY=/src/hattip pnpm dev
 $ SERVER_ENTRY=/src/h3 pnpm dev
 [pathname] /api/simple
@@ -39,7 +30,9 @@ $ bun run src/bun.ts
 sending i = 0
 sending i = 1
 abort!
+```
 
+```sh
 $ deno run --allow-net src/deno.ts
 [pathname] /api/simple
 abort!
@@ -49,3 +42,8 @@ sending i = 1
 abort!
 cancel!
 ```
+
+## context
+
+- https://github.com/remix-run/remix/issues/9438
+- https://github.com/hi-ogawa/js-utils/pull/252
