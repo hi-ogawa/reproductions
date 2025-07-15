@@ -1,9 +1,14 @@
-Comparing `request.signal` abort behaviors of various "Web -> Node" handler implementations.
+Comparing `Request.signal` and `ReadableStream.cancel` behaviors of various "fetch handler server" implementations.
 
 Run a server in one terminal and then run `pnpm test` in another terminal, which requests two endpoints `/api/simple` and `/api/stream`.
 
 ```sh
-$ SERVER_ENTRY=/src/hono pnpm dev
+$ node --version
+v22.14.0
+```
+
+```sh
+$ node src/hono.js
 [pathname] /api/simple
 [pathname] /api/stream
 sending i = 0
@@ -13,27 +18,47 @@ cancel!
 ```
 
 ```sh
-$ SERVER_ENTRY=/src/hattip pnpm dev
-$ SERVER_ENTRY=/src/h3 pnpm dev
+$ node src/srvx.js
 [pathname] /api/simple
+abort!
+[pathname] /api/stream
+sending i = 0
+sending i = 1
+cancel!
+abort!
+```
+
+```sh
+$ node src/mjackson.js
+[pathname] /api/simple
+abort!
 [pathname] /api/stream
 sending i = 0
 sending i = 1
 sending i = 2
-...
+abort!
 ```
 
 ```sh
-$ bun run src/bun.ts
+$ bun --version
+1.2.18
+
+$ bun run src/bun.js
 [pathname] /api/simple
 [pathname] /api/stream
 sending i = 0
 sending i = 1
 abort!
+cancel!
 ```
 
 ```sh
-$ deno run --allow-net src/deno.ts
+$ deno --version
+deno 2.4.1 (stable, release, x86_64-unknown-linux-gnu)
+v8 13.7.152.6-rusty
+typescript 5.8.3
+
+$ deno run --allow-net src/deno.js
 [pathname] /api/simple
 abort!
 [pathname] /api/stream
@@ -46,4 +71,4 @@ cancel!
 ## context
 
 - https://github.com/remix-run/remix/issues/9438
-- https://github.com/hi-ogawa/js-utils/pull/252
+- https://github.com/mjackson/remix-the-web/pull/74
