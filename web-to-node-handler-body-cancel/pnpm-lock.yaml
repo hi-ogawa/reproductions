@@ -14,6 +14,9 @@ importers:
       '@mjackson/node-fetch-server':
         specifier: ^0.7.0
         version: 0.7.0
+      h3:
+        specifier: beta
+        version: 2.0.0-beta.1
       hono:
         specifier: ^4.8.5
         version: 4.8.5
@@ -29,9 +32,31 @@ packages:
   '@mjackson/node-fetch-server@0.7.0':
     resolution: {integrity: sha512-un8diyEBKU3BTVj3GzlTPA1kIjCkGdD+AMYQy31Gf9JCkfoZzwgJ79GUtHrF2BN3XPNMLpubbzPcxys+a3uZEw==}
 
+  cookie-es@2.0.0:
+    resolution: {integrity: sha512-RAj4E421UYRgqokKUmotqAwuplYw15qtdXfY+hGzgCJ/MBjCVZcSoHK/kH9kocfjRjcDME7IiDWR/1WX1TM2Pg==}
+
+  fetchdts@0.1.5:
+    resolution: {integrity: sha512-GCxyHdCCUm56atms+sIjOsAENvhebk3HAM1CfzgKCgMRjPUylpkkPmNknsaXe1gDRqM3cJbMhpkXMhCzXSE+Jg==}
+
+  h3@2.0.0-beta.1:
+    resolution: {integrity: sha512-sAhBVWbCi2AzApSLZhk41Rmiz+gjPhoAEqjJ96VH3OwyS3Co2kHVx3FZk0/OCCrzKWzYx3Pwf5WbEKDQ2plifg==}
+    engines: {node: '>=20.11.1'}
+    peerDependencies:
+      crossws: ^0.4.1
+    peerDependenciesMeta:
+      crossws:
+        optional: true
+
   hono@4.8.5:
     resolution: {integrity: sha512-Up2cQbtNz1s111qpnnECdTGqSIUIhZJMLikdKkshebQSEBcoUKq6XJayLGqSZWidiH0zfHRCJqFu062Mz5UuRA==}
     engines: {node: '>=16.9.0'}
+
+  rou3@0.7.3:
+    resolution: {integrity: sha512-KKenF/hB2iIhS1ohj226LT+/8uKCBpSMqeS4V1UPN9vad99uLoyIhrULRRB1skaB40LQHcBlSsAi3sT8MaoDDQ==}
+
+  srvx@0.8.2:
+    resolution: {integrity: sha512-anC1+7B6tryHQd4lFVSDZIfZ1QwJwqm5h1iveKwC1E40PA8nOD50hEt7+AlUoGc9jW3OdmztWBqf4yHCdCPdRQ==}
+    engines: {node: '>=20.16.0'}
 
 snapshots:
 
@@ -41,4 +66,21 @@ snapshots:
 
   '@mjackson/node-fetch-server@0.7.0': {}
 
+  cookie-es@2.0.0: {}
+
+  fetchdts@0.1.5: {}
+
+  h3@2.0.0-beta.1:
+    dependencies:
+      cookie-es: 2.0.0
+      fetchdts: 0.1.5
+      rou3: 0.7.3
+      srvx: 0.8.2
+
   hono@4.8.5: {}
+
+  rou3@0.7.3: {}
+
+  srvx@0.8.2:
+    dependencies:
+      cookie-es: 2.0.0

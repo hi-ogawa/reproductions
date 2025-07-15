@@ -28,6 +28,15 @@ $ node src/server-remix.js
 [start:out]
 ```
 
+- `h3`
+
+```sh
+$ node src/server-h3.js
+[start:in]
+[enqueue:ok]
+[start:out]
+```
+
 ## context
 
 - https://github.com/wakujs/waku/issues/1521
