@@ -6,6 +6,7 @@ function main() {
   let server = http.createServer(createRequestListener(handler));
 
   server.listen(3000);
+  console.log("Server http://localhost:3000");
 }
 
 main();

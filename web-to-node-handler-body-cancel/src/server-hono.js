@@ -9,6 +9,7 @@ function main() {
   });
 
   serve({ fetch: app.fetch });
+  console.log("Server http://localhost:3000");
 }
 
 main();
