@@ -1,0 +1,28 @@
+{
+  "name": "waku-nitro",
+  "version": "0.0.0",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "waku dev",
+    "build": "waku build",
+    "start": "waku start"
+  },
+  "dependencies": {
+    "@hiogawa/vite-plugin-nitro": "^0.0.1",
+    "react": "19.1.1",
+    "react-dom": "19.1.1",
+    "react-server-dom-webpack": "19.1.1",
+    "waku": "https://pkg.pr.new/wakujs/waku@a28eb74"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "4.1.11",
+    "@types/react": "19.1.9",
+    "@types/react-dom": "19.1.7",
+    "@vercel/og": "^0.8.5",
+    "postcss": "8.5.6",
+    "tailwindcss": "4.1.11",
+    "typescript": "5.9.2"
+  },
+  "packageManager": "pnpm@10.14.0+sha512.ad27a79641b49c3e481a16a805baa71817a04bbe06a38d17e60e2eaee83f6a146c6a688125f5792e48dd5ba30e7da52a5cda4c3992b9ccf333f9ce223af84748"
+}
