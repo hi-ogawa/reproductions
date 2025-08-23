@@ -31,7 +31,9 @@ function App() {
       </div>
       <div className="p-4">
         <form action={updateServerCounter.bind(null, 1)}>
-          <button className="btn">Server Counter: {getServerCounter()}</button>
+          <button className="btn btn bg-[#cfc] hover:bg-[#cfca]">
+            Server Counter: {getServerCounter()}
+          </button>
         </form>
       </div>
       <ul className="text-gray-500 text-left">

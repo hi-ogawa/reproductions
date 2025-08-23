@@ -23,5 +23,5 @@ export default defineConfig({
     // otherwise build style breaks with
     // > [plugin unocss:global:build:generate] [unocss] failed to find vite:css-post plugin. It might be an internal bug of UnoCSS
     outDir: "dist/rsc",
-  }
+  },
 });
