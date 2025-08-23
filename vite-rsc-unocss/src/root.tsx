@@ -21,7 +21,10 @@ export function Root() {
 function App() {
   return (
     <div className="max-w-2xl mx-auto p-8 text-center">
-      <div className="i-logos-react w-24 h-24 transform transition-transform duration-700 hover:rotate-180"></div>
+      <div className="flex justify-center gap-12">
+        <div className="i-logos-react size-30 transform transition-transform duration-700 hover:rotate-180"></div>
+        <div className="i-logos-unocss size-30 transform transition-transform duration-700 hover:rotate-180"></div>
+      </div>
       <h1 className="text-5xl leading-tight">Vite + RSC + UnoCSS</h1>
       <div className="p-4">
         <ClientCounter />
