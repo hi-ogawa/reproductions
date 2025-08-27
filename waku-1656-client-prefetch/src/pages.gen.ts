@@ -7,11 +7,14 @@ import type { PathsForPages, GetConfigResponse } from 'waku/router';
 import type { getConfig as File_About_getConfig } from './pages/about';
 // prettier-ignore
 import type { getConfig as File_Index_getConfig } from './pages/index';
+// prettier-ignore
+import type { getConfig as File_WildcardKey_getConfig } from './pages/wildcard/[key]';
 
 // prettier-ignore
 type Page =
 | ({ path: '/about' } & GetConfigResponse<typeof File_About_getConfig>)
-| ({ path: '/' } & GetConfigResponse<typeof File_Index_getConfig>);
+| ({ path: '/' } & GetConfigResponse<typeof File_Index_getConfig>)
+| ({ path: '/wildcard/[key]' } & GetConfigResponse<typeof File_WildcardKey_getConfig>);
 
 // prettier-ignore
 declare module 'waku/router' {

@@ -12,5 +12,9 @@
 - open http://localhost:8080/
 - click "About" link
 - see waterfall
-  - `/RSC/R/about.txt?query=` and `/assets/rsc2-54c10a12c.js` at the same time
-  - `/assets/rsc1-77d2239aa.js` comes later
+  - `/RSC/R/about.txt?query=` and `/assets/rsc-aaa.js` at the same time
+  - `/assets/rsc-bbb.js` comes later
+- click "Wildcard" link
+- see waterfall
+  - `/RSC/R/wildcard/x.txt?query=`
+  - `/assets/rsc-ccc.js`

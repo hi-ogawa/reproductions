@@ -13,6 +13,9 @@ export default async function RootLayout({ children }: RootLayoutProps) {
         <li>
           <Link to="/about">About</Link>
         </li>
+        <li>
+          <Link to="/wildcard/x">Wildcard</Link>
+        </li>
       </ul>
       {children}
     </div>
