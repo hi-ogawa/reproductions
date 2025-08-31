@@ -1,10 +1,8 @@
 // https://www.prisma.io/docs/orm/overview/databases/sqlite
 generator client {
-  provider        = "prisma-client-js"
-  // need to use a valid packaage name so that Vite can externalize it.
-  // https://github.com/vitejs/vite/issues/19036
-  // https://github.com/remix-run/react-router/issues/12610#issuecomment-2773018176
-  output = "../node_modules/prisma-generated"
+  // https://www.prisma.io/docs/orm/prisma-schema/overview/generators#prisma-client-preview
+  provider        = "prisma-client"
+  output = "../node_modules/.prisma"
 }
 
 datasource db {
