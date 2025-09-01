@@ -1,8 +1,10 @@
 # Vite + RSC + Cloudflare D1
 
-- https://orm.drizzle.team/docs/connect-cloudflare-d1
+- https://vite-rsc-d1-demo.hiro18181.workers.dev/
 
 # example
+
+- Local
 
 ```sh
 ### Generate migration
@@ -15,7 +17,7 @@ counters 2 columns 0 indexes 0 fks
 [✓] Your SQL migration file ➜ drizzle/0000_tricky_newton_destine.sql 🚀
 
 ### Apply migration
-$ pnpm wrangler d1 migrations apply demo-db --local
+$ pnpm wrangler d1 migrations apply vite-rsc-d1-demo-db --local
 
  ⛅️ wrangler 4.33.1
 ───────────────────
@@ -30,4 +32,13 @@ Migrations to be applied:
 $ pnpm dev
 $ pnpm build
 $ pnpm preview
+```
+
+- Remote
+
+```sh
+$ pnpm wrangler d1 create vite-rsc-d1-demo-db
+$ pnpm wrangler d1 migrations apply vite-rsc-d1-demo-db --remote
+$ pnpm build
+$ pnpm wrangler deploy
 ```

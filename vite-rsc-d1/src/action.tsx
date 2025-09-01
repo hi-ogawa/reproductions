@@ -1,5 +1,3 @@
-"use server";
-
 import { eq, sql } from "drizzle-orm";
 import { db } from "./db";
 import { counters } from "./db/schema";
