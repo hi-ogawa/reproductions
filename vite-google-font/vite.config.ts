@@ -18,6 +18,7 @@ export default defineConfig({
   environments: {
     rsc: {
       build: {
+        cssMinify: false,
         rollupOptions: {
           input: {
             index: "./src/framework/entry.rsc.tsx",

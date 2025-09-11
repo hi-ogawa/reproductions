@@ -1,6 +1,7 @@
 import type { JSX } from "react";
 import type { Plugin } from "vite";
 
+// https://github.com/vercel/next.js/blob/bdb12360376a6996d84cac06b7c3a2671232973a/crates/next-core/src/next_font/google/mod.rs#L66
 const USER_AGENT = `Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36`;
 
 export function googleFontPlugin(fontPluignOptions: {
@@ -94,6 +95,7 @@ type FontMeta = {
   type?: string;
 };
 
+// https://github.com/vercel/next.js/blob/bdb12360376a6996d84cac06b7c3a2671232973a/crates/next-core/src/next_font/google/mod.rs#L526
 export function analyzeGoogleFontCss(css: string) {
   const metas: FontMeta[] = [];
   let subset: string | undefined;
