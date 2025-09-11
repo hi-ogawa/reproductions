@@ -8,42 +8,12 @@ export function googleFontPlugin(fontPluignOptions: {
   fonts: string[];
   subset?: string[];
 }): Plugin {
-  async function fetchFontCss(url: string) {
-    const res = await fetch(url, {
-      headers: {
-        "User-Agent": USER_AGENT,
-      },
-    });
-    if (!res.ok) {
-      throw new Error(
-        `Failed to fetch font css: ${url} - ${res.status} ${res.statusText}`,
-      );
-    }
-    const css = await res.text();
-    const metas = analyzeGoogleFontCss(css);
-    const links: JSX.IntrinsicElements["link"][] = [];
-    if (fontPluignOptions.subset) {
-      for (const meta of metas) {
-        if (meta.subset && fontPluignOptions.subset.includes(meta.subset)) {
-          links.push({
-            rel: "preload",
-            as: "font",
-            crossOrigin: "",
-            href: meta.url,
-            ...(meta.type && { type: `font/${meta.type}` }),
-          });
-        }
-      }
-    }
-    return {
-      css,
-      metas,
-      links,
-    };
-  }
+  let resultCss: string;
 
   async function handleCssUrls(urls: string[]) {
-    const results = await Promise.all(urls.map((url) => fetchFontCss(url)));
+    const results = await Promise.all(
+      urls.map((url) => fetchFontCss(url, fontPluignOptions.subset)),
+    );
     const css = results.map((r) => r.css).join("\n");
     const links = results.flatMap((r) => r.links);
     return {
@@ -51,8 +21,6 @@ export function googleFontPlugin(fontPluignOptions: {
       links,
     };
   }
-
-  let resultCss: string;
 
   return {
     name: "font:google",
@@ -86,6 +54,40 @@ function createFontFn(
   const h = React.createElement;
   return function Font() {
     return h(React.Fragment, null, ...links.map((props) => h("link", props)));
+  };
+}
+
+async function fetchFontCss(url: string, preloadSubsets?: string[]) {
+  const res = await fetch(url, {
+    headers: {
+      "User-Agent": USER_AGENT,
+    },
+  });
+  if (!res.ok) {
+    throw new Error(
+      `Failed to fetch font css: ${url} - ${res.status} ${res.statusText}`,
+    );
+  }
+  const css = await res.text();
+  const metas = analyzeGoogleFontCss(css);
+  const links: JSX.IntrinsicElements["link"][] = [];
+  if (preloadSubsets) {
+    for (const meta of metas) {
+      if (meta.subset && preloadSubsets.includes(meta.subset)) {
+        links.push({
+          rel: "preload",
+          as: "font",
+          crossOrigin: "",
+          href: meta.url,
+          ...(meta.type && { type: `font/${meta.type}` }),
+        });
+      }
+    }
+  }
+  return {
+    css,
+    metas,
+    links,
   };
 }
 
