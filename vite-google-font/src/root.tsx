@@ -4,6 +4,9 @@ import { getServerCounter, updateServerCounter } from './action.tsx'
 import reactLogo from './assets/react.svg'
 import { ClientCounter } from './client.tsx'
 
+// @ts-ignore
+import Font from "virtual:font";
+
 export function Root(props: { url: URL }) {
   return (
     <html lang="en">
@@ -12,6 +15,7 @@ export function Root(props: { url: URL }) {
         <link rel="icon" type="image/svg+xml" href="/vite.svg" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Vite + RSC</title>
+        <Font />
       </head>
       <body>
         <App {...props} />
