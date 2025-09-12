@@ -31,6 +31,9 @@ export function Root() {
 
 ## Note
 
+> [!NOTE]
+> This is fixed by https://github.com/vitejs/vite-plugin-react/pull/841 and not necessary anymore.
+
 The font flashes twice during dev by going through "with font -> without font -> with font".
 This is likely due to RSC plugin's server css injection and immediate removal on browser, which causes re-fetching a same font file momentarily.
 
