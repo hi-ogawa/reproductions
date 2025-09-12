@@ -7,8 +7,8 @@ Self-hosted font with preloading based on https://fontsource.org/docs/getting-st
 - `src/root.tsx`
 
 ```tsx
-import "@fontsource-variable/inter";
-import fontAssetUrl from "@fontsource-variable/inter/files/inter-latin-wght-normal.woff2?url";
+import "@fontsource-variable/orbitron";
+import fontUrl from "@fontsource-variable/orbitron/files/orbitron-latin-wght-normal.woff2";
 
 export function Root() {
   return (
@@ -18,7 +18,7 @@ export function Root() {
         <link
           rel="preload"
           as="font"
-          href={fontAssetUrl}
+          href={fontUrl}
           type="font/woff2"
           crossOrigin=""
         />

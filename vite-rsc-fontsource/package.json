@@ -14,12 +14,12 @@
     "react-dom": "^19.1.1"
   },
   "devDependencies": {
-    "@fontsource-variable/inter": "^5.2.6",
+    "@fontsource-variable/orbitron": "^5.2.7",
     "@types/node": "^24.3.1",
     "@types/react": "^19.1.12",
     "@types/react-dom": "^19.1.9",
     "@vitejs/plugin-react": "latest",
-    "@vitejs/plugin-rsc": "latest",
+    "@vitejs/plugin-rsc": "https://pkg.pr.new/@vitejs/plugin-rsc@2a49b23",
     "rsc-html-stream": "^0.0.7",
     "vite": "^7.1.4"
   },

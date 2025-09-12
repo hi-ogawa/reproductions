@@ -15,9 +15,9 @@ importers:
         specifier: ^19.1.1
         version: 19.1.1(react@19.1.1)
     devDependencies:
-      '@fontsource-variable/inter':
-        specifier: ^5.2.6
-        version: 5.2.6
+      '@fontsource-variable/orbitron':
+        specifier: ^5.2.7
+        version: 5.2.7
       '@types/node':
         specifier: ^24.3.1
         version: 24.3.1
@@ -31,8 +31,8 @@ importers:
         specifier: latest
         version: 5.0.2(vite@7.1.5(@types/node@24.3.1))
       '@vitejs/plugin-rsc':
-        specifier: latest
-        version: 0.4.29(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(vite@7.1.5(@types/node@24.3.1))
+        specifier: https://pkg.pr.new/@vitejs/plugin-rsc@2a49b23
+        version: https://pkg.pr.new/@vitejs/plugin-rsc@2a49b23(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(vite@7.1.5(@types/node@24.3.1))
       rsc-html-stream:
         specifier: ^0.0.7
         version: 0.0.7
@@ -281,8 +281,8 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@fontsource-variable/inter@5.2.6':
-    resolution: {integrity: sha512-jks/bficUPQ9nn7GvXvHtlQIPudW7Wx8CrlZoY8bhxgeobNxlQan8DclUJuYF2loYRrGpfrhCIZZspXYysiVGg==}
+  '@fontsource-variable/orbitron@5.2.7':
+    resolution: {integrity: sha512-p39zcTeJzQY4X/yl5DBvhIpEm0Nocawra5yAKiH1RtvdD38am4Cn4rCiJ3w4CewryjKOsUCLHUvgHFzE3CwEZg==}
 
   '@jridgewell/gen-mapping@0.3.13':
     resolution: {integrity: sha512-2kkt/7niJ6MgEPxF0bYdQ6etZaA+fQvDcLKckhy1yIQOzaoKjBBjSj63/aLVjYE3qhRt5dvM+uUyfCg6UKCBbA==}
@@ -443,8 +443,9 @@ packages:
     peerDependencies:
       vite: ^4.2.0 || ^5.0.0 || ^6.0.0 || ^7.0.0
 
-  '@vitejs/plugin-rsc@0.4.29':
-    resolution: {integrity: sha512-sNR86RuKfk0KQ8H3Ustmp1GC9ABmWyJo736WqCtaipH8mfnxDO2c9gvm+q24yoESerOlNI/zHkCGX8vGm00NCw==}
+  '@vitejs/plugin-rsc@https://pkg.pr.new/@vitejs/plugin-rsc@2a49b23':
+    resolution: {tarball: https://pkg.pr.new/@vitejs/plugin-rsc@2a49b23}
+    version: 0.4.29
     peerDependencies:
       react: '*'
       react-dom: '*'
@@ -850,7 +851,7 @@ snapshots:
   '@esbuild/win32-x64@0.25.9':
     optional: true
 
-  '@fontsource-variable/inter@5.2.6': {}
+  '@fontsource-variable/orbitron@5.2.7': {}
 
   '@jridgewell/gen-mapping@0.3.13':
     dependencies:
@@ -985,7 +986,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@vitejs/plugin-rsc@0.4.29(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(vite@7.1.5(@types/node@24.3.1))':
+  '@vitejs/plugin-rsc@https://pkg.pr.new/@vitejs/plugin-rsc@2a49b23(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(vite@7.1.5(@types/node@24.3.1))':
     dependencies:
       '@remix-run/node-fetch-server': 0.8.0
       es-module-lexer: 1.7.0
