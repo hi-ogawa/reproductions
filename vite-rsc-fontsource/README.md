@@ -42,7 +42,7 @@ This can be worked around by adding `cache-control` to avoid immediate font re-f
 export default defineConfig({
   plugins: [
     {
-      name: 'fix-dev-font-flush',
+      name: 'fix-dev-font-double-flash',
       configureServer(server) {
         server.middlewares.use((req, res, next) => {
           const url = new URL(req.url || "", "http://localhost");
