@@ -29,6 +29,32 @@ export function Root() {
 }
 ```
 
+Additionally you can use [fontaine](https://github.com/unjs/fontaine/) to generate metric-based fallback font.
+
+- `vite.config.ts`
+
+```tsx
+import { FontaineTransform } from "fontaine";
+
+export default defineConfig({
+  plugins: [
+    rsc(),
+    react(),
+    FontaineTransform.vite({
+      fallbacks: [
+        "BlinkMacSystemFont",
+        "Segoe UI",
+        "Helvetica Neue",
+        "Arial",
+        "Roboto",
+        "Noto Sans",
+      ],
+    }),
+  ]
+  ...
+})
+```
+
 ## Note
 
 > [!NOTE]
