@@ -1,0 +1,19 @@
+{
+	"name": "vite-rsc-851-cloudflare-entry-virtual",
+	"private": true,
+	"version": "0.0.0",
+	"type": "module",
+	"scripts": {
+		"dev": "vite",
+		"build": "vite build",
+		"lint": "eslint .",
+		"preview": "pnpm run build && vite preview",
+		"deploy": "pnpm run build && wrangler deploy"
+	},
+	"devDependencies": {
+		"@cloudflare/vite-plugin": "^1.13.1",
+		"vite": "^7.1.5",
+		"wrangler": "^4.37.0"
+	},
+	"packageManager": "pnpm@10.16.1+sha512.0e155aa2629db8672b49e8475da6226aa4bdea85fdcdfdc15350874946d4f3c91faaf64cbdc4a5d1ab8002f473d5c3fcedcd197989cf0390f9badd3c04678706"
+}
