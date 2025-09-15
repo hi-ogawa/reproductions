@@ -55,6 +55,14 @@ export default defineConfig({
 })
 ```
 
+The following screencast shows how the fallback font looks by simulating slow loading `.woff2` file (see `simulate-fallback` plugin in `vite.config.ts`).
+
+```sh
+TEST_FALLBACK=1 pnpm dev
+```
+
+https://github.com/user-attachments/assets/ea7f629b-0c54-4d5c-a27a-addd58c16eca
+
 ## Note
 
 > [!NOTE]
