@@ -25,15 +25,16 @@ import {
   cacheLife,
   revalidateTag,
 } from "vite-plugin-react-use-cache/runtime";
+import { unstable_rerenderRoute } from 'waku/router/server';
 
 async function CachedComponent() {
   "use cache";
 
-  cacheLife("seconds");
+  cacheLife("minutes");
   cacheTag("home-page");
 
-  console.log("[Rendering CachedComponent... (1sec)]");
-  await new Promise((resolve) => setTimeout(resolve, 1000));
+  console.log("[Rendering CachedComponent... (0.5sec)]");
+  await new Promise((resolve) => setTimeout(resolve, 500));
 
   return (
     <div>
@@ -41,6 +42,7 @@ async function CachedComponent() {
       <form
         action={async () => {
           "use server";
+          unstable_rerenderRoute('/');
           await revalidateTag("home-page");
         }}
       >

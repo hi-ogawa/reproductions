@@ -1,0 +1,2 @@
+overrides:
+  "@vitejs/plugin-rsc": "$@vitejs/plugin-rsc"
