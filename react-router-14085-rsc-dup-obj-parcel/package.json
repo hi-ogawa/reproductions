@@ -1,0 +1,33 @@
+{
+  "name": "@vitejs/plugin-rsc-examples-starter",
+  "version": "0.0.0",
+  "private": true,
+  "license": "MIT",
+  "scripts": {
+    "dev": "parcel --no-autoinstall --no-cache",
+    "build": "parcel build --no-autoinstall",
+    "start": "NODE_ENV=production node dist/server/entry.rsc.js"
+  },
+  "dependencies": {
+    "@parcel/runtime-rsc": "^2.16.0",
+    "@remix-run/node-fetch-server": "^0.10.0",
+    "@types/node": "^24.7.0",
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "parcel": "^2.16.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "react-server-dom-parcel": "^19.2.0"
+  },
+  "packageManager": "pnpm@10.18.0+sha512.e804f889f1cecc40d572db084eec3e4881739f8dec69c0ff10d2d1beff9a4e309383ba27b5b750059d7f4c149535b6cd0d2cb1ed3aeb739239a4284a68f40cfa",
+  "targets": {
+    "react-server": {
+      "context": "react-server",
+      "source": "src/entry.rsc.tsx",
+      "scopeHoist": false,
+      "includeNodeModules": {
+        "@remix-run/node-fetch-server": false
+      }
+    }
+  }
+}
