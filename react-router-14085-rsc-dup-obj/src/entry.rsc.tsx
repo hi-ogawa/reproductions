@@ -17,7 +17,7 @@ async function test1() {
   // serialize same `obj` reference as top-level object and as prop
   const obj = {};
   function Test(_props: { obj: {} }) {
-    return null;
+    return "test";
   }
   const original = {
     obj: obj,
@@ -34,7 +34,7 @@ async function test1() {
 async function test2() {
   const obj = {};
   function Test(_props: { obj: {} }) {
-    return null;
+    return "test";
   }
   const original = {
     node: <Test obj={obj} />,
