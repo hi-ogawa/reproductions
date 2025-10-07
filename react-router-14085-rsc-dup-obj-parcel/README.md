@@ -6,7 +6,7 @@
 
 ## Vite
 
-See [./react-router-14085-rsc-dup-obj](./react-router-14085-rsc-dup-obj)
+See [../react-router-14085-rsc-dup-obj](../react-router-14085-rsc-dup-obj)
 
 ## Parcel
 

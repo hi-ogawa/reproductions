@@ -21,4 +21,4 @@ curl http://localhost:4173/test2 # works
 
 ## Parcel
 
-See [./react-router-14085-rsc-dup-obj-parcel](./react-router-14085-rsc-dup-obj-parcel)
+See [../react-router-14085-rsc-dup-obj-parcel](../react-router-14085-rsc-dup-obj-parcel)
