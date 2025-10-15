@@ -75,7 +75,45 @@ error   [browser] Uncaught (in promise) Error: this is test unhandledrejection (
 
 ## Next.js
 
-Enabled by default
+See [../vite-20916-demo-next](../vite-20916-demo-next)
+
+Disabled by default. Enable it by `experimental.browserDebugInfoInTerminal` https://github.com/vercel/next.js/pull/82701. 
 
 ```sh
+> next dev --turbopack
+
+   ▲ Next.js 16.0.0-canary.5 (Turbopack)
+   - Local:        http://localhost:3000
+   - Network:      http://10.186.205.251:3000
+   - Experiments (use with caution):
+     ✓ browserDebugInfoInTerminal
+
+ ✓ Starting...
+ ✓ Ready in 274ms
+ ○ Compiling / ...
+ ✓ Compiled / in 561ms
+ GET / 200 in 413ms
+[browser] Download the React DevTools for a better development experience: https://react.dev/link/react-devtools
+[browser] Uncaught Error: this is test error
+    at testError (app/client.jsx:21:9)
+    at onClick (app/client.jsx:7:9)
+    at button (<anonymous>)
+    at TestClient (app/client.jsx:6:7)
+    at Home (app/page.jsx:7:7)
+  19 |
+  20 | function testError() {
+> 21 |   throw new Error('this is test error')
+     |         ^
+  22 | }
+  23 |
+  24 |
+[browser] ⨯ unhandledRejection: Error: this is test unhandledrejection
+    at testUnhandledRejection (app/client.jsx:26:9)
+    at onClick (app/client.jsx:12:9)
+  24 |
+  25 | async function testUnhandledRejection() {
+> 26 |   throw new Error('this is test unhandledrejection')
+     |         ^
+  27 | }
+  28 |
 ```
