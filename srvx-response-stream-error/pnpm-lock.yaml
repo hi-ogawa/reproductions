@@ -1,0 +1,24 @@
+lockfileVersion: '9.0'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
+importers:
+
+  .:
+    devDependencies:
+      srvx:
+        specifier: npm:srvx-nightly
+        version: srvx-nightly@0.9.0-20251021-000254-9eda551
+
+packages:
+
+  srvx-nightly@0.9.0-20251021-000254-9eda551:
+    resolution: {integrity: sha512-n70o7kHJM9/jWnwBNz+zetdCXhVGgt2cLpjGEbZ0ACcB77NDm250lO8/vwU6It3mlbcE1wm8IjN0vtvr1NDm8g==}
+    engines: {node: '>=20.16.0'}
+    hasBin: true
+
+snapshots:
+
+  srvx-nightly@0.9.0-20251021-000254-9eda551: {}
