@@ -1,10 +1,8 @@
 import { serve } from "srvx";
 
 serve({
-  // https://srvx.h3.dev/guide/options
   port: 3000,
   fetch(req) {
-    req.url.includes("error")
     const stream = new ReadableStream({
       async start(controller) {
         await new Promise((r) => setTimeout(r, 100));
