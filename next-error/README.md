@@ -35,6 +35,16 @@ export type ActionFlightResponse = {
 export type ActionResult = Promise<any>
 ```
 
+`ActionResult` is a promise, but the action result is always awaited on server side to allow handling
+http status properly. https://github.com/vercel/next.js/blob/28a14da5010ad3147a06abbabc99a119d009f733/packages/next/src/server/app-render/action-handler.ts#L1124-L1125
+
+### Server function error (progressive enhancement)
+
+- "Disable Javascript" in browser devtools
+- go to http://localhost:3000/test-action and click "Test error"
+
+This case is not handled at all and "500 Internal Server Error"
+
 ### Network error
 
-TODO
+TODO: does it full reload on failure?
