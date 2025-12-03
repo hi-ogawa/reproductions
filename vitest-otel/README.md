@@ -11,6 +11,8 @@ docker compose up
 
 # Run tests (exports to Jaeger via OTLP HTTP)
 pnpm test
+
+# Open http://localhost:16686
 ```
 
 ## Debug Mode
