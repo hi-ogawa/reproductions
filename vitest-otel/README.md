@@ -1,8 +1,8 @@
-# Vitest OpenTelemetry Setup
+# Vitest OpenTelemetry Example
 
 Local OpenTelemetry setup for Vitest with Jaeger tracing.
 
-## Quick Start
+## How to run
 
 ```sh
 # Start Jaeger service to receive otlp traces over http
@@ -13,13 +13,6 @@ docker compose up
 pnpm test
 
 # Open http://localhost:16686
-```
-
-## Debug Mode
-
-```sh
-# Dump traces to console without Jaeger
-OTEL_TRACES_EXPORTER=console pnpm test
 ```
 
 ## References
