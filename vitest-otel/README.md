@@ -5,8 +5,7 @@ Local OpenTelemetry setup for Vitest with Jaeger tracing.
 ## Quick Start
 
 ```sh
-# Start Jaeger
-# Server to receive otlp traces over http
+# Start Jaeger service to receive otlp traces over http
 # and serve Web UI at http://localhost:16686
 docker compose up
 
