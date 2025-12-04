@@ -15,6 +15,11 @@ pnpm test
 # Open http://localhost:16686
 ```
 
+```sh
+# Browser mode test runtime traces are not implemented yet
+pnpm test --browser.enabled=true
+```
+
 ## References
 
 - [Vitest OpenTelemetry Guide](https://vitest.dev/guide/open-telemetry.html)
