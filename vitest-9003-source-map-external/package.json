@@ -5,11 +5,13 @@
     "test": "vitest"
   },
   "devDependencies": {
+    "test-esm-external": "file:./fixtures/esm-external",
     "@preact/preset-vite": "^2.10.3",
     "@vitest/browser-playwright": "^4.0.18",
     "happy-dom": "^20.5.0",
     "playwright": "^1.58.1",
     "typescript": "^5.9.3",
+    "vite": "^7.3.1",
     "vitest": "beta"
   },
   "dependencies": {
