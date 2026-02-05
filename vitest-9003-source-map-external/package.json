@@ -5,15 +5,15 @@
     "test": "vitest"
   },
   "devDependencies": {
-    "@preact/preset-vite": "^2.10.2",
-    "@vitest/browser-playwright": "^4.0.14",
-    "happy-dom": "^20.0.11",
-    "playwright": "^1.57.0",
+    "@preact/preset-vite": "^2.10.3",
+    "@vitest/browser-playwright": "^4.0.18",
+    "happy-dom": "^20.5.0",
+    "playwright": "^1.58.1",
     "typescript": "^5.9.3",
-    "vitest": "^4.0.15"
+    "vitest": "beta"
   },
   "dependencies": {
-    "preact": "^10.28.0"
+    "preact": "^10.28.3"
   },
   "packageManager": "pnpm@10.24.0+sha512.01ff8ae71b4419903b65c60fb2dc9d34cf8bb6e06d03bde112ef38f7a34d6904c424ba66bea5cdcf12890230bf39f9580473140ed9c946fef328b6e5238a345a"
 }
