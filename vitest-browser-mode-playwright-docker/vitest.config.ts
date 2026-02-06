@@ -9,6 +9,7 @@ export default defineConfig({
         connectOptions: process.env.REMOTE_PW
           ? {
               wsEndpoint: process.env.REMOTE_PW,
+              exposeNetwork: '<loopback>',
             }
           : undefined,
       }),
