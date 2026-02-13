@@ -1,0 +1,5 @@
+// not ok
+// @import "./nested/test1.scss";
+
+// ok: since this triggers Vite's custom importer
+@import "/src/repro/nested/test1.scss";
