@@ -15,7 +15,7 @@ async function main() {
 
   await context.tracing.group("Test group", {
     location: {
-      file: join(import.meta.dirname, "dummy.js"),
+      file: join(import.meta.dirname, "repro-dummy.js"),
       line: 1,
       column: 1,
     },

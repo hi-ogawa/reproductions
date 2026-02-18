@@ -1,23 +1,22 @@
 # Playwright tracing `group` location sources missing
 
-- generate `trace.zip`
+- Run repro.js to generate trace.zip
 
 ```sh
-node src/repro.js
+node repro.js
 ```
 
-- local `show-trace` shows `dummy.js` source for `tracing.group` API
+- local `show-trace` shows `repro-dummy.js` source for `tracing.group` API
 
 ```
 pnpm playwright show-trace trace.zip
 ```
 
-<img width="898" height="691" alt="image" src="https://github.com/user-attachments/assets/b19ec644-26c6-4aa0-9ec4-f6e11bc63625" />
+<img width="1027" height="751" alt="Image" src="https://github.com/user-attachments/assets/bf75e0bf-75ac-4eca-8b0d-fe522f5a62c7" />
 
-- previwing the same `trace.zip` on https://trace.playwright.dev/ doesn't show `dummy.js` source.
+- previwing the same `trace.zip` on https://trace.playwright.dev/ doesn't show `repro-dummy.js` source.
 
-<img width="898" alt="image" src="https://github.com/user-attachments/assets/6a231144-f87e-4a02-9598-3b545053b415" />
-
+<img width="1015" height="720" alt="Image" src="https://github.com/user-attachments/assets/255ea62b-613e-487b-bf9a-5c373d8ac8eb" />
 
 ## References
 
