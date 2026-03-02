@@ -1,0 +1,11 @@
+{
+  "name": "template-jsdom",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node repro.js"
+  },
+  "devDependencies": {
+    "jsdom": "latest"
+  }
+}
