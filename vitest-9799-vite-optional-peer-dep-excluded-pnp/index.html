@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+  <head>
+    <title>vitest-9799 repro</title>
+  </head>
+  <body>
+    <h1>Optional Peer Dep + Excluded Dep (PnP)</h1>
+    <div id="hello"></div>
+    <div id="peer-error"></div>
+    <script type="module">
+      import { hello, callPeerDep } from "my-dep";
+      document.getElementById("hello").textContent = hello();
+      callPeerDep().catch((e) => {
+        document.getElementById("peer-error").textContent = e.message.includes(
+          'Could not resolve "foobar"',
+        )
+          ? "[success] got expected error"
+          : `[failed] ${e.message}`;
+      });
+    </script>
+  </body>
+</html>
