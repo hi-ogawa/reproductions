@@ -1,0 +1,11 @@
+{
+  "name": "vitest-10036-playwright-webkit-fill-shadow-dom",
+  "private": true,
+  "license": "MIT",
+  "type": "module",
+  "scripts": {},
+  "devDependencies": {
+    "playwright": "1.59.0"
+  },
+  "packageManager": "pnpm@10.31.0"
+}
