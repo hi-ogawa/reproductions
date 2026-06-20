@@ -1,0 +1,16 @@
+// https://www.prisma.io/docs/orm/overview/databases/sqlite
+generator client {
+  // https://www.prisma.io/docs/orm/prisma-schema/overview/generators#prisma-client-preview
+  provider        = "prisma-client"
+  output = "../node_modules/.prisma"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:dev.db"
+}
+
+model Counter {
+  id    Int @id @default(1)
+  value Int @default(0)
+}
