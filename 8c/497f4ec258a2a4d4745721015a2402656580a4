@@ -1,0 +1,23 @@
+next-inline-use-server-shared-module/.gitignore
+  s_2e44eb2955add1::t_02444cfd6afc48 1-41
+next-inline-use-server-shared-module/next.config.mjs
+  s_2e44eb2955add1::t_5a1688c6e7692a 1-4
+next-inline-use-server-shared-module/pnpm-lock.yaml
+  s_2e44eb2955add1::t_9674e821ebc23f 1-554
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "8c497f4ec258a2a4d4745721015a2402656580a4",
+  "prompts": {},
+  "sessions": {
+    "s_2e44eb2955add1": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_07de6ff2bffeyt0aFn228Ybvau",
+        "model": "claude-opus-4-8"
+      },
+      "human_author": "Hiroshi Ogawa <4232207+hi-ogawa@users.noreply.github.com>"
+    }
+  }
+}
