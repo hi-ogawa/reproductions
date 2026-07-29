@@ -1,0 +1,57 @@
+next-rsc-action-argument/.gitignore
+  s_ddc8dd7f6ec95c::t_ae76ac9670df09 1-3
+next-rsc-action-argument/README.md
+  s_ddc8dd7f6ec95c::t_8bef891343bfe4 1-87
+next-rsc-action-argument/app/a/actions.ts
+  s_ddc8dd7f6ec95c::t_5bb6c740f2f194 1-5
+next-rsc-action-argument/app/a/client.tsx
+  s_ddc8dd7f6ec95c::t_ac7ffbe94673d3 1-8
+next-rsc-action-argument/app/a/page.tsx
+  s_ddc8dd7f6ec95c::t_f522f9d48770ee 1-10
+next-rsc-action-argument/app/b/actions.ts
+  s_ddc8dd7f6ec95c::t_9523dc4e1c7212 1-7
+next-rsc-action-argument/app/b/client.tsx
+  s_ddc8dd7f6ec95c::t_903a0b87361f17 1-46
+next-rsc-action-argument/app/b/page.tsx
+  s_ddc8dd7f6ec95c::t_4d8b1602e805d3 1-10
+next-rsc-action-argument/app/nested/client.tsx
+  s_ddc8dd7f6ec95c::t_4efb0f3cf131f1 1-24
+next-rsc-action-argument/app/nested/inner-action.ts
+  s_ddc8dd7f6ec95c::t_9d92f500d522b7 1-5
+next-rsc-action-argument/app/nested/outer-action.ts
+  s_ddc8dd7f6ec95c::t_829c87038696e9 1-5
+next-rsc-action-argument/app/nested/page.tsx
+  s_ddc8dd7f6ec95c::t_07e0fe5a67fe17 1-10
+next-rsc-action-argument/app/saved-action.ts
+  s_ddc8dd7f6ec95c::t_dd179f5cbf9469 1-13
+next-rsc-action-argument/next.config.ts
+  s_ddc8dd7f6ec95c::t_6ba7bd27218d8b 1-5
+next-rsc-action-argument/package.json
+  s_ddc8dd7f6ec95c::t_0e77e5a2492cb0 1-22
+next-rsc-action-argument/playwright.config.ts
+  s_ddc8dd7f6ec95c::t_2cb1302495e873 1-15
+next-rsc-action-argument/pnpm-lock.yaml
+  s_ddc8dd7f6ec95c::t_8df96be04955e5 1-673
+next-rsc-action-argument/pnpm-workspace.yaml
+  s_ddc8dd7f6ec95c::t_6f0ebe4665424d 1-11
+next-rsc-action-argument/tests/repro.spec.ts
+  s_ddc8dd7f6ec95c::t_0db0fca9de9dfe 1-43
+next-rsc-action-argument/tsconfig.json
+  s_ddc8dd7f6ec95c::t_de51b989fe44ec 1-36
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "89ef37300521747dd0fb5b9228f9e4a804ee99e7",
+  "prompts": {},
+  "sessions": {
+    "s_ddc8dd7f6ec95c": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_058307da9ffe1EXnU06zqPheea",
+        "model": "gpt-5.6-sol"
+      },
+      "human_author": "Hiroshi Ogawa <4232207+hi-ogawa@users.noreply.github.com>"
+    }
+  }
+}
