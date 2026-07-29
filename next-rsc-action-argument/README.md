@@ -1,7 +1,7 @@
 # Next.js Server-Reference Argument Reproduction
 
 - Next.js package: `16.3.0-canary.102`
-- Related local source checkout: `/Users/hogawa/code/others/next.js` at `aae4179ac628e55483b62cd023a7e1827dcef122` (`16.3.0-canary.98`, unpublished)
+- Related source snapshot: [`aae4179ac628e55483b62cd023a7e1827dcef122`](https://github.com/vercel/next.js/commit/aae4179ac628e55483b62cd023a7e1827dcef122) (`16.3.0-canary.98`, unpublished)
 
 ## Scenario
 
