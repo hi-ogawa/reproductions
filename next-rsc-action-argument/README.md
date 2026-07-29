@@ -3,6 +3,15 @@
 - Next.js package: `16.3.0-canary.102`
 - Related source snapshot: [`aae4179ac628e55483b62cd023a7e1827dcef122`](https://github.com/vercel/next.js/commit/aae4179ac628e55483b62cd023a7e1827dcef122) (`16.3.0-canary.98`, unpublished)
 
+## Context
+
+This reproduction was created while investigating route-aware server-reference manifests for `@vitejs/plugin-rsc`:
+
+- [vite-plugin-react issue #1337](https://github.com/vitejs/vite-plugin-react/issues/1337)
+- [vite-plugin-react PR #1341](https://github.com/vitejs/vite-plugin-react/pull/1341), which adds a route-aware action-routing example
+
+The failure reproduced here is Next.js behavior. The links above provide the Vite RSC plugin design context in which the limitation was discovered.
+
 ## Scenario
 
 Page A is the only static application graph that reaches `actionA`. Page B is the only static application graph that reaches `actionB`. A shared client-only module stores a server-reference value without statically importing either action.
