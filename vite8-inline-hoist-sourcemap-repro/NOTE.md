@@ -1,0 +1,46 @@
+# Vite 8 Inline Hoist Source Map Repro
+
+- Repo: git@github.com:vitejs/vite-plugin-react.git
+- Commit: 1ccaa5b21f21928eb9734dda97d0c56f0f662bce
+- Branch: fix/issue-1350
+- Worktree: /Users/hogawa/code/others/vite-plugin-react-issue-1350
+
+## Goal
+
+Reduce the Vite 8 inline Server Function source-map regression without React, RSC, Playwright, or CDP. The repro applies the relevant `MagicString.update()`, `appendLeft()`, and `move()` sequence in a Vite transform, asks `server.transformRequest()` for the final composed map, and checks the generated `register(...)` call with Node's `SourceMap.findEntry()`.
+
+## Run
+
+```sh
+pnpm install
+pnpm repro
+```
+
+The script runs `input.js` and `input.ts` through Vite 7.3.6 and Vite 8.2.0, prints each evanw URL, and regenerates the visualization links below directly from the returned code and source map.
+
+## Result
+
+The JavaScript control maps correctly under both versions:
+
+```text
+Vite 7.3.6, input.js: PASS
+Vite 8.2.0, input.js: PASS
+```
+
+TypeScript maps correctly under Vite 7, but Vite 8 maps the registration to the end of the outer `Component` declaration on line 1:
+
+```text
+Vite 7.3.6, input.ts: PASS
+Vite 8.2.0, input.ts: FAIL
+```
+
+The regression therefore requires Vite 8's TypeScript preprocessing and source-map composition path.
+
+<!-- visualizations:start -->
+## Visualizations
+
+- [Vite 7.3.6, input.js](<https://evanw.github.io/source-map-visualization/#MTgyAGV4cG9ydCBmdW5jdGlvbiBDb21wb25lbnQoKSB7CiAgY29uc3QgYWN0aW9uID0gcmVnaXN0ZXIoJCRob2lzdF9hY3Rpb24pOwoKICByZXR1cm4gYWN0aW9uCn0KCjtleHBvcnQgYXN5bmMgZnVuY3Rpb24gJCRob2lzdF9hY3Rpb24oKSB7CiAgICAnY3VzdG9tIGRpcmVjdGl2ZScKICAgIHJldHVybiAncmVzdWx0JwogIH07NDI2AHsidmVyc2lvbiI6Mywic291cmNlcyI6WyJpbnB1dC5qcyJdLCJzb3VyY2VzQ29udGVudCI6WyJleHBvcnQgZnVuY3Rpb24gQ29tcG9uZW50KCkge1xuICBhc3luYyBmdW5jdGlvbiBhY3Rpb24oKSB7XG4gICAgJ2N1c3RvbSBkaXJlY3RpdmUnXG4gICAgcmV0dXJuICdyZXN1bHQnXG4gIH1cblxuICByZXR1cm4gYWN0aW9uXG59XG4iXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsTUFBTSxDQUFDLFFBQVEsQ0FBQyxTQUFTLENBQUMsQ0FBQyxDQUFDO0FBQzVCLENBQUM7O0FBS0QsQ0FBQyxDQUFDLE1BQU0sQ0FBQztBQUNUO0FBTkU7QUFBQSx3Q0FBd0I7QUFDMUIsQ0FBQyxDQUFDLENBQUMsQ0FBQyxDQUFDLE1BQU0sQ0FBQyxTQUFTO0FBQ3JCLENBQUMsQ0FBQyxDQUFDLENBQUMsTUFBTSxDQUFDLENBQUMsTUFBTTtBQUNsQixDQUFDLENBQUMifQ==>)
+- [Vite 8.2.0, input.js](<https://evanw.github.io/source-map-visualization/#MTgyAGV4cG9ydCBmdW5jdGlvbiBDb21wb25lbnQoKSB7CiAgY29uc3QgYWN0aW9uID0gcmVnaXN0ZXIoJCRob2lzdF9hY3Rpb24pOwoKICByZXR1cm4gYWN0aW9uCn0KCjtleHBvcnQgYXN5bmMgZnVuY3Rpb24gJCRob2lzdF9hY3Rpb24oKSB7CiAgICAnY3VzdG9tIGRpcmVjdGl2ZScKICAgIHJldHVybiAncmVzdWx0JwogIH07NDI2AHsidmVyc2lvbiI6Mywic291cmNlcyI6WyJpbnB1dC5qcyJdLCJzb3VyY2VzQ29udGVudCI6WyJleHBvcnQgZnVuY3Rpb24gQ29tcG9uZW50KCkge1xuICBhc3luYyBmdW5jdGlvbiBhY3Rpb24oKSB7XG4gICAgJ2N1c3RvbSBkaXJlY3RpdmUnXG4gICAgcmV0dXJuICdyZXN1bHQnXG4gIH1cblxuICByZXR1cm4gYWN0aW9uXG59XG4iXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsTUFBTSxDQUFDLFFBQVEsQ0FBQyxTQUFTLENBQUMsQ0FBQyxDQUFDO0FBQzVCLENBQUM7O0FBS0QsQ0FBQyxDQUFDLE1BQU0sQ0FBQztBQUNUO0FBTkU7QUFBQSx3Q0FBd0I7QUFDMUIsQ0FBQyxDQUFDLENBQUMsQ0FBQyxDQUFDLE1BQU0sQ0FBQyxTQUFTO0FBQ3JCLENBQUMsQ0FBQyxDQUFDLENBQUMsTUFBTSxDQUFDLENBQUMsTUFBTTtBQUNsQixDQUFDLENBQUMifQ==>)
+- [Vite 7.3.6, input.ts](<https://evanw.github.io/source-map-visualization/#MTg0AGV4cG9ydCBmdW5jdGlvbiBDb21wb25lbnQoKSB7CiAgY29uc3QgYWN0aW9uID0gcmVnaXN0ZXIoJCRob2lzdF9hY3Rpb24pOwogIHJldHVybiBhY3Rpb247Cn0KCjtleHBvcnQgYXN5bmMgZnVuY3Rpb24gJCRob2lzdF9hY3Rpb24oKSB7CiAgICAiY3VzdG9tIGRpcmVjdGl2ZSI7CiAgICByZXR1cm4gInJlc3VsdCI7CiAgfTs0MDUAeyJ2ZXJzaW9uIjozLCJtYXBwaW5ncyI6IkFBQU8sZ0JBQVMsWUFBWTtBQUMxQjtBQUtBLFNBQU87QUFDVDtBQU5FO0FBQUEsd0NBQXdCO0FBQ3RCO0FBQ0EsV0FBTztBQUFBLEVBQ1QiLCJuYW1lcyI6W10sImlnbm9yZUxpc3QiOltdLCJzb3VyY2VzIjpbImlucHV0LnRzIl0sInNvdXJjZXNDb250ZW50IjpbImV4cG9ydCBmdW5jdGlvbiBDb21wb25lbnQoKSB7XG4gIGFzeW5jIGZ1bmN0aW9uIGFjdGlvbigpIHtcbiAgICAnY3VzdG9tIGRpcmVjdGl2ZSdcbiAgICByZXR1cm4gJ3Jlc3VsdCdcbiAgfVxuXG4gIHJldHVybiBhY3Rpb25cbn1cbiJdLCJmaWxlIjoiL1VzZXJzL2hvZ2F3YS9jb2RlL3BlcnNvbmFsL3JlcHJvZHVjdGlvbnMvdml0ZTgtaW5saW5lLWhvaXN0LXNvdXJjZW1hcC1yZXByby9pbnB1dC50cyJ9>)
+- [Vite 8.2.0, input.ts](<https://evanw.github.io/source-map-visualization/#MTc3AGV4cG9ydCBmdW5jdGlvbiBDb21wb25lbnQoKSB7Cgljb25zdCBhY3Rpb24gPSByZWdpc3RlcigkJGhvaXN0X2FjdGlvbik7CglyZXR1cm4gYWN0aW9uOwp9Cgo7ZXhwb3J0IGFzeW5jIGZ1bmN0aW9uICQkaG9pc3RfYWN0aW9uKCkgewoJCSJjdXN0b20gZGlyZWN0aXZlIjsKCQlyZXR1cm4gInJlc3VsdCI7Cgl9OzQwMAB7InZlcnNpb24iOjMsIm1hcHBpbmdzIjoiQUFBQSxPQUFPLFNBQVMsWUFBWTs7Q0FNMUIsT0FBTztBQUNUO0FBTkU7QUFBQSx3Q0FBd0I7RUFDdEI7RUFDQSxPQUFPO0NBQ1QiLCJuYW1lcyI6W10sImlnbm9yZUxpc3QiOltdLCJzb3VyY2VzIjpbImlucHV0LnRzIl0sInNvdXJjZXNDb250ZW50IjpbImV4cG9ydCBmdW5jdGlvbiBDb21wb25lbnQoKSB7XG4gIGFzeW5jIGZ1bmN0aW9uIGFjdGlvbigpIHtcbiAgICAnY3VzdG9tIGRpcmVjdGl2ZSdcbiAgICByZXR1cm4gJ3Jlc3VsdCdcbiAgfVxuXG4gIHJldHVybiBhY3Rpb25cbn1cbiJdLCJmaWxlIjoiL1VzZXJzL2hvZ2F3YS9jb2RlL3BlcnNvbmFsL3JlcHJvZHVjdGlvbnMvdml0ZTgtaW5saW5lLWhvaXN0LXNvdXJjZW1hcC1yZXByby9pbnB1dC50cyJ9>)
+<!-- visualizations:end -->

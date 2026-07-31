@@ -1,0 +1,14 @@
+{
+  "name": "vite-inline-hoist-sourcemap-repro",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@10.34.5",
+  "scripts": {
+    "repro": "node repro.mjs"
+  },
+  "devDependencies": {
+    "magic-string": "^0.30.21",
+    "vite7": "npm:vite@7.3.6",
+    "vite8": "npm:vite@8.2.0"
+  }
+}
