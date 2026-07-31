@@ -66,7 +66,7 @@ async function runVite(packageName, root, inputFile, input) {
 }
 
 async function updateVisualizations(visualizations) {
-  const noteUrl = new URL("NOTE.md", import.meta.url);
+  const noteUrl = new URL("README.md", import.meta.url);
   const note = await readFile(noteUrl, "utf8");
   const section = [
     "<!-- visualizations:start -->",
