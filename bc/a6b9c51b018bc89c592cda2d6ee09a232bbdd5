@@ -1,0 +1,21 @@
+vite8-inline-hoist-sourcemap-repro/NOTE.md
+  s_abdce5c7f838e0::t_9bd74d69372a34 1-46
+vite8-inline-hoist-sourcemap-repro/pnpm-lock.yaml
+  s_abdce5c7f838e0::t_93ab124805b264 1-1088
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "bca6b9c51b018bc89c592cda2d6ee09a232bbdd5",
+  "prompts": {},
+  "sessions": {
+    "s_abdce5c7f838e0": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_04846b8f1ffesnO2RjkvJ42VO7",
+        "model": "gpt-5.6-sol"
+      },
+      "human_author": "Hiroshi Ogawa <4232207+hi-ogawa@users.noreply.github.com>"
+    }
+  }
+}
