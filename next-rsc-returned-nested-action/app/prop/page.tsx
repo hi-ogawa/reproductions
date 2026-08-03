@@ -1,5 +1,5 @@
 import { outer } from './actions'
-import { PropRepro } from './repro'
+import { PropRepro } from './client'
 
 export default function Page() {
   return (

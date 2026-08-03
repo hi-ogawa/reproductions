@@ -27,8 +27,8 @@ export async function outer(prefix) {
 }
 ```
 
-- `/imported`: [`app/imported/repro.tsx`](./app/imported/repro.tsx) directly imports `outer` into a Client Component.
-- `/prop`: [`app/prop/page.tsx`](./app/prop/page.tsx) imports `outer` in a Server Component and passes it to [`app/prop/repro.tsx`](./app/prop/repro.tsx) as a prop.
+- `/imported`: [`app/imported/client.tsx`](./app/imported/client.tsx) directly imports `outer` into a Client Component.
+- `/prop`: [`app/prop/page.tsx`](./app/prop/page.tsx) imports `outer` in a Server Component and passes it to [`app/prop/client.tsx`](./app/prop/client.tsx) as a prop.
 
 Each client invokes `outer('captured')`, stores its returned function in a ref, and later invokes that function with `'client'`. The root layout provides navigation between the routes.
 

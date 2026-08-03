@@ -1,4 +1,4 @@
-import { ImportedRepro } from './repro'
+import { ImportedRepro } from './client'
 
 export default function Page() {
   return (
