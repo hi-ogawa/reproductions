@@ -1,0 +1,23 @@
+next-rsc-returned-nested-action/next-env.d.ts
+  s_0cd541dc655382::t_084731294e751a 1-7
+next-rsc-returned-nested-action/pnpm-lock.yaml
+  s_0cd541dc655382::t_c018eb4d2be3aa 1-673
+next-rsc-returned-nested-action/tsconfig.json
+  s_0cd541dc655382::t_c9dfb9cf2babe7 1-36
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "2d6be3327bf65fd72b399ed558f86d372228e93f",
+  "prompts": {},
+  "sessions": {
+    "s_0cd541dc655382": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_03ae6d963ffeGePu4LRELeH0Ie",
+        "model": "gpt-5.6-sol"
+      },
+      "human_author": "Hiroshi Ogawa <4232207+hi-ogawa@users.noreply.github.com>"
+    }
+  }
+}
