@@ -1,0 +1,22 @@
+{
+  "name": "next-rsc-returned-nested-action",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "test": "playwright test"
+  },
+  "dependencies": {
+    "next": "16.3.0-canary.106",
+    "react": "19.2.4",
+    "react-dom": "19.2.4"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.62.0",
+    "@types/node": "24.10.1",
+    "@types/react": "19.2.7",
+    "@types/react-dom": "19.2.3",
+    "typescript": "5.9.3"
+  },
+  "packageManager": "pnpm@10.34.5"
+}
