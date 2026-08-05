@@ -1,0 +1,4 @@
+.next/
+.tmp/
+node_modules/
+test-results/

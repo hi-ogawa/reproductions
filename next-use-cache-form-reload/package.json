@@ -1,0 +1,24 @@
+{
+  "name": "next-use-cache-form-reload-repro",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "test:dev": "REPRO_MODE=dev playwright test",
+    "test:build": "pnpm build && REPRO_MODE=build playwright test"
+  },
+  "dependencies": {
+    "next": "16.3.0",
+    "react": "19.2.8",
+    "react-dom": "19.2.8"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.62.1",
+    "@types/node": "24.3.0",
+    "@types/react": "19.2.8",
+    "@types/react-dom": "19.2.3",
+    "typescript": "5.9.3"
+  },
+  "packageManager": "pnpm@10.34.5"
+}
