@@ -1,0 +1,23 @@
+next-use-cache-form-reload/next-env.d.ts
+  s_8fbd0d9ba51487::t_c792224c703998 1-7
+next-use-cache-form-reload/pnpm-lock.yaml
+  s_8fbd0d9ba51487::t_85b993db0e01c3 1-673
+next-use-cache-form-reload/tsconfig.json
+  s_8fbd0d9ba51487::t_e609aa1d7fd2be 1-36
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "fd8701e63c2c858fc66e585a4ba37ca330b9b485",
+  "prompts": {},
+  "sessions": {
+    "s_8fbd0d9ba51487": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_02f6211b6ffekMtOzij8rneR3E",
+        "model": "gpt-5.6"
+      },
+      "human_author": "Hiroshi Ogawa <4232207+hi-ogawa@users.noreply.github.com>"
+    }
+  }
+}
