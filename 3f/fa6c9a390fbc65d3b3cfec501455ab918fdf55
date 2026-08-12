@@ -1,0 +1,917 @@
+vitest-10519-inline-snapshot-stack/.gitignore
+  s_65d3f2050ea367::t_59d98e60e6aa8c 1-2
+vitest-10519-inline-snapshot-stack/package.json
+  s_65d3f2050ea367::t_0be3d20e0a9e4a 1-19
+vitest-10519-inline-snapshot-stack/patches/@vitest__snapshot@4.1.10.patch
+  s_65d3f2050ea367::t_58719b8728ca84 1-67
+vitest-10519-inline-snapshot-stack/pnpm-lock.yaml
+  s_65d3f2050ea367::t_191abb996839dc 1-983
+vitest-10519-inline-snapshot-stack/pnpm-workspace.yaml
+  s_65d3f2050ea367::t_ae8fa02e81137c 1-2
+vitest-10519-inline-snapshot-stack/results/diagnostic-node/node-off/eager/001.diagnostic.json
+  s_65d3f2050ea367::t_6510360802aa22 1-35
+vitest-10519-inline-snapshot-stack/results/diagnostic-node/node-off/eager/001.report.json
+  s_65d3f2050ea367::t_a942e0379abd33 1
+vitest-10519-inline-snapshot-stack/results/diagnostic-node/node-off/lazy/001.diagnostic.json
+  s_65d3f2050ea367::t_4629fa4218e9a4 1-35
+vitest-10519-inline-snapshot-stack/results/diagnostic-node/node-off/lazy/001.report.json
+  s_65d3f2050ea367::t_cb07a836d0a041 1
+vitest-10519-inline-snapshot-stack/results/diagnostic-node/node-off/manifest.json
+  s_65d3f2050ea367::t_7f8ecc43a793aa 1-33
+vitest-10519-inline-snapshot-stack/results/diagnostic-smoke/browser-on/eager/001.diagnostic.json
+  s_65d3f2050ea367::t_e9c96034158749 1-35
+vitest-10519-inline-snapshot-stack/results/diagnostic-smoke/browser-on/eager/001.report.json
+  s_65d3f2050ea367::t_7d092a8d32184b 1
+vitest-10519-inline-snapshot-stack/results/diagnostic-smoke/browser-on/lazy/001.diagnostic.json
+  s_65d3f2050ea367::t_a6fa4abd76715b 1-35
+vitest-10519-inline-snapshot-stack/results/diagnostic-smoke/browser-on/lazy/001.report.json
+  s_65d3f2050ea367::t_d573e1f3c9028d 1
+vitest-10519-inline-snapshot-stack/results/diagnostic-smoke/browser-on/manifest.json
+  s_65d3f2050ea367::t_cc3aa76ca5c02e 1-33
+vitest-10519-inline-snapshot-stack/results/infra-smoke/node-off/eager/001.json
+  s_65d3f2050ea367::t_24561f15662899 1
+vitest-10519-inline-snapshot-stack/results/infra-smoke/node-off/eager/002.json
+  s_65d3f2050ea367::t_2ea7d9ed3e29d7 1
+vitest-10519-inline-snapshot-stack/results/infra-smoke/node-off/lazy/001.json
+  s_65d3f2050ea367::t_0232e7ac95fa00 1
+vitest-10519-inline-snapshot-stack/results/infra-smoke/node-off/lazy/002.json
+  s_65d3f2050ea367::t_4002fd94c09e95 1
+vitest-10519-inline-snapshot-stack/results/infra-smoke/node-off/manifest.json
+  s_65d3f2050ea367::t_e8d05d95d1048a 1-19
+vitest-10519-inline-snapshot-stack/results/infra-v2/browser-on/eager/001.json
+  s_65d3f2050ea367::t_6a2899a8c58706 1
+vitest-10519-inline-snapshot-stack/results/infra-v2/browser-on/lazy/001.json
+  s_65d3f2050ea367::t_7de959245c0524 1
+vitest-10519-inline-snapshot-stack/results/infra-v2/browser-on/manifest.json
+  s_65d3f2050ea367::t_8497aaf6b6537e 1-32
+vitest-10519-inline-snapshot-stack/results/reference-100x1/browser-on.analysis.json
+  s_65d3f2050ea367::t_cbce93356433f6 1-2522
+vitest-10519-inline-snapshot-stack/results/reference-100x1/browser-on/control/001.diagnostic.json
+  s_65d3f2050ea367::t_1ce22a194ea30a 1-2906
+vitest-10519-inline-snapshot-stack/results/reference-100x1/browser-on/control/001.report.json
+  s_65d3f2050ea367::t_0f48fd11a31ad6 1
+vitest-10519-inline-snapshot-stack/results/reference-100x1/browser-on/control/002.diagnostic.json
+  s_65d3f2050ea367::t_c95fecb3b87bce 1-2906
+vitest-10519-inline-snapshot-stack/results/reference-100x1/browser-on/control/002.report.json
+  s_65d3f2050ea367::t_42203922b656bf 1
+vitest-10519-inline-snapshot-stack/results/reference-100x1/browser-on/control/003.diagnostic.json
+  s_65d3f2050ea367::t_fafc2ca9165656 1-2906
+vitest-10519-inline-snapshot-stack/results/reference-100x1/browser-on/control/003.report.json
+  s_65d3f2050ea367::t_4c0b006a702c23 1
+vitest-10519-inline-snapshot-stack/results/reference-100x1/browser-on/control/004.diagnostic.json
+  s_65d3f2050ea367::t_bd486f6a3ac0f5 1-2906
+vitest-10519-inline-snapshot-stack/results/reference-100x1/browser-on/control/004.report.json
+  s_65d3f2050ea367::t_1468d2b3806a42 1
+vitest-10519-inline-snapshot-stack/results/reference-100x1/browser-on/control/005.diagnostic.json
+  s_65d3f2050ea367::t_8660eac53fc1ea 1-2906
+vitest-10519-inline-snapshot-stack/results/reference-100x1/browser-on/control/005.report.json
+  s_65d3f2050ea367::t_eeff023d3b9ce3 1
+vitest-10519-inline-snapshot-stack/results/reference-100x1/browser-on/eager/001.diagnostic.json
+  s_65d3f2050ea367::t_dc2fc3d268a1a1 1-2906
+vitest-10519-inline-snapshot-stack/results/reference-100x1/browser-on/eager/001.report.json
+  s_65d3f2050ea367::t_c78778b61cf91e 1
+vitest-10519-inline-snapshot-stack/results/reference-100x1/browser-on/eager/002.diagnostic.json
+  s_65d3f2050ea367::t_2141d1b90555a4 1-2906
+vitest-10519-inline-snapshot-stack/results/reference-100x1/browser-on/eager/002.report.json
+  s_65d3f2050ea367::t_6982108f76b07e 1
+vitest-10519-inline-snapshot-stack/results/reference-100x1/browser-on/eager/003.diagnostic.json
+  s_65d3f2050ea367::t_539c3ab9853c75 1-2906
+vitest-10519-inline-snapshot-stack/results/reference-100x1/browser-on/eager/003.report.json
+  s_65d3f2050ea367::t_8eddf04bdd6553 1
+vitest-10519-inline-snapshot-stack/results/reference-100x1/browser-on/eager/004.diagnostic.json
+  s_65d3f2050ea367::t_34de1b3675a937 1-2906
+vitest-10519-inline-snapshot-stack/results/reference-100x1/browser-on/eager/004.report.json
+  s_65d3f2050ea367::t_540ed64c8b954f 1
+vitest-10519-inline-snapshot-stack/results/reference-100x1/browser-on/eager/005.diagnostic.json
+  s_65d3f2050ea367::t_50a8e47da807e3 1-2906
+vitest-10519-inline-snapshot-stack/results/reference-100x1/browser-on/eager/005.report.json
+  s_65d3f2050ea367::t_bca73ae5f1dbaa 1
+vitest-10519-inline-snapshot-stack/results/reference-100x1/browser-on/lazy/001.diagnostic.json
+  s_65d3f2050ea367::t_934c635280acf1 1-2906
+vitest-10519-inline-snapshot-stack/results/reference-100x1/browser-on/lazy/001.report.json
+  s_65d3f2050ea367::t_12a518e4b2ccf7 1
+vitest-10519-inline-snapshot-stack/results/reference-100x1/browser-on/lazy/002.diagnostic.json
+  s_65d3f2050ea367::t_dddfbc2504124b 1-2906
+vitest-10519-inline-snapshot-stack/results/reference-100x1/browser-on/lazy/002.report.json
+  s_65d3f2050ea367::t_3004cccf764f24 1
+vitest-10519-inline-snapshot-stack/results/reference-100x1/browser-on/lazy/003.diagnostic.json
+  s_65d3f2050ea367::t_389f782ef76a28 1-2906
+vitest-10519-inline-snapshot-stack/results/reference-100x1/browser-on/lazy/003.report.json
+  s_65d3f2050ea367::t_b8a4171e8325ab 1
+vitest-10519-inline-snapshot-stack/results/reference-100x1/browser-on/lazy/004.diagnostic.json
+  s_65d3f2050ea367::t_f52ed6742cd28d 1-2906
+vitest-10519-inline-snapshot-stack/results/reference-100x1/browser-on/lazy/004.report.json
+  s_65d3f2050ea367::t_6ae56f36e18597 1
+vitest-10519-inline-snapshot-stack/results/reference-100x1/browser-on/lazy/005.diagnostic.json
+  s_65d3f2050ea367::t_e83938d0515e68 1-2906
+vitest-10519-inline-snapshot-stack/results/reference-100x1/browser-on/lazy/005.report.json
+  s_65d3f2050ea367::t_1fd5a4f922fdcf 1
+vitest-10519-inline-snapshot-stack/results/reference-100x1/browser-on/manifest.json
+  s_65d3f2050ea367::t_57b8428c3bd128 1-434
+vitest-10519-inline-snapshot-stack/results/reference-10x10/browser-on.analysis.json
+  s_65d3f2050ea367::t_774e02019d1fc3 1-2162
+vitest-10519-inline-snapshot-stack/results/reference-10x10/browser-on/control/001.diagnostic.json
+  s_65d3f2050ea367::t_e30e529bb9a201 1-1556
+vitest-10519-inline-snapshot-stack/results/reference-10x10/browser-on/control/001.report.json
+  s_65d3f2050ea367::t_c9fc402b000b3c 1
+vitest-10519-inline-snapshot-stack/results/reference-10x10/browser-on/control/002.diagnostic.json
+  s_65d3f2050ea367::t_9c0fdc9d8b3a47 1-1556
+vitest-10519-inline-snapshot-stack/results/reference-10x10/browser-on/control/002.report.json
+  s_65d3f2050ea367::t_17a30f9994b715 1
+vitest-10519-inline-snapshot-stack/results/reference-10x10/browser-on/control/003.diagnostic.json
+  s_65d3f2050ea367::t_93fb9208339034 1-1556
+vitest-10519-inline-snapshot-stack/results/reference-10x10/browser-on/control/003.report.json
+  s_65d3f2050ea367::t_23cf37d01e8d97 1
+vitest-10519-inline-snapshot-stack/results/reference-10x10/browser-on/control/004.diagnostic.json
+  s_65d3f2050ea367::t_24e282298fa842 1-1556
+vitest-10519-inline-snapshot-stack/results/reference-10x10/browser-on/control/004.report.json
+  s_65d3f2050ea367::t_c5854d64cd20c1 1
+vitest-10519-inline-snapshot-stack/results/reference-10x10/browser-on/control/005.diagnostic.json
+  s_65d3f2050ea367::t_2aa8ade742c0c3 1-1556
+vitest-10519-inline-snapshot-stack/results/reference-10x10/browser-on/control/005.report.json
+  s_65d3f2050ea367::t_59cb47659e0294 1
+vitest-10519-inline-snapshot-stack/results/reference-10x10/browser-on/eager/001.diagnostic.json
+  s_65d3f2050ea367::t_a26a258a784302 1-1556
+vitest-10519-inline-snapshot-stack/results/reference-10x10/browser-on/eager/001.report.json
+  s_65d3f2050ea367::t_98c1289e422a2f 1
+vitest-10519-inline-snapshot-stack/results/reference-10x10/browser-on/eager/002.diagnostic.json
+  s_65d3f2050ea367::t_1dbb375ba8bbb3 1-1556
+vitest-10519-inline-snapshot-stack/results/reference-10x10/browser-on/eager/002.report.json
+  s_65d3f2050ea367::t_535f1c27f61a40 1
+vitest-10519-inline-snapshot-stack/results/reference-10x10/browser-on/eager/003.diagnostic.json
+  s_65d3f2050ea367::t_5f5071bcad63d8 1-1556
+vitest-10519-inline-snapshot-stack/results/reference-10x10/browser-on/eager/003.report.json
+  s_65d3f2050ea367::t_232e2be2e99a29 1
+vitest-10519-inline-snapshot-stack/results/reference-10x10/browser-on/eager/004.diagnostic.json
+  s_65d3f2050ea367::t_39cbe2c84c6f09 1-1556
+vitest-10519-inline-snapshot-stack/results/reference-10x10/browser-on/eager/004.report.json
+  s_65d3f2050ea367::t_b4a57ff2be6dcc 1
+vitest-10519-inline-snapshot-stack/results/reference-10x10/browser-on/eager/005.diagnostic.json
+  s_65d3f2050ea367::t_43c2a7e9374c65 1-1556
+vitest-10519-inline-snapshot-stack/results/reference-10x10/browser-on/eager/005.report.json
+  s_65d3f2050ea367::t_d749129a9c5d52 1
+vitest-10519-inline-snapshot-stack/results/reference-10x10/browser-on/lazy/001.diagnostic.json
+  s_65d3f2050ea367::t_0f309781bd3711 1-1556
+vitest-10519-inline-snapshot-stack/results/reference-10x10/browser-on/lazy/001.report.json
+  s_65d3f2050ea367::t_f2f9f66149d4ee 1
+vitest-10519-inline-snapshot-stack/results/reference-10x10/browser-on/lazy/002.diagnostic.json
+  s_65d3f2050ea367::t_f1c06603e20601 1-1556
+vitest-10519-inline-snapshot-stack/results/reference-10x10/browser-on/lazy/002.report.json
+  s_65d3f2050ea367::t_f560ac79e6f158 1
+vitest-10519-inline-snapshot-stack/results/reference-10x10/browser-on/lazy/003.diagnostic.json
+  s_65d3f2050ea367::t_80fa6f4f0f293c 1-1556
+vitest-10519-inline-snapshot-stack/results/reference-10x10/browser-on/lazy/003.report.json
+  s_65d3f2050ea367::t_8eeafdab12edd8 1
+vitest-10519-inline-snapshot-stack/results/reference-10x10/browser-on/lazy/004.diagnostic.json
+  s_65d3f2050ea367::t_c5853d89ae922c 1-1556
+vitest-10519-inline-snapshot-stack/results/reference-10x10/browser-on/lazy/004.report.json
+  s_65d3f2050ea367::t_f4b280807eed83 1
+vitest-10519-inline-snapshot-stack/results/reference-10x10/browser-on/lazy/005.diagnostic.json
+  s_65d3f2050ea367::t_c9d9381a979b59 1-1556
+vitest-10519-inline-snapshot-stack/results/reference-10x10/browser-on/lazy/005.report.json
+  s_65d3f2050ea367::t_b9a69f1382408f 1
+vitest-10519-inline-snapshot-stack/results/reference-10x10/browser-on/manifest.json
+  s_65d3f2050ea367::t_2c57c0d84259b2 1-74
+vitest-10519-inline-snapshot-stack/results/reference-1x100/browser-on.analysis.json
+  s_65d3f2050ea367::t_56a7c4dfb6e170 1-2126
+vitest-10519-inline-snapshot-stack/results/reference-1x100/browser-on/control/001.diagnostic.json
+  s_65d3f2050ea367::t_9fbbab66f7b4c6 1-1421
+vitest-10519-inline-snapshot-stack/results/reference-1x100/browser-on/control/001.report.json
+  s_65d3f2050ea367::t_9692286f88f4ee 1
+vitest-10519-inline-snapshot-stack/results/reference-1x100/browser-on/control/002.diagnostic.json
+  s_65d3f2050ea367::t_4aa063342ecfa3 1-1421
+vitest-10519-inline-snapshot-stack/results/reference-1x100/browser-on/control/002.report.json
+  s_65d3f2050ea367::t_0d4875efd0f77a 1
+vitest-10519-inline-snapshot-stack/results/reference-1x100/browser-on/control/003.diagnostic.json
+  s_65d3f2050ea367::t_75386e1d47b25f 1-1421
+vitest-10519-inline-snapshot-stack/results/reference-1x100/browser-on/control/003.report.json
+  s_65d3f2050ea367::t_885ee752ec8844 1
+vitest-10519-inline-snapshot-stack/results/reference-1x100/browser-on/control/004.diagnostic.json
+  s_65d3f2050ea367::t_9d86c63c46d0e6 1-1421
+vitest-10519-inline-snapshot-stack/results/reference-1x100/browser-on/control/004.report.json
+  s_65d3f2050ea367::t_36ca84e047247d 1
+vitest-10519-inline-snapshot-stack/results/reference-1x100/browser-on/control/005.diagnostic.json
+  s_65d3f2050ea367::t_9ffef26dd6cf28 1-1421
+vitest-10519-inline-snapshot-stack/results/reference-1x100/browser-on/control/005.report.json
+  s_65d3f2050ea367::t_602c9b01a4f85c 1
+vitest-10519-inline-snapshot-stack/results/reference-1x100/browser-on/eager/001.diagnostic.json
+  s_65d3f2050ea367::t_ac0d54ec2bbe93 1-1421
+vitest-10519-inline-snapshot-stack/results/reference-1x100/browser-on/eager/001.report.json
+  s_65d3f2050ea367::t_8440a437183241 1
+vitest-10519-inline-snapshot-stack/results/reference-1x100/browser-on/eager/002.diagnostic.json
+  s_65d3f2050ea367::t_3ea58dc56ea8ae 1-1421
+vitest-10519-inline-snapshot-stack/results/reference-1x100/browser-on/eager/002.report.json
+  s_65d3f2050ea367::t_fe083fce3f5460 1
+vitest-10519-inline-snapshot-stack/results/reference-1x100/browser-on/eager/003.diagnostic.json
+  s_65d3f2050ea367::t_7d6adbde33c75e 1-1421
+vitest-10519-inline-snapshot-stack/results/reference-1x100/browser-on/eager/003.report.json
+  s_65d3f2050ea367::t_d852fb5bdb5f27 1
+vitest-10519-inline-snapshot-stack/results/reference-1x100/browser-on/eager/004.diagnostic.json
+  s_65d3f2050ea367::t_f86014091b306c 1-1421
+vitest-10519-inline-snapshot-stack/results/reference-1x100/browser-on/eager/004.report.json
+  s_65d3f2050ea367::t_2aa4d74657bc22 1
+vitest-10519-inline-snapshot-stack/results/reference-1x100/browser-on/eager/005.diagnostic.json
+  s_65d3f2050ea367::t_262f8d7f141883 1-1421
+vitest-10519-inline-snapshot-stack/results/reference-1x100/browser-on/eager/005.report.json
+  s_65d3f2050ea367::t_e9cbad49daafd2 1
+vitest-10519-inline-snapshot-stack/results/reference-1x100/browser-on/lazy/001.diagnostic.json
+  s_65d3f2050ea367::t_6f1b08fbfd513d 1-1421
+vitest-10519-inline-snapshot-stack/results/reference-1x100/browser-on/lazy/001.report.json
+  s_65d3f2050ea367::t_61fc387a682c08 1
+vitest-10519-inline-snapshot-stack/results/reference-1x100/browser-on/lazy/002.diagnostic.json
+  s_65d3f2050ea367::t_4c39796b5220ad 1-1421
+vitest-10519-inline-snapshot-stack/results/reference-1x100/browser-on/lazy/002.report.json
+  s_65d3f2050ea367::t_f5d0621e2d3b5b 1
+vitest-10519-inline-snapshot-stack/results/reference-1x100/browser-on/lazy/003.diagnostic.json
+  s_65d3f2050ea367::t_0da7afe6b82e5e 1-1421
+vitest-10519-inline-snapshot-stack/results/reference-1x100/browser-on/lazy/003.report.json
+  s_65d3f2050ea367::t_35666cbfba31f0 1
+vitest-10519-inline-snapshot-stack/results/reference-1x100/browser-on/lazy/004.diagnostic.json
+  s_65d3f2050ea367::t_878ac063f31d54 1-1421
+vitest-10519-inline-snapshot-stack/results/reference-1x100/browser-on/lazy/004.report.json
+  s_65d3f2050ea367::t_7fe9421177b79d 1
+vitest-10519-inline-snapshot-stack/results/reference-1x100/browser-on/lazy/005.diagnostic.json
+  s_65d3f2050ea367::t_17f35bac3111c7 1-1421
+vitest-10519-inline-snapshot-stack/results/reference-1x100/browser-on/lazy/005.report.json
+  s_65d3f2050ea367::t_ea3bc604e19240 1
+vitest-10519-inline-snapshot-stack/results/reference-1x100/browser-on/manifest.json
+  s_65d3f2050ea367::t_6109aa4b149297 1-38
+vitest-10519-inline-snapshot-stack/results/shape-100x1-browser-no-coverage/browser-off/analysis-v2.json
+  s_65d3f2050ea367::t_ace56b4cb0a9b5 1-816
+vitest-10519-inline-snapshot-stack/results/shape-100x1-browser-no-coverage/browser-off/analysis.json
+  s_65d3f2050ea367::t_b4b9f5dc5a28d1 1-756
+vitest-10519-inline-snapshot-stack/results/shape-100x1-browser-no-coverage/browser-off/eager/001.diagnostic.json
+  s_65d3f2050ea367::t_e73a4862c911fe 1-2906
+vitest-10519-inline-snapshot-stack/results/shape-100x1-browser-no-coverage/browser-off/eager/001.report.json
+  s_65d3f2050ea367::t_c23256d8d45efb 1
+vitest-10519-inline-snapshot-stack/results/shape-100x1-browser-no-coverage/browser-off/eager/002.diagnostic.json
+  s_65d3f2050ea367::t_f053bd68ad70e8 1-2906
+vitest-10519-inline-snapshot-stack/results/shape-100x1-browser-no-coverage/browser-off/eager/002.report.json
+  s_65d3f2050ea367::t_7988621364f085 1
+vitest-10519-inline-snapshot-stack/results/shape-100x1-browser-no-coverage/browser-off/eager/003.diagnostic.json
+  s_65d3f2050ea367::t_84a6adc2af9bfc 1-2906
+vitest-10519-inline-snapshot-stack/results/shape-100x1-browser-no-coverage/browser-off/eager/003.report.json
+  s_65d3f2050ea367::t_279baa768bee0e 1
+vitest-10519-inline-snapshot-stack/results/shape-100x1-browser-no-coverage/browser-off/lazy/001.diagnostic.json
+  s_65d3f2050ea367::t_bfc96fec232214 1-2906
+vitest-10519-inline-snapshot-stack/results/shape-100x1-browser-no-coverage/browser-off/lazy/001.report.json
+  s_65d3f2050ea367::t_3038a49833ae98 1
+vitest-10519-inline-snapshot-stack/results/shape-100x1-browser-no-coverage/browser-off/lazy/002.diagnostic.json
+  s_65d3f2050ea367::t_f9c0d85226d4cf 1-2906
+vitest-10519-inline-snapshot-stack/results/shape-100x1-browser-no-coverage/browser-off/lazy/002.report.json
+  s_65d3f2050ea367::t_19a9f44cb83700 1
+vitest-10519-inline-snapshot-stack/results/shape-100x1-browser-no-coverage/browser-off/lazy/003.diagnostic.json
+  s_65d3f2050ea367::t_93f11c4d99dfcf 1-2906
+vitest-10519-inline-snapshot-stack/results/shape-100x1-browser-no-coverage/browser-off/lazy/003.report.json
+  s_65d3f2050ea367::t_cad732532b5ca7 1
+vitest-10519-inline-snapshot-stack/results/shape-100x1-browser-no-coverage/browser-off/manifest.json
+  s_65d3f2050ea367::t_9c02ef427f0817 1-231
+vitest-10519-inline-snapshot-stack/results/shape-100x1-browser-v8/browser-on/analysis-v2.json
+  s_65d3f2050ea367::t_34f25a6d6a135e 1-756
+vitest-10519-inline-snapshot-stack/results/shape-100x1-browser-v8/browser-on/analysis-v3.json
+  s_65d3f2050ea367::t_bcb8d06dba3c4f 1-816
+vitest-10519-inline-snapshot-stack/results/shape-100x1-browser-v8/browser-on/analysis-v4.json
+  s_65d3f2050ea367::t_6d48a840d685ee 1-999
+vitest-10519-inline-snapshot-stack/results/shape-100x1-browser-v8/browser-on/analysis.json
+  s_65d3f2050ea367::t_ad735cb0f34924 1-666
+vitest-10519-inline-snapshot-stack/results/shape-100x1-browser-v8/browser-on/eager/001.diagnostic.json
+  s_65d3f2050ea367::t_5e8c872eefdca8 1-2906
+vitest-10519-inline-snapshot-stack/results/shape-100x1-browser-v8/browser-on/eager/001.report.json
+  s_65d3f2050ea367::t_49b126c8f60496 1
+vitest-10519-inline-snapshot-stack/results/shape-100x1-browser-v8/browser-on/eager/002.diagnostic.json
+  s_65d3f2050ea367::t_d22e366187acd4 1-2906
+vitest-10519-inline-snapshot-stack/results/shape-100x1-browser-v8/browser-on/eager/002.report.json
+  s_65d3f2050ea367::t_dea2caaded9704 1
+vitest-10519-inline-snapshot-stack/results/shape-100x1-browser-v8/browser-on/eager/003.diagnostic.json
+  s_65d3f2050ea367::t_4abba436c53113 1-2906
+vitest-10519-inline-snapshot-stack/results/shape-100x1-browser-v8/browser-on/eager/003.report.json
+  s_65d3f2050ea367::t_38f3b3bfd6598f 1
+vitest-10519-inline-snapshot-stack/results/shape-100x1-browser-v8/browser-on/lazy/001.diagnostic.json
+  s_65d3f2050ea367::t_59c326db8dc53c 1-2906
+vitest-10519-inline-snapshot-stack/results/shape-100x1-browser-v8/browser-on/lazy/001.report.json
+  s_65d3f2050ea367::t_bc167b43f920ef 1
+vitest-10519-inline-snapshot-stack/results/shape-100x1-browser-v8/browser-on/lazy/002.diagnostic.json
+  s_65d3f2050ea367::t_bdab1794ae371d 1-2906
+vitest-10519-inline-snapshot-stack/results/shape-100x1-browser-v8/browser-on/lazy/002.report.json
+  s_65d3f2050ea367::t_f4ed9a638ce332 1
+vitest-10519-inline-snapshot-stack/results/shape-100x1-browser-v8/browser-on/lazy/003.diagnostic.json
+  s_65d3f2050ea367::t_a302f9d637c3e5 1-2906
+vitest-10519-inline-snapshot-stack/results/shape-100x1-browser-v8/browser-on/lazy/003.report.json
+  s_65d3f2050ea367::t_375b946771508b 1
+vitest-10519-inline-snapshot-stack/results/shape-100x1-browser-v8/browser-on/manifest.json
+  s_65d3f2050ea367::t_9f551bcde87ec0 1-231
+vitest-10519-inline-snapshot-stack/results/shape-10x10-browser-no-coverage/browser-off/analysis-v2.json
+  s_65d3f2050ea367::t_171d63b2e06943 1-636
+vitest-10519-inline-snapshot-stack/results/shape-10x10-browser-no-coverage/browser-off/analysis.json
+  s_65d3f2050ea367::t_ac11651ee0d7cd 1-576
+vitest-10519-inline-snapshot-stack/results/shape-10x10-browser-no-coverage/browser-off/eager/001.diagnostic.json
+  s_65d3f2050ea367::t_30085fc70f68aa 1-1556
+vitest-10519-inline-snapshot-stack/results/shape-10x10-browser-no-coverage/browser-off/eager/001.report.json
+  s_65d3f2050ea367::t_df16e2e9ecbc47 1
+vitest-10519-inline-snapshot-stack/results/shape-10x10-browser-no-coverage/browser-off/eager/002.diagnostic.json
+  s_65d3f2050ea367::t_3a3c634bdd763e 1-1556
+vitest-10519-inline-snapshot-stack/results/shape-10x10-browser-no-coverage/browser-off/eager/002.report.json
+  s_65d3f2050ea367::t_407337952dd653 1
+vitest-10519-inline-snapshot-stack/results/shape-10x10-browser-no-coverage/browser-off/eager/003.diagnostic.json
+  s_65d3f2050ea367::t_c0892af849026b 1-1556
+vitest-10519-inline-snapshot-stack/results/shape-10x10-browser-no-coverage/browser-off/eager/003.report.json
+  s_65d3f2050ea367::t_cba126fcecaad4 1
+vitest-10519-inline-snapshot-stack/results/shape-10x10-browser-no-coverage/browser-off/lazy/001.diagnostic.json
+  s_65d3f2050ea367::t_c69f9cc6749cba 1-1556
+vitest-10519-inline-snapshot-stack/results/shape-10x10-browser-no-coverage/browser-off/lazy/001.report.json
+  s_65d3f2050ea367::t_d66ea301e01095 1
+vitest-10519-inline-snapshot-stack/results/shape-10x10-browser-no-coverage/browser-off/lazy/002.diagnostic.json
+  s_65d3f2050ea367::t_158e4d91cfd770 1-1556
+vitest-10519-inline-snapshot-stack/results/shape-10x10-browser-no-coverage/browser-off/lazy/002.report.json
+  s_65d3f2050ea367::t_51cf364ccb0e73 1
+vitest-10519-inline-snapshot-stack/results/shape-10x10-browser-no-coverage/browser-off/lazy/003.diagnostic.json
+  s_65d3f2050ea367::t_422a61e749b639 1-1556
+vitest-10519-inline-snapshot-stack/results/shape-10x10-browser-no-coverage/browser-off/lazy/003.report.json
+  s_65d3f2050ea367::t_b7ad9f735551d3 1
+vitest-10519-inline-snapshot-stack/results/shape-10x10-browser-no-coverage/browser-off/manifest.json
+  s_65d3f2050ea367::t_50a35a388cd157 1-51
+vitest-10519-inline-snapshot-stack/results/shape-10x10-browser-v8/browser-on/analysis-v2.json
+  s_65d3f2050ea367::t_be9146075e5407 1-576
+vitest-10519-inline-snapshot-stack/results/shape-10x10-browser-v8/browser-on/analysis-v3.json
+  s_65d3f2050ea367::t_038b9dd874f471 1-636
+vitest-10519-inline-snapshot-stack/results/shape-10x10-browser-v8/browser-on/analysis-v4.json
+  s_65d3f2050ea367::t_7e40e050e62061 1-819
+vitest-10519-inline-snapshot-stack/results/shape-10x10-browser-v8/browser-on/analysis.json
+  s_65d3f2050ea367::t_8349791d12f134 1-486
+vitest-10519-inline-snapshot-stack/results/shape-10x10-browser-v8/browser-on/eager/001.diagnostic.json
+  s_65d3f2050ea367::t_fd77a9eb8380f5 1-1556
+vitest-10519-inline-snapshot-stack/results/shape-10x10-browser-v8/browser-on/eager/001.report.json
+  s_65d3f2050ea367::t_b6a0329f1f5ea9 1
+vitest-10519-inline-snapshot-stack/results/shape-10x10-browser-v8/browser-on/eager/002.diagnostic.json
+  s_65d3f2050ea367::t_0a65897afcf61d 1-1556
+vitest-10519-inline-snapshot-stack/results/shape-10x10-browser-v8/browser-on/eager/002.report.json
+  s_65d3f2050ea367::t_59ea7b2d837116 1
+vitest-10519-inline-snapshot-stack/results/shape-10x10-browser-v8/browser-on/eager/003.diagnostic.json
+  s_65d3f2050ea367::t_d5d64eabb956f5 1-1556
+vitest-10519-inline-snapshot-stack/results/shape-10x10-browser-v8/browser-on/eager/003.report.json
+  s_65d3f2050ea367::t_c820fc6d0e52b8 1
+vitest-10519-inline-snapshot-stack/results/shape-10x10-browser-v8/browser-on/lazy/001.diagnostic.json
+  s_65d3f2050ea367::t_e33765231fad7e 1-1556
+vitest-10519-inline-snapshot-stack/results/shape-10x10-browser-v8/browser-on/lazy/001.report.json
+  s_65d3f2050ea367::t_18f1c84f1c50c7 1
+vitest-10519-inline-snapshot-stack/results/shape-10x10-browser-v8/browser-on/lazy/002.diagnostic.json
+  s_65d3f2050ea367::t_0183a35937b8ed 1-1556
+vitest-10519-inline-snapshot-stack/results/shape-10x10-browser-v8/browser-on/lazy/002.report.json
+  s_65d3f2050ea367::t_88214c4c893663 1
+vitest-10519-inline-snapshot-stack/results/shape-10x10-browser-v8/browser-on/lazy/003.diagnostic.json
+  s_65d3f2050ea367::t_f55cf02925daa3 1-1556
+vitest-10519-inline-snapshot-stack/results/shape-10x10-browser-v8/browser-on/lazy/003.report.json
+  s_65d3f2050ea367::t_14d5d175a41c9f 1
+vitest-10519-inline-snapshot-stack/results/shape-10x10-browser-v8/browser-on/manifest.json
+  s_65d3f2050ea367::t_8f674c7aeb29a1 1-51
+vitest-10519-inline-snapshot-stack/results/shape-1x100-browser-no-coverage/browser-off/analysis-v2.json
+  s_65d3f2050ea367::t_36ec2c281cf510 1-618
+vitest-10519-inline-snapshot-stack/results/shape-1x100-browser-no-coverage/browser-off/analysis.json
+  s_65d3f2050ea367::t_b267099103a5f6 1-558
+vitest-10519-inline-snapshot-stack/results/shape-1x100-browser-no-coverage/browser-off/eager/001.diagnostic.json
+  s_65d3f2050ea367::t_8457a5b761a451 1-1421
+vitest-10519-inline-snapshot-stack/results/shape-1x100-browser-no-coverage/browser-off/eager/001.report.json
+  s_65d3f2050ea367::t_5bd7ce29c85516 1
+vitest-10519-inline-snapshot-stack/results/shape-1x100-browser-no-coverage/browser-off/eager/002.diagnostic.json
+  s_65d3f2050ea367::t_cb1f88f5d76e7f 1-1421
+vitest-10519-inline-snapshot-stack/results/shape-1x100-browser-no-coverage/browser-off/eager/002.report.json
+  s_65d3f2050ea367::t_e78bffc8279c1f 1
+vitest-10519-inline-snapshot-stack/results/shape-1x100-browser-no-coverage/browser-off/eager/003.diagnostic.json
+  s_65d3f2050ea367::t_ca19e30ebcb569 1-1421
+vitest-10519-inline-snapshot-stack/results/shape-1x100-browser-no-coverage/browser-off/eager/003.report.json
+  s_65d3f2050ea367::t_f4112a99118ad3 1
+vitest-10519-inline-snapshot-stack/results/shape-1x100-browser-no-coverage/browser-off/lazy/001.diagnostic.json
+  s_65d3f2050ea367::t_dabd698248ec8d 1-1421
+vitest-10519-inline-snapshot-stack/results/shape-1x100-browser-no-coverage/browser-off/lazy/001.report.json
+  s_65d3f2050ea367::t_e4335bffd53af6 1
+vitest-10519-inline-snapshot-stack/results/shape-1x100-browser-no-coverage/browser-off/lazy/002.diagnostic.json
+  s_65d3f2050ea367::t_11cc7e6e0f1d92 1-1421
+vitest-10519-inline-snapshot-stack/results/shape-1x100-browser-no-coverage/browser-off/lazy/002.report.json
+  s_65d3f2050ea367::t_cc4052196702fd 1
+vitest-10519-inline-snapshot-stack/results/shape-1x100-browser-no-coverage/browser-off/lazy/003.diagnostic.json
+  s_65d3f2050ea367::t_7c04fe670ac91c 1-1421
+vitest-10519-inline-snapshot-stack/results/shape-1x100-browser-no-coverage/browser-off/lazy/003.report.json
+  s_65d3f2050ea367::t_105343840d8346 1
+vitest-10519-inline-snapshot-stack/results/shape-1x100-browser-no-coverage/browser-off/manifest.json
+  s_65d3f2050ea367::t_02d447d4caf322 1-33
+vitest-10519-inline-snapshot-stack/results/shape-1x100-browser-v8/browser-on/analysis-v2.json
+  s_65d3f2050ea367::t_a9c9eaa852425d 1-558
+vitest-10519-inline-snapshot-stack/results/shape-1x100-browser-v8/browser-on/analysis-v3.json
+  s_65d3f2050ea367::t_dc769355a0acef 1-618
+vitest-10519-inline-snapshot-stack/results/shape-1x100-browser-v8/browser-on/analysis-v4.json
+  s_65d3f2050ea367::t_9d6aa3d6aa82cd 1-801
+vitest-10519-inline-snapshot-stack/results/shape-1x100-browser-v8/browser-on/analysis.json
+  s_65d3f2050ea367::t_c1de268db78f3b 1-468
+vitest-10519-inline-snapshot-stack/results/shape-1x100-browser-v8/browser-on/eager/001.diagnostic.json
+  s_65d3f2050ea367::t_0d7714b0f8d2d3 1-1421
+vitest-10519-inline-snapshot-stack/results/shape-1x100-browser-v8/browser-on/eager/001.report.json
+  s_65d3f2050ea367::t_e1d9945242cc34 1
+vitest-10519-inline-snapshot-stack/results/shape-1x100-browser-v8/browser-on/eager/002.diagnostic.json
+  s_65d3f2050ea367::t_c78824a071a584 1-1421
+vitest-10519-inline-snapshot-stack/results/shape-1x100-browser-v8/browser-on/eager/002.report.json
+  s_65d3f2050ea367::t_9e4cb211d22b22 1
+vitest-10519-inline-snapshot-stack/results/shape-1x100-browser-v8/browser-on/eager/003.diagnostic.json
+  s_65d3f2050ea367::t_4d234968591f53 1-1421
+vitest-10519-inline-snapshot-stack/results/shape-1x100-browser-v8/browser-on/eager/003.report.json
+  s_65d3f2050ea367::t_fa898eba28fd7b 1
+vitest-10519-inline-snapshot-stack/results/shape-1x100-browser-v8/browser-on/lazy/001.diagnostic.json
+  s_65d3f2050ea367::t_03579de8aa2de4 1-1421
+vitest-10519-inline-snapshot-stack/results/shape-1x100-browser-v8/browser-on/lazy/001.report.json
+  s_65d3f2050ea367::t_5b037ff84fb775 1
+vitest-10519-inline-snapshot-stack/results/shape-1x100-browser-v8/browser-on/lazy/002.diagnostic.json
+  s_65d3f2050ea367::t_cd3509518b1d05 1-1421
+vitest-10519-inline-snapshot-stack/results/shape-1x100-browser-v8/browser-on/lazy/002.report.json
+  s_65d3f2050ea367::t_62dec30b0536c6 1
+vitest-10519-inline-snapshot-stack/results/shape-1x100-browser-v8/browser-on/lazy/003.diagnostic.json
+  s_65d3f2050ea367::t_f2df4b3c5bb1b1 1-1421
+vitest-10519-inline-snapshot-stack/results/shape-1x100-browser-v8/browser-on/lazy/003.report.json
+  s_65d3f2050ea367::t_8fa518078f5a9b 1
+vitest-10519-inline-snapshot-stack/results/shape-1x100-browser-v8/browser-on/manifest.json
+  s_65d3f2050ea367::t_19840d63a78402 1-33
+vitest-10519-inline-snapshot-stack/scripts/analyze.mjs
+  s_65d3f2050ea367::t_3ecd9f581f9318 1-193
+vitest-10519-inline-snapshot-stack/scripts/diagnostic-reporter.mjs
+  s_65d3f2050ea367::t_b2139251a5bc6a 1-30
+vitest-10519-inline-snapshot-stack/scripts/generate-workload.mjs
+  s_65d3f2050ea367::t_722a8d80d688ae 1-54
+vitest-10519-inline-snapshot-stack/scripts/run-results.mjs
+  s_65d3f2050ea367::t_6cd1db8b65c88a 1-111
+vitest-10519-inline-snapshot-stack/test/setup.ts
+  s_65d3f2050ea367::t_88cf54df4ac8ab 1-5
+vitest-10519-inline-snapshot-stack/test/smoke.test.ts
+  s_65d3f2050ea367::t_948fc869cbddf4 1-9
+vitest-10519-inline-snapshot-stack/vitest.config.ts
+  s_65d3f2050ea367::t_b7a34af1721e69 1-27
+vitest-10519-inline-snapshot-stack/workloads/generated/100x1/000.test.ts
+  s_65d3f2050ea367::t_bca220eab00906 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/100x1/001.test.ts
+  s_65d3f2050ea367::t_f5def4a27bdf3c 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/100x1/002.test.ts
+  s_65d3f2050ea367::t_89c728e94ccad4 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/100x1/003.test.ts
+  s_65d3f2050ea367::t_685a5def5a704b 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/100x1/004.test.ts
+  s_65d3f2050ea367::t_4dbfba818587b2 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/100x1/005.test.ts
+  s_65d3f2050ea367::t_db11f6612e609f 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/100x1/006.test.ts
+  s_65d3f2050ea367::t_ad7368620453b6 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/100x1/007.test.ts
+  s_65d3f2050ea367::t_38eea2ce6e99d0 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/100x1/008.test.ts
+  s_65d3f2050ea367::t_7d2b1973ae9a68 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/100x1/009.test.ts
+  s_65d3f2050ea367::t_d020f061ce8580 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/100x1/010.test.ts
+  s_65d3f2050ea367::t_f9d6fd5e6f6bea 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/100x1/011.test.ts
+  s_65d3f2050ea367::t_4cfed329f2f79e 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/100x1/012.test.ts
+  s_65d3f2050ea367::t_01ff2f7c7172a5 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/100x1/013.test.ts
+  s_65d3f2050ea367::t_07d0c0a974ef6f 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/100x1/014.test.ts
+  s_65d3f2050ea367::t_77196122645b88 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/100x1/015.test.ts
+  s_65d3f2050ea367::t_c034a59464d680 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/100x1/016.test.ts
+  s_65d3f2050ea367::t_f64c8235522a9b 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/100x1/017.test.ts
+  s_65d3f2050ea367::t_de8f4c4e05a8ef 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/100x1/018.test.ts
+  s_65d3f2050ea367::t_e9703dfb96a902 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/100x1/019.test.ts
+  s_65d3f2050ea367::t_a07cc3091cbfe2 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/100x1/020.test.ts
+  s_65d3f2050ea367::t_9e94ff5b05ba39 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/100x1/021.test.ts
+  s_65d3f2050ea367::t_4811cf622ff664 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/100x1/022.test.ts
+  s_65d3f2050ea367::t_cd42d0ee9f6755 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/100x1/023.test.ts
+  s_65d3f2050ea367::t_15fcc471b08af2 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/100x1/024.test.ts
+  s_65d3f2050ea367::t_2ab725dd702408 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/100x1/025.test.ts
+  s_65d3f2050ea367::t_9b56fd523eedf8 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/100x1/026.test.ts
+  s_65d3f2050ea367::t_02619fa1130c63 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/100x1/027.test.ts
+  s_65d3f2050ea367::t_546bdc44aaa5ee 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/100x1/028.test.ts
+  s_65d3f2050ea367::t_493e9e2fbb14ce 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/100x1/029.test.ts
+  s_65d3f2050ea367::t_bfb7684f7f7a78 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/100x1/030.test.ts
+  s_65d3f2050ea367::t_9dfec095f6a829 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/100x1/031.test.ts
+  s_65d3f2050ea367::t_c7e87e3aeae691 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/100x1/032.test.ts
+  s_65d3f2050ea367::t_f71a8430fd6006 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/100x1/033.test.ts
+  s_65d3f2050ea367::t_69a7b367449f87 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/100x1/034.test.ts
+  s_65d3f2050ea367::t_e542441b9e6840 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/100x1/035.test.ts
+  s_65d3f2050ea367::t_e5817b88e89265 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/100x1/036.test.ts
+  s_65d3f2050ea367::t_7ac2b5ffe0752d 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/100x1/037.test.ts
+  s_65d3f2050ea367::t_c1c7c1844d6c43 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/100x1/038.test.ts
+  s_65d3f2050ea367::t_2bc67b599b83f9 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/100x1/039.test.ts
+  s_65d3f2050ea367::t_5f6909bf9cd417 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/100x1/040.test.ts
+  s_65d3f2050ea367::t_a155a2a25710c5 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/100x1/041.test.ts
+  s_65d3f2050ea367::t_7c70df29f28420 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/100x1/042.test.ts
+  s_65d3f2050ea367::t_288c51f426e06d 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/100x1/043.test.ts
+  s_65d3f2050ea367::t_c3b29228fef159 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/100x1/044.test.ts
+  s_65d3f2050ea367::t_e400a569d4cd06 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/100x1/045.test.ts
+  s_65d3f2050ea367::t_6a3928e82a7d55 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/100x1/046.test.ts
+  s_65d3f2050ea367::t_235de9a6236dce 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/100x1/047.test.ts
+  s_65d3f2050ea367::t_db61afaa0fc002 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/100x1/048.test.ts
+  s_65d3f2050ea367::t_f8ad09e3e653cc 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/100x1/049.test.ts
+  s_65d3f2050ea367::t_779c2615620ac5 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/100x1/050.test.ts
+  s_65d3f2050ea367::t_c199c00cf09f73 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/100x1/051.test.ts
+  s_65d3f2050ea367::t_d7bf4fef368027 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/100x1/052.test.ts
+  s_65d3f2050ea367::t_21cb7aa4ee005e 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/100x1/053.test.ts
+  s_65d3f2050ea367::t_fdf3062dd37a50 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/100x1/054.test.ts
+  s_65d3f2050ea367::t_eb6f57a56378e0 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/100x1/055.test.ts
+  s_65d3f2050ea367::t_b3ebe12b3c568b 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/100x1/056.test.ts
+  s_65d3f2050ea367::t_8ce33971a99da5 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/100x1/057.test.ts
+  s_65d3f2050ea367::t_2495114c11255b 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/100x1/058.test.ts
+  s_65d3f2050ea367::t_9192bf06e03912 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/100x1/059.test.ts
+  s_65d3f2050ea367::t_5dcbbcf413b6fd 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/100x1/060.test.ts
+  s_65d3f2050ea367::t_780b92d205634b 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/100x1/061.test.ts
+  s_65d3f2050ea367::t_8f82e1a85edb58 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/100x1/062.test.ts
+  s_65d3f2050ea367::t_8c25ebe3fb3539 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/100x1/063.test.ts
+  s_65d3f2050ea367::t_6ed2952874e6df 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/100x1/064.test.ts
+  s_65d3f2050ea367::t_aa2a179d79f716 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/100x1/065.test.ts
+  s_65d3f2050ea367::t_22273c79b0f989 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/100x1/066.test.ts
+  s_65d3f2050ea367::t_db9fd902e621c0 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/100x1/067.test.ts
+  s_65d3f2050ea367::t_742dda55876459 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/100x1/068.test.ts
+  s_65d3f2050ea367::t_a6268ddc2a17eb 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/100x1/069.test.ts
+  s_65d3f2050ea367::t_43d194bae2826f 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/100x1/070.test.ts
+  s_65d3f2050ea367::t_579921087ff32f 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/100x1/071.test.ts
+  s_65d3f2050ea367::t_5041ef97a53ce1 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/100x1/072.test.ts
+  s_65d3f2050ea367::t_6ec6b8bce96c88 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/100x1/073.test.ts
+  s_65d3f2050ea367::t_f396958e75c6f6 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/100x1/074.test.ts
+  s_65d3f2050ea367::t_e565cf021a2cd0 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/100x1/075.test.ts
+  s_65d3f2050ea367::t_3d43767cf63958 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/100x1/076.test.ts
+  s_65d3f2050ea367::t_3c2f7560e9dbc1 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/100x1/077.test.ts
+  s_65d3f2050ea367::t_8064be5cc46b16 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/100x1/078.test.ts
+  s_65d3f2050ea367::t_7971fab5f34d91 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/100x1/079.test.ts
+  s_65d3f2050ea367::t_224820e96aaad0 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/100x1/080.test.ts
+  s_65d3f2050ea367::t_13632e924f3495 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/100x1/081.test.ts
+  s_65d3f2050ea367::t_feeb5078d719f0 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/100x1/082.test.ts
+  s_65d3f2050ea367::t_39035ff9d65742 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/100x1/083.test.ts
+  s_65d3f2050ea367::t_504dfa6cd0e169 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/100x1/084.test.ts
+  s_65d3f2050ea367::t_504d56c0e52093 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/100x1/085.test.ts
+  s_65d3f2050ea367::t_999438076d5fa9 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/100x1/086.test.ts
+  s_65d3f2050ea367::t_8be41137a223bb 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/100x1/087.test.ts
+  s_65d3f2050ea367::t_bbf330fca4a224 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/100x1/088.test.ts
+  s_65d3f2050ea367::t_2c170472638b02 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/100x1/089.test.ts
+  s_65d3f2050ea367::t_d2c461f7bbfb6b 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/100x1/090.test.ts
+  s_65d3f2050ea367::t_cef4874ec09e9e 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/100x1/091.test.ts
+  s_65d3f2050ea367::t_9e116ab729a8a3 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/100x1/092.test.ts
+  s_65d3f2050ea367::t_426bc63f10efbb 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/100x1/093.test.ts
+  s_65d3f2050ea367::t_ada64ff37faa7d 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/100x1/094.test.ts
+  s_65d3f2050ea367::t_f4b8161a607dac 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/100x1/095.test.ts
+  s_65d3f2050ea367::t_0579275b181bd9 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/100x1/096.test.ts
+  s_65d3f2050ea367::t_20b63e97a4ac0a 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/100x1/097.test.ts
+  s_65d3f2050ea367::t_4f7317adb3b9a7 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/100x1/098.test.ts
+  s_65d3f2050ea367::t_708d6af3f2435b 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/100x1/099.test.ts
+  s_65d3f2050ea367::t_9316a1850a6ee6 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/100x1/workload.json
+  s_65d3f2050ea367::t_1782300671c6c7 1-7
+vitest-10519-inline-snapshot-stack/workloads/generated/10x10/000.test.ts
+  s_65d3f2050ea367::t_5163914acee0dc 1-41
+vitest-10519-inline-snapshot-stack/workloads/generated/10x10/001.test.ts
+  s_65d3f2050ea367::t_bcd2e10445fceb 1-41
+vitest-10519-inline-snapshot-stack/workloads/generated/10x10/002.test.ts
+  s_65d3f2050ea367::t_454a0ac7f5433f 1-41
+vitest-10519-inline-snapshot-stack/workloads/generated/10x10/003.test.ts
+  s_65d3f2050ea367::t_e724f8488328f6 1-41
+vitest-10519-inline-snapshot-stack/workloads/generated/10x10/004.test.ts
+  s_65d3f2050ea367::t_67bc90886fcd1e 1-41
+vitest-10519-inline-snapshot-stack/workloads/generated/10x10/005.test.ts
+  s_65d3f2050ea367::t_f36489f6be58f7 1-41
+vitest-10519-inline-snapshot-stack/workloads/generated/10x10/006.test.ts
+  s_65d3f2050ea367::t_4e5cab8bad53f0 1-41
+vitest-10519-inline-snapshot-stack/workloads/generated/10x10/007.test.ts
+  s_65d3f2050ea367::t_ccba82d526826a 1-41
+vitest-10519-inline-snapshot-stack/workloads/generated/10x10/008.test.ts
+  s_65d3f2050ea367::t_b10386a11d0683 1-41
+vitest-10519-inline-snapshot-stack/workloads/generated/10x10/009.test.ts
+  s_65d3f2050ea367::t_8469fe37f171cf 1-41
+vitest-10519-inline-snapshot-stack/workloads/generated/10x10/workload.json
+  s_65d3f2050ea367::t_285db1a078b3d4 1-7
+vitest-10519-inline-snapshot-stack/workloads/generated/1x100/000.test.ts
+  s_65d3f2050ea367::t_da5a7c7508a600 1-401
+vitest-10519-inline-snapshot-stack/workloads/generated/1x100/workload.json
+  s_65d3f2050ea367::t_a110ea19999781 1-7
+vitest-10519-inline-snapshot-stack/workloads/generated/control-100x1/000.test.ts
+  s_65d3f2050ea367::t_6d7c904e246a87 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/control-100x1/001.test.ts
+  s_65d3f2050ea367::t_11bcef73ba57ad 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/control-100x1/002.test.ts
+  s_65d3f2050ea367::t_0addf1f925afb5 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/control-100x1/003.test.ts
+  s_65d3f2050ea367::t_d412ce6284d596 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/control-100x1/004.test.ts
+  s_65d3f2050ea367::t_8dde5e7435c70c 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/control-100x1/005.test.ts
+  s_65d3f2050ea367::t_ce7c71c847ce74 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/control-100x1/006.test.ts
+  s_65d3f2050ea367::t_fa5ae6f8abc61e 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/control-100x1/007.test.ts
+  s_65d3f2050ea367::t_cb217628f30c6e 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/control-100x1/008.test.ts
+  s_65d3f2050ea367::t_2ea2ee188803a1 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/control-100x1/009.test.ts
+  s_65d3f2050ea367::t_ae9876fc1cddc6 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/control-100x1/010.test.ts
+  s_65d3f2050ea367::t_1bc94c617751e5 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/control-100x1/011.test.ts
+  s_65d3f2050ea367::t_76c409c71cb05a 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/control-100x1/012.test.ts
+  s_65d3f2050ea367::t_a663e9bb1a5ae6 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/control-100x1/013.test.ts
+  s_65d3f2050ea367::t_f1d79f956465dd 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/control-100x1/014.test.ts
+  s_65d3f2050ea367::t_16b1b3cd4faee4 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/control-100x1/015.test.ts
+  s_65d3f2050ea367::t_3c797fae00baf5 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/control-100x1/016.test.ts
+  s_65d3f2050ea367::t_fb8e8a0aaca745 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/control-100x1/017.test.ts
+  s_65d3f2050ea367::t_c8d04b5c331863 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/control-100x1/018.test.ts
+  s_65d3f2050ea367::t_2caf50e5d3e9c8 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/control-100x1/019.test.ts
+  s_65d3f2050ea367::t_3fc86fd6fa597c 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/control-100x1/020.test.ts
+  s_65d3f2050ea367::t_7908a45188d065 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/control-100x1/021.test.ts
+  s_65d3f2050ea367::t_464abb5a3ed0c8 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/control-100x1/022.test.ts
+  s_65d3f2050ea367::t_e23ff7c79c2f40 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/control-100x1/023.test.ts
+  s_65d3f2050ea367::t_b67a84b5fe8a91 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/control-100x1/024.test.ts
+  s_65d3f2050ea367::t_70849ac829091b 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/control-100x1/025.test.ts
+  s_65d3f2050ea367::t_c74223dfdafebc 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/control-100x1/026.test.ts
+  s_65d3f2050ea367::t_deb5cb2850bede 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/control-100x1/027.test.ts
+  s_65d3f2050ea367::t_d91dc8483305c3 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/control-100x1/028.test.ts
+  s_65d3f2050ea367::t_2360c13ca07f30 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/control-100x1/029.test.ts
+  s_65d3f2050ea367::t_e5bc421f120c85 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/control-100x1/030.test.ts
+  s_65d3f2050ea367::t_13e0c61e3bcbd7 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/control-100x1/031.test.ts
+  s_65d3f2050ea367::t_cbf396c3df3fcb 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/control-100x1/032.test.ts
+  s_65d3f2050ea367::t_4f3259e7cba768 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/control-100x1/033.test.ts
+  s_65d3f2050ea367::t_959afbbc90bbfc 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/control-100x1/034.test.ts
+  s_65d3f2050ea367::t_02acaeca894d00 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/control-100x1/035.test.ts
+  s_65d3f2050ea367::t_378b43c3b7e997 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/control-100x1/036.test.ts
+  s_65d3f2050ea367::t_166dd30c5f566b 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/control-100x1/037.test.ts
+  s_65d3f2050ea367::t_61eb6b5a2a48eb 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/control-100x1/038.test.ts
+  s_65d3f2050ea367::t_fb77bc8b8923ba 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/control-100x1/039.test.ts
+  s_65d3f2050ea367::t_9ba3f8001b4e2f 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/control-100x1/040.test.ts
+  s_65d3f2050ea367::t_37d4f85315c908 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/control-100x1/041.test.ts
+  s_65d3f2050ea367::t_d31884fda11d51 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/control-100x1/042.test.ts
+  s_65d3f2050ea367::t_0765227bb80e2f 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/control-100x1/043.test.ts
+  s_65d3f2050ea367::t_dde9a9aaeb6452 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/control-100x1/044.test.ts
+  s_65d3f2050ea367::t_7d87a2acc37855 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/control-100x1/045.test.ts
+  s_65d3f2050ea367::t_d1a6a8b697c4c1 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/control-100x1/046.test.ts
+  s_65d3f2050ea367::t_13e89850d5d07a 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/control-100x1/047.test.ts
+  s_65d3f2050ea367::t_b09c151981b2aa 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/control-100x1/048.test.ts
+  s_65d3f2050ea367::t_fd3dacb407aaba 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/control-100x1/049.test.ts
+  s_65d3f2050ea367::t_56525cf947847c 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/control-100x1/050.test.ts
+  s_65d3f2050ea367::t_a3657c0c84d432 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/control-100x1/051.test.ts
+  s_65d3f2050ea367::t_9119f3cee23eaf 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/control-100x1/052.test.ts
+  s_65d3f2050ea367::t_636289196e3442 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/control-100x1/053.test.ts
+  s_65d3f2050ea367::t_5e11ff80de2dc4 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/control-100x1/054.test.ts
+  s_65d3f2050ea367::t_a89746b4bb44f5 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/control-100x1/055.test.ts
+  s_65d3f2050ea367::t_2b3835b35bda86 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/control-100x1/056.test.ts
+  s_65d3f2050ea367::t_3bf0e19776f16f 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/control-100x1/057.test.ts
+  s_65d3f2050ea367::t_08068cb074606d 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/control-100x1/058.test.ts
+  s_65d3f2050ea367::t_3b18a607cf689d 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/control-100x1/059.test.ts
+  s_65d3f2050ea367::t_8bcea337a0da86 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/control-100x1/060.test.ts
+  s_65d3f2050ea367::t_289f9b20af6f89 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/control-100x1/061.test.ts
+  s_65d3f2050ea367::t_25933a38ba5fde 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/control-100x1/062.test.ts
+  s_65d3f2050ea367::t_9ea7206c93fad7 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/control-100x1/063.test.ts
+  s_65d3f2050ea367::t_3cbcf19a1a0466 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/control-100x1/064.test.ts
+  s_65d3f2050ea367::t_0ad5ea02962eb9 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/control-100x1/065.test.ts
+  s_65d3f2050ea367::t_43aba9e85145d9 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/control-100x1/066.test.ts
+  s_65d3f2050ea367::t_68ef4f916e9a70 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/control-100x1/067.test.ts
+  s_65d3f2050ea367::t_2145f67df81065 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/control-100x1/068.test.ts
+  s_65d3f2050ea367::t_99f0cbaa92e3ec 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/control-100x1/069.test.ts
+  s_65d3f2050ea367::t_4a3135a28b2c50 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/control-100x1/070.test.ts
+  s_65d3f2050ea367::t_7e08f1d52d6934 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/control-100x1/071.test.ts
+  s_65d3f2050ea367::t_82eebce2d6d536 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/control-100x1/072.test.ts
+  s_65d3f2050ea367::t_630974a62a73d3 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/control-100x1/073.test.ts
+  s_65d3f2050ea367::t_b8601ba47fa9e1 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/control-100x1/074.test.ts
+  s_65d3f2050ea367::t_e2aa9f5123ef7a 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/control-100x1/075.test.ts
+  s_65d3f2050ea367::t_57dd9f8964a0e2 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/control-100x1/076.test.ts
+  s_65d3f2050ea367::t_d29c859626fce3 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/control-100x1/077.test.ts
+  s_65d3f2050ea367::t_cc98e257a6996f 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/control-100x1/078.test.ts
+  s_65d3f2050ea367::t_dbd37e0d330c8f 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/control-100x1/079.test.ts
+  s_65d3f2050ea367::t_b2594c12224163 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/control-100x1/080.test.ts
+  s_65d3f2050ea367::t_7ebe9fee0b7187 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/control-100x1/081.test.ts
+  s_65d3f2050ea367::t_6946d01c9fffb3 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/control-100x1/082.test.ts
+  s_65d3f2050ea367::t_ef9a14b1eb602b 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/control-100x1/083.test.ts
+  s_65d3f2050ea367::t_40b5eef8508165 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/control-100x1/084.test.ts
+  s_65d3f2050ea367::t_9ea3ea3573a43b 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/control-100x1/085.test.ts
+  s_65d3f2050ea367::t_f036dcbd80d853 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/control-100x1/086.test.ts
+  s_65d3f2050ea367::t_9d81bc2491dbe4 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/control-100x1/087.test.ts
+  s_65d3f2050ea367::t_76cd76ab785636 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/control-100x1/088.test.ts
+  s_65d3f2050ea367::t_4bf42a84ea691a 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/control-100x1/089.test.ts
+  s_65d3f2050ea367::t_cb66a672f5756f 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/control-100x1/090.test.ts
+  s_65d3f2050ea367::t_8c94f4db42ba3e 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/control-100x1/091.test.ts
+  s_65d3f2050ea367::t_0a91bc0b94ab1d 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/control-100x1/092.test.ts
+  s_65d3f2050ea367::t_3e34cb904986a8 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/control-100x1/093.test.ts
+  s_65d3f2050ea367::t_455b7800b5a652 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/control-100x1/094.test.ts
+  s_65d3f2050ea367::t_9f749042d8776b 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/control-100x1/095.test.ts
+  s_65d3f2050ea367::t_409c6e025c28be 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/control-100x1/096.test.ts
+  s_65d3f2050ea367::t_ae13885944a710 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/control-100x1/097.test.ts
+  s_65d3f2050ea367::t_419c946eaba129 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/control-100x1/098.test.ts
+  s_65d3f2050ea367::t_2607b22f031260 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/control-100x1/099.test.ts
+  s_65d3f2050ea367::t_dae7cfb75148b0 1-5
+vitest-10519-inline-snapshot-stack/workloads/generated/control-100x1/workload.json
+  s_65d3f2050ea367::t_f840dd66f78b67 1-8
+vitest-10519-inline-snapshot-stack/workloads/generated/control-10x10/000.test.ts
+  s_65d3f2050ea367::t_1bc1b43126283d 1-41
+vitest-10519-inline-snapshot-stack/workloads/generated/control-10x10/001.test.ts
+  s_65d3f2050ea367::t_1f173ae0ec3e06 1-41
+vitest-10519-inline-snapshot-stack/workloads/generated/control-10x10/002.test.ts
+  s_65d3f2050ea367::t_037f4639cbd71f 1-41
+vitest-10519-inline-snapshot-stack/workloads/generated/control-10x10/003.test.ts
+  s_65d3f2050ea367::t_dbdcbdda7aaa0b 1-41
+vitest-10519-inline-snapshot-stack/workloads/generated/control-10x10/004.test.ts
+  s_65d3f2050ea367::t_cc4a70295b3dd8 1-41
+vitest-10519-inline-snapshot-stack/workloads/generated/control-10x10/005.test.ts
+  s_65d3f2050ea367::t_508f3ea78cc3f6 1-41
+vitest-10519-inline-snapshot-stack/workloads/generated/control-10x10/006.test.ts
+  s_65d3f2050ea367::t_da07255de18e30 1-41
+vitest-10519-inline-snapshot-stack/workloads/generated/control-10x10/007.test.ts
+  s_65d3f2050ea367::t_bd5e75c0d9935e 1-41
+vitest-10519-inline-snapshot-stack/workloads/generated/control-10x10/008.test.ts
+  s_65d3f2050ea367::t_5f27372817ae38 1-41
+vitest-10519-inline-snapshot-stack/workloads/generated/control-10x10/009.test.ts
+  s_65d3f2050ea367::t_7c468d4f026995 1-41
+vitest-10519-inline-snapshot-stack/workloads/generated/control-10x10/workload.json
+  s_65d3f2050ea367::t_4f8701aff906e2 1-8
+vitest-10519-inline-snapshot-stack/workloads/generated/control-1x100/000.test.ts
+  s_65d3f2050ea367::t_b764f6aedb2fae 1-401
+vitest-10519-inline-snapshot-stack/workloads/generated/control-1x100/workload.json
+  s_65d3f2050ea367::t_881a97f695a204 1-8
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "3ffa6c9a390fbc65d3b3cfec501455ab918fdf55",
+  "prompts": {},
+  "sessions": {
+    "s_65d3f2050ea367": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_00b9019f9ffeG69lDx0euzKz4N",
+        "model": "gpt-5.6"
+      },
+      "human_author": "Hiroshi Ogawa <4232207+hi-ogawa@users.noreply.github.com>"
+    }
+  }
+}
