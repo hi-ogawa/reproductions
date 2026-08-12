@@ -1,0 +1,558 @@
+{
+  "manifest": {
+    "schemaVersion": 1,
+    "createdAt": "2026-08-12T07:05:38.486Z",
+    "label": "shape-1x100-browser-no-coverage",
+    "runtime": "browser",
+    "coverage": "off",
+    "samples": 3,
+    "files": [
+      "workloads/generated/1x100/000.test.ts"
+    ],
+    "variants": [
+      "eager",
+      "lazy"
+    ],
+    "includeTaskLocation": false,
+    "ci": false,
+    "platform": "darwin",
+    "architecture": "arm64",
+    "node": "v24.19.0",
+    "packages": {
+      "@vitest/browser": "4.1.10",
+      "@vitest/browser-playwright": "4.1.10",
+      "@vitest/coverage-v8": "4.1.10",
+      "playwright": "1.62.1",
+      "vitest": "4.1.10"
+    },
+    "inputs": {
+      "vitest.config.ts": "63f0206a9e584c97a1f8d030cce79fd24e329fc901eeac4567b87ef07351fbea",
+      "scripts/diagnostic-reporter.mjs": "289b079c348f0460893e690c8668fe29e931e821838a7633a493007696b7b2b7",
+      "patches/@vitest__snapshot@4.1.10.patch": "0e6633c9f8b940bb1508ec2bfbe1ffce7b55d79e1d9864d8eecdac7d715f3ebb",
+      "workloads/generated/1x100/000.test.ts": "3dfd8c522a9a215cb477e2e9af0bf51f11917d72e81c4c3bcb2c21cf0ee44a44"
+    }
+  },
+  "metrics": {
+    "eager": {
+      "environmentSetupDuration": {
+        "min": 0,
+        "median": 0,
+        "mean": 0,
+        "p90": 0,
+        "max": 0
+      },
+      "prepareDuration": {
+        "min": 89.80000000074506,
+        "median": 91.40000000223517,
+        "mean": 98.50000000124176,
+        "p90": 114.30000000074506,
+        "max": 114.30000000074506
+      },
+      "prepareDurationPerModule": {
+        "min": 89.80000000074506,
+        "median": 91.40000000223517,
+        "mean": 98.50000000124176,
+        "p90": 114.30000000074506,
+        "max": 114.30000000074506
+      },
+      "setupDuration": {
+        "min": 2.300000000745058,
+        "median": 2.399999998509884,
+        "mean": 2.3999999997516475,
+        "p90": 2.5,
+        "max": 2.5
+      },
+      "setupDurationPerModule": {
+        "min": 2.300000000745058,
+        "median": 2.399999998509884,
+        "mean": 2.3999999997516475,
+        "p90": 2.5,
+        "max": 2.5
+      },
+      "collectDuration": {
+        "min": 2.800000000745058,
+        "median": 3.100000001490116,
+        "mean": 3.033333335071802,
+        "p90": 3.2000000029802322,
+        "max": 3.2000000029802322
+      },
+      "collectDurationPerModule": {
+        "min": 2.800000000745058,
+        "median": 3.100000001490116,
+        "mean": 3.033333335071802,
+        "p90": 3.2000000029802322,
+        "max": 3.2000000029802322
+      },
+      "testCaseDuration": {
+        "min": 9.900000002235174,
+        "median": 9.99999999627471,
+        "mean": 10.06666666517655,
+        "p90": 10.299999997019768,
+        "max": 10.299999997019768
+      },
+      "testCaseDurationPerTest": {
+        "min": 0.09900000002235174,
+        "median": 0.0999999999627471,
+        "mean": 0.10066666665176549,
+        "p90": 0.10299999997019768,
+        "max": 0.10299999997019768
+      },
+      "moduleDuration": {
+        "min": 10.699999999254942,
+        "median": 10.800000000745058,
+        "mean": 10.799999999503294,
+        "p90": 10.899999998509884,
+        "max": 10.899999998509884
+      },
+      "moduleDurationPerModule": {
+        "min": 10.699999999254942,
+        "median": 10.800000000745058,
+        "mean": 10.799999999503294,
+        "p90": 10.899999998509884,
+        "max": 10.899999998509884
+      },
+      "moduleWorkDuration": {
+        "min": 16.099999997764826,
+        "median": 16.100000001490116,
+        "mean": 16.233333334326744,
+        "p90": 16.50000000372529,
+        "max": 16.50000000372529
+      },
+      "moduleWorkDurationPerModule": {
+        "min": 16.099999997764826,
+        "median": 16.100000001490116,
+        "mean": 16.233333334326744,
+        "p90": 16.50000000372529,
+        "max": 16.50000000372529
+      },
+      "trackedDuration": {
+        "min": 105.89999999850988,
+        "median": 107.90000000596046,
+        "mean": 114.7333333355685,
+        "p90": 130.40000000223517,
+        "max": 130.40000000223517
+      },
+      "reporterRunDuration": {
+        "min": 442.199951171875,
+        "median": 463.10009765625,
+        "mean": 470.1666666666667,
+        "p90": 505.199951171875,
+        "max": 505.199951171875
+      }
+    },
+    "lazy": {
+      "environmentSetupDuration": {
+        "min": 0,
+        "median": 0,
+        "mean": 0,
+        "p90": 0,
+        "max": 0
+      },
+      "prepareDuration": {
+        "min": 92.10000000149012,
+        "median": 93.09999999776483,
+        "mean": 92.96666666616996,
+        "p90": 93.69999999925494,
+        "max": 93.69999999925494
+      },
+      "prepareDurationPerModule": {
+        "min": 92.10000000149012,
+        "median": 93.09999999776483,
+        "mean": 92.96666666616996,
+        "p90": 93.69999999925494,
+        "max": 93.69999999925494
+      },
+      "setupDuration": {
+        "min": 2.399999998509884,
+        "median": 2.5,
+        "mean": 2.5666666651765504,
+        "p90": 2.7999999970197678,
+        "max": 2.7999999970197678
+      },
+      "setupDurationPerModule": {
+        "min": 2.399999998509884,
+        "median": 2.5,
+        "mean": 2.5666666651765504,
+        "p90": 2.7999999970197678,
+        "max": 2.7999999970197678
+      },
+      "collectDuration": {
+        "min": 2.899999998509884,
+        "median": 3,
+        "mean": 3.0333333338300386,
+        "p90": 3.2000000029802322,
+        "max": 3.2000000029802322
+      },
+      "collectDurationPerModule": {
+        "min": 2.899999998509884,
+        "median": 3,
+        "mean": 3.0333333338300386,
+        "p90": 3.2000000029802322,
+        "max": 3.2000000029802322
+      },
+      "testCaseDuration": {
+        "min": 4.200000002980232,
+        "median": 4.299999997019768,
+        "mean": 4.266666666915019,
+        "p90": 4.300000000745058,
+        "max": 4.300000000745058
+      },
+      "testCaseDurationPerTest": {
+        "min": 0.04200000002980232,
+        "median": 0.042999999970197676,
+        "mean": 0.04266666666915019,
+        "p90": 0.04300000000745058,
+        "max": 0.04300000000745058
+      },
+      "moduleDuration": {
+        "min": 4.800000000745058,
+        "median": 4.900000002235174,
+        "mean": 4.900000000993411,
+        "p90": 5,
+        "max": 5
+      },
+      "moduleDurationPerModule": {
+        "min": 4.800000000745058,
+        "median": 4.900000002235174,
+        "mean": 4.900000000993411,
+        "p90": 5,
+        "max": 5
+      },
+      "moduleWorkDuration": {
+        "min": 10.300000000745058,
+        "median": 10.399999998509884,
+        "mean": 10.5,
+        "p90": 10.800000000745058,
+        "max": 10.800000000745058
+      },
+      "moduleWorkDurationPerModule": {
+        "min": 10.300000000745058,
+        "median": 10.399999998509884,
+        "mean": 10.5,
+        "p90": 10.800000000745058,
+        "max": 10.800000000745058
+      },
+      "trackedDuration": {
+        "min": 102.5,
+        "median": 103.89999999850988,
+        "mean": 103.46666666616996,
+        "p90": 104,
+        "max": 104
+      },
+      "reporterRunDuration": {
+        "min": 436.199951171875,
+        "median": 449.10009765625,
+        "mean": 446.800048828125,
+        "p90": 455.10009765625,
+        "max": 455.10009765625
+      }
+    },
+    "eagerMinusLazy": {
+      "environmentSetupDuration": {
+        "min": 0,
+        "median": 0,
+        "mean": 0,
+        "p90": 0,
+        "max": 0
+      },
+      "prepareDuration": {
+        "min": -2.300000000745058,
+        "median": -2.2999999970197678,
+        "mean": 5.533333335071802,
+        "p90": 21.200000002980232,
+        "max": 21.200000002980232
+      },
+      "prepareDurationPerModule": {
+        "min": -2.300000000745058,
+        "median": -2.2999999970197678,
+        "mean": 5.533333335071802,
+        "p90": 21.200000002980232,
+        "max": 21.200000002980232
+      },
+      "setupDuration": {
+        "min": -0.4999999962747097,
+        "median": 0,
+        "mean": -0.16666666542490324,
+        "p90": 0,
+        "max": 0
+      },
+      "setupDurationPerModule": {
+        "min": -0.4999999962747097,
+        "median": 0,
+        "mean": -0.16666666542490324,
+        "p90": 0,
+        "max": 0
+      },
+      "collectDuration": {
+        "min": -0.19999999925494194,
+        "median": -0.10000000149011612,
+        "mean": 1.241763432820638e-9,
+        "p90": 0.30000000447034836,
+        "max": 0.30000000447034836
+      },
+      "collectDurationPerModule": {
+        "min": -0.19999999925494194,
+        "median": -0.10000000149011612,
+        "mean": 1.241763432820638e-9,
+        "p90": 0.30000000447034836,
+        "max": 0.30000000447034836
+      },
+      "testCaseDuration": {
+        "min": 5.600000001490116,
+        "median": 5.699999999254942,
+        "mean": 5.799999998261531,
+        "p90": 6.0999999940395355,
+        "max": 6.0999999940395355
+      },
+      "testCaseDurationPerTest": {
+        "min": 0.05600000001490116,
+        "median": 0.05699999999254942,
+        "mean": 0.05799999998261531,
+        "p90": 0.06099999994039536,
+        "max": 0.06099999994039536
+      },
+      "moduleDuration": {
+        "min": 5.899999998509884,
+        "median": 5.899999998509884,
+        "mean": 5.899999998509884,
+        "p90": 5.899999998509884,
+        "max": 5.899999998509884
+      },
+      "moduleDurationPerModule": {
+        "min": 5.899999998509884,
+        "median": 5.899999998509884,
+        "mean": 5.899999998509884,
+        "p90": 5.899999998509884,
+        "max": 5.899999998509884
+      },
+      "moduleWorkDuration": {
+        "min": 5.300000000745058,
+        "median": 5.699999999254942,
+        "mean": 5.733333334326744,
+        "p90": 6.200000002980232,
+        "max": 6.200000002980232
+      },
+      "moduleWorkDurationPerModule": {
+        "min": 5.300000000745058,
+        "median": 5.699999999254942,
+        "mean": 5.733333334326744,
+        "p90": 6.200000002980232,
+        "max": 6.200000002980232
+      },
+      "trackedDuration": {
+        "min": 3.399999998509884,
+        "median": 3.9000000059604645,
+        "mean": 11.266666669398546,
+        "p90": 26.50000000372529,
+        "max": 26.50000000372529
+      },
+      "reporterRunDuration": {
+        "min": -12.900146484375,
+        "median": 26.900146484375,
+        "mean": 23.366617838541668,
+        "p90": 56.099853515625,
+        "max": 56.099853515625
+      }
+    }
+  },
+  "samples": {
+    "eager": [
+      {
+        "sample": 1,
+        "success": true,
+        "moduleCount": 1,
+        "prepareModuleCount": 1,
+        "testCount": 100,
+        "snapshotCount": 100,
+        "environmentSetupDuration": 0,
+        "prepareDuration": 114.30000000074506,
+        "setupDuration": 2.300000000745058,
+        "collectDuration": 3.100000001490116,
+        "testCaseDuration": 9.99999999627471,
+        "moduleDuration": 10.699999999254942,
+        "reporterRunDuration": 505.199951171875,
+        "moduleWorkDuration": 16.100000001490116,
+        "trackedDuration": 130.40000000223517,
+        "testCaseDurationPerTest": 0.0999999999627471,
+        "prepareDurationPerModule": 114.30000000074506,
+        "setupDurationPerModule": 2.300000000745058,
+        "collectDurationPerModule": 3.100000001490116,
+        "moduleDurationPerModule": 10.699999999254942,
+        "moduleWorkDurationPerModule": 16.100000001490116
+      },
+      {
+        "sample": 2,
+        "success": true,
+        "moduleCount": 1,
+        "prepareModuleCount": 1,
+        "testCount": 100,
+        "snapshotCount": 100,
+        "environmentSetupDuration": 0,
+        "prepareDuration": 91.40000000223517,
+        "setupDuration": 2.5,
+        "collectDuration": 3.2000000029802322,
+        "testCaseDuration": 9.900000002235174,
+        "moduleDuration": 10.800000000745058,
+        "reporterRunDuration": 463.10009765625,
+        "moduleWorkDuration": 16.50000000372529,
+        "trackedDuration": 107.90000000596046,
+        "testCaseDurationPerTest": 0.09900000002235174,
+        "prepareDurationPerModule": 91.40000000223517,
+        "setupDurationPerModule": 2.5,
+        "collectDurationPerModule": 3.2000000029802322,
+        "moduleDurationPerModule": 10.800000000745058,
+        "moduleWorkDurationPerModule": 16.50000000372529
+      },
+      {
+        "sample": 3,
+        "success": true,
+        "moduleCount": 1,
+        "prepareModuleCount": 1,
+        "testCount": 100,
+        "snapshotCount": 100,
+        "environmentSetupDuration": 0,
+        "prepareDuration": 89.80000000074506,
+        "setupDuration": 2.399999998509884,
+        "collectDuration": 2.800000000745058,
+        "testCaseDuration": 10.299999997019768,
+        "moduleDuration": 10.899999998509884,
+        "reporterRunDuration": 442.199951171875,
+        "moduleWorkDuration": 16.099999997764826,
+        "trackedDuration": 105.89999999850988,
+        "testCaseDurationPerTest": 0.10299999997019768,
+        "prepareDurationPerModule": 89.80000000074506,
+        "setupDurationPerModule": 2.399999998509884,
+        "collectDurationPerModule": 2.800000000745058,
+        "moduleDurationPerModule": 10.899999998509884,
+        "moduleWorkDurationPerModule": 16.099999997764826
+      }
+    ],
+    "lazy": [
+      {
+        "sample": 1,
+        "success": true,
+        "moduleCount": 1,
+        "prepareModuleCount": 1,
+        "testCount": 100,
+        "snapshotCount": 100,
+        "environmentSetupDuration": 0,
+        "prepareDuration": 93.09999999776483,
+        "setupDuration": 2.7999999970197678,
+        "collectDuration": 3.2000000029802322,
+        "testCaseDuration": 4.299999997019768,
+        "moduleDuration": 4.800000000745058,
+        "reporterRunDuration": 449.10009765625,
+        "moduleWorkDuration": 10.800000000745058,
+        "trackedDuration": 103.89999999850988,
+        "testCaseDurationPerTest": 0.042999999970197676,
+        "prepareDurationPerModule": 93.09999999776483,
+        "setupDurationPerModule": 2.7999999970197678,
+        "collectDurationPerModule": 3.2000000029802322,
+        "moduleDurationPerModule": 4.800000000745058,
+        "moduleWorkDurationPerModule": 10.800000000745058
+      },
+      {
+        "sample": 2,
+        "success": true,
+        "moduleCount": 1,
+        "prepareModuleCount": 1,
+        "testCount": 100,
+        "snapshotCount": 100,
+        "environmentSetupDuration": 0,
+        "prepareDuration": 93.69999999925494,
+        "setupDuration": 2.5,
+        "collectDuration": 2.899999998509884,
+        "testCaseDuration": 4.300000000745058,
+        "moduleDuration": 4.900000002235174,
+        "reporterRunDuration": 436.199951171875,
+        "moduleWorkDuration": 10.300000000745058,
+        "trackedDuration": 104,
+        "testCaseDurationPerTest": 0.04300000000745058,
+        "prepareDurationPerModule": 93.69999999925494,
+        "setupDurationPerModule": 2.5,
+        "collectDurationPerModule": 2.899999998509884,
+        "moduleDurationPerModule": 4.900000002235174,
+        "moduleWorkDurationPerModule": 10.300000000745058
+      },
+      {
+        "sample": 3,
+        "success": true,
+        "moduleCount": 1,
+        "prepareModuleCount": 1,
+        "testCount": 100,
+        "snapshotCount": 100,
+        "environmentSetupDuration": 0,
+        "prepareDuration": 92.10000000149012,
+        "setupDuration": 2.399999998509884,
+        "collectDuration": 3,
+        "testCaseDuration": 4.200000002980232,
+        "moduleDuration": 5,
+        "reporterRunDuration": 455.10009765625,
+        "moduleWorkDuration": 10.399999998509884,
+        "trackedDuration": 102.5,
+        "testCaseDurationPerTest": 0.04200000002980232,
+        "prepareDurationPerModule": 92.10000000149012,
+        "setupDurationPerModule": 2.399999998509884,
+        "collectDurationPerModule": 3,
+        "moduleDurationPerModule": 5,
+        "moduleWorkDurationPerModule": 10.399999998509884
+      }
+    ],
+    "eagerMinusLazy": [
+      {
+        "sample": 1,
+        "environmentSetupDuration": 0,
+        "prepareDuration": 21.200000002980232,
+        "prepareDurationPerModule": 21.200000002980232,
+        "setupDuration": -0.4999999962747097,
+        "setupDurationPerModule": -0.4999999962747097,
+        "collectDuration": -0.10000000149011612,
+        "collectDurationPerModule": -0.10000000149011612,
+        "testCaseDuration": 5.699999999254942,
+        "testCaseDurationPerTest": 0.05699999999254942,
+        "moduleDuration": 5.899999998509884,
+        "moduleDurationPerModule": 5.899999998509884,
+        "moduleWorkDuration": 5.300000000745058,
+        "moduleWorkDurationPerModule": 5.300000000745058,
+        "trackedDuration": 26.50000000372529,
+        "reporterRunDuration": 56.099853515625
+      },
+      {
+        "sample": 2,
+        "environmentSetupDuration": 0,
+        "prepareDuration": -2.2999999970197678,
+        "prepareDurationPerModule": -2.2999999970197678,
+        "setupDuration": 0,
+        "setupDurationPerModule": 0,
+        "collectDuration": 0.30000000447034836,
+        "collectDurationPerModule": 0.30000000447034836,
+        "testCaseDuration": 5.600000001490116,
+        "testCaseDurationPerTest": 0.05600000001490116,
+        "moduleDuration": 5.899999998509884,
+        "moduleDurationPerModule": 5.899999998509884,
+        "moduleWorkDuration": 6.200000002980232,
+        "moduleWorkDurationPerModule": 6.200000002980232,
+        "trackedDuration": 3.9000000059604645,
+        "reporterRunDuration": 26.900146484375
+      },
+      {
+        "sample": 3,
+        "environmentSetupDuration": 0,
+        "prepareDuration": -2.300000000745058,
+        "prepareDurationPerModule": -2.300000000745058,
+        "setupDuration": 0,
+        "setupDurationPerModule": 0,
+        "collectDuration": -0.19999999925494194,
+        "collectDurationPerModule": -0.19999999925494194,
+        "testCaseDuration": 6.0999999940395355,
+        "testCaseDurationPerTest": 0.06099999994039536,
+        "moduleDuration": 5.899999998509884,
+        "moduleDurationPerModule": 5.899999998509884,
+        "moduleWorkDuration": 5.699999999254942,
+        "moduleWorkDurationPerModule": 5.699999999254942,
+        "trackedDuration": 3.399999998509884,
+        "reporterRunDuration": -12.900146484375
+      }
+    ]
+  }
+}

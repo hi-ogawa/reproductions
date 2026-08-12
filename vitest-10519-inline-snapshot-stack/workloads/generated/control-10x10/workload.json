@@ -1,0 +1,8 @@
+{
+  "schemaVersion": 1,
+  "name": "control-10x10",
+  "fileCount": 10,
+  "casesPerFile": 10,
+  "totalCases": 100,
+  "kind": "control"
+}

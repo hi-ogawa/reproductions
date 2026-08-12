@@ -1,0 +1,2 @@
+patchedDependencies:
+  '@vitest/snapshot@4.1.10': patches/@vitest__snapshot@4.1.10.patch

@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "createdAt": "2026-08-12T07:14:47.714Z",
+  "label": "reference-1x100",
+  "runtime": "browser",
+  "coverage": "on",
+  "samples": 5,
+  "files": [
+    "workloads/generated/1x100/000.test.ts"
+  ],
+  "controlFiles": [
+    "workloads/generated/control-1x100/000.test.ts"
+  ],
+  "variants": [
+    "control",
+    "eager",
+    "lazy"
+  ],
+  "includeTaskLocation": false,
+  "ci": false,
+  "platform": "darwin",
+  "architecture": "arm64",
+  "node": "v24.19.0",
+  "packages": {
+    "@vitest/browser": "4.1.10",
+    "@vitest/browser-playwright": "4.1.10",
+    "@vitest/coverage-v8": "4.1.10",
+    "playwright": "1.62.1",
+    "vitest": "4.1.10"
+  },
+  "inputs": {
+    "vitest.config.ts": "63f0206a9e584c97a1f8d030cce79fd24e329fc901eeac4567b87ef07351fbea",
+    "scripts/diagnostic-reporter.mjs": "289b079c348f0460893e690c8668fe29e931e821838a7633a493007696b7b2b7",
+    "patches/@vitest__snapshot@4.1.10.patch": "0e6633c9f8b940bb1508ec2bfbe1ffce7b55d79e1d9864d8eecdac7d715f3ebb",
+    "workloads/generated/1x100/000.test.ts": "3dfd8c522a9a215cb477e2e9af0bf51f11917d72e81c4c3bcb2c21cf0ee44a44",
+    "workloads/generated/control-1x100/000.test.ts": "02ebce841bf598777f448b42c87d8f1538df54cc81536c34c48518e19e3fd6fa"
+  }
+}

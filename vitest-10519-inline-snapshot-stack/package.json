@@ -1,0 +1,19 @@
+{
+  "name": "vitest-inline-snapshot-stack-bench",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "analyze": "node scripts/analyze.mjs",
+    "generate-workload": "node scripts/generate-workload.mjs",
+    "run-results": "node scripts/run-results.mjs",
+    "test": "vitest run"
+  },
+  "devDependencies": {
+    "@vitest/browser": "4.1.10",
+    "@vitest/browser-playwright": "4.1.10",
+    "@vitest/coverage-v8": "4.1.10",
+    "playwright": "1.62.1",
+    "vitest": "4.1.10"
+  },
+  "packageManager": "pnpm@11.21.0"
+}

@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "createdAt": "2026-08-12T06:45:25.769Z",
+  "label": "infra-smoke",
+  "runtime": "node",
+  "coverage": "off",
+  "samples": 2,
+  "files": [
+    "test/smoke.test.ts"
+  ],
+  "variants": [
+    "eager",
+    "lazy"
+  ],
+  "includeTaskLocation": false,
+  "platform": "darwin",
+  "architecture": "arm64",
+  "node": "v24.19.0"
+}

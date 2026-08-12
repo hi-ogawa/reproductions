@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 1,
+  "createdAt": "2026-08-12T07:03:30.416Z",
+  "label": "shape-10x10-browser-v8",
+  "runtime": "browser",
+  "coverage": "on",
+  "samples": 3,
+  "files": [
+    "workloads/generated/10x10/000.test.ts",
+    "workloads/generated/10x10/001.test.ts",
+    "workloads/generated/10x10/002.test.ts",
+    "workloads/generated/10x10/003.test.ts",
+    "workloads/generated/10x10/004.test.ts",
+    "workloads/generated/10x10/005.test.ts",
+    "workloads/generated/10x10/006.test.ts",
+    "workloads/generated/10x10/007.test.ts",
+    "workloads/generated/10x10/008.test.ts",
+    "workloads/generated/10x10/009.test.ts"
+  ],
+  "variants": [
+    "eager",
+    "lazy"
+  ],
+  "includeTaskLocation": false,
+  "ci": false,
+  "platform": "darwin",
+  "architecture": "arm64",
+  "node": "v24.19.0",
+  "packages": {
+    "@vitest/browser": "4.1.10",
+    "@vitest/browser-playwright": "4.1.10",
+    "@vitest/coverage-v8": "4.1.10",
+    "playwright": "1.62.1",
+    "vitest": "4.1.10"
+  },
+  "inputs": {
+    "vitest.config.ts": "63f0206a9e584c97a1f8d030cce79fd24e329fc901eeac4567b87ef07351fbea",
+    "scripts/diagnostic-reporter.mjs": "289b079c348f0460893e690c8668fe29e931e821838a7633a493007696b7b2b7",
+    "patches/@vitest__snapshot@4.1.10.patch": "0e6633c9f8b940bb1508ec2bfbe1ffce7b55d79e1d9864d8eecdac7d715f3ebb",
+    "workloads/generated/10x10/000.test.ts": "4726ff50848b5377288ee09b46f20f5622763cbd9014a066f898038d7d29c36b",
+    "workloads/generated/10x10/001.test.ts": "15fe0b0395e37e0cd935da7a43b1b1c50b281f028abf9ff32c549efcc99d501b",
+    "workloads/generated/10x10/002.test.ts": "e51bc70b68614e2c593ab76bf7030fe7e3838dd0f9f2d4a28dca93ce681e4db6",
+    "workloads/generated/10x10/003.test.ts": "044babe4e4bd3fe6ca5c7d61b69d9391aad19d2081d909edc359587b50a050d3",
+    "workloads/generated/10x10/004.test.ts": "65b9ca13af4793dd2c9430df0317c4087fd5d6e8b4379eeb5fe83767fab32c6b",
+    "workloads/generated/10x10/005.test.ts": "9dca223e86a00e29dbff3e4ddea9ea740aaf836750307c1c00ea3a05c40064aa",
+    "workloads/generated/10x10/006.test.ts": "3f9bc274eaeea3d72f4239e3c64ea8bdcb7cdbfa13b98e5c1e2a373c1c1b97c8",
+    "workloads/generated/10x10/007.test.ts": "6dec928bb960c05b3ded3b845dbe0bcc1804f188827815746d6b4b6a11a45286",
+    "workloads/generated/10x10/008.test.ts": "30cff9b529ed6023b55673ddfb328b44eb4428a2cdb9a3d9151199734daee176",
+    "workloads/generated/10x10/009.test.ts": "d16c4423eba21eda64b6076356dbfcabea0ea2f2afe2e09e031ddd173e740fc0"
+  }
+}

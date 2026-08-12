@@ -1,0 +1,35 @@
+{
+  "reason": "passed",
+  "unhandledErrors": [],
+  "modules": [
+    {
+      "moduleId": "/Users/hogawa/.local/share/ho-dev-notes/vitest/pr-10519-inline-snapshot-stack/fixture/test/smoke.test.ts",
+      "relativeModuleId": "test/smoke.test.ts",
+      "state": "passed",
+      "diagnostic": {
+        "environmentSetupDuration": 0.03491700000000009,
+        "prepareDuration": 1.7942499999999981,
+        "collectDuration": 4.360208,
+        "setupDuration": 5.593916999999998,
+        "duration": 3.1847080000000005,
+        "importDurations": {}
+      },
+      "tests": [
+        {
+          "id": "1389441311_0",
+          "name": "passing inline snapshot",
+          "fullName": "passing inline snapshot",
+          "state": "passed",
+          "diagnostic": {
+            "slow": false,
+            "duration": 2.7567909999999998,
+            "startTime": 1786517906440,
+            "retryCount": 0,
+            "repeatCount": 0,
+            "flaky": false
+          }
+        }
+      ]
+    }
+  ]
+}

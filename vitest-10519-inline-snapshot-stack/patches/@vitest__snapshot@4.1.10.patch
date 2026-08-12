@@ -1,0 +1,67 @@
+diff --git a/dist/index.js b/dist/index.js
+index 1a61477796163a7a7f8ce9d44a7828b3debf13a8..856bc4c8fd622a3f3e9b62116cc0636316aa9560 100644
+--- a/dist/index.js
++++ b/dist/index.js
+@@ -683,6 +683,7 @@ class SnapshotState {
+ 		//  * The update flag is set to 'none'.
+ 		//  * There's no snapshot file or a file without this snapshot on a CI environment.
+ 		if (opts.hasSnapshot && this._updateSnapshot === "all" || (!opts.hasSnapshot || !opts.snapshotIsPersisted) && (this._updateSnapshot === "new" || this._updateSnapshot === "all")) {
++			const stack = opts.stack?.();
+ 			if (this._updateSnapshot === "all") {
+ 				if (!opts.pass) {
+ 					if (opts.hasSnapshot) {
+@@ -691,7 +692,7 @@ class SnapshotState {
+ 						this.added.increment(opts.testId);
+ 					}
+ 					this._addSnapshot(opts.key, opts.addValue, {
+-						stack: opts.stack,
++						stack,
+ 						testId: opts.testId,
+ 						rawSnapshot: opts.rawSnapshot,
+ 						assertionName: opts.assertionName
+@@ -701,7 +702,7 @@ class SnapshotState {
+ 				}
+ 			} else {
+ 				this._addSnapshot(opts.key, opts.addValue, {
+-					stack: opts.stack,
++					stack,
+ 					testId: opts.testId,
+ 					rawSnapshot: opts.rawSnapshot,
+ 					assertionName: opts.assertionName
+@@ -828,12 +829,15 @@ class SnapshotState {
+ 			// value may contain match patterns that differ from the received output.
+ 			this._snapshotData[key] = receivedSerialized;
+ 		}
+-		const stack = isInline ? this._resolveInlineStack({
+-			testId,
+-			snapshot: receivedSerialized,
+-			assertionName: assertionName || "toMatchInlineSnapshot",
+-			error: error || new Error("snapshot")
+-		}) : undefined;
++		const stackTraceError = error || new Error("snapshot");
++		let resolvedStack;
++		const stack = isInline ? () => resolvedStack ||= this._resolveInlineStack({
++					testId,
++					snapshot: receivedSerialized,
++					assertionName: assertionName || "toMatchInlineSnapshot",
++					error: stackTraceError
++				}) : undefined;
++		if (globalThis.__VITEST_BENCH_EAGER_STACK__) stack?.();
+ 		return this._reconcile({
+ 			testId,
+ 			key,
+@@ -850,11 +854,12 @@ class SnapshotState {
+ 		});
+ 	}
+ 	processDomainSnapshot({ testId, received, expectedSnapshot, matchResult, isInline, error, assertionName }) {
+-		const stack = isInline ? this._resolveInlineStack({
++		const stackTraceError = error || new Error("STACK_TRACE_ERROR");
++		const stack = isInline ? () => this._resolveInlineStack({
+ 			testId,
+ 			snapshot: received,
+ 			assertionName,
+-			error: error || new Error("STACK_TRACE_ERROR")
++			error: stackTraceError
+ 		}) : undefined;
+ 		const actualResolved = matchResult?.resolved ?? received;
+ 		const expectedResolved = matchResult?.expected ?? expectedSnapshot.data;

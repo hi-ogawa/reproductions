@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "createdAt": "2026-08-12T06:58:26.769Z",
+  "label": "diagnostic-node",
+  "runtime": "node",
+  "coverage": "off",
+  "samples": 1,
+  "files": [
+    "test/smoke.test.ts"
+  ],
+  "variants": [
+    "eager",
+    "lazy"
+  ],
+  "includeTaskLocation": false,
+  "ci": false,
+  "platform": "darwin",
+  "architecture": "arm64",
+  "node": "v24.19.0",
+  "packages": {
+    "@vitest/browser": "4.1.10",
+    "@vitest/browser-playwright": "4.1.10",
+    "@vitest/coverage-v8": "4.1.10",
+    "playwright": "1.62.1",
+    "vitest": "4.1.10"
+  },
+  "inputs": {
+    "vitest.config.ts": "63f0206a9e584c97a1f8d030cce79fd24e329fc901eeac4567b87ef07351fbea",
+    "scripts/diagnostic-reporter.mjs": "289b079c348f0460893e690c8668fe29e931e821838a7633a493007696b7b2b7",
+    "patches/@vitest__snapshot@4.1.10.patch": "0e6633c9f8b940bb1508ec2bfbe1ffce7b55d79e1d9864d8eecdac7d715f3ebb",
+    "test/smoke.test.ts": "b3945d3e7d2720f9cdbf1185f5f06aaf86c164b71498ef356a8fac3818b60e76"
+  }
+}

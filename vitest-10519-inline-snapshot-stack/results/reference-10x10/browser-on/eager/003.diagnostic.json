@@ -1,0 +1,1556 @@
+{
+  "reason": "passed",
+  "unhandledErrors": [],
+  "modules": [
+    {
+      "moduleId": "/Users/hogawa/.local/share/ho-dev-notes/vitest/pr-10519-inline-snapshot-stack/fixture/workloads/generated/10x10/000.test.ts",
+      "relativeModuleId": "workloads/generated/10x10/000.test.ts",
+      "state": "passed",
+      "diagnostic": {
+        "environmentSetupDuration": 0,
+        "prepareDuration": 435.1000000014901,
+        "collectDuration": 6.100000001490116,
+        "setupDuration": 3.699999999254942,
+        "duration": 5,
+        "importDurations": {}
+      },
+      "tests": [
+        {
+          "id": "1503927433_0",
+          "name": "case 0",
+          "fullName": "case 0",
+          "state": "passed",
+          "diagnostic": {
+            "slow": false,
+            "duration": 2.800000000745058,
+            "startTime": 1786518906640,
+            "retryCount": 0,
+            "repeatCount": 0,
+            "flaky": false
+          }
+        },
+        {
+          "id": "1503927433_1",
+          "name": "case 1",
+          "fullName": "case 1",
+          "state": "passed",
+          "diagnostic": {
+            "slow": false,
+            "duration": 0.3999999985098839,
+            "startTime": 1786518906643,
+            "retryCount": 0,
+            "repeatCount": 0,
+            "flaky": false
+          }
+        },
+        {
+          "id": "1503927433_2",
+          "name": "case 2",
+          "fullName": "case 2",
+          "state": "passed",
+          "diagnostic": {
+            "slow": false,
+            "duration": 0.20000000298023224,
+            "startTime": 1786518906644,
+            "retryCount": 0,
+            "repeatCount": 0,
+            "flaky": false
+          }
+        },
+        {
+          "id": "1503927433_3",
+          "name": "case 3",
+          "fullName": "case 3",
+          "state": "passed",
+          "diagnostic": {
+            "slow": false,
+            "duration": 0.09999999776482582,
+            "startTime": 1786518906644,
+            "retryCount": 0,
+            "repeatCount": 0,
+            "flaky": false
+          }
+        },
+        {
+          "id": "1503927433_4",
+          "name": "case 4",
+          "fullName": "case 4",
+          "state": "passed",
+          "diagnostic": {
+            "slow": false,
+            "duration": 0.19999999925494194,
+            "startTime": 1786518906644,
+            "retryCount": 0,
+            "repeatCount": 0,
+            "flaky": false
+          }
+        },
+        {
+          "id": "1503927433_5",
+          "name": "case 5",
+          "fullName": "case 5",
+          "state": "passed",
+          "diagnostic": {
+            "slow": false,
+            "duration": 0.10000000149011612,
+            "startTime": 1786518906644,
+            "retryCount": 0,
+            "repeatCount": 0,
+            "flaky": false
+          }
+        },
+        {
+          "id": "1503927433_6",
+          "name": "case 6",
+          "fullName": "case 6",
+          "state": "passed",
+          "diagnostic": {
+            "slow": false,
+            "duration": 0,
+            "startTime": 1786518906644,
+            "retryCount": 0,
+            "repeatCount": 0,
+            "flaky": false
+          }
+        },
+        {
+          "id": "1503927433_7",
+          "name": "case 7",
+          "fullName": "case 7",
+          "state": "passed",
+          "diagnostic": {
+            "slow": false,
+            "duration": 0.09999999776482582,
+            "startTime": 1786518906644,
+            "retryCount": 0,
+            "repeatCount": 0,
+            "flaky": false
+          }
+        },
+        {
+          "id": "1503927433_8",
+          "name": "case 8",
+          "fullName": "case 8",
+          "state": "passed",
+          "diagnostic": {
+            "slow": false,
+            "duration": 0.19999999925494194,
+            "startTime": 1786518906645,
+            "retryCount": 0,
+            "repeatCount": 0,
+            "flaky": false
+          }
+        },
+        {
+          "id": "1503927433_9",
+          "name": "case 9",
+          "fullName": "case 9",
+          "state": "passed",
+          "diagnostic": {
+            "slow": false,
+            "duration": 0.10000000149011612,
+            "startTime": 1786518906645,
+            "retryCount": 0,
+            "repeatCount": 0,
+            "flaky": false
+          }
+        }
+      ]
+    },
+    {
+      "moduleId": "/Users/hogawa/.local/share/ho-dev-notes/vitest/pr-10519-inline-snapshot-stack/fixture/workloads/generated/10x10/001.test.ts",
+      "relativeModuleId": "workloads/generated/10x10/001.test.ts",
+      "state": "passed",
+      "diagnostic": {
+        "environmentSetupDuration": 0,
+        "prepareDuration": 451.29999999701977,
+        "collectDuration": 6.899999998509884,
+        "setupDuration": 5.600000001490116,
+        "duration": 4.800000000745058,
+        "importDurations": {}
+      },
+      "tests": [
+        {
+          "id": "-1437730166_0",
+          "name": "case 10",
+          "fullName": "case 10",
+          "state": "passed",
+          "diagnostic": {
+            "slow": false,
+            "duration": 2.800000000745058,
+            "startTime": 1786518906640,
+            "retryCount": 0,
+            "repeatCount": 0,
+            "flaky": false
+          }
+        },
+        {
+          "id": "-1437730166_1",
+          "name": "case 11",
+          "fullName": "case 11",
+          "state": "passed",
+          "diagnostic": {
+            "slow": false,
+            "duration": 0.3999999985098839,
+            "startTime": 1786518906643,
+            "retryCount": 0,
+            "repeatCount": 0,
+            "flaky": false
+          }
+        },
+        {
+          "id": "-1437730166_2",
+          "name": "case 12",
+          "fullName": "case 12",
+          "state": "passed",
+          "diagnostic": {
+            "slow": false,
+            "duration": 0.10000000149011612,
+            "startTime": 1786518906644,
+            "retryCount": 0,
+            "repeatCount": 0,
+            "flaky": false
+          }
+        },
+        {
+          "id": "-1437730166_3",
+          "name": "case 13",
+          "fullName": "case 13",
+          "state": "passed",
+          "diagnostic": {
+            "slow": false,
+            "duration": 0.19999999925494194,
+            "startTime": 1786518906644,
+            "retryCount": 0,
+            "repeatCount": 0,
+            "flaky": false
+          }
+        },
+        {
+          "id": "-1437730166_4",
+          "name": "case 14",
+          "fullName": "case 14",
+          "state": "passed",
+          "diagnostic": {
+            "slow": false,
+            "duration": 0.10000000149011612,
+            "startTime": 1786518906644,
+            "retryCount": 0,
+            "repeatCount": 0,
+            "flaky": false
+          }
+        },
+        {
+          "id": "-1437730166_5",
+          "name": "case 15",
+          "fullName": "case 15",
+          "state": "passed",
+          "diagnostic": {
+            "slow": false,
+            "duration": 0.19999999925494194,
+            "startTime": 1786518906644,
+            "retryCount": 0,
+            "repeatCount": 0,
+            "flaky": false
+          }
+        },
+        {
+          "id": "-1437730166_6",
+          "name": "case 16",
+          "fullName": "case 16",
+          "state": "passed",
+          "diagnostic": {
+            "slow": false,
+            "duration": 0.10000000149011612,
+            "startTime": 1786518906644,
+            "retryCount": 0,
+            "repeatCount": 0,
+            "flaky": false
+          }
+        },
+        {
+          "id": "-1437730166_7",
+          "name": "case 17",
+          "fullName": "case 17",
+          "state": "passed",
+          "diagnostic": {
+            "slow": false,
+            "duration": 0.19999999925494194,
+            "startTime": 1786518906644,
+            "retryCount": 0,
+            "repeatCount": 0,
+            "flaky": false
+          }
+        },
+        {
+          "id": "-1437730166_8",
+          "name": "case 18",
+          "fullName": "case 18",
+          "state": "passed",
+          "diagnostic": {
+            "slow": false,
+            "duration": 0.09999999776482582,
+            "startTime": 1786518906644,
+            "retryCount": 0,
+            "repeatCount": 0,
+            "flaky": false
+          }
+        },
+        {
+          "id": "-1437730166_9",
+          "name": "case 19",
+          "fullName": "case 19",
+          "state": "passed",
+          "diagnostic": {
+            "slow": false,
+            "duration": 0.10000000149011612,
+            "startTime": 1786518906645,
+            "retryCount": 0,
+            "repeatCount": 0,
+            "flaky": false
+          }
+        }
+      ]
+    },
+    {
+      "moduleId": "/Users/hogawa/.local/share/ho-dev-notes/vitest/pr-10519-inline-snapshot-stack/fixture/workloads/generated/10x10/002.test.ts",
+      "relativeModuleId": "workloads/generated/10x10/002.test.ts",
+      "state": "passed",
+      "diagnostic": {
+        "environmentSetupDuration": 0,
+        "prepareDuration": 447.30000000074506,
+        "collectDuration": 6.100000001490116,
+        "setupDuration": 6.099999997764826,
+        "duration": 5,
+        "importDurations": {}
+      },
+      "tests": [
+        {
+          "id": "-84420469_0",
+          "name": "case 20",
+          "fullName": "case 20",
+          "state": "passed",
+          "diagnostic": {
+            "slow": false,
+            "duration": 2.800000000745058,
+            "startTime": 1786518906640,
+            "retryCount": 0,
+            "repeatCount": 0,
+            "flaky": false
+          }
+        },
+        {
+          "id": "-84420469_1",
+          "name": "case 21",
+          "fullName": "case 21",
+          "state": "passed",
+          "diagnostic": {
+            "slow": false,
+            "duration": 0.3999999985098839,
+            "startTime": 1786518906643,
+            "retryCount": 0,
+            "repeatCount": 0,
+            "flaky": false
+          }
+        },
+        {
+          "id": "-84420469_2",
+          "name": "case 22",
+          "fullName": "case 22",
+          "state": "passed",
+          "diagnostic": {
+            "slow": false,
+            "duration": 0.10000000149011612,
+            "startTime": 1786518906644,
+            "retryCount": 0,
+            "repeatCount": 0,
+            "flaky": false
+          }
+        },
+        {
+          "id": "-84420469_3",
+          "name": "case 23",
+          "fullName": "case 23",
+          "state": "passed",
+          "diagnostic": {
+            "slow": false,
+            "duration": 0.19999999925494194,
+            "startTime": 1786518906644,
+            "retryCount": 0,
+            "repeatCount": 0,
+            "flaky": false
+          }
+        },
+        {
+          "id": "-84420469_4",
+          "name": "case 24",
+          "fullName": "case 24",
+          "state": "passed",
+          "diagnostic": {
+            "slow": false,
+            "duration": 0.10000000149011612,
+            "startTime": 1786518906644,
+            "retryCount": 0,
+            "repeatCount": 0,
+            "flaky": false
+          }
+        },
+        {
+          "id": "-84420469_5",
+          "name": "case 25",
+          "fullName": "case 25",
+          "state": "passed",
+          "diagnostic": {
+            "slow": false,
+            "duration": 0.19999999925494194,
+            "startTime": 1786518906644,
+            "retryCount": 0,
+            "repeatCount": 0,
+            "flaky": false
+          }
+        },
+        {
+          "id": "-84420469_6",
+          "name": "case 26",
+          "fullName": "case 26",
+          "state": "passed",
+          "diagnostic": {
+            "slow": false,
+            "duration": 0.10000000149011612,
+            "startTime": 1786518906644,
+            "retryCount": 0,
+            "repeatCount": 0,
+            "flaky": false
+          }
+        },
+        {
+          "id": "-84420469_7",
+          "name": "case 27",
+          "fullName": "case 27",
+          "state": "passed",
+          "diagnostic": {
+            "slow": false,
+            "duration": 0.09999999776482582,
+            "startTime": 1786518906644,
+            "retryCount": 0,
+            "repeatCount": 0,
+            "flaky": false
+          }
+        },
+        {
+          "id": "-84420469_8",
+          "name": "case 28",
+          "fullName": "case 28",
+          "state": "passed",
+          "diagnostic": {
+            "slow": false,
+            "duration": 0.19999999925494194,
+            "startTime": 1786518906644,
+            "retryCount": 0,
+            "repeatCount": 0,
+            "flaky": false
+          }
+        },
+        {
+          "id": "-84420469_9",
+          "name": "case 29",
+          "fullName": "case 29",
+          "state": "passed",
+          "diagnostic": {
+            "slow": false,
+            "duration": 0.10000000149011612,
+            "startTime": 1786518906645,
+            "retryCount": 0,
+            "repeatCount": 0,
+            "flaky": false
+          }
+        }
+      ]
+    },
+    {
+      "moduleId": "/Users/hogawa/.local/share/ho-dev-notes/vitest/pr-10519-inline-snapshot-stack/fixture/workloads/generated/10x10/003.test.ts",
+      "relativeModuleId": "workloads/generated/10x10/003.test.ts",
+      "state": "passed",
+      "diagnostic": {
+        "environmentSetupDuration": 0,
+        "prepareDuration": 444,
+        "collectDuration": 16.600000001490116,
+        "setupDuration": 1.699999999254942,
+        "duration": 4.899999998509884,
+        "importDurations": {}
+      },
+      "tests": [
+        {
+          "id": "1268889228_0",
+          "name": "case 30",
+          "fullName": "case 30",
+          "state": "passed",
+          "diagnostic": {
+            "slow": false,
+            "duration": 2.899999998509884,
+            "startTime": 1786518906652,
+            "retryCount": 0,
+            "repeatCount": 0,
+            "flaky": false
+          }
+        },
+        {
+          "id": "1268889228_1",
+          "name": "case 31",
+          "fullName": "case 31",
+          "state": "passed",
+          "diagnostic": {
+            "slow": false,
+            "duration": 0.19999999925494194,
+            "startTime": 1786518906655,
+            "retryCount": 0,
+            "repeatCount": 0,
+            "flaky": false
+          }
+        },
+        {
+          "id": "1268889228_2",
+          "name": "case 32",
+          "fullName": "case 32",
+          "state": "passed",
+          "diagnostic": {
+            "slow": false,
+            "duration": 0.19999999925494194,
+            "startTime": 1786518906655,
+            "retryCount": 0,
+            "repeatCount": 0,
+            "flaky": false
+          }
+        },
+        {
+          "id": "1268889228_3",
+          "name": "case 33",
+          "fullName": "case 33",
+          "state": "passed",
+          "diagnostic": {
+            "slow": false,
+            "duration": 0.10000000149011612,
+            "startTime": 1786518906655,
+            "retryCount": 0,
+            "repeatCount": 0,
+            "flaky": false
+          }
+        },
+        {
+          "id": "1268889228_4",
+          "name": "case 34",
+          "fullName": "case 34",
+          "state": "passed",
+          "diagnostic": {
+            "slow": false,
+            "duration": 0.19999999925494194,
+            "startTime": 1786518906656,
+            "retryCount": 0,
+            "repeatCount": 0,
+            "flaky": false
+          }
+        },
+        {
+          "id": "1268889228_5",
+          "name": "case 35",
+          "fullName": "case 35",
+          "state": "passed",
+          "diagnostic": {
+            "slow": false,
+            "duration": 0.19999999925494194,
+            "startTime": 1786518906656,
+            "retryCount": 0,
+            "repeatCount": 0,
+            "flaky": false
+          }
+        },
+        {
+          "id": "1268889228_6",
+          "name": "case 36",
+          "fullName": "case 36",
+          "state": "passed",
+          "diagnostic": {
+            "slow": false,
+            "duration": 0,
+            "startTime": 1786518906656,
+            "retryCount": 0,
+            "repeatCount": 0,
+            "flaky": false
+          }
+        },
+        {
+          "id": "1268889228_7",
+          "name": "case 37",
+          "fullName": "case 37",
+          "state": "passed",
+          "diagnostic": {
+            "slow": false,
+            "duration": 0.19999999925494194,
+            "startTime": 1786518906656,
+            "retryCount": 0,
+            "repeatCount": 0,
+            "flaky": false
+          }
+        },
+        {
+          "id": "1268889228_8",
+          "name": "case 38",
+          "fullName": "case 38",
+          "state": "passed",
+          "diagnostic": {
+            "slow": false,
+            "duration": 0.20000000298023224,
+            "startTime": 1786518906656,
+            "retryCount": 0,
+            "repeatCount": 0,
+            "flaky": false
+          }
+        },
+        {
+          "id": "1268889228_9",
+          "name": "case 39",
+          "fullName": "case 39",
+          "state": "passed",
+          "diagnostic": {
+            "slow": false,
+            "duration": 0,
+            "startTime": 1786518906656,
+            "retryCount": 0,
+            "repeatCount": 0,
+            "flaky": false
+          }
+        }
+      ]
+    },
+    {
+      "moduleId": "/Users/hogawa/.local/share/ho-dev-notes/vitest/pr-10519-inline-snapshot-stack/fixture/workloads/generated/10x10/004.test.ts",
+      "relativeModuleId": "workloads/generated/10x10/004.test.ts",
+      "state": "passed",
+      "diagnostic": {
+        "environmentSetupDuration": 0,
+        "prepareDuration": 445.4000000022352,
+        "collectDuration": 16.200000002980232,
+        "setupDuration": 1.5999999977648258,
+        "duration": 4.900000002235174,
+        "importDurations": {}
+      },
+      "tests": [
+        {
+          "id": "-1672768371_0",
+          "name": "case 40",
+          "fullName": "case 40",
+          "state": "passed",
+          "diagnostic": {
+            "slow": false,
+            "duration": 3,
+            "startTime": 1786518906652,
+            "retryCount": 0,
+            "repeatCount": 0,
+            "flaky": false
+          }
+        },
+        {
+          "id": "-1672768371_1",
+          "name": "case 41",
+          "fullName": "case 41",
+          "state": "passed",
+          "diagnostic": {
+            "slow": false,
+            "duration": 0.30000000074505806,
+            "startTime": 1786518906655,
+            "retryCount": 0,
+            "repeatCount": 0,
+            "flaky": false
+          }
+        },
+        {
+          "id": "-1672768371_2",
+          "name": "case 42",
+          "fullName": "case 42",
+          "state": "passed",
+          "diagnostic": {
+            "slow": false,
+            "duration": 0.09999999776482582,
+            "startTime": 1786518906655,
+            "retryCount": 0,
+            "repeatCount": 0,
+            "flaky": false
+          }
+        },
+        {
+          "id": "-1672768371_3",
+          "name": "case 43",
+          "fullName": "case 43",
+          "state": "passed",
+          "diagnostic": {
+            "slow": false,
+            "duration": 0.19999999925494194,
+            "startTime": 1786518906655,
+            "retryCount": 0,
+            "repeatCount": 0,
+            "flaky": false
+          }
+        },
+        {
+          "id": "-1672768371_4",
+          "name": "case 44",
+          "fullName": "case 44",
+          "state": "passed",
+          "diagnostic": {
+            "slow": false,
+            "duration": 0.10000000149011612,
+            "startTime": 1786518906656,
+            "retryCount": 0,
+            "repeatCount": 0,
+            "flaky": false
+          }
+        },
+        {
+          "id": "-1672768371_5",
+          "name": "case 45",
+          "fullName": "case 45",
+          "state": "passed",
+          "diagnostic": {
+            "slow": false,
+            "duration": 0.19999999925494194,
+            "startTime": 1786518906656,
+            "retryCount": 0,
+            "repeatCount": 0,
+            "flaky": false
+          }
+        },
+        {
+          "id": "-1672768371_6",
+          "name": "case 46",
+          "fullName": "case 46",
+          "state": "passed",
+          "diagnostic": {
+            "slow": false,
+            "duration": 0.10000000149011612,
+            "startTime": 1786518906656,
+            "retryCount": 0,
+            "repeatCount": 0,
+            "flaky": false
+          }
+        },
+        {
+          "id": "-1672768371_7",
+          "name": "case 47",
+          "fullName": "case 47",
+          "state": "passed",
+          "diagnostic": {
+            "slow": false,
+            "duration": 0.19999999925494194,
+            "startTime": 1786518906656,
+            "retryCount": 0,
+            "repeatCount": 0,
+            "flaky": false
+          }
+        },
+        {
+          "id": "-1672768371_8",
+          "name": "case 48",
+          "fullName": "case 48",
+          "state": "passed",
+          "diagnostic": {
+            "slow": false,
+            "duration": 0.10000000149011612,
+            "startTime": 1786518906656,
+            "retryCount": 0,
+            "repeatCount": 0,
+            "flaky": false
+          }
+        },
+        {
+          "id": "-1672768371_9",
+          "name": "case 49",
+          "fullName": "case 49",
+          "state": "passed",
+          "diagnostic": {
+            "slow": false,
+            "duration": 0.09999999776482582,
+            "startTime": 1786518906656,
+            "retryCount": 0,
+            "repeatCount": 0,
+            "flaky": false
+          }
+        }
+      ]
+    },
+    {
+      "moduleId": "/Users/hogawa/.local/share/ho-dev-notes/vitest/pr-10519-inline-snapshot-stack/fixture/workloads/generated/10x10/005.test.ts",
+      "relativeModuleId": "workloads/generated/10x10/005.test.ts",
+      "state": "passed",
+      "diagnostic": {
+        "environmentSetupDuration": 0,
+        "prepareDuration": 444,
+        "collectDuration": 7.099999997764826,
+        "setupDuration": 5.800000000745058,
+        "duration": 4.900000002235174,
+        "importDurations": {}
+      },
+      "tests": [
+        {
+          "id": "-319458674_0",
+          "name": "case 50",
+          "fullName": "case 50",
+          "state": "passed",
+          "diagnostic": {
+            "slow": false,
+            "duration": 2.899999998509884,
+            "startTime": 1786518906641,
+            "retryCount": 0,
+            "repeatCount": 0,
+            "flaky": false
+          }
+        },
+        {
+          "id": "-319458674_1",
+          "name": "case 51",
+          "fullName": "case 51",
+          "state": "passed",
+          "diagnostic": {
+            "slow": false,
+            "duration": 0.19999999925494194,
+            "startTime": 1786518906644,
+            "retryCount": 0,
+            "repeatCount": 0,
+            "flaky": false
+          }
+        },
+        {
+          "id": "-319458674_2",
+          "name": "case 52",
+          "fullName": "case 52",
+          "state": "passed",
+          "diagnostic": {
+            "slow": false,
+            "duration": 0.19999999925494194,
+            "startTime": 1786518906644,
+            "retryCount": 0,
+            "repeatCount": 0,
+            "flaky": false
+          }
+        },
+        {
+          "id": "-319458674_3",
+          "name": "case 53",
+          "fullName": "case 53",
+          "state": "passed",
+          "diagnostic": {
+            "slow": false,
+            "duration": 0.10000000149011612,
+            "startTime": 1786518906644,
+            "retryCount": 0,
+            "repeatCount": 0,
+            "flaky": false
+          }
+        },
+        {
+          "id": "-319458674_4",
+          "name": "case 54",
+          "fullName": "case 54",
+          "state": "passed",
+          "diagnostic": {
+            "slow": false,
+            "duration": 0.19999999925494194,
+            "startTime": 1786518906644,
+            "retryCount": 0,
+            "repeatCount": 0,
+            "flaky": false
+          }
+        },
+        {
+          "id": "-319458674_5",
+          "name": "case 55",
+          "fullName": "case 55",
+          "state": "passed",
+          "diagnostic": {
+            "slow": false,
+            "duration": 0.10000000149011612,
+            "startTime": 1786518906644,
+            "retryCount": 0,
+            "repeatCount": 0,
+            "flaky": false
+          }
+        },
+        {
+          "id": "-319458674_6",
+          "name": "case 56",
+          "fullName": "case 56",
+          "state": "passed",
+          "diagnostic": {
+            "slow": false,
+            "duration": 0.10000000149011612,
+            "startTime": 1786518906644,
+            "retryCount": 0,
+            "repeatCount": 0,
+            "flaky": false
+          }
+        },
+        {
+          "id": "-319458674_7",
+          "name": "case 57",
+          "fullName": "case 57",
+          "state": "passed",
+          "diagnostic": {
+            "slow": false,
+            "duration": 0.09999999776482582,
+            "startTime": 1786518906644,
+            "retryCount": 0,
+            "repeatCount": 0,
+            "flaky": false
+          }
+        },
+        {
+          "id": "-319458674_8",
+          "name": "case 58",
+          "fullName": "case 58",
+          "state": "passed",
+          "diagnostic": {
+            "slow": false,
+            "duration": 0.10000000149011612,
+            "startTime": 1786518906645,
+            "retryCount": 0,
+            "repeatCount": 0,
+            "flaky": false
+          }
+        },
+        {
+          "id": "-319458674_9",
+          "name": "case 59",
+          "fullName": "case 59",
+          "state": "passed",
+          "diagnostic": {
+            "slow": false,
+            "duration": 0.19999999925494194,
+            "startTime": 1786518906645,
+            "retryCount": 0,
+            "repeatCount": 0,
+            "flaky": false
+          }
+        }
+      ]
+    },
+    {
+      "moduleId": "/Users/hogawa/.local/share/ho-dev-notes/vitest/pr-10519-inline-snapshot-stack/fixture/workloads/generated/10x10/006.test.ts",
+      "relativeModuleId": "workloads/generated/10x10/006.test.ts",
+      "state": "passed",
+      "diagnostic": {
+        "environmentSetupDuration": 0,
+        "prepareDuration": 451.8999999985099,
+        "collectDuration": 5.5,
+        "setupDuration": 3.800000000745058,
+        "duration": 5,
+        "importDurations": {}
+      },
+      "tests": [
+        {
+          "id": "1033851023_0",
+          "name": "case 60",
+          "fullName": "case 60",
+          "state": "passed",
+          "diagnostic": {
+            "slow": false,
+            "duration": 2.899999998509884,
+            "startTime": 1786518906640,
+            "retryCount": 0,
+            "repeatCount": 0,
+            "flaky": false
+          }
+        },
+        {
+          "id": "1033851023_1",
+          "name": "case 61",
+          "fullName": "case 61",
+          "state": "passed",
+          "diagnostic": {
+            "slow": false,
+            "duration": 0.19999999925494194,
+            "startTime": 1786518906643,
+            "retryCount": 0,
+            "repeatCount": 0,
+            "flaky": false
+          }
+        },
+        {
+          "id": "1033851023_2",
+          "name": "case 62",
+          "fullName": "case 62",
+          "state": "passed",
+          "diagnostic": {
+            "slow": false,
+            "duration": 0.19999999925494194,
+            "startTime": 1786518906643,
+            "retryCount": 0,
+            "repeatCount": 0,
+            "flaky": false
+          }
+        },
+        {
+          "id": "1033851023_3",
+          "name": "case 63",
+          "fullName": "case 63",
+          "state": "passed",
+          "diagnostic": {
+            "slow": false,
+            "duration": 0.10000000149011612,
+            "startTime": 1786518906644,
+            "retryCount": 0,
+            "repeatCount": 0,
+            "flaky": false
+          }
+        },
+        {
+          "id": "1033851023_4",
+          "name": "case 64",
+          "fullName": "case 64",
+          "state": "passed",
+          "diagnostic": {
+            "slow": false,
+            "duration": 0.19999999925494194,
+            "startTime": 1786518906644,
+            "retryCount": 0,
+            "repeatCount": 0,
+            "flaky": false
+          }
+        },
+        {
+          "id": "1033851023_5",
+          "name": "case 65",
+          "fullName": "case 65",
+          "state": "passed",
+          "diagnostic": {
+            "slow": false,
+            "duration": 0.10000000149011612,
+            "startTime": 1786518906644,
+            "retryCount": 0,
+            "repeatCount": 0,
+            "flaky": false
+          }
+        },
+        {
+          "id": "1033851023_6",
+          "name": "case 66",
+          "fullName": "case 66",
+          "state": "passed",
+          "diagnostic": {
+            "slow": false,
+            "duration": 0.19999999925494194,
+            "startTime": 1786518906644,
+            "retryCount": 0,
+            "repeatCount": 0,
+            "flaky": false
+          }
+        },
+        {
+          "id": "1033851023_7",
+          "name": "case 67",
+          "fullName": "case 67",
+          "state": "passed",
+          "diagnostic": {
+            "slow": false,
+            "duration": 0.10000000149011612,
+            "startTime": 1786518906644,
+            "retryCount": 0,
+            "repeatCount": 0,
+            "flaky": false
+          }
+        },
+        {
+          "id": "1033851023_8",
+          "name": "case 68",
+          "fullName": "case 68",
+          "state": "passed",
+          "diagnostic": {
+            "slow": false,
+            "duration": 0.19999999925494194,
+            "startTime": 1786518906644,
+            "retryCount": 0,
+            "repeatCount": 0,
+            "flaky": false
+          }
+        },
+        {
+          "id": "1033851023_9",
+          "name": "case 69",
+          "fullName": "case 69",
+          "state": "passed",
+          "diagnostic": {
+            "slow": false,
+            "duration": 0.09999999776482582,
+            "startTime": 1786518906644,
+            "retryCount": 0,
+            "repeatCount": 0,
+            "flaky": false
+          }
+        }
+      ]
+    },
+    {
+      "moduleId": "/Users/hogawa/.local/share/ho-dev-notes/vitest/pr-10519-inline-snapshot-stack/fixture/workloads/generated/10x10/007.test.ts",
+      "relativeModuleId": "workloads/generated/10x10/007.test.ts",
+      "state": "passed",
+      "diagnostic": {
+        "environmentSetupDuration": 0,
+        "prepareDuration": 444.6000000014901,
+        "collectDuration": 6.199999999254942,
+        "setupDuration": 3.800000000745058,
+        "duration": 6.399999998509884,
+        "importDurations": {}
+      },
+      "tests": [
+        {
+          "id": "-1907806576_0",
+          "name": "case 70",
+          "fullName": "case 70",
+          "state": "passed",
+          "diagnostic": {
+            "slow": false,
+            "duration": 4.100000001490116,
+            "startTime": 1786518906644,
+            "retryCount": 0,
+            "repeatCount": 0,
+            "flaky": false
+          }
+        },
+        {
+          "id": "-1907806576_1",
+          "name": "case 71",
+          "fullName": "case 71",
+          "state": "passed",
+          "diagnostic": {
+            "slow": false,
+            "duration": 0.19999999925494194,
+            "startTime": 1786518906648,
+            "retryCount": 0,
+            "repeatCount": 0,
+            "flaky": false
+          }
+        },
+        {
+          "id": "-1907806576_2",
+          "name": "case 72",
+          "fullName": "case 72",
+          "state": "passed",
+          "diagnostic": {
+            "slow": false,
+            "duration": 0.09999999776482582,
+            "startTime": 1786518906648,
+            "retryCount": 0,
+            "repeatCount": 0,
+            "flaky": false
+          }
+        },
+        {
+          "id": "-1907806576_3",
+          "name": "case 73",
+          "fullName": "case 73",
+          "state": "passed",
+          "diagnostic": {
+            "slow": false,
+            "duration": 0.20000000298023224,
+            "startTime": 1786518906648,
+            "retryCount": 0,
+            "repeatCount": 0,
+            "flaky": false
+          }
+        },
+        {
+          "id": "-1907806576_4",
+          "name": "case 74",
+          "fullName": "case 74",
+          "state": "passed",
+          "diagnostic": {
+            "slow": false,
+            "duration": 0.09999999776482582,
+            "startTime": 1786518906648,
+            "retryCount": 0,
+            "repeatCount": 0,
+            "flaky": false
+          }
+        },
+        {
+          "id": "-1907806576_5",
+          "name": "case 75",
+          "fullName": "case 75",
+          "state": "passed",
+          "diagnostic": {
+            "slow": false,
+            "duration": 0.19999999925494194,
+            "startTime": 1786518906648,
+            "retryCount": 0,
+            "repeatCount": 0,
+            "flaky": false
+          }
+        },
+        {
+          "id": "-1907806576_6",
+          "name": "case 76",
+          "fullName": "case 76",
+          "state": "passed",
+          "diagnostic": {
+            "slow": false,
+            "duration": 0.20000000298023224,
+            "startTime": 1786518906649,
+            "retryCount": 0,
+            "repeatCount": 0,
+            "flaky": false
+          }
+        },
+        {
+          "id": "-1907806576_7",
+          "name": "case 77",
+          "fullName": "case 77",
+          "state": "passed",
+          "diagnostic": {
+            "slow": false,
+            "duration": 0.09999999776482582,
+            "startTime": 1786518906649,
+            "retryCount": 0,
+            "repeatCount": 0,
+            "flaky": false
+          }
+        },
+        {
+          "id": "-1907806576_8",
+          "name": "case 78",
+          "fullName": "case 78",
+          "state": "passed",
+          "diagnostic": {
+            "slow": false,
+            "duration": 0.10000000149011612,
+            "startTime": 1786518906649,
+            "retryCount": 0,
+            "repeatCount": 0,
+            "flaky": false
+          }
+        },
+        {
+          "id": "-1907806576_9",
+          "name": "case 79",
+          "fullName": "case 79",
+          "state": "passed",
+          "diagnostic": {
+            "slow": false,
+            "duration": 0.09999999776482582,
+            "startTime": 1786518906649,
+            "retryCount": 0,
+            "repeatCount": 0,
+            "flaky": false
+          }
+        }
+      ]
+    },
+    {
+      "moduleId": "/Users/hogawa/.local/share/ho-dev-notes/vitest/pr-10519-inline-snapshot-stack/fixture/workloads/generated/10x10/008.test.ts",
+      "relativeModuleId": "workloads/generated/10x10/008.test.ts",
+      "state": "passed",
+      "diagnostic": {
+        "environmentSetupDuration": 0,
+        "prepareDuration": 443.69999999925494,
+        "collectDuration": 7.100000001490116,
+        "setupDuration": 5.800000000745058,
+        "duration": 5,
+        "importDurations": {}
+      },
+      "tests": [
+        {
+          "id": "-554496879_0",
+          "name": "case 80",
+          "fullName": "case 80",
+          "state": "passed",
+          "diagnostic": {
+            "slow": false,
+            "duration": 2.899999998509884,
+            "startTime": 1786518906640,
+            "retryCount": 0,
+            "repeatCount": 0,
+            "flaky": false
+          }
+        },
+        {
+          "id": "-554496879_1",
+          "name": "case 81",
+          "fullName": "case 81",
+          "state": "passed",
+          "diagnostic": {
+            "slow": false,
+            "duration": 0.4000000022351742,
+            "startTime": 1786518906643,
+            "retryCount": 0,
+            "repeatCount": 0,
+            "flaky": false
+          }
+        },
+        {
+          "id": "-554496879_2",
+          "name": "case 82",
+          "fullName": "case 82",
+          "state": "passed",
+          "diagnostic": {
+            "slow": false,
+            "duration": 0.09999999776482582,
+            "startTime": 1786518906643,
+            "retryCount": 0,
+            "repeatCount": 0,
+            "flaky": false
+          }
+        },
+        {
+          "id": "-554496879_3",
+          "name": "case 83",
+          "fullName": "case 83",
+          "state": "passed",
+          "diagnostic": {
+            "slow": false,
+            "duration": 0.20000000298023224,
+            "startTime": 1786518906644,
+            "retryCount": 0,
+            "repeatCount": 0,
+            "flaky": false
+          }
+        },
+        {
+          "id": "-554496879_4",
+          "name": "case 84",
+          "fullName": "case 84",
+          "state": "passed",
+          "diagnostic": {
+            "slow": false,
+            "duration": 0.19999999925494194,
+            "startTime": 1786518906644,
+            "retryCount": 0,
+            "repeatCount": 0,
+            "flaky": false
+          }
+        },
+        {
+          "id": "-554496879_5",
+          "name": "case 85",
+          "fullName": "case 85",
+          "state": "passed",
+          "diagnostic": {
+            "slow": false,
+            "duration": 0.09999999776482582,
+            "startTime": 1786518906644,
+            "retryCount": 0,
+            "repeatCount": 0,
+            "flaky": false
+          }
+        },
+        {
+          "id": "-554496879_6",
+          "name": "case 86",
+          "fullName": "case 86",
+          "state": "passed",
+          "diagnostic": {
+            "slow": false,
+            "duration": 0.10000000149011612,
+            "startTime": 1786518906644,
+            "retryCount": 0,
+            "repeatCount": 0,
+            "flaky": false
+          }
+        },
+        {
+          "id": "-554496879_7",
+          "name": "case 87",
+          "fullName": "case 87",
+          "state": "passed",
+          "diagnostic": {
+            "slow": false,
+            "duration": 0.19999999925494194,
+            "startTime": 1786518906644,
+            "retryCount": 0,
+            "repeatCount": 0,
+            "flaky": false
+          }
+        },
+        {
+          "id": "-554496879_8",
+          "name": "case 88",
+          "fullName": "case 88",
+          "state": "passed",
+          "diagnostic": {
+            "slow": false,
+            "duration": 0.19999999925494194,
+            "startTime": 1786518906644,
+            "retryCount": 0,
+            "repeatCount": 0,
+            "flaky": false
+          }
+        },
+        {
+          "id": "-554496879_9",
+          "name": "case 89",
+          "fullName": "case 89",
+          "state": "passed",
+          "diagnostic": {
+            "slow": false,
+            "duration": 0.10000000149011612,
+            "startTime": 1786518906645,
+            "retryCount": 0,
+            "repeatCount": 0,
+            "flaky": false
+          }
+        }
+      ]
+    },
+    {
+      "moduleId": "/Users/hogawa/.local/share/ho-dev-notes/vitest/pr-10519-inline-snapshot-stack/fixture/workloads/generated/10x10/009.test.ts",
+      "relativeModuleId": "workloads/generated/10x10/009.test.ts",
+      "state": "passed",
+      "diagnostic": {
+        "environmentSetupDuration": 0,
+        "prepareDuration": 444.70000000298023,
+        "collectDuration": 6.800000000745058,
+        "setupDuration": 3.699999999254942,
+        "duration": 5.199999999254942,
+        "importDurations": {}
+      },
+      "tests": [
+        {
+          "id": "798812818_0",
+          "name": "case 90",
+          "fullName": "case 90",
+          "state": "passed",
+          "diagnostic": {
+            "slow": false,
+            "duration": 3,
+            "startTime": 1786518906646,
+            "retryCount": 0,
+            "repeatCount": 0,
+            "flaky": false
+          }
+        },
+        {
+          "id": "798812818_1",
+          "name": "case 91",
+          "fullName": "case 91",
+          "state": "passed",
+          "diagnostic": {
+            "slow": false,
+            "duration": 0.3999999985098839,
+            "startTime": 1786518906649,
+            "retryCount": 0,
+            "repeatCount": 0,
+            "flaky": false
+          }
+        },
+        {
+          "id": "798812818_2",
+          "name": "case 92",
+          "fullName": "case 92",
+          "state": "passed",
+          "diagnostic": {
+            "slow": false,
+            "duration": 0.19999999925494194,
+            "startTime": 1786518906649,
+            "retryCount": 0,
+            "repeatCount": 0,
+            "flaky": false
+          }
+        },
+        {
+          "id": "798812818_3",
+          "name": "case 93",
+          "fullName": "case 93",
+          "state": "passed",
+          "diagnostic": {
+            "slow": false,
+            "duration": 0.20000000298023224,
+            "startTime": 1786518906650,
+            "retryCount": 0,
+            "repeatCount": 0,
+            "flaky": false
+          }
+        },
+        {
+          "id": "798812818_4",
+          "name": "case 94",
+          "fullName": "case 94",
+          "state": "passed",
+          "diagnostic": {
+            "slow": false,
+            "duration": 0.09999999776482582,
+            "startTime": 1786518906650,
+            "retryCount": 0,
+            "repeatCount": 0,
+            "flaky": false
+          }
+        },
+        {
+          "id": "798812818_5",
+          "name": "case 95",
+          "fullName": "case 95",
+          "state": "passed",
+          "diagnostic": {
+            "slow": false,
+            "duration": 0.10000000149011612,
+            "startTime": 1786518906650,
+            "retryCount": 0,
+            "repeatCount": 0,
+            "flaky": false
+          }
+        },
+        {
+          "id": "798812818_6",
+          "name": "case 96",
+          "fullName": "case 96",
+          "state": "passed",
+          "diagnostic": {
+            "slow": false,
+            "duration": 0.10000000149011612,
+            "startTime": 1786518906650,
+            "retryCount": 0,
+            "repeatCount": 0,
+            "flaky": false
+          }
+        },
+        {
+          "id": "798812818_7",
+          "name": "case 97",
+          "fullName": "case 97",
+          "state": "passed",
+          "diagnostic": {
+            "slow": false,
+            "duration": 0.10000000149011612,
+            "startTime": 1786518906650,
+            "retryCount": 0,
+            "repeatCount": 0,
+            "flaky": false
+          }
+        },
+        {
+          "id": "798812818_8",
+          "name": "case 98",
+          "fullName": "case 98",
+          "state": "passed",
+          "diagnostic": {
+            "slow": false,
+            "duration": 0.19999999925494194,
+            "startTime": 1786518906650,
+            "retryCount": 0,
+            "repeatCount": 0,
+            "flaky": false
+          }
+        },
+        {
+          "id": "798812818_9",
+          "name": "case 99",
+          "fullName": "case 99",
+          "state": "passed",
+          "diagnostic": {
+            "slow": false,
+            "duration": 0.09999999776482582,
+            "startTime": 1786518906651,
+            "retryCount": 0,
+            "repeatCount": 0,
+            "flaky": false
+          }
+        }
+      ]
+    }
+  ]
+}
