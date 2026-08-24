@@ -1,0 +1,19 @@
+vitest-trace-view-screencast/pnpm-lock.yaml
+  s_270c39f5471bab::t_65fddcde0490f1 1-969
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "bb217fdf8472688fd8058d09c3b247d53c72f4ff",
+  "prompts": {},
+  "sessions": {
+    "s_270c39f5471bab": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_fcd6d0152ffeJ81kUF74v4aEdS",
+        "model": "gpt-5.6-sol"
+      },
+      "human_author": "Hiroshi Ogawa <4232207+hi-ogawa@users.noreply.github.com>"
+    }
+  }
+}
