@@ -1,0 +1,22 @@
+{
+  "name": "vitest-trace-view-screencast",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "demo": "vitest --ui",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^6.1.0",
+    "@vitest/browser-playwright": "https://pkg.pr.new/@vitest/browser-playwright@c36c4fd",
+    "@vitest/ui": "https://pkg.pr.new/@vitest/ui@c36c4fd",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "typescript": "^5.9.3",
+    "vite": "^8.2.2",
+    "vitest": "https://pkg.pr.new/vitest@c36c4fd",
+    "vitest-browser-react": "^2.2.0"
+  }
+}
