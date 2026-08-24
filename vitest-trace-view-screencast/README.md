@@ -6,7 +6,7 @@ This React fixture exercises an isolated date-range picker through `vitest-brows
 - `rejects checkout before check-in` selects April 18–14 and fails because the component incorrectly reports `Dates saved`.
 - `reviews the dark theme` applies a dark render wrapper, marks the initial component, opens the calendar, and passes.
 
-https://github.com/user-attachments/assets/74cbaae2-9e40-428a-9e12-24463f86e8e9
+https://github.com/user-attachments/assets/f61bd787-b252-439f-b894-2e387f4d7b86
 
 ## Run
 
@@ -19,3 +19,5 @@ pnpm demo
 The single-file HTML reporter writes all traces to `.vitest/index.html`. For the recording, open the report and click through the passing test first, then the failing test. The failed final state visibly shows check-in `18 Apr`, checkout `14 Apr`, and the incorrect `Dates saved` confirmation.
 
 The Vitest packages use the `pkg.pr.new` snapshots for commit `c36c4fd` from [vitest#11027](https://github.com/vitest-dev/vitest/pull/11027#issuecomment-5391793011), which preserves Trace Viewer split-pane sizes for easier recording. Installation requires `pnpm install --config.blockExoticSubdeps=false` because those snapshots reference their internal workspace packages through trusted `pkg.pr.new` URLs.
+
+
