@@ -29,7 +29,7 @@ export function DateRangePicker() {
             <button
               className="date-button"
               aria-label="Choose check in"
-              onClick={() => calendar.current?.showPopover()}
+              popoverTarget="date-calendar"
             >
               {checkIn ? `${checkIn} Apr` : "Choose date"}
               <span>{checkIn ? "Sunday" : "Flexible"}</span>
@@ -43,6 +43,40 @@ export function DateRangePicker() {
             </button>
           </label>
         </div>
+        <div ref={calendar} id="date-calendar" className="calendar-panel" popover="auto">
+          <div className="calendar-head">
+            <strong>{month}</strong>
+            <button className="next-month" onClick={() => setMonth("April 2027")}>
+              Next month
+            </button>
+          </div>
+          <div className="week">
+            <span>M</span>
+            <span>T</span>
+            <span>W</span>
+            <span>T</span>
+            <span>F</span>
+            <span>S</span>
+            <span>S</span>
+          </div>
+          <div className="days">
+            {Array.from({ length: 28 }, (_, index) => {
+              const day = index + 1;
+              const selected = day === checkIn || day === checkOut;
+              const inRange = checkIn && checkOut && day > checkIn && day < checkOut;
+              return (
+                <button
+                  className={`day${selected ? " selected" : ""}${inRange ? " range" : ""}`}
+                  key={day}
+                  onClick={() => selectDay(day)}
+                >
+                  {day}
+                </button>
+              );
+            })}
+          </div>
+          <p className="calendar-note">Select check-in and check-out dates</p>
+        </div>
         <button className="save" onClick={() => setSaved(true)}>
           Save dates
         </button>
@@ -53,40 +87,6 @@ export function DateRangePicker() {
           </div>
         )}
       </section>
-      <div ref={calendar} className="calendar-popover" popover="auto">
-        <div className="calendar-head">
-          <strong>{month}</strong>
-          <button className="next-month" onClick={() => setMonth("April 2027")}>
-            Next month
-          </button>
-        </div>
-        <div className="week">
-          <span>M</span>
-          <span>T</span>
-          <span>W</span>
-          <span>T</span>
-          <span>F</span>
-          <span>S</span>
-          <span>S</span>
-        </div>
-        <div className="days">
-          {Array.from({ length: 28 }, (_, index) => {
-            const day = index + 1;
-            const selected = day === checkIn || day === checkOut;
-            const inRange = checkIn && checkOut && day > checkIn && day < checkOut;
-            return (
-              <button
-                className={`day${selected ? " selected" : ""}${inRange ? " range" : ""}`}
-                key={day}
-                onClick={() => selectDay(day)}
-              >
-                {day}
-              </button>
-            );
-          })}
-        </div>
-        <p className="calendar-note">Select check-in and check-out dates</p>
-      </div>
     </>
   );
 }

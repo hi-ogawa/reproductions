@@ -8,7 +8,7 @@
 body {
   min-height: 100vh;
   margin: 0;
-  padding: 24px;
+  padding: 20px;
   background:
     linear-gradient(rgba(64, 72, 91, 0.045) 1px, transparent 1px),
     linear-gradient(90deg, rgba(64, 72, 91, 0.045) 1px, transparent 1px), #f4f5f7;
@@ -19,39 +19,39 @@ body > div {
   align-items: flex-start;
 }
 .picker {
-  anchor-name: --picker;
-  width: 420px;
+  width: min(360px, calc(100vw - 40px));
   border: 1px solid #dedfe4;
-  border-radius: 22px;
-  padding: 30px;
+  border-radius: 18px;
+  padding: 24px;
   background: white;
   box-shadow: 0 22px 60px rgba(32, 39, 55, 0.13);
 }
 .kicker {
   color: #59637a;
-  font-size: 11px;
+  font-size: 10px;
   font-weight: 850;
   letter-spacing: 0.15em;
   text-transform: uppercase;
 }
 h1 {
-  margin: 8px 0 5px;
-  font-size: 25px;
+  margin: 6px 0 4px;
+  font-size: 22px;
   letter-spacing: -0.025em;
 }
 .property {
-  margin: 0 0 25px;
+  margin: 0 0 20px;
   color: #7a8190;
-  font-size: 14px;
+  font-size: 13px;
 }
 .dates {
+  anchor-name: --dates;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 12px;
+  gap: 10px;
 }
 label {
   display: grid;
-  gap: 7px;
+  gap: 6px;
   color: #70798d;
   font-size: 10px;
   font-weight: 850;
@@ -60,14 +60,14 @@ label {
 }
 .date-button {
   width: 100%;
-  min-height: 62px;
+  min-height: 54px;
   border: 1px solid #dadde5;
-  border-radius: 13px;
-  padding: 10px 13px;
+  border-radius: 11px;
+  padding: 8px 11px;
   color: #1d2639;
   background: #fbfbfc;
   font: inherit;
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 720;
   text-align: left;
 }
@@ -75,7 +75,7 @@ label {
   display: block;
   margin-top: 3px;
   color: #8a91a0;
-  font-size: 11px;
+  font-size: 10px;
   font-weight: 500;
 }
 button:focus-visible {
@@ -84,10 +84,10 @@ button:focus-visible {
 }
 .save {
   width: 100%;
-  height: 50px;
-  margin-top: 16px;
+  height: 44px;
+  margin-top: 13px;
   border: 0;
-  border-radius: 12px;
+  border-radius: 10px;
   color: white;
   background: #315ed4;
   font: inherit;
@@ -119,37 +119,34 @@ button:focus-visible {
   background: #208654;
   font-size: 12px;
 }
-[popover] {
+.calendar-panel {
   position: fixed;
-  position-anchor: --picker;
+  position-anchor: --dates;
   inset: auto;
-  top: anchor(top);
-  left: calc(anchor(right) + 12px);
-  width: 300px;
+  top: calc(anchor(bottom) + 8px);
+  left: anchor(left);
+  width: anchor-size(width);
   margin: 0;
-  border: 0;
-  border-radius: 18px;
-  padding: 19px;
+  border: 1px solid #e0e3e9;
+  border-radius: 12px;
+  padding: 13px;
   color: #172033;
-  background: white;
-  box-shadow: 0 24px 80px rgba(23, 32, 51, 0.27);
-}
-[popover]::backdrop {
-  background: rgba(25, 32, 48, 0.16);
+  background: #fbfbfc;
+  box-shadow: 0 18px 50px rgba(23, 32, 51, 0.2);
 }
 .calendar-head {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 17px;
+  margin-bottom: 13px;
 }
 .calendar-head strong {
-  font-size: 15px;
+  font-size: 14px;
 }
 .next-month {
   border: 1px solid #e0e3e9;
   border-radius: 9px;
-  padding: 7px 10px;
+  padding: 6px 9px;
   color: #43506a;
   background: white;
   font: inherit;
@@ -160,7 +157,7 @@ button:focus-visible {
 .days {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
-  gap: 5px;
+  gap: 4px;
 }
 .week {
   margin-bottom: 7px;
@@ -171,11 +168,11 @@ button:focus-visible {
 .day {
   aspect-ratio: 1;
   border: 0;
-  border-radius: 10px;
+  border-radius: 8px;
   color: #3d465a;
   background: transparent;
   font: inherit;
-  font-size: 12px;
+  font-size: 11px;
 }
 .day:hover {
   background: #edf2ff;
@@ -189,7 +186,7 @@ button:focus-visible {
   background: #e7eeff;
 }
 .calendar-note {
-  margin: 15px 0 0;
+  margin: 12px 0 0;
   color: #7b8393;
   font-size: 11px;
   text-align: center;
@@ -226,32 +223,32 @@ button:focus-visible {
   color: #a8e7c4;
   background: #153826;
 }
-.dark [popover] {
+.dark .calendar-panel {
   border: 1px solid #303a50;
   color: #edf1f8;
-  background: #161c2a;
-  box-shadow: 0 24px 80px rgba(5, 8, 15, 0.38);
+  background: #202838;
+  box-shadow: none;
 }
-.dark [popover] .next-month {
+.dark .calendar-panel .next-month {
   border-color: #354057;
   color: #cdd6e7;
   background: #202838;
 }
-.dark [popover] .week,
-.dark [popover] .calendar-note {
+.dark .calendar-panel .week,
+.dark .calendar-panel .calendar-note {
   color: #929db1;
 }
-.dark [popover] .day {
+.dark .calendar-panel .day {
   color: #dce3ef;
 }
-.dark [popover] .day:hover {
+.dark .calendar-panel .day:hover {
   background: #27344d;
 }
-.dark [popover] .day.selected {
+.dark .calendar-panel .day.selected {
   color: white;
   background: #6687ea;
 }
-.dark [popover] .day.range {
+.dark .calendar-panel .day.range {
   color: #b8c9ff;
   background: #26375f;
 }
