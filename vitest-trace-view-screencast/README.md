@@ -11,12 +11,11 @@ https://github.com/user-attachments/assets/8cce6aa5-e84d-4483-9485-0e8c76143234
 ## Run
 
 ```sh
-pnpm install --config.blockExoticSubdeps=false
+pnpm install
 pnpm typecheck
 pnpm test
 ```
 
 The single-file HTML reporter writes all traces to `.vitest/index.html`. For the recording, open the report and click through the passing test first, then the failing test. The failed final state visibly shows check-in `18 Apr`, checkout `14 Apr`, and the incorrect `Dates saved` confirmation.
 
-The Vitest packages use the `pkg.pr.new` snapshots for commit `c36c4fd` from [vitest#11027](https://github.com/vitest-dev/vitest/pull/11027#issuecomment-5391793011), which preserves Trace Viewer split-pane sizes for easier recording. Installation requires `pnpm install --config.blockExoticSubdeps=false` because those snapshots reference their internal workspace packages through trusted `pkg.pr.new` URLs.
- 
+The Vitest packages use `5.1.0-beta.1`, the first release whose trace viewer has the Aria snapshot view. The guide screenshots in [vitest#11826](https://github.com/vitest-dev/vitest/pull/11826) come from the `saves a valid date range` test at the `click "18"` step.
