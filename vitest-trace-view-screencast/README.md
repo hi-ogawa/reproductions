@@ -18,4 +18,13 @@ pnpm test
 
 The single-file HTML reporter writes all traces to `.vitest/index.html`. For the recording, open the report and click through the passing test first, then the failing test. The failed final state visibly shows check-in `18 Apr`, checkout `14 Apr`, and the incorrect `Dates saved` confirmation.
 
-The Vitest packages use `5.1.0-beta.1`, the first release whose trace viewer has the Aria snapshot view. The guide screenshots in [vitest#11826](https://github.com/vitest-dev/vitest/pull/11826) come from the `saves a valid date range` test at the `click "18"` step.
+The Vitest packages use `5.1.0-beta.1`, the first release whose trace viewer has the Aria snapshot view.
+
+## Guide Screenshots
+
+```sh
+pnpm test
+pnpm screenshots
+```
+
+`scripts/screenshots.mjs` serves the report, frames it in a mock browser window, and writes the DOM and Aria views of the `saves a valid date range` test at the `click "18"` step to `.vitest/screenshots`, in light and dark. The file names match `docs/public/browser` in the Vitest repo, as used by [vitest#11826](https://github.com/vitest-dev/vitest/pull/11826). Set `DPR=2` for 2x captures.

@@ -4,7 +4,8 @@
   "type": "module",
   "scripts": {
     "test": "vitest",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "screenshots": "node scripts/screenshots.mjs"
   },
   "devDependencies": {
     "@types/react": "^19.2.18",
@@ -12,6 +13,7 @@
     "@vitejs/plugin-react": "^6.1.0",
     "@vitest/browser-playwright": "5.1.0-beta.1",
     "@vitest/ui": "5.1.0-beta.1",
+    "playwright": "1.62.1",
     "react": "^19.2.8",
     "react-dom": "^19.2.8",
     "typescript": "^5.9.3",
